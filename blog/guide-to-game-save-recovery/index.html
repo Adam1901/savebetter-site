@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1teoznn--><!---->  <title>Guide to Game Save Recovery: Fix Lost Progress — Checkpoint64</title>
+  <meta name="description" content="A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today." />
+  <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../../retro_save_icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/blog/guide-to-game-save-recovery/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Guide to Game Save Recovery: Fix Lost Progress" />
+  <meta property="og:description" content="A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today." />
+  <meta property="og:url" content="https://checkpoint64.com/blog/guide-to-game-save-recovery/" />
+  <meta property="og:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/c7fd5853-92d9-4b94-a627-1d2e0d8eb5c0.webp" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guide to Game Save Recovery: Fix Lost Progress" />
+  <meta name="twitter:description" content="A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today." />
+  <meta name="twitter:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/c7fd5853-92d9-4b94-a627-1d2e0d8eb5c0.webp" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta property="article:published_time" content="2026-07-28" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logbook",
+        "item": "https://checkpoint64.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Guide to Game Save Recovery: Fix Lost Progress",
+        "item": "https://checkpoint64.com/blog/guide-to-game-save-recovery/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Guide to Game Save Recovery: Fix Lost Progress",
+    "description": "A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today.",
+    "url": "https://checkpoint64.com/blog/guide-to-game-save-recovery/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://checkpoint64.com/blog/guide-to-game-save-recovery/"
+    },
+    "datePublished": "2026-07-28",
+    "dateModified": "2026-07-28",
+    "image": "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/c7fd5853-92d9-4b94-a627-1d2e0d8eb5c0.webp",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "name": "Checkpoint64",
+      "url": "https://checkpoint64.com/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Checkpoint64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      }
+    }
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post">
+      <header class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../../">Home</a> <span aria-hidden="true">/</span> <a href="../../blog/">Logbook</a> <span aria-hidden="true">/</span> <span>Guide to Game Save Recovery: Fix Lost Progress</span>
+        </nav>
+        <p class="blog-post-meta"><time datetime="2026-07-28">2026-07-28</time> · <span class="blog-author">By the Checkpoint64 team</span></p>
+        <h1 class="blog-post-title pixel">Guide to Game Save Recovery: Fix Lost Progress</h1>
+      </header>
+      <figure class="blog-post-lead">
+        <img src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/c7fd5853-92d9-4b94-a627-1d2e0d8eb5c0.webp" alt="Guide to Game Save Recovery: Fix Lost Progress" loading="eager" />
+      </figure>
+      <div class="blog-post-body">
+<p>Your 140-hour world has vanished. Maybe the game crashed during a save. Maybe a mod update turned your town into a haunted void. Maybe your mate hosted co-op, overwrote the good world, and has gone mysteriously quiet on Discord. This guide to game save recovery is for the part after the swearing: what to check, what not to touch, and how to get your progress back without making the wreckage worse.</p>
+<h2>First rule: stop playing immediately</h2>
+<p>If a save has disappeared, corrupted, or rolled back, do not keep launching the game to see whether it magically fixes itself. Every new autosave can overwrite a usable copy. <a href="https://checkpoint64.com/blog/cloud-saves-arent-backups/" rel="nofollow noopener">Cloud sync clients</a> can also see an empty or broken local folder and enthusiastically spread that disaster to every machine you own. Cheers, technology.</p>
+<p>Close the game, then close any launcher that might manage saves. Pause OneDrive, Dropbox, Steam Cloud, or another sync tool if it is actively changing files. Take a copy of the entire save folder before trying repairs, even if the files look wrong. Put that copy somewhere separate and label it with the date.</p>
+<p>That first copy is your evidence locker. Recovery is much easier when you have not accidentally replaced the last surviving version with a fresh, equally broken one.</p>
+<h3>Work out what actually happened</h3>
+<p>A missing save and a corrupted save need different treatment. If the game no longer lists your character or world, the files may be in the wrong folder, under a different Windows account, or hidden behind cloud sync confusion. If the save appears but will not load, crashes on load, or places you in an earlier state, you are looking for an older version rather than simply locating a folder.</p>
+<p>Also check whether this is a game problem or a launcher problem. A game launched through Steam, a mod manager, Game Pass, or a portable install may use different save paths. The game did not necessarily eat your save. It may just be looking in the wrong cupboard.</p>
+<h2>Guide to game save recovery: find the save folder</h2>
+<p>On Windows, many games store saves in Documents, AppData, Saved Games, or the game's installation folder. AppData is hidden by default, because apparently the place holding your 300-hour RPG campaign needed an invisibility cloak. Type `%appdata%` or `%localappdata%` into File Explorer's address bar to get there quickly.</p>
+<p>On macOS, look in the Library folder inside your user folder, particularly Application Support, Containers, or Preferences. On Linux, saves commonly live in `.local/share`, `.config`, or inside the relevant Steam compatibility prefix if you are using Proton. Emulator saves can sit beside the ROM, in the emulator's own data folder, or in a separately configured path.</p>
+<p>Once you find a likely folder, sort files by date modified. Look for familiar world names, character names, profile files, or folders with recent timestamps. Some games use a single large save file. Others split a world across a folder full of chunks, metadata, player inventories, and backups. Copy the whole set. Recovering only one file from a multi-file world can create a new flavour of corruption.</p>
+<p>If the folder is empty, search your drive for the world name, the game's save extension, or a recognisable player name. Check the Recycle Bin too. It is not glamorous, but accidental deletion remains one of the few disasters with a pleasantly boring solution.</p>
+<h3>Check built-in backup files before downloading recovery tools</h3>
+<p>Many games quietly keep backups with names such as `.bak`, `backup`, `old`, `previous`, or a timestamp. Factorio, Minecraft modpacks, management sims, and emulator setups often have their own backup habits. Look in the save folder and any adjacent `backups` directory.</p>
+<p>Do not overwrite the current save with a backup straight away. Rename the current folder first, then copy the backup into place. Launch the game once and verify that the world loads. If it does, immediately make another copy before continuing.</p>
+<p>File recovery software is the next rung down the ladder, not the first. It can help after deletion, especially on a hard drive, but it is less reliable on SSDs because deleted data may be cleared quickly. Installing recovery software onto the same drive can also overwrite the very data you want back. Use another drive if you can.</p>
+<h2>Restore an earlier version if the save exists but is wrong</h2>
+<p>A save that loads badly is often the more painful case. You can see your world. It is just missing last night's build, has duplicated items everywhere, or crashes the moment you enter the base where the mod conflict happened.</p>
+<p>Windows may have previous versions available through File History or a restore point, depending on how your PC was set up. Right-click the save folder, open Properties, and look for Previous Versions. On macOS, Time Machine may have a historical copy. Linux users may have snapshots through their filesystem or backup tool. These are worth checking, but they depend entirely on having configured them before the catastrophe. Past you either did the sensible thing or left present you a boss fight.</p>
+<p>Steam Cloud can sometimes provide a useful copy, but it is not a proper version-history system. Its job is usually to keep the latest save in sync, not preserve every meaningful state forever. If a bad save syncs successfully, Steam may faithfully deliver it to your other device. That is synchronisation, not recovery.</p>
+<p>When restoring an older version, keep the damaged save separately. An older save may load, but you might later need a newer file to recover screenshots, map data, or a specific player inventory. Treat every candidate as a branch, not a sacrifice.</p>
+<h2>For co-op worlds, fix the hand-off problem</h2>
+<p>Host-dependent worlds create a special kind of nonsense. One player owns the save, everyone else owns anxiety. When the host is away, changes PCs, or accidentally rolls back the world, the whole group is stuck negotiating through chat logs and half-remembered filenames.</p>
+<p>The sensible approach is to keep a shared history and make hand-offs deliberate. One person takes control of the world, plays, then releases it for the next host. The important part is preventing two people from <a href="https://checkpoint64.com/blog/co-op-save-management/" rel="nofollow noopener">editing separate copies</a> at once. That creates conflicting timelines, and neither one contains the iron farm everyone spent Sunday building.</p>
+<p>Checkpoint64 is built for this exact mess: it watches supported save folders, keeps version history, and uses locked co-op hand-offs so a shared world has one active editor at a time. It also checks for changes every 30 seconds and uploads only what changed, rather than asking you to perform a weekly ritual with USB sticks and optimism. The free plan is actually free, while extra space is a pay-once option rather than another recurring bill lurking in your bank app.</p>
+<p>The trade-off is simple: any automated backup system must be set up before the failure. It cannot time-travel into a folder that was never backed up. But once it is watching the right saves, rolling back a bad mod session becomes a few clicks rather than a forensic investigation.</p>
+<h2>Make the next recovery boring</h2>
+<p>The best save recovery story is the one where you restore yesterday's version, complain for thirty seconds, and get back to playing. Set up <a href="https://checkpoint64.com/blog/how-to-back-up-game-saves/" rel="nofollow noopener">automatic backup</a> for the games that matter most, especially modded games, long-running survival worlds, emulators, and co-op saves.</p>
+<p>Before a major mod update, server migration, operating-system reinstall, or risky bit of save editing, create a named checkpoint. Keep at least one copy away from your main PC. If you play on a laptop and desktop, make sure both machines are not silently fighting over the same save folder.</p>
+<p>And before your crew starts a shared campaign, decide who hosts, how hand-offs work, and where the authoritative save lives. That conversation takes two minutes. Rebuilding a vanished Valheim base takes considerably longer, mostly because everyone will insist they remember the roof differently.</p>
+<p>Your save files are not disposable cache. They are the cartridge shelf holding your actual game history. Treat them that way, and the next corrupted world becomes an inconvenience instead of a eulogy.</p>
+      </div>
+      <nav class="guide-related" aria-label="More from the Logbook">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="../../blog/save-sharing-vs-dedicated-servers/">Save Sharing vs Dedicated Servers: Which Fits?</a></li>
+          <li><a href="../../blog/co-op-save-management/">Co Op Save Management Without Co-op Drama</a></li>
+          <li><a href="../../blog/game-save-backup-software/">Game Save Backup Software That Saves Your Save</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>
