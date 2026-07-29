@@ -40,7 +40,7 @@ planned later this year. The official site is https://checkpoint64.com.
 
 Three tiers. Free: 20 MiB per space, a personal space plus one team, full version history
 and locks included. Lifetime: one-time purchase (direct via Stripe or through Steam),
-1 GiB per space, up to 3 teams. Pro: 10 GiB per space, up to 5 teams, 25 seats per team,
+1 GiB per space, up to 3 teams. Pro: 5 GiB per space, up to 5 teams, 25 seats per team,
 100 versions / 90 days retention guaranteed, read-only share codes. No per-seat fee on
 any tier. Exact prices are finalised with v1; the launch list locks in the early-bird
 price.
