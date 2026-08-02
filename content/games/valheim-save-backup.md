@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up Valheim Worlds (and Settle 'Who Has the Latest Save?')"
-description: "Valheim keeps each world as a .db and .fwl pair, and co-op groups constantly lose track of the newest copy. Checkpoint64 keeps every version with version locks, so one canonical world moves forward. Free download for Windows, macOS, and Linux."
+description: "Valheim keeps each world as a .db and .fwl pair, and co-op groups constantly lose track of the newest copy. Checkpoint64 keeps every version with version locks, so one canonical world moves forward. Free download for Windows and Linux."
 updated: 2026-07-02
 breadcrumb: "Valheim save backup"
 faq:

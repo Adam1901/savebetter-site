@@ -44,7 +44,7 @@ Not listed? Any emulator works — point Checkpoint64 at its save folder and cho
 
 ## Sync save states between PCs
 
-Because every version lives in your account, your states aren't stuck on one machine. Start a run on your desktop, **Restore** the state on your laptop, and pick up where you left off — the same save history follows you to any PC you sign in on. It runs on Windows, macOS (Apple Silicon), and Linux.
+Because every version lives in your account, your states aren't stuck on one machine. Start a run on your desktop, **Restore** the state on your laptop, and pick up where you left off — the same save history follows you to any PC you sign in on. It runs on Windows and Linux.
 
 ## How to back up your emulator saves
 

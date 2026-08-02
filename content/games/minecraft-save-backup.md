@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up Minecraft Worlds (Java Edition)"
-description: "A single corrupted region file can wipe a Minecraft world you've built for months. Checkpoint64 backs up your saves folder automatically and keeps every version, so a broken chunk is one click from restored. Free download for Windows, macOS, and Linux."
+description: "A single corrupted region file can wipe a Minecraft world you've built for months. Checkpoint64 backs up your saves folder automatically and keeps every version, so a broken chunk is one click from restored. Free download for Windows and Linux."
 updated: 2026-07-02
 breadcrumb: "Minecraft save backup"
 faq:

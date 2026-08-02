@@ -133,7 +133,10 @@ function jsonLdBlocks({ code, t, intl, version }) {
       alternateName: 'Checkpoint 64',
       applicationCategory: 'UtilitiesApplication',
       applicationSubCategory: 'Backup Software',
-      operatingSystem: 'Windows, macOS, Linux',
+      // No macOS: both darwin shards are commented out of the app's release
+      // matrix, so no Mac build ships. This field is machine-read by search and
+      // AI crawlers, so a stale value here outlives the visible copy.
+      operatingSystem: 'Windows, Linux',
       url: `${ORIGIN}/`,
       description: j.softwareDescription,
       image: `${ORIGIN}/og-image.png`,

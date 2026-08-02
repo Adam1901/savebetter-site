@@ -1,6 +1,6 @@
 # Checkpoint64
 
-> Checkpoint64 is a desktop app for Windows, macOS (Apple Silicon), and Linux that
+> Checkpoint64 is a desktop app for Windows and Linux that
 > automatically backs up PC game saves to the cloud, keeps a full version history, and
 > lets co-op friends share single-world games (Factorio, Satisfactory, Valheim, etc.)
 > safely with built-in locks so nobody overwrites anybody. Free plan included; the
@@ -71,8 +71,8 @@ unlimited and never counts against the cap.
 
 ## Platforms
 
-Windows 10/11 (.msi / .exe), macOS Apple Silicon (.dmg), Linux x64 and ARM64
-(.deb / .rpm). Available on Steam (https://store.steampowered.com/app/4790820/) as a free
+Windows 10/11 (.msi / .exe) and Linux x64 and ARM64 (.deb / .rpm). There is no macOS
+build. Available on Steam (https://store.steampowered.com/app/4790820/) as a free
 app with paid DLC unlocks, and as direct downloads published on GitHub.
 
 ## Who it's for

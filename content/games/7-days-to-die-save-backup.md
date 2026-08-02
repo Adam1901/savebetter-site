@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up 7 Days to Die Saves (Across Version Updates)"
-description: "7 Days to Die saves routinely stop working across major version updates, and a corrupted region can cost a horde-night base. Checkpoint64 keeps every version so an update or a bad region is one click from undone. Free download for Windows, macOS, and Linux."
+description: "7 Days to Die saves routinely stop working across major version updates, and a corrupted region can cost a horde-night base. Checkpoint64 keeps every version so an update or a bad region is one click from undone. Free download for Windows and Linux."
 updated: 2026-07-03
 breadcrumb: "7 Days to Die save backup"
 faq:
