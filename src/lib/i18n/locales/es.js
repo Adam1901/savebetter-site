@@ -85,7 +85,7 @@ export default {
       { tag: 'HISTORIAL DE VERSIONES', title: 'CADA SUBIDA\nES UNA VERSIÓN.', body: 'Recorre cada copia con su número de archivos, tamaño y qué cambió desde la última vez. Pulsa Restaurar y los archivos vuelven al disco, marcados como actuales — sin adivinar, sin carpetas «final_v2_DEVERDAD».' },
       { tag: 'BLOQUEOS CO-OP', title: 'UNO SOSTIENE\nEL MUNDO.', body: 'Juegos como Factorio, Valheim y Satisfactory tienen un solo mundo activo a la vez. Quien tiene el bloqueo sube; los demás descargan. ¿El portador desapareció? Los bloqueos caducan solos y puedes tomar el relevo — con aviso, y con una línea en la bitácora para que todos se enteren.' },
       { tag: 'SOLO LO QUE CAMBIA', title: 'SUBIDAS\nMINÚSCULAS.', body: 'Solo se suben los archivos que cambiaron — los renombrados no cuestan nada extra. Un mundo de Minecraft de 500 MB se re-sube en unos pocos MB tras una sesión normal, no entero. Suave para tu internet, suave para tu almacenamiento.' },
-      { tag: '60+ JUEGOS LISTOS', title: 'CONFIGURADO EN\nSEGUNDOS.', body: 'Preajustes para 60+ juegos — cuatro variantes de Minecraft con mods, Stardew, Skyrim, Palworld, Elden Ring — más siete emuladores. Elige qué archivos cuentan y salta las capturas. Si guarda en una carpeta, funciona.' },
+      { tag: '75+ JUEGOS LISTOS', title: 'CONFIGURADO EN\nSEGUNDOS.', body: 'Preajustes para 75+ juegos — cuatro variantes de Minecraft con mods, Stardew, Skyrim, Palworld, Elden Ring — más siete emuladores. Elige qué archivos cuentan y salta las capturas. Si guarda en una carpeta, funciona.' },
       { tag: 'CÓDIGOS DE ACCESO', title: 'UN MUNDO,\nTODA UNA MULTITUD.', body: '¿Llevas un mundo comunitario? Genera un código de acceso y cualquiera que lo tenga puede descargar tu mundo — pero nunca escribir encima. Los códigos tienen límite y se pueden revocar, y los visitantes de solo lectura no ocupan plazas. (Pro)' },
       { tag: 'BITÁCORA', title: 'QUIÉN HIZO QUÉ,\nY CUÁNDO.', body: 'Cada subida, restauración y toma de bloqueo queda anotada en la bitácora de tu grupo. Útil cuando tu compañero de co-op te echa la culpa de la mala partida.' },
     ],
@@ -120,20 +120,19 @@ export default {
 
   // Reseñas de Steam. La descripción de la puntuación y el nombre del juego
   // vienen directamente de Steam y se quedan en inglés en todos los idiomas,
-  // como los textos de la maqueta de la app. Checkpoint64 aún no tiene su propia
-  // página de Steam — placeholderTpl lo deja claro.
+  // como los textos de la maqueta de la app. Las reseñas son las de Checkpoint64,
+  // cargadas en vivo desde su página de Steam (ver src/lib/steam.js).
   steam: {
     tape: 'LO QUE DICEN LOS JUGADORES',
     hand: 'en vivo desde Steam',
     h2Html: 'DIRECTO DE <span class="accent">STEAM.</span>',
-    lede: 'La página de Steam de Checkpoint64 está en camino. Cuando llegue, aquí aparecerán reseñas reales de jugadores — cargadas en vivo desde Steam. Por ahora, una vista previa con un juego que nos encanta.',
+    lede: 'Reseñas reales de jugadores reales, cargadas en vivo desde nuestra página de Steam.',
     countTpl: '{0} reseñas',
     viewOnSteam: 'Ver en Steam',
     recommended: 'RECOMENDADO',
     hoursTpl: '{0} jugadas',
     helpfulTpl: '{0} lo encontraron útil',
     anonymous: 'Jugador de Steam',
-    placeholderTpl: 'Solo una vista previa — mientras se finaliza la página de Steam de Checkpoint64, estas son reseñas reales de {0}, mostradas para ilustrar esta sección. Checkpoint64 no está afiliado a él.',
   },
 
   savings: {
@@ -170,7 +169,7 @@ export default {
   pricing: {
     tape: 'PRECIOS',
     h2Html: 'ELIGE TU<br/><span class="accent">CARTUCHO.</span>',
-    lede: 'Tres formas de jugarlo. El Gratis es gratis de verdad — no una prueba de siete días. El Lifetime se paga una vez. El Pro es para grupos que respaldan juntos. Sin cobro por persona, sin costes sorpresa. Los precios definitivos se están ajustando — los publicaremos aquí antes del lanzamiento.',
+    lede: 'Tres formas de jugarlo. El Gratis es gratis de verdad — no una prueba de siete días. El Lifetime se paga una vez. El Pro es para grupos que respaldan juntos. Sin cobro por persona, sin costes sorpresa, sin letra pequeña.',
     badge: '★ EL MÁS ELEGIDO',
     cards: [
       {
@@ -178,10 +177,10 @@ export default {
         tagline: 'suficiente para Stardew, Hollow Knight o toda una biblioteca retro',
         features: [
           'espacio personal + 1 equipo',
+          'únete a hasta 3 equipos de amigos',
           '20 MiB de almacenamiento por espacio',
           'auto-backup + historial completo de versiones',
           'bloqueos co-op + bitácora incluidos',
-          'únete a tantos equipos de amigos como quieras',
         ],
         cta: 'CONSEGUIR GRATIS',
       },
@@ -190,6 +189,7 @@ export default {
         tagline: 'paga una vez — tus partidas sobrevivirán a tu GPU',
         features: [
           'espacio personal + hasta 3 equipos',
+          'únete a hasta 5 equipos de amigos',
           '1 GiB de almacenamiento por espacio',
           'compra directa o en Steam',
           'nunca una suscripción',
@@ -202,6 +202,7 @@ export default {
         tagline: 'para grupos, streamers, equipos de mods',
         features: [
           'espacio personal + hasta 5 equipos',
+          'únete a hasta 8 equipos de amigos',
           '5 GiB de almacenamiento por espacio',
           '25 plazas por equipo (mínimo garantizado)',
           '100 versiones / 90 días guardados (mínimo garantizado)',
@@ -211,15 +212,14 @@ export default {
         cta: 'CONSEGUIR PRO',
       },
     ],
-    tbc: 'POR DEF.',
   },
 
   download: {
-    headlineSoonHtml: 'PRONTO DISPONIBLE.<br/>LOS BUILDS<br/><span class="invert">LLEGAN AQUÍ.</span>',
-    headlineLiveHtml: 'EL PRIMER BUILD<br/>YA ESTÁ FUERA.<br/><span class="invert">LLÉVATELO.</span>',
-    blurbSoon: 'Aún probamos en privado. Los builds para Windows, Mac y Linux llegan aquí en cuanto estén listos.',
+    headlineSoonHtml: 'CHECKPOINT64 v1.0<br/>YA ESTÁ FUERA.<br/><span class="invert">LLÉVATELO.</span>',
+    headlineLiveHtml: 'CHECKPOINT64 v1.0<br/>YA ESTÁ FUERA.<br/><span class="invert">LLÉVATELO.</span>',
+    blurbSoon: 'Descarga gratis, plan gratis incluido. Llévatelo en Steam, o baja el último instalador directamente desde GitHub.',
     blurbLive: 'Descarga gratis, plan gratis incluido. Los builds se publican directamente desde GitHub — estos botones siempre apuntan al último instalador.',
-    signoffSoon: 'gratis para probar el día del lanzamiento',
+    signoffSoon: 'gratis para probar — el plan gratis es real',
     signoffLiveTpl: 'notas de versión y builds antiguos: <a href="{0}">en GitHub</a>',
     comingSoon: 'pronto',
     tileAriaLiveTpl: 'Descargar Checkpoint64 para {0} ({1})',
@@ -230,13 +230,13 @@ export default {
     tape: 'FAQ',
     h2Html: 'PREGUNTAS <span class="accent">FRECUENTES.</span>',
     items: [
-      { q: '¿QUÉ CUENTA COMO «PARTIDA»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 60+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
+      { q: '¿QUÉ CUENTA COMO «PARTIDA»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 75+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
       { q: '¿SUBÍS MIENTRAS EL JUEGO ESTÁ ABIERTO?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 30 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
       { q: '¿Y SI MI COMPAÑERO DE CO-OP SOBRESCRIBE MI SUBIDA?', a: 'No puede, a propósito. Solo quien tiene el bloqueo puede subir. Para empujar su versión tiene que tomar el bloqueo primero — lo que te avisa, y queda en la bitácora a la vista de todos. En el peor de los casos, tu versión está a un Restaurar de distancia en el historial.' },
       { q: '¿SIGO NECESITANDO UN SERVIDOR DEDICADO?', a: 'Para la mayoría de los grupos, no. Todo el sentido de un servidor dedicado es mantener tu mundo en línea cuando el PC del anfitrión está apagado. Checkpoint64 cubre alrededor del 90 % de eso por una tarifa única: quien quiera jugar toma el bloqueo, juega su sesión y devuelve la partida. Un grupo de co-op típico ahorra {0} frente a alquilar un servidor 24/7 que está parado 18 horas al día.' },
       { q: '¿FUNCIONA CON EMULADORES O PARTIDAS DE CONSOLA?', a: 'Con emuladores, totalmente — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 y Cemu tienen preajuste, así que tus save states por fin tienen historial de versiones de verdad. Las partidas de consola solo funcionan si primero las llevas a un PC. La app corre en Windows, macOS (Apple Silicon) y Linux.' },
-      { q: '¿CUÁNTO CUESTA?', a: 'El plan gratis es real y seguirá siendo gratis: 20 MiB, tu propio espacio más un equipo. El Lifetime es un pago único — 1 GiB por espacio, hasta 3 equipos, comprado directo o vía Steam. El Pro es para grupos grandes: 5 GiB por espacio, 5 equipos, 25 plazas cada uno, códigos de acceso de solo lectura. Sin cobro por persona en ningún plan. Las cifras definitivas llegan con la v1.' },
-      { q: '¿PUEDO USARLO HOY?', a: 'Sí — el primer build se puede descargar gratis ahora mismo para Windows, macOS (Apple Silicon) y Linux. La v1 y el lanzamiento en Steam llegan más adelante este año.' },
+      { q: '¿CUÁNTO CUESTA?', a: 'El plan gratis es real y seguirá siendo gratis: 20 MiB, tu propio espacio más un equipo. El Lifetime es un pago único — 1 GiB por espacio, hasta 3 equipos, comprado directo o vía Steam. El Pro es para grupos grandes: 5 GiB por espacio, 5 equipos, 25 plazas cada uno, códigos de acceso de solo lectura. Sin cobro por persona en ningún plan.' },
+      { q: '¿PUEDO USARLO HOY?', a: 'Sí — la v1.0 ya está fuera. Descarga gratis para Windows, macOS (Apple Silicon) y Linux, y también está en Steam.' },
       { q: '¿QUIÉN PUEDE VER MIS PARTIDAS?', a: 'Tus compañeros de equipo — y solo los que tú invites. Ven tu nombre visible, nunca tu correo. Y tus datos son tuyos: exporta todo en un zip cuando quieras, y borrar tu cuenta la borra de verdad (tras 7 días de margen, por si el arrepentimiento de las 2 de la mañana ataca).' },
     ],
   },
@@ -270,25 +270,25 @@ export default {
   meta: {
     skipLink: 'Saltar al contenido',
     title: 'Checkpoint64 — Nunca más pierdas una partida, en solitario o en co-op',
-    description: 'Backup automático en la nube e historial completo de versiones para partidas de PC. Restaura partidas corruptas y comparte mundos de co-op con bloqueos. Funciona con Minecraft, Stardew Valley, Elden Ring y 60+ juegos. Descarga gratis para Windows, Mac, Linux.',
+    description: 'Backup automático en la nube e historial completo de versiones para partidas de PC. Restaura partidas corruptas y comparte mundos de co-op con bloqueos. Funciona con Minecraft, Stardew Valley, Elden Ring y 75+ juegos. Descarga gratis para Windows, Mac, Linux.',
     ogTitle: 'Checkpoint64 — Nunca más pierdas una partida, en solitario o en co-op',
-    ogDescription: 'Nunca más pierdas una partida. Backups automáticos, historial completo de versiones y bloqueos co-op para que los amigos compartan mundos sin sobrescribirse. 60+ juegos listos. Descarga gratis — paga una vez por más espacio.',
+    ogDescription: 'Nunca más pierdas una partida. Backups automáticos, historial completo de versiones y bloqueos co-op para que los amigos compartan mundos sin sobrescribirse. 75+ juegos listos. Descarga gratis — paga una vez por más espacio.',
     ogImageAlt: 'Checkpoint64 — nunca más pierdas una partida. Una estantería retro de cartuchos de partidas.',
     twitterTitle: 'Checkpoint64 — Nunca más pierdas una partida, en solitario o en co-op',
-    twitterDescription: 'Nunca más pierdas una partida. Backups automáticos en la nube, historial completo de versiones, bloqueos co-op. 60+ juegos listos. Descarga gratis para Windows, Mac, Linux.',
+    twitterDescription: 'Nunca más pierdas una partida. Backups automáticos en la nube, historial completo de versiones, bloqueos co-op. 75+ juegos listos. Descarga gratis para Windows, Mac, Linux.',
     twitterImageAlt: 'Checkpoint64 — nunca más pierdas una partida.',
     noscriptHtml: 'Aviso — JavaScript está desactivado, así que la demo animada de esta página no funcionará. El resto del contenido se ve por completo arriba.',
   },
 
   jsonld: {
     orgDescription: 'Checkpoint64 crea una herramienta de backup de partidas para jugadores de PC — backups automáticos en la nube, historial completo de versiones y bloqueos co-op para que los amigos compartan mundos sin sobrescribirse.',
-    softwareDescription: 'Backup automático en la nube, historial completo de versiones y bloqueos co-op para partidas de PC. Plan gratis incluido; paga una vez por más espacio. Funciona de fábrica con Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, más 60+ juegos y 7 emuladores.',
+    softwareDescription: 'Backup automático en la nube, historial completo de versiones y bloqueos co-op para partidas de PC. Plan gratis incluido; paga una vez por más espacio. Funciona de fábrica con Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, más 75+ juegos y 7 emuladores.',
     featureList: [
       'Backups automáticos en segundo plano cada 30 segundos',
       'Historial completo de versiones con restauración en un clic',
       'Bloqueos co-op aplicados en el servidor — un solo portador del mundo a la vez',
       'Subidas deduplicadas — solo se envían los archivos que cambiaron',
-      'Preajustes para 60+ juegos y 7 emuladores',
+      'Preajustes para 75+ juegos y 7 emuladores',
       'Bitácora de actividad compartida para equipos',
       'Códigos de acceso de solo lectura para mundos comunitarios',
       'Plan Lifetime de pago único — sin suscripción',
@@ -306,13 +306,13 @@ export default {
       { name: 'Restaura cualquier versión anterior', text: 'Abre Versiones en cualquier partida para ver el historial completo. Elige una y pulsa Restaurar para volver atrás al instante — los archivos vuelven al disco y esa versión pasa a ser la actual.' },
     ],
     faq: [
-      { q: '¿Qué cuenta como «partida»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 60+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
+      { q: '¿Qué cuenta como «partida»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 75+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
       { q: '¿Subís mientras el juego está abierto?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 30 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
       { q: '¿Y si mi compañero de co-op sobrescribe mi subida?', a: 'No puede, a propósito. Solo quien tiene el bloqueo puede subir. Para empujar su versión tiene que tomar el bloqueo primero — lo que te avisa, y queda en la bitácora a la vista de todos. En el peor de los casos, tu versión está a un Restaurar de distancia en el historial.' },
       { q: '¿Sigo necesitando un servidor dedicado?', a: 'Para la mayoría de los grupos, no. Todo el sentido de un servidor dedicado es mantener tu mundo en línea cuando el PC del anfitrión está apagado. Checkpoint64 cubre alrededor del 90 % de eso por una tarifa única: quien quiera jugar toma el bloqueo, juega su sesión y devuelve la partida. Un grupo de co-op típico ahorra {0} frente a alquilar un servidor 24/7 que está parado 18 horas al día.' },
       { q: '¿Funciona con emuladores o partidas de consola?', a: 'Con emuladores, totalmente — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 y Cemu tienen preajuste, así que tus save states por fin tienen historial de versiones de verdad. Las partidas de consola solo funcionan si primero las llevas a un PC. La app corre en Windows, macOS (Apple Silicon) y Linux.' },
-      { q: '¿Cuánto cuesta?', a: 'El plan gratis es real y seguirá siendo gratis: 20 MiB, tu propio espacio más un equipo. El Lifetime es un pago único — 1 GiB por espacio, hasta 3 equipos, comprado directo o vía Steam. El Pro es para grupos grandes: 5 GiB por espacio, 5 equipos, 25 plazas cada uno, códigos de acceso de solo lectura. Sin cobro por persona en ningún plan. Las cifras definitivas llegan con la v1.' },
-      { q: '¿Puedo usarlo hoy?', a: 'Sí — el primer build se puede descargar gratis ahora mismo para Windows, macOS (Apple Silicon) y Linux. La v1 y el lanzamiento en Steam llegan más adelante este año.' },
+      { q: '¿Cuánto cuesta?', a: 'El plan gratis es real y seguirá siendo gratis: 20 MiB, tu propio espacio más un equipo. El Lifetime es un pago único — 1 GiB por espacio, hasta 3 equipos, comprado directo o vía Steam. El Pro es para grupos grandes: 5 GiB por espacio, 5 equipos, 25 plazas cada uno, códigos de acceso de solo lectura. Sin cobro por persona en ningún plan.' },
+      { q: '¿Puedo usarlo hoy?', a: 'Sí — la v1.0 ya está fuera. Descarga gratis para Windows, macOS (Apple Silicon) y Linux, y también está en Steam.' },
       { q: '¿Quién puede ver mis partidas?', a: 'Tus compañeros de equipo — y solo los que tú invites. Ven tu nombre visible, nunca tu correo. Y tus datos son tuyos: exporta todo en un zip cuando quieras, y borrar tu cuenta la borra de verdad (tras 7 días de margen).' },
     ],
   },

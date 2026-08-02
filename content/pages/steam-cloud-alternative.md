@@ -9,7 +9,7 @@ faq:
   - q: "Why did Steam Cloud overwrite or delete my save?"
     a: "Usually a sync conflict. If you play on two PCs, or Steam thinks the cloud copy is newer than your local one, it can pull the cloud version down over your local progress. Steam only tracks the most recent state, so the older save is simply gone. Checkpoint64 never discards an old version — it stacks them."
   - q: "Does Steam Cloud work for every game?"
-    a: "No. Steam Cloud is opt-in per game — the developer has to implement it, and many games either skip it or only sync some of their files. Checkpoint64 works with any game that writes its save to a folder on disk, Steam or not, with presets for 60+ games and 7 emulators out of the box."
+    a: "No. Steam Cloud is opt-in per game — the developer has to implement it, and many games either skip it or only sync some of their files. Checkpoint64 works with any game that writes its save to a folder on disk, Steam or not, with presets for 75+ games and 7 emulators out of the box."
   - q: "Can I use Steam Cloud and Checkpoint64 together?"
     a: "Yes, and it's a reasonable setup. Leave Steam Cloud on for quick device-to-device syncing, and run Checkpoint64 alongside it for the version history and rollback Steam Cloud doesn't provide. They don't conflict — Checkpoint64 only reads your save folder and uploads snapshots."
 ---
@@ -26,7 +26,7 @@ Checkpoint64 keeps every upload as a labelled version. Open **Versions** on any 
 
 No. Steam Cloud is opt-in per game: each developer has to build it in, and plenty don't — or only sync part of their save data. That's why your progress in one game rides along fine and another game loses everything.
 
-Checkpoint64 doesn't depend on the developer. If a game writes its save to a folder — which is nearly all of them — Checkpoint64 can back it up. It ships with presets for 60+ games and 7 emulators, and you can point it at any folder it doesn't already know.
+Checkpoint64 doesn't depend on the developer. If a game writes its save to a folder — which is nearly all of them — Checkpoint64 can back it up. It ships with presets for 75+ games and 7 emulators, and you can point it at any folder it doesn't already know.
 
 ## Steam Cloud vs Checkpoint64
 
@@ -53,6 +53,6 @@ You need more the moment any of these is true:
 
 ## How to replace Steam Cloud with Checkpoint64
 
-1. **Install Checkpoint64 and pick your game.** Presets for 60+ games already know where the save folder is.
+1. **Install Checkpoint64 and pick your game.** Presets for 75+ games already know where the save folder is.
 2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version. Only the files that changed are sent, so it stays light.
 3. **Roll back whenever you need to.** Open Versions, choose a past save, and Restore. That's the button Steam Cloud never gave you.

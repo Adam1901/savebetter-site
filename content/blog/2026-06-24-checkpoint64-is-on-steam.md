@@ -48,7 +48,7 @@ the short version is that a copy of one file isn't a history of it.
 **Steam Cloud only covers Steam games that opted in.** A surprising number don't,
 and that's before you leave Steam at all. Checkpoint64 watches the *folder*, so
 it works across Steam, GOG, Epic, the Microsoft Store, emulators, and modded
-launchers the same way — presets for 60+ games and 7 emulators out of the box,
+launchers the same way — presets for 75+ games and 7 emulators out of the box,
 and "point it at any folder" for everything else. Your GOG copy of a game and
 your Steam copy land in the same logbook.
 

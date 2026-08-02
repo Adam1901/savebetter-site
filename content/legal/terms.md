@@ -26,7 +26,7 @@ You must not use the Service if you are prohibited from doing so under the laws 
 
 Checkpoint64 is a save-file backup tool for PC games. It takes snapshots of folders you point it at, uploads only the files that changed to cloud storage, and lets you roll back to earlier versions. It also lets small groups share a single live save through co-operative locks and a shared activity log.
 
-The Service is in pre-launch development. Today the Site is primarily a marketing page. The App and cloud service are being tested privately and will be made generally available at a later date. Features, pricing, storage quotas, and tier names may change before launch, and we may add, remove, or alter functionality at any time.
+Features, pricing, storage quotas, and tier names may change, and we may add, remove, or alter functionality at any time.
 
 ## 3. Accounts
 

@@ -86,7 +86,7 @@ export default {
       { tag: 'VERSION HISTORY', title: 'EVERY UPLOAD\nIS A VERSION.', body: 'Scroll through every backup with file count, size, and what changed since last time. Hit Restore and the files go back on disk, marked as current — no guessing, no “final_v2_REAL” folders.' },
       { tag: 'CO-OP LOCKS', title: 'ONE PERSON\nHOLDS THE WORLD.', body: 'Games like Factorio, Valheim, and Satisfactory have one live world at a time. Whoever holds the lock uploads; everyone else downloads. Holder gone quiet? Locks expire on their own, and you can take over — with a warning, and a logbook entry so everyone knows.' },
       { tag: 'ONLY WHAT CHANGED', title: 'TINY\nUPLOADS.', body: 'Only the files that changed get uploaded — renamed files cost nothing extra. A 500 MB Minecraft world re-uploads as a few MB after a normal session, not the whole thing. Easy on your internet, easy on your storage.' },
-      { tag: '60+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 60+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
+      { tag: '75+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 75+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
       { tag: 'SHARE CODES', title: 'ONE WORLD,\nWHOLE CROWD.', body: 'Running a community world? Mint a join code and anyone holding it can download your save — but never upload over it. Codes are capped and revocable, and read-only visitors don’t use up seats. (Pro)' },
       { tag: 'LOGBOOK', title: 'WHO DID WHAT,\nWHEN.', body: 'Every upload, restore, and lock-grab gets written down in your group’s logbook. Handy when your co-op partner blames you for the bad run.' },
     ],
@@ -125,21 +125,19 @@ export default {
 
   // Steam reviews social-proof strip. The score description (e.g.
   // "Overwhelmingly Positive") and the game name come straight from Steam and
-  // stay English across locales, like the app-mockup chrome. While Checkpoint64
-  // has no Steam page of its own, this previews the section with another game's
-  // reviews — placeholderTpl says so plainly.
+  // stay English across locales, like the app-mockup chrome. Reviews are
+  // Checkpoint64's own, pulled live from its store page (see src/lib/steam.js).
   steam: {
     tape: 'WHAT PLAYERS SAY',
     hand: 'live from Steam',
     h2Html: 'STRAIGHT FROM <span class="accent">STEAM.</span>',
-    lede: 'Checkpoint64’s Steam page is on the way. When it lands, real player reviews show up right here — pulled live from Steam. For now, here’s a preview using a game we love.',
+    lede: 'Real reviews from real players, pulled live from our Steam page.',
     countTpl: '{0} reviews',
     viewOnSteam: 'View on Steam',
     recommended: 'RECOMMENDED',
     hoursTpl: '{0} on record',
     helpfulTpl: '{0} found this helpful',
     anonymous: 'Steam player',
-    placeholderTpl: 'Preview only — while Checkpoint64’s own Steam page is being finalised, these are live reviews for {0}, shown to demo this section. Checkpoint64 is not affiliated with it.',
   },
 
   savings: {
@@ -176,7 +174,7 @@ export default {
   pricing: {
     tape: 'PRICING',
     h2Html: 'PICK YOUR<br/><span class="accent">CART.</span>',
-    lede: 'Three ways to play it. Free is actually free — not a seven-day trial. Lifetime is pay-once. Pro is for crews who save together. No charge per person, no surprise fees, no rip-cords. Final prices are still being dialled in — they’ll be posted here before launch.',
+    lede: 'Three ways to play it. Free is actually free — not a seven-day trial. Lifetime is pay-once. Pro is for crews who save together. No charge per person, no surprise fees, no rip-cords.',
     badge: '★ MOST CARTS',
     cards: [
       {
@@ -184,10 +182,10 @@ export default {
         tagline: 'big enough for Stardew, Hollow Knight, or a whole retro library',
         features: [
           'personal space + 1 team',
+          'join up to 3 friends’ teams',
           '20 MiB cloud storage per space',
           'auto-backup + full version history',
           'co-op locks + logbook included',
-          'join as many friends’ teams as you like',
         ],
         cta: 'GET FREE',
       },
@@ -196,6 +194,7 @@ export default {
         tagline: 'pay once — your saves outlive your GPU',
         features: [
           'personal space + up to 3 teams',
+          'join up to 5 friends’ teams',
           '1 GiB storage per space',
           'buy direct or on Steam',
           'no subscription, ever',
@@ -208,6 +207,7 @@ export default {
         tagline: 'for crews, streamers, modding groups',
         features: [
           'personal space + up to 5 teams',
+          'join up to 8 friends’ teams',
           '5 GiB storage per space',
           '25 seats per team (guaranteed minimum)',
           '100 versions / 90 days kept (guaranteed minimum)',
@@ -217,15 +217,14 @@ export default {
         cta: 'GET PRO',
       },
     ],
-    tbc: 'TBC',
   },
 
   download: {
-    headlineSoonHtml: 'SHIPPING SOON.<br/>BUILDS LAND<br/><span class="invert">HERE.</span>',
-    headlineLiveHtml: 'THE EARLY BUILD<br/>IS OUT.<br/><span class="invert">GRAB IT.</span>',
-    blurbSoon: 'We’re still testing in private. Builds for Windows, Mac, and Linux land right here the moment they’re ready.',
+    headlineSoonHtml: 'CHECKPOINT64 v1.0<br/>IS OUT.<br/><span class="invert">GRAB IT.</span>',
+    headlineLiveHtml: 'CHECKPOINT64 v1.0<br/>IS OUT.<br/><span class="invert">GRAB IT.</span>',
+    blurbSoon: 'Free download, free plan included. Grab it on Steam, or pull the latest installer straight from GitHub.',
     blurbLive: 'Free download, free plan included. Builds publish straight from GitHub — these buttons always point at the newest installer.',
-    signoffSoon: 'free to try the day it ships',
+    signoffSoon: 'free to try — the free plan is real',
     signoffLiveTpl: 'release notes & older builds: <a href="{0}">on GitHub</a>',
     comingSoon: 'coming soon',
     tileAriaLiveTpl: 'Download Checkpoint64 for {0} ({1})',
@@ -237,13 +236,13 @@ export default {
     h2Html: 'FREQUENTLY <span class="accent">CHECKED.</span>',
     // `a` values are raw HTML; item index 3 uses {0} for the savings figure.
     items: [
-      { q: "WHAT COUNTS AS A 'SAVE'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 60+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
+      { q: "WHAT COUNTS AS A 'SAVE'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 75+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
       { q: 'DO YOU UPLOAD WHILE THE GAME IS RUNNING?', a: 'Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won’t notice it while playing.' },
       { q: 'WHAT IF MY CO-OP PARTNER OVERWRITES MY UPLOAD?', a: 'They can’t, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history.' },
       { q: 'DO I STILL NEED A DEDICATED SERVER?', a: 'For most groups, no. The whole point of a dedicated server is keeping your world online when the host’s PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day.' },
       { q: 'DOES THIS WORK FOR EMULATORS OR CONSOLE SAVES?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
-      { q: 'WHAT DOES IT COST?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier. Final numbers land with v1.' },
-      { q: 'CAN I USE IT TODAY?', a: 'Yes — the early build is free to download right now for Windows, macOS (Apple Silicon), and Linux. v1 and the Steam release are coming later this year.' },
+      { q: 'WHAT DOES IT COST?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
+      { q: 'CAN I USE IT TODAY?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'WHO CAN SEE MY SAVES?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period, in case of 2am regret).' },
     ],
   },
@@ -277,25 +276,25 @@ export default {
   meta: {
     skipLink: 'Skip to content',
     title: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    description: 'Automatic cloud backup and full version history for PC game saves. Roll back corrupted saves and share co-op worlds with locks. Works with Minecraft, Stardew Valley, Elden Ring and 60+ games. Free download for Windows, Mac, Linux.',
+    description: 'Automatic cloud backup and full version history for PC game saves. Roll back corrupted saves and share co-op worlds with locks. Works with Minecraft, Stardew Valley, Elden Ring and 75+ games. Free download for Windows, Mac, Linux.',
     ogTitle: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    ogDescription: 'Never lose a save again. Automatic backups, full version history, and co-op locks so friends can share worlds without overwriting each other. 60+ games ready. Free download — pay once for more space.',
+    ogDescription: 'Never lose a save again. Automatic backups, full version history, and co-op locks so friends can share worlds without overwriting each other. 75+ games ready. Free download — pay once for more space.',
     ogImageAlt: 'Checkpoint64 — never lose a save again. A retro cartridge shelf of game saves.',
     twitterTitle: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    twitterDescription: 'Never lose a save again. Automatic cloud backups, full version history, co-op locks. 60+ games ready. Free download for Windows, Mac, Linux.',
+    twitterDescription: 'Never lose a save again. Automatic cloud backups, full version history, co-op locks. 75+ games ready. Free download for Windows, Mac, Linux.',
     twitterImageAlt: 'Checkpoint64 — never lose a save again.',
     noscriptHtml: 'Heads-up — JavaScript is disabled, so the animated demo on this page won’t work. The rest of the content is fully visible above.',
   },
 
   jsonld: {
     orgDescription: 'Checkpoint64 makes a save-file backup tool for PC gamers — automatic cloud backups, full version history, and co-op locks so friends can share worlds without overwriting each other.',
-    softwareDescription: 'Automatic cloud backup, full version history, and co-op locks for PC game saves. Free plan included; pay once for more space. Works with Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 60+ more games and 7 emulators out of the box.',
+    softwareDescription: 'Automatic cloud backup, full version history, and co-op locks for PC game saves. Free plan included; pay once for more space. Works with Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 75+ more games and 7 emulators out of the box.',
     featureList: [
       'Automatic background backups every 30 seconds',
       'Full version history with one-click restore',
       'Server-enforced co-op locks — one world holder at a time',
       'Deduplicated uploads — only the files that changed are sent',
-      'Presets for 60+ games and 7 emulators',
+      'Presets for 75+ games and 7 emulators',
       'Shared activity logbook for teams',
       'Read-only share codes for community worlds',
       'Pay-once Lifetime plan — no subscription required',
@@ -315,13 +314,13 @@ export default {
     // Plain-text FAQ for the FAQPage block. Mirrors the visible FAQ; index 3
     // takes the savings figure as {0}.
     faq: [
-      { q: "What counts as a 'save'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 60+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
+      { q: "What counts as a 'save'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 75+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
       { q: 'Do you upload while the game is running?', a: "Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won't notice it while playing." },
       { q: 'What if my co-op partner overwrites my upload?', a: "They can't, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history." },
       { q: 'Do I still need a dedicated server?', a: "For most groups, no. The whole point of a dedicated server is keeping your world online when the host's PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day." },
       { q: 'Does this work for emulators or console saves?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
-      { q: 'What does it cost?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier. Final numbers land with v1.' },
-      { q: 'Can I use it today?', a: 'Yes — the early build is free to download right now for Windows, macOS (Apple Silicon), and Linux. v1 and the Steam release are coming later this year.' },
+      { q: 'What does it cost?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
+      { q: 'Can I use it today?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'Who can see my saves?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period).' },
     ],
   },

@@ -115,5 +115,5 @@ it's the difference between a save that's *synced* and a save that's *safe*.
 
 ---
 
-[Get on the launch list](/#download) and we'll tell you the day Checkpoint64
-ships. One email, no follow-ups.
+[Download Checkpoint64](/#download) — it's free, and the free plan is real.
+No email list, no follow-ups.

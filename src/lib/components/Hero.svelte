@@ -18,7 +18,7 @@
       <div>
         <p class="eyebrow">
           <span class="dot" aria-hidden="true"></span>
-          EARLY BUILD · FREE · WIN · MAC · LINUX
+          OUT NOW · FREE · WIN · MAC · LINUX
         </p>
         <h1>{@html h.h1Html}</h1>
         <p class="sub">{h.sub}</p>

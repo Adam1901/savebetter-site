@@ -45,8 +45,6 @@
           </figure>
         {/each}
       </div>
-
-      <p class="steam-note">{fmt(s.placeholderTpl, steam.appName)}</p>
     </div>
   </section>
 {/if}

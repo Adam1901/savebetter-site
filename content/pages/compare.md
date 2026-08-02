@@ -43,7 +43,7 @@ Steam Cloud is automatic and free, but it's opt-in per game — plenty of titles
 | **Versioning** | Manual or scheduled runs | Automatic, every 30 seconds |
 | **Cloud storage** | Bring your own setup (e.g. Ludusavi + rclone) | Built in |
 | **Shared / co-op saves** | Single-user | Server-enforced locks — one holder at a time |
-| **Setup** | Configure per game | Presets for 60+ games, 7 emulators |
+| **Setup** | Configure per game | Presets for 75+ games, 7 emulators |
 
 ## Where each one still makes sense
 
@@ -58,6 +58,6 @@ Where all four run out of road at the same point: a save gets corrupted, overwri
 
 ## How Checkpoint64 covers the gap
 
-1. **Install it and point it at your save folder.** Presets for 60+ games and 7 emulators already know where to look.
+1. **Install it and point it at your save folder.** Presets for 75+ games and 7 emulators already know where to look.
 2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.
 3. **Roll back whenever something goes wrong.** Open Versions, pick a save from before the problem, and Restore.
