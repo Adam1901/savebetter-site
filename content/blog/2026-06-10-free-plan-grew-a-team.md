@@ -41,7 +41,7 @@ friction, not a trick — 20 MiB comfortably holds a Stardew farm, a Hollow
 Knight run, or a stack of emulator saves, and it will absolutely not hold your
 500 MB modded Minecraft world. When you hit the cap, you've outgrown the free
 plan and you'll know it. That's the moment Lifetime exists for: pay once, get
-2.5 GiB per space, never think about it again.
+1 GiB per space, never think about it again.
 
 Locks, version history, auto-backup, and the logbook were never plan-gated and
 still aren't. The free plan isn't a demo; it's the product, sized small.
