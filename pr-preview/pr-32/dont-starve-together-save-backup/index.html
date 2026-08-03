@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1oyyij7--><!---->  <title>How to Back Up Don&#39;t Starve Together Worlds (Solo or with a Group) — Checkpoint64</title>
+  <meta name="description" content="Don&#39;t Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you&#39;ve survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows, macOS, and Linux." />
+  <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../retro_save_icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/dont-starve-together-save-backup/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="How to Back Up Don&#39;t Starve Together Worlds (Solo or with a Group)" />
+  <meta property="og:description" content="Don&#39;t Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you&#39;ve survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows, macOS, and Linux." />
+  <meta property="og:url" content="https://checkpoint64.com/dont-starve-together-save-backup/" />
+  <meta property="og:image" content="https://checkpoint64.com/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Back Up Don&#39;t Starve Together Worlds (Solo or with a Group)" />
+  <meta name="twitter:description" content="Don&#39;t Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you&#39;ve survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows, macOS, and Linux." />
+  <meta name="twitter:image" content="https://checkpoint64.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Don't Starve Together save backup",
+        "item": "https://checkpoint64.com/dont-starve-together-save-backup/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where are Don't Starve Together worlds saved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On Windows that's Documents\\Klei\\DoNotStarveTogether, on macOS ~/Documents/Klei/DoNotStarveTogether, and on Linux ~/.klei/DoNotStarveTogether. Each world is a cluster folder with its own cluster.ini, plus separate Master and Caves shard folders if you're running both — a mix of .ini, session, and save-data files with no single obvious extension to filter on. Checkpoint64 backs up the whole cluster folder as-is."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does my save say 'server' when I'm playing alone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Don't Starve Together always runs as a client connecting to a server — even in solo play, the game quietly starts a local server for you to connect to. That's why a corrupted server save can happen even if nobody else was ever in your world; it's not really optional multiplayer infrastructure, it's how the game saves at all."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I recover a world after a crash corrupts the server save?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if it was being backed up. A crash or force-close mid-autosave is the most common way a DST cluster save ends up unreadable, especially with Caves running alongside the Master shard. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy cluster folder from before the crash — not regenerating the world and losing your base."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a group share one world without renting a dedicated server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Don't Starve Together is a single-world game — whoever hosts has the only live copy, which is exactly why people rent an always-on server for their group. Checkpoint64 covers most of that need without the rent: version history plus a lock so only one person's session saves over the world at a time. The dedicated server alternative guide covers the trade-off."
+        }
+      }
+    ]
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post guide-page">
+      <header class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../">Home</a> <span aria-hidden="true">/</span> <span>Don&#39;t Starve Together save backup</span>
+        </nav>
+        <h1 class="blog-post-title pixel">How to Back Up Don&#39;t Starve Together Worlds (Solo or with a Group)</h1>
+        <p class="blog-post-meta">Last updated <time datetime="2026-07-03">2026-07-03</time></p>
+      </header>
+      <div class="blog-post-body">
+<p><strong>Don&#39;t Starve Together quietly runs a server even when you&#39;re playing solo, and a crash mid-autosave is the most common way a world you&#39;ve survived hundreds of days in ends up corrupted.</strong> Checkpoint64 backs up the whole cluster folder automatically and keeps every version, so a bad save means restoring the last healthy one, not regenerating the world.</p>
+<h2>Where Don&#39;t Starve Together worlds live</h2>
+<ul>
+<li><strong>Windows</strong> — <code>Documents\Klei\DoNotStarveTogether</code></li>
+<li><strong>macOS</strong> — <code>~/Documents/Klei/DoNotStarveTogether</code></li>
+<li><strong>Linux</strong> — <code>~/.klei/DoNotStarveTogether</code></li>
+</ul>
+<p>Each world is a cluster folder holding a <code>cluster.ini</code>, plus a <code>Master</code> shard folder and — if you&#39;re running the underground too — a separate <code>Caves</code> shard folder. It&#39;s a mix of <code>.ini</code> files, session data, and save files with no single extension that covers everything, so Checkpoint64 backs up the whole cluster folder as-is rather than trying to filter it down.</p>
+<h2>Why it says &quot;server&quot; even when you&#39;re playing alone</h2>
+<p>DST doesn&#39;t really have a non-multiplayer mode — even solo, the game starts a local server in the background and connects you to it as a client. That&#39;s why a &quot;server save corrupted&quot; error can hit a world nobody else ever joined: the server isn&#39;t optional infrastructure for other players, it&#39;s how the game persists your world at all, and it fails the same way whether you&#39;re solo or in a group of six.</p>
+<h2>Recovering after a crash</h2>
+<p>A crash or a force-close mid-autosave is the most common way a DST save goes bad — especially with the Master and Caves shards trying to stay in sync. Klei&#39;s own fallback here is thin; if the write didn&#39;t finish cleanly, the cluster can come back corrupted with no built-in history to fall back on. Checkpoint64 keeps every version it uploaded, so recovering means restoring the cluster folder from before the crash, not starting the world over.</p>
+<h2>Hosting for a group without a rented server</h2>
+<p>DST has one live world at a time, and whoever&#39;s hosting holds the only current copy — which is exactly why groups rent an always-on server so the world doesn&#39;t depend on one person&#39;s PC being on. Checkpoint64 covers most of that need for a small group without the rent: full version history plus a lock so only one session saves over the world at a time. The <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> goes deeper on the trade-off.</p>
+<h2>How Checkpoint64 backs up Don&#39;t Starve Together</h2>
+<ol>
+<li><strong>Pick Don&#39;t Starve Together.</strong> The cluster folder is already known on all three platforms.</li>
+<li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed cluster and uploads a new version, sending only what changed.</li>
+<li><strong>Restore in one click.</strong> Open Versions, pick a healthy version from before the crash, and Restore.</li>
+</ol>
+
+      </div>
+        <section class="guide-faq" aria-label="Frequently asked questions">
+          <h2>Common questions</h2>
+          <details class="guide-faq-item" open>
+            <summary>Where are Don&#39;t Starve Together worlds saved?</summary>
+            <p>On Windows that&#39;s Documents\Klei\DoNotStarveTogether, on macOS ~/Documents/Klei/DoNotStarveTogether, and on Linux ~/.klei/DoNotStarveTogether. Each world is a cluster folder with its own cluster.ini, plus separate Master and Caves shard folders if you&#39;re running both — a mix of .ini, session, and save-data files with no single obvious extension to filter on. Checkpoint64 backs up the whole cluster folder as-is.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Why does my save say &#39;server&#39; when I&#39;m playing alone?</summary>
+            <p>Don&#39;t Starve Together always runs as a client connecting to a server — even in solo play, the game quietly starts a local server for you to connect to. That&#39;s why a corrupted server save can happen even if nobody else was ever in your world; it&#39;s not really optional multiplayer infrastructure, it&#39;s how the game saves at all.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Can I recover a world after a crash corrupts the server save?</summary>
+            <p>Yes, if it was being backed up. A crash or force-close mid-autosave is the most common way a DST cluster save ends up unreadable, especially with Caves running alongside the Master shard. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy cluster folder from before the crash — not regenerating the world and losing your base.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Can a group share one world without renting a dedicated server?</summary>
+            <p>Yes. Don&#39;t Starve Together is a single-world game — whoever hosts has the only live copy, which is exactly why people rent an always-on server for their group. Checkpoint64 covers most of that need without the rent: version history plus a lock so only one person&#39;s session saves over the world at a time. The dedicated server alternative guide covers the trade-off.</p>
+          </details>
+        </section>
+        <aside class="guide-cta">
+          <p class="guide-cta-title pixel">Never lose a save again</p>
+          <p>Automatic backups and full version history. Free download for Windows, macOS, and Linux.</p>
+          <a class="guide-cta-btn pixel" href="../#download">Download Checkpoint64 free</a>
+        </aside>
+        <nav class="guide-related" aria-label="Related guides">
+          <h2>More guides</h2>
+          <ul>
+          <li><a href="../compare/">Compare</a></li>
+          <li><a href="../steam-cloud-alternative/">Steam Cloud Alternative</a></li>
+          <li><a href="../dedicated-server-alternative/">Dedicated Server Alternative</a></li>
+          <li><a href="../modded-game-save-backup/">Modded Game Save Backup</a></li>
+          <li><a href="../emulator-save-backup/">Emulator Save Backup</a></li>
+          <li><a href="../games/">Supported games</a></li>
+          <li><a href="../skyrim-save-backup/">Skyrim save backup</a></li>
+          <li><a href="../minecraft-save-backup/">Minecraft save backup</a></li>
+          <li><a href="../satisfactory-save-backup/">Satisfactory save backup</a></li>
+          <li><a href="../valheim-save-backup/">Valheim save backup</a></li>
+          <li><a href="../stardew-save-backup/">Stardew Valley save backup</a></li>
+          <li><a href="../elden-ring-save-backup/">Elden Ring save backup</a></li>
+          <li><a href="../palworld-save-backup/">Palworld save backup</a></li>
+          <li><a href="../factorio-save-backup/">Factorio save backup</a></li>
+          <li><a href="../7-days-to-die-save-backup/">7 Days to Die save backup</a></li>
+          <li><a href="../sons-of-the-forest-save-backup/">Sons of the Forest save backup</a></li>
+          <li><a href="../enshrouded-save-backup/">Enshrouded save backup</a></li>
+          </ul>
+        </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>

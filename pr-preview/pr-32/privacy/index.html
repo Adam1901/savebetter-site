@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1nwyq6--><!---->  <title>Privacy Policy — Checkpoint64</title>
+  <meta name="description" content="What personal data Checkpoint64 collects, why we collect it, who we share it with, and the rights you have over it under the UK GDPR and applicable data-protection laws." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="../retro_save_icon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../blog.css" /><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../">CHECKPOINT64</a>
+      <a class="blog-allposts" href="../blog/">Logbook →</a>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post">
+      <header class="blog-post-header">
+        <p class="blog-post-meta">Last updated <time datetime="2026-06-13">2026-06-13</time></p>
+      </header>
+      <div class="blog-post-body">
+<h1>Privacy Policy</h1>
+<p><strong>Last updated:</strong> 13 June 2026</p>
+<p>This Privacy Policy explains what personal data <strong>Checkpoint64 Ltd</strong> (&quot;<strong>Checkpoint64</strong>&quot;, &quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot;, &quot;<strong>our</strong>&quot;) collects when you use the website at <a href="https://checkpoint64.com/">checkpoint64.com</a>, install the Checkpoint64 desktop app, or use the Checkpoint64 cloud backup service (together, the &quot;<strong>Service</strong>&quot;), why we collect it, who we share it with, and the rights you have over it.</p>
+<p>We are the <strong>data controller</strong> for the personal data described below. We are based in the United Kingdom and process personal data in line with the <strong>UK GDPR</strong> and the <strong>Data Protection Act 2018</strong>. If you are in the EEA, the <strong>EU GDPR</strong> applies on equivalent terms.</p>
+<h2>1. The short version</h2>
+<ul>
+<li>We collect the <strong>minimum we need</strong> to run the Service: your email and account details, the save files you ask us to back up, and basic technical information to keep the Service running and secure.</li>
+<li>We <strong>never sell your data</strong>, and we <strong>never look inside your save files</strong> for advertising or training.</li>
+<li>We use a small number of <strong>trusted third-party processors</strong> to host the Service, send transactional email, process payments, and measure how the website is used. They are listed in Section 8.</li>
+<li>You have <strong>strong rights</strong> over your data, including the right to access, correct, export, and delete it. Section 11 explains how to exercise them.</li>
+</ul>
+<p>The rest of this page is the long version.</p>
+<h2>2. The data we collect</h2>
+<h3>2.1 When you create an account or use the Service</h3>
+<p>If and when you register for an account, we collect:</p>
+<ul>
+<li>your <strong>email address</strong> and a <strong>display name</strong>,</li>
+<li>a <strong>BCrypt hash of your password</strong> (we never store your password in plaintext, and only the hash leaves your browser in encrypted form over TLS),</li>
+<li>whether your email is <strong>verified</strong>,</li>
+<li>if you sign in with <strong>Google</strong> or <strong>GitHub</strong>, the <strong>OAuth identifier</strong> that provider returns to us and the email address that provider provides,</li>
+<li>if you activate via <strong>Steam</strong>, your <strong>Steam ID</strong> and the fact that activation came from Steam,</li>
+<li>if you pay through <strong>Stripe</strong>, your <strong>Stripe customer ID</strong> (we do not see or store your full card details — Stripe holds them), and</li>
+<li>access and <strong>refresh tokens</strong> we issue to keep you signed in. Refresh tokens are stored in your operating system&#39;s secure credential store (Windows Credential Manager, macOS Keychain, or Secret Service on Linux) by the desktop app, not in the browser.</li>
+</ul>
+<h3>2.2 The content you back up (&quot;Your Content&quot;)</h3>
+<p>When you use the Service to back up game saves, we receive and store:</p>
+<ul>
+<li>the <strong>save files</strong> you choose to back up, transmitted over TLS, deduplicated, and stored as content-addressed blobs in <strong>AWS S3</strong>,</li>
+<li><strong>manifests</strong> that describe how those blobs reconstruct your save folder, including file paths, sizes, hashes, and timestamps,</li>
+<li>the <strong>game catalogue entries</strong> you&#39;ve added to your account, and any per-save settings, slot labels, and notes you create,</li>
+<li>in team / co-op contexts, <strong>lock state</strong> (who currently has the editing lock on a save) and the <strong>activity log</strong> of uploads, restores, lock grabs and releases, including which user did what and when.</li>
+</ul>
+<p>Your Content stays yours — see Section 4 of the <a href="/terms/">Terms</a>.</p>
+<h3>2.3 Technical and security data</h3>
+<p>To operate and protect the Service we also collect or generate:</p>
+<ul>
+<li><strong>server logs</strong> containing request paths, status codes, timestamps, user IDs (where authenticated), and IP addresses;</li>
+<li><strong>rate-limiting counters</strong> keyed by user and namespace;</li>
+<li><strong>error reports</strong> and crash diagnostics from the App and backend;</li>
+<li><strong>device and app diagnostics</strong> such as App version, operating system, and architecture, used to deliver the right binary updates;</li>
+<li><strong>usage counters</strong> such as your storage consumption and the number of teams or saves on your account, used to enforce plan limits.</li>
+</ul>
+<h3>2.4 Analytics on the marketing website</h3>
+<p>The marketing website at checkpoint64.com uses <strong>Google Analytics 4</strong> and <strong>Microsoft Clarity</strong> to understand how visitors arrive at the Site and which sections they look at. These tools may set cookies and may receive your <strong>IP address</strong> (truncated for GA4), <strong>user-agent</strong>, <strong>referrer</strong>, <strong>screen size</strong>, <strong>device type</strong>, <strong>interaction events</strong> (clicks, scrolls), and, in the case of Clarity, <strong>anonymised session replays</strong> and <strong>heatmaps</strong> of pages on the Site. We do not enable Google Analytics features that allow Google to use your data for its own advertising purposes.</p>
+<p>The Site also loads <strong>Google Fonts</strong>, which means Google receives the IP address of your browser when your browser fetches a font. We use <strong>Bing Webmaster verification</strong> and <strong>Google Search Console</strong> for SEO; neither sets tracking cookies just by virtue of the verification meta tag.</p>
+<h3>2.5 Analytics in the desktop app</h3>
+<p>When the App is generally available, it may send a small amount of pseudonymous product-analytics data — for example, &quot;the user opened the Versions panel&quot; or &quot;an auto-backup completed in N seconds&quot; — to <strong>Aptabase</strong> to help us improve the App. This data is not tied to your account and does not include the contents of Your Content. You will be able to disable this from the App&#39;s settings.</p>
+<h3>2.6 Information you give us when you contact us</h3>
+<p>If you email us, fill in a support form, or reach out via Discord, we receive whatever you choose to send us, including your <strong>contact details</strong> and the <strong>content of your message</strong>.</p>
+<h2>3. Why we use your data, and the lawful basis</h2>
+<table>
+<thead>
+<tr>
+<th>What we use it for</th>
+<th>Lawful basis under the UK/EU GDPR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Creating your account and operating the Service: authentication, backing up and restoring saves, enforcing per-namespace access, billing, team and lock features</td>
+<td><strong>Contract</strong> (Art. 6(1)(b)) — necessary to provide the Service you signed up for.</td>
+</tr>
+<tr>
+<td>Sending transactional emails: account verification, password reset, invoice receipts, security alerts, important Service notices</td>
+<td><strong>Contract</strong> (Art. 6(1)(b)) and <strong>legal obligation</strong> (Art. 6(1)(c)) for invoices/tax records.</td>
+</tr>
+<tr>
+<td>Keeping the Service secure: server logs, rate limiting, abuse detection, security review</td>
+<td><strong>Legitimate interests</strong> (Art. 6(1)(f)) — protecting the Service and our users; we have weighed this against your rights and consider the impact minimal.</td>
+</tr>
+<tr>
+<td>Improving the App and Service: aggregated product analytics, crash reports</td>
+<td><strong>Legitimate interests</strong> (Art. 6(1)(f)), or <strong>consent</strong> where required (e.g. cookie-based analytics on the marketing site).</td>
+</tr>
+<tr>
+<td>Complying with our legal obligations (e.g. responding to lawful requests, retaining accounting records)</td>
+<td><strong>Legal obligation</strong> (Art. 6(1)(c)).</td>
+</tr>
+<tr>
+<td>Defending or pursuing legal claims</td>
+<td><strong>Legitimate interests</strong> (Art. 6(1)(f)).</td>
+</tr>
+</tbody></table>
+<p>We do not use Your Content (the actual save files and manifests) for any purpose other than providing the backup, restore, sharing, and quota-enforcement features you use the Service for. We do not train machine-learning models on Your Content, and we do not sell or share Your Content with advertisers.</p>
+<h2>4. Cookies and similar technologies</h2>
+<p>The Service uses cookies and similar technologies (such as local storage) for a few specific purposes:</p>
+<ul>
+<li><strong>Strictly necessary</strong> — keeping you signed in, remembering your CSRF protections, enforcing rate-limit cooldowns. These do not require consent.</li>
+<li><strong>Analytics</strong> — Google Analytics 4 and Microsoft Clarity, as described in Section 2.4. Where required by your local law (for example, under PECR in the UK or national implementations of the ePrivacy Directive in the EEA), we will ask for your consent before these load.</li>
+<li><strong>Third-party content</strong> — Google Fonts is loaded directly from Google&#39;s servers; Google may set its own cookies for that domain.</li>
+</ul>
+<p>You can control cookies through your browser&#39;s settings, and you can opt out of Google Analytics across the web by installing Google&#39;s <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>. Disabling analytics or strictly-necessary cookies may degrade your experience or prevent you from using parts of the Service.</p>
+<h2>5. Who we share data with</h2>
+<p>We do not sell your personal data. We share the minimum necessary data with the following categories of recipient:</p>
+<ul>
+<li><strong>Our service providers / processors</strong> — see Section 8 for the current list. Each is bound by a contract that limits their use of the data to providing services to us.</li>
+<li><strong>Payment providers (Stripe, Steam/Valve)</strong> — to process payments you make.</li>
+<li><strong>OAuth identity providers (Google, GitHub)</strong> — only if you choose to sign in with them, and only the OAuth handshake itself.</li>
+<li><strong>Game-platform partners (Steam)</strong> — for activation flows you initiate.</li>
+<li><strong>Authorities, courts, and other parties where legally required</strong> — for example, in response to a valid court order, a regulatory request, or to comply with a legal obligation. We will challenge requests we believe to be overbroad or unlawful.</li>
+<li><strong>A successor entity</strong> — if Checkpoint64 is involved in a merger, acquisition, restructuring, or sale of assets, your data may be transferred to the successor, subject to the same protections set out in this policy.</li>
+</ul>
+<p>We do not currently engage in any <strong>advertising-related sharing</strong>, and we do not participate in real-time bidding or ad-tech data exchanges.</p>
+<h2>6. International transfers</h2>
+<p>Some of our processors are based outside the United Kingdom or the EEA — in particular in the <strong>United States</strong>. When we transfer personal data to a country that the UK or EU has not deemed to provide an adequate level of protection, we put appropriate safeguards in place, typically the <strong>Standard Contractual Clauses</strong> issued by the European Commission and the UK International Data Transfer Addendum, plus any supplementary technical and organisational measures (such as encryption in transit and at rest).</p>
+<p>You can ask us for a copy of the safeguards that apply to a specific transfer by emailing <a href="mailto:privacy@checkpoint64.com">privacy@checkpoint64.com</a>.</p>
+<h2>7. Where your data is stored</h2>
+<p>The backend that runs Checkpoint64 is hosted in the <strong>United Kingdom (London region)</strong>. Save-file blobs are stored in <strong>AWS S3</strong> in the region(s) configured for the bucket. Database storage (MongoDB) and operational logs live in the region of our hosting provider. Some processors (e.g. Stripe, Resend, Google) will store data in the United States and elsewhere, as described in their own privacy policies.</p>
+<h2>8. The processors we use</h2>
+<table>
+<thead>
+<tr>
+<th>Processor</th>
+<th>What it does</th>
+<th>Where it processes data</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fly.io</strong></td>
+<td>Hosts the backend API and TLS termination</td>
+<td>UK + global edge</td>
+</tr>
+<tr>
+<td><strong>Amazon Web Services (S3)</strong></td>
+<td>Stores save-file blobs (content-addressed, encrypted at rest)</td>
+<td>EU / global, per bucket config</td>
+</tr>
+<tr>
+<td><strong>MongoDB</strong></td>
+<td>Stores account, manifest, namespace, and activity data</td>
+<td>EU / UK</td>
+</tr>
+<tr>
+<td><strong>Stripe</strong></td>
+<td>Processes payments and stores customer + payment records</td>
+<td>US + EU</td>
+</tr>
+<tr>
+<td><strong>Steam / Valve</strong></td>
+<td>Processes Steam-based activations and payments</td>
+<td>US</td>
+</tr>
+<tr>
+<td><strong>Resend</strong></td>
+<td>Sends transactional emails (verification, password reset, receipts)</td>
+<td>US</td>
+</tr>
+<tr>
+<td><strong>Google (Sign-in / OAuth)</strong></td>
+<td>Optional sign-in provider</td>
+<td>US</td>
+</tr>
+<tr>
+<td><strong>GitHub (OAuth)</strong></td>
+<td>Optional sign-in provider</td>
+<td>US</td>
+</tr>
+<tr>
+<td><strong>Google Analytics 4</strong></td>
+<td>Marketing-site analytics</td>
+<td>US (with IP truncation)</td>
+</tr>
+<tr>
+<td><strong>Microsoft Clarity</strong></td>
+<td>Marketing-site session replay + heatmaps</td>
+<td>US / global</td>
+</tr>
+<tr>
+<td><strong>Google Fonts</strong></td>
+<td>Serves the fonts on the marketing site</td>
+<td>US / global</td>
+</tr>
+<tr>
+<td><strong>Aptabase</strong></td>
+<td>Pseudonymous desktop-app product analytics</td>
+<td>EU</td>
+</tr>
+<tr>
+<td><strong>Cloudflare / GitHub Pages</strong></td>
+<td>Hosts and caches the marketing site</td>
+<td>Global edge</td>
+</tr>
+</tbody></table>
+<p>This list may change as we add or replace providers. We will update this page when it does.</p>
+<h2>9. How long we keep your data</h2>
+<p>We keep your data only for as long as we need it for the purposes set out in this policy:</p>
+<ul>
+<li><strong>Account data</strong> — for as long as your account is active, and for up to <strong>180 days after closure</strong> so we can recover it if you change your mind. After that we delete or anonymise it, except where we need to retain it for legal reasons (e.g. tax records for up to 7 years).</li>
+<li><strong>Your Content (save files and manifests)</strong> — for as long as your account exists and you keep them. Deleted versions may persist in our content-addressed store and in backups for up to <strong>30 days</strong> before being permanently removed.</li>
+<li><strong>Server logs and rate-limit data</strong> — typically <strong>30–90 days</strong>, longer where we need a record for security investigation.</li>
+<li><strong>Activity logs (per-namespace)</strong> — for as long as the namespace exists, so co-op groups have a complete history.</li>
+<li><strong>Billing records</strong> — for <strong>7 years</strong> after the relevant transaction, to meet UK accounting and tax obligations.</li>
+<li><strong>Support correspondence</strong> — for <strong>2 years</strong> after the issue is closed.</li>
+</ul>
+<p>When we no longer need data, we delete it or irreversibly anonymise it.</p>
+<h2>10. How we protect your data</h2>
+<p>We take security seriously and apply industry-standard technical and organisational measures, including:</p>
+<ul>
+<li><strong>TLS</strong> for all data in transit between you, our backend, and our processors,</li>
+<li><strong>BCrypt</strong> for password hashing, with no plaintext storage,</li>
+<li><strong>JWT</strong> access tokens with short lifetimes and rotating refresh tokens stored in your operating system&#39;s secure credential store (not in browser local storage),</li>
+<li><strong>encryption at rest</strong> for save-file blobs in AWS S3,</li>
+<li><strong>rate-limiting</strong>, abuse detection, and CSP / HTTP security headers,</li>
+<li><strong>principle of least privilege</strong> on internal access to systems and data,</li>
+<li>regular <strong>security review</strong> (see our internal security review for the App, backend, and infrastructure), and</li>
+<li><strong>strict separation</strong> between the backend (which is the only component with cloud-storage credentials) and the desktop client.</li>
+</ul>
+<p>No system is perfectly secure, and you also have a part to play — see our <a href="/terms/">Terms</a> about keeping your password and tokens safe.</p>
+<h2>11. Your rights</h2>
+<p>If you are in the UK or EEA, you have the following rights over the personal data we hold about you:</p>
+<ul>
+<li><strong>Right of access</strong> — get a copy of the personal data we hold about you.</li>
+<li><strong>Right to rectification</strong> — correct inaccurate or incomplete data.</li>
+<li><strong>Right to erasure</strong> (&quot;right to be forgotten&quot;) — ask us to delete your data, subject to limited exceptions.</li>
+<li><strong>Right to restriction</strong> — ask us to limit how we use your data while a question is being resolved.</li>
+<li><strong>Right to data portability</strong> — get a machine-readable copy of data you provided to us, and ask us to transfer it to another provider where technically feasible.</li>
+<li><strong>Right to object</strong> — object to processing we carry out on the basis of legitimate interests, including any direct marketing.</li>
+<li><strong>Right to withdraw consent</strong> — where we rely on your consent, you can withdraw it at any time (without affecting the lawfulness of processing before withdrawal).</li>
+<li><strong>Right not to be subject to automated decision-making</strong> — we do not currently make any decisions about you using solely automated means that produce legal or similarly significant effects.</li>
+</ul>
+<p>To exercise any of these rights, email <a href="mailto:privacy@checkpoint64.com">privacy@checkpoint64.com</a>. We will respond within <strong>one month</strong> (extendable by two further months for complex requests, in which case we will tell you within the first month). We may need to verify your identity before acting on a request.</p>
+<p>You also have the right to <strong>complain to a data-protection authority</strong>. In the UK, that is the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner&#39;s Office (ICO)</a>. In the EEA, you can complain to the supervisory authority in the member state where you live, work, or where the alleged infringement took place. We would, of course, prefer the chance to fix things first.</p>
+<h2>12. Children</h2>
+<p>The Service is not directed to children. We do not knowingly collect personal data from anyone under 16. If you believe a child has provided us with personal data, please contact <a href="mailto:privacy@checkpoint64.com">privacy@checkpoint64.com</a> and we will delete it.</p>
+<h2>13. Deletion and account closure</h2>
+<p>You can close your account and delete Your Content at any time from the account settings, or by emailing <a href="mailto:privacy@checkpoint64.com">privacy@checkpoint64.com</a>. Once you close your account:</p>
+<ul>
+<li>we will delete your account data within <strong>180 days</strong>, except where Section 9 says we need to keep it longer;</li>
+<li>save-file blobs are removed from the content-addressed store within <strong>30 days</strong>, allowing for backup rotation;</li>
+<li>billing and accounting records are retained for <strong>7 years</strong> as required by UK law; and</li>
+<li>aggregated, anonymised analytics that contain no identifiers may be retained indefinitely.</li>
+</ul>
+<h2>14. Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time. When we do, we will revise the &quot;Last updated&quot; date at the top. If the changes are material, we will tell you by email or in-app notification before they take effect, and (where required) ask for your consent.</p>
+<h2>15. Contact and complaints</h2>
+<p>Privacy questions, data-subject requests, or anything else covered by this policy:</p>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:privacy@checkpoint64.com">privacy@checkpoint64.com</a></li>
+</ul>
+<p>You can also complain to the <a href="https://ico.org.uk/make-a-complaint/">Information Commissioner&#39;s Office</a> at any time.</p>
+
+      </div>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../">← Back to checkpoint64.com</a>
+      <span style="opacity:.5;padding:0 8px">·</span>
+      <a href="../terms/">Terms</a>
+      <span style="opacity:.5;padding:0 8px">·</span>
+      <a href="../privacy/">Privacy</a>
+    </div>
+  </footer><!----><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>
