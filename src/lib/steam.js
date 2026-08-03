@@ -14,8 +14,8 @@ export const STEAM_STORE_URL = `https://store.steampowered.com/app/${STEAM_APP_I
 // First call (num_per_page=0) returns ONLY the aggregate query_summary
 // (score description + totals). The second returns the actual review bodies,
 // ordered by helpfulness within the last year, English-only, positive.
-const SUMMARY_URL = `https://store.steampowered.com/appreviews/${STEAM_APP_ID}?json=1&language=english&purchase_type=all&num_per_page=0`
-const REVIEWS_URL = `https://store.steampowered.com/appreviews/${STEAM_APP_ID}?json=1&filter=all&language=english&review_type=positive&purchase_type=all&day_range=365&num_per_page=40`
+const SUMMARY_URL = `https://store.steampowered.com/appreviews/${STEAM_APP_ID}?json=1&language=all&purchase_type=all&num_per_page=0`
+const REVIEWS_URL = `https://store.steampowered.com/appreviews/${STEAM_APP_ID}?json=1&filter=all&language=all&review_type=positive&purchase_type=all&day_range=365&num_per_page=40`
 
 // Strip Steam's BBCode-ish markup, collapse whitespace, and trim to a card-
 // friendly length on a word boundary so the grid stays tidy.
