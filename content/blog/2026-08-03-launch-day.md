@@ -1,8 +1,9 @@
 ---
 title: Checkpoint64 is Live on Steam!
 date: 2026-08-03
-excerpt: Today is the day. Checkpoint64 1.0 is officially live on Steam. No more playtests, no more waitlists — just better saves for everyone.
+excerpt: Today is the day. Checkpoint64 1.0.0 is officially live on Steam. No more playtests, no more waitlists — just better saves for everyone.
 tags: [meta, launch, steam]
+pinned: true
 ---
 
 Today is the day. After months of playtesting, countless bug reports from the community, and a lot of late nights, **Checkpoint64 is officially live on Steam.**
