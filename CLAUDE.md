@@ -35,4 +35,8 @@ Styling lives in `src/style.css`, organized by section with header comments. Pap
 
 ## Deployment
 
-`.github/workflows/main.yml` builds and deploys to GitHub Pages on push to `master`. `preview.yml` publishes PR previews to a subpath (which is why `vite.config.js` uses `base: './'` and pages emit relative links). The `CNAME` file pins checkpoint64.com; do not delete it (a prior commit already lost and restored it).
+`.github/workflows/main.yml` builds and deploys to GitHub Pages on push to `master`, then POSTs every `sitemap.xml` URL
+to IndexNow (Bing/Yandex/Naver/Seznam). Ownership is proven by `static/<key>.txt` — a public file, not a secret; change
+the key in both places or not at all. `preview.yml` publishes PR previews to a subpath (which is why `vite.config.js`
+uses `base: './'` and pages emit relative links). The `CNAME` file pins checkpoint64.com; do not delete it (a prior
+commit already lost and restored it).

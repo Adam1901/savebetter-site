@@ -29,3 +29,19 @@ jobs:
           clean: true
           clean-exclude: |
             pr-preview/
+      # Tell Bing/Yandex/Naver/Seznam what just shipped. The key file is public by
+      # design (static/<key>.txt proves ownership), so it is not a secret. Never
+      # fail a deploy over a search-engine ping — and expect HTTP 403 on the very
+      # first run, since the key file only goes live in this same deploy.
+      # ponytail: resubmits all ~50 sitemap URLs every deploy, changed or not.
+      # If that ever draws a quota complaint, diff dist/sitemap.xml against the
+      # live one and send only the new/changed <loc>s.
+      - name: Ping IndexNow
+        continue-on-error: true
+        run: |
+          KEY=513c6980b4f941fbae2142a036a79b65
+          grep -oP '(?<=<loc>)[^<]+' dist/sitemap.xml |
+            jq -Rn --arg key "$KEY" '{host:"checkpoint64.com",key:$key,keyLocation:"https://checkpoint64.com/\($key).txt",urlList:[inputs]}' > indexnow.json
+          cat indexnow.json
+          curl -sS --fail-with-body -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json' -d @indexnow.json -w 'HTTP %{http_code}\n'
