@@ -2,6 +2,7 @@ import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { legalSlugs, loadLegal } from '$lib/legal/load.js'
 import { pageSlugs, loadPage } from '$lib/pages/load.js'
+import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
 
 // A file, not a directory — override the global trailingSlash:'always' so the
@@ -17,6 +18,7 @@ const ORIGIN = 'https://checkpoint64.com'
 export async function GET() {
   const today = () => new Date().toISOString().slice(0, 10)
   const posts = loadAllPosts(await getFeedPosts())
+  const catalog = await getCatalog()
 
   const homeAlternates = [
     ...LOCALES.map((l) => `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code)}"/>`),
@@ -57,6 +59,14 @@ export async function GET() {
         changefreq: 'monthly',
         priority: '0.8',
       })),
+    // Generated save-location pages, one per catalog game (+ their A–Z index).
+    { loc: '/saves/', lastmod: today(), changefreq: 'weekly', priority: '0.8' },
+    ...catalog.map((g) => ({
+      loc: `/saves/${g.slug}/`,
+      lastmod: today(),
+      changefreq: 'monthly',
+      priority: '0.7',
+    })),
   ]
   const body = urls
     .map(

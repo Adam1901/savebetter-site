@@ -1,5 +1,6 @@
 import { markdownToHtml, layout, socialMeta, jsonLd } from '../blog/render.js'
-import { pageSummaries, gameSummaries } from './load.js'
+import { pageSummaries, gameSummaries, catalogSlugForGuide } from './load.js'
+import { getCatalog } from '../catalog/load.js'
 import { esc } from '../esc.js'
 
 const ORIGIN = 'https://checkpoint64.com'
@@ -13,7 +14,9 @@ function breadcrumbNav(doc, prefix) {
 }
 
 // Visible FAQ (accordion). Same q/a strings the FAQPage schema uses.
-function faqSection(doc) {
+// Exported for the generated /saves/ pages (catalog/render.js), which build
+// the same {faq:[{q,a}]} shape from catalog data.
+export function faqSection(doc) {
   if (!doc.faq.length) return ''
   const items = doc.faq.map((f, i) => `          <details class="guide-faq-item"${i === 0 ? ' open' : ''}>
             <summary>${esc(f.q)}</summary>
@@ -25,7 +28,8 @@ ${items}
         </section>`
 }
 
-function ctaBlock(prefix) {
+// Exported for the generated /saves/ pages too — one CTA, one place.
+export function ctaBlock(prefix) {
   return `        <aside class="guide-cta">
           <p class="guide-cta-title pixel">Never lose a save again</p>
           <p>Automatic backups and full version history. Free download for Windows, macOS, and Linux.</p>
@@ -63,11 +67,15 @@ function gamesItemListLd() {
 }
 
 // Cross-links to the other guide pages — internal linking for topical
-// authority, and a real next-click for the reader.
-function relatedGuides(slug, prefix) {
+// authority, and a real next-click for the reader. `extraLinks`
+// ({href, label}) render first, before the guide list.
+function relatedGuides(slug, prefix, extraLinks = []) {
   const others = pageSummaries().filter((p) => p.slug !== slug)
-  if (!others.length) return ''
-  const links = others.map((p) => `          <li><a href="${prefix}${p.slug}/">${esc(p.breadcrumb)}</a></li>`).join('\n')
+  if (!others.length && !extraLinks.length) return ''
+  const links = [
+    ...extraLinks.map((l) => `          <li><a href="${l.href}">${esc(l.label)}</a></li>`),
+    ...others.map((p) => `          <li><a href="${prefix}${p.slug}/">${esc(p.breadcrumb)}</a></li>`),
+  ].join('\n')
   return `        <nav class="guide-related" aria-label="Related guides">
           <h2>More guides</h2>
           <ul>
@@ -87,11 +95,21 @@ export async function renderPage(doc, { depth = 1 } = {}) {
     : ''
 
   const isGamesHub = doc.slug === 'games'
+  // Game guides cross-link their generated /saves/ location page (exact paths
+  // straight from the app's catalog) when the game is in the catalog.
+  const catalogSlug = catalogSlugForGuide(doc.slug)
+  const locationLinks =
+    catalogSlug && (await getCatalog()).some((g) => g.slug === catalogSlug)
+      ? [{
+          href: `${prefix}saves/${catalogSlug}/`,
+          label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
+        }]
+      : []
   // The hub fans out to the per-game guides (grid before the CTA); every other
   // page keeps the original CTA-then-related-guides tail.
   const tail = isGamesHub
     ? `${gamesGrid(prefix)}\n${ctaBlock(prefix)}`
-    : `${ctaBlock(prefix)}\n${relatedGuides(doc.slug, prefix)}`
+    : `${ctaBlock(prefix)}\n${relatedGuides(doc.slug, prefix, locationLinks)}`
 
   const body = `    <article class="blog-post guide-page">
       <header class="blog-post-header">

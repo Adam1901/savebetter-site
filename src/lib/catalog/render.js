@@ -1,0 +1,330 @@
+import { layout, socialMeta, jsonLd } from '../blog/render.js'
+import { ctaBlock, faqSection } from '../pages/render.js'
+import { guideSlugForCatalog, loadPage } from '../pages/load.js'
+import { esc } from '../esc.js'
+
+// Generated "save file location" pages — one per backend-catalog game
+// (/saves/<slug>/) plus the /saves/ A–Z index. These target the
+// "<game> save file location" query family with the exact per-platform paths
+// the app itself uses (the catalog's pathTemplates), so the content is real
+// data, not filler: the catalog is maintained for the product and the pages
+// ride along. Hand-written guides (content/games/) stay the deep-dive layer;
+// where one exists the two pages cross-link.
+
+const ORIGIN = 'https://checkpoint64.com'
+
+const PLATFORMS = [
+  { key: 'windows', label: 'Windows' },
+  { key: 'macos', label: 'macOS' },
+  { key: 'linux', label: 'Linux' },
+]
+
+// How each pathTemplate token reads on each OS. Mirrors the desktop client's
+// resolver (src-tauri core/games.rs `expand_var`, via the `dirs` crate):
+// APPDATA = config dir, LOCALAPPDATA = local-data dir, LOCALLOW/DOCUMENTS/HOME
+// as named. Display forms, not runtime values — %VARS% on Windows (pasteable
+// into Explorer/Win+R), ~ paths on macOS/Linux.
+const TOKEN_DISPLAY = {
+  windows: {
+    HOME: '%USERPROFILE%',
+    APPDATA: '%APPDATA%',
+    LOCALAPPDATA: '%LOCALAPPDATA%',
+    LOCALLOW: '%USERPROFILE%\\AppData\\LocalLow',
+    DOCUMENTS: '%USERPROFILE%\\Documents',
+  },
+  macos: {
+    HOME: '~',
+    APPDATA: '~/Library/Application Support',
+    LOCALAPPDATA: '~/Library/Application Support',
+    DOCUMENTS: '~/Documents',
+  },
+  linux: {
+    HOME: '~',
+    APPDATA: '~/.config',
+    LOCALAPPDATA: '~/.local/share',
+    DOCUMENTS: '~/Documents',
+  },
+}
+
+// "{APPDATA}/StardewValley/Saves" → "%APPDATA%\StardewValley\Saves" (windows)
+// Unknown tokens pass through untouched rather than breaking the page.
+export function displayPath(platform, template) {
+  const tokens = TOKEN_DISPLAY[platform] ?? {}
+  let out = template.replace(/\{([A-Z_]+)\}/g, (m, name) => tokens[name] ?? m)
+  if (platform === 'windows') out = out.replaceAll('/', '\\')
+  return out
+}
+
+// Platforms this game has paths for, in PLATFORMS order, each with its display
+// paths (several = candidate locations, first-that-exists wins in the app).
+export function platformRows(game) {
+  return PLATFORMS.map(({ key, label }) => ({
+    key,
+    label,
+    paths: game.paths.filter((p) => p.platform === key).map((p) => displayPath(key, p.pathTemplate)),
+  })).filter((row) => row.paths.length > 0)
+}
+
+// "Windows, macOS & Linux" (titles) / "Windows, macOS, and Linux" (prose).
+function platformList(rows, { prose = false } = {}) {
+  const labels = rows.map((r) => r.label)
+  if (labels.length === 1) return labels[0]
+  const last = labels[labels.length - 1]
+  const head = labels.slice(0, -1).join(', ')
+  return prose && labels.length > 2 ? `${head}, and ${last}` : `${head} & ${last}`
+}
+
+function pathListSection(game, rows) {
+  const multi = rows.some((r) => r.paths.length > 1)
+  const items = rows.map((r) => {
+    const paths = r.paths
+      .map((p) => `<code>${esc(p)}</code>`)
+      .join('<br>or ')
+    return `          <li><strong>${esc(r.label)}</strong> — ${paths}</li>`
+  }).join('\n')
+  const multiNote = multi
+    ? `\n        <p>Where two locations are listed, which one is in use depends on the install (Checkpoint64 checks them in order and uses the first that exists).</p>`
+    : ''
+  const exts = game.allowedFileExtensions
+  const extNote = exts && exts.length > 0 && exts.length <= 8
+    ? `\n        <p>The save data here is ${exts.map((e) => `<code>.${esc(e)}</code>`).join(' / ')} files — back up the folder as a set, not single files, so a restore always keeps them consistent.</p>`
+    : ''
+  return `        <h2>Where ${esc(game.displayName)} saves are stored</h2>
+        <ul>
+${items}
+        </ul>${multiNote}${extNote}`
+}
+
+function openFolderSection(rows) {
+  const win = rows.find((r) => r.key === 'windows')
+  const mac = rows.find((r) => r.key === 'macos')
+  const tips = []
+  if (win) {
+    const p = win.paths[0]
+    const hidden = p.includes('\\AppData\\')
+      ? ' (the AppData folder is hidden in Explorer, which is why this path is so easy to miss — pasting it skips the hunt)'
+      : ''
+    tips.push(`          <li><strong>Windows</strong> — press <strong>Win+R</strong>, paste <code>${esc(p)}</code>, and press Enter${hidden}.</li>`)
+  }
+  if (mac) {
+    tips.push(`          <li><strong>macOS</strong> — in Finder press <strong>Cmd+Shift+G</strong> (Go to Folder) and paste <code>${esc(mac.paths[0])}</code>.</li>`)
+  }
+  if (!tips.length) return ''
+  return `        <h2>How to open the save folder</h2>
+        <ul>
+${tips.join('\n')}
+        </ul>`
+}
+
+function backupSection(game, prefix, guide) {
+  const name = esc(game.displayName)
+  const guideLink = guide
+    ? `\n        <p>For the deeper story — how ${name} saves break and how rollback works — read the full <a href="${prefix}${guide.slug}/">${esc(guide.breadcrumb)}</a> guide.</p>`
+    : ''
+  return `        <h2>Backing up ${name} saves automatically</h2>
+        <ol>
+          <li><strong>Install Checkpoint64</strong> (free) and pick ${name} — the save path above is already preset.</li>
+          <li><strong>Auto-backup watches the folder</strong> and uploads a new version whenever it changes, keeping full history.</li>
+          <li><strong>Restore any version in one click</strong> if a save corrupts, gets overwritten, or a mod breaks it.</li>
+        </ol>${guideLink}`
+}
+
+function buildFaq(game, rows) {
+  const name = game.displayName
+  const first = rows[0]
+  const win = rows.find((r) => r.key === 'windows')
+  const faq = []
+  if (win) {
+    const hidden = win.paths[0].includes('\\AppData\\')
+      ? ' AppData is a hidden folder — paste the path into Explorer or the Win+R box to jump straight there.'
+      : ''
+    faq.push({
+      q: `Where does ${name} store save files on Windows?`,
+      a: `${name} keeps its saves at ${win.paths.join(' or ')}.${hidden} Checkpoint64 already knows this path and backs the folder up automatically.`,
+    })
+  } else if (first) {
+    faq.push({
+      q: `Where does ${name} store save files on ${first.label}?`,
+      a: `${name} keeps its saves at ${first.paths.join(' or ')}. Checkpoint64 already knows this path and backs the folder up automatically.`,
+    })
+  }
+  faq.push({
+    q: `Can I back up ${name} saves automatically?`,
+    a: `Yes — Checkpoint64 watches ${name}'s save folder and uploads a new version every time it changes, so you get automatic backups with full version history. Free download for Windows, macOS, and Linux.`,
+  })
+  faq.push({
+    q: `How do I restore an earlier ${name} save?`,
+    a: `With Checkpoint64, open the save's version list and restore any earlier version in one click — it puts those exact files back in ${name}'s save folder. Without a backup tool there's usually nothing to go back to: the folder only holds the latest files.`,
+  })
+  return faq
+}
+
+// A few alphabetical neighbours for the related block — a stable internal-link
+// mesh across the /saves/ set without dumping all ~90 links on every page.
+function neighbours(games, slug, n = 6) {
+  const i = games.findIndex((g) => g.slug === slug)
+  if (i < 0) return []
+  const out = []
+  for (let step = 1; out.length < n && step < games.length; step++) {
+    const after = games[i + step]
+    if (after) out.push(after)
+    if (out.length >= n) break
+    const before = games[i - step]
+    if (before) out.push(before)
+  }
+  return out
+}
+
+function relatedSection(game, games, prefix) {
+  const links = [
+    ...neighbours(games, game.slug).map((g) =>
+      `          <li><a href="${prefix}saves/${esc(g.slug)}/">${esc(g.displayName)} save file location</a></li>`),
+    `          <li><a href="${prefix}saves/">All game save locations</a></li>`,
+    `          <li><a href="${prefix}games/">Per-game backup guides</a></li>`,
+  ].join('\n')
+  return `        <nav class="guide-related" aria-label="Related pages">
+          <h2>More save locations</h2>
+          <ul>
+${links}
+          </ul>
+        </nav>`
+}
+
+// /saves/<slug>/index.html → depth 2.
+export function renderSavePage(game, games, { depth = 2 } = {}) {
+  const prefix = depth === 0 ? './' : '../'.repeat(depth)
+  const rows = platformRows(game)
+  const name = esc(game.displayName)
+  const url = `${ORIGIN}/saves/${game.slug}/`
+  const title = `${game.displayName} Save File Location (${platformList(rows)})`
+  const first = rows[0]
+  const description = `${game.displayName} keeps its save files at ${first.paths[0]} on ${first.label}. Exact save folder paths for ${platformList(rows, { prose: true })}, and how to back them up automatically with Checkpoint64.`
+
+  const guideSlug = guideSlugForCatalog(game.slug)
+  const guide = guideSlug ? loadPage(guideSlug) : null
+  const faq = buildFaq(game, rows)
+
+  const noteBlock = game.note
+    ? `\n        <p><strong>Good to know:</strong> ${esc(game.note)}</p>`
+    : ''
+
+  const body = `    <article class="blog-post guide-page">
+      <header class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <a href="${prefix}saves/">Save locations</a> <span aria-hidden="true">/</span> <span>${name}</span>
+        </nav>
+        <h1 class="blog-post-title pixel">${esc(title)}</h1>
+      </header>
+      <div class="blog-post-body">
+        <p><strong>${name} stores its save files at <code>${esc(first.paths[0])}</code> on ${esc(first.label)}.</strong> Checkpoint64 already knows this folder — it backs it up automatically and keeps every version, so a corrupted or overwritten save is one click from restored.</p>${noteBlock}
+${pathListSection(game, rows)}
+${openFolderSection(rows)}
+${backupSection(game, prefix, guide)}
+      </div>
+${faqSection({ faq })}
+${ctaBlock(prefix)}
+${relatedSection(game, games, prefix)}
+    </article>`
+
+  const breadcrumbLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+      { '@type': 'ListItem', position: 2, name: 'Save locations', item: `${ORIGIN}/saves/` },
+      { '@type': 'ListItem', position: 3, name: game.displayName, item: url },
+    ],
+  })
+  const faqLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  })
+
+  const head = [
+    socialMeta({ type: 'article', title, description, url }),
+    breadcrumbLd,
+    faqLd,
+  ].join('\n')
+
+  return layout({
+    title: `${title} — Checkpoint64`,
+    description,
+    body,
+    depth,
+    head,
+  })
+}
+
+// /saves/index.html → depth 1.
+export function renderSavesIndex(games, { depth = 1 } = {}) {
+  const prefix = depth === 0 ? './' : '../'.repeat(depth)
+  const url = `${ORIGIN}/saves/`
+  const title = `Game Save File Locations — ${games.length} Games`
+  const description = `Where ${games.length} games keep their save files on Windows, macOS, and Linux — the exact folder paths Checkpoint64 uses for automatic save backup, in one A–Z list.`
+
+  const cards = games.map((g) => {
+    const rows = platformRows(g)
+    const first = rows[0]
+    return `          <li class="blog-card">
+            <a class="blog-card-link" href="${prefix}saves/${esc(g.slug)}/">
+              <h2 class="blog-card-title">${esc(g.displayName)}</h2>
+              <p class="blog-card-excerpt">${esc(first.paths[0])}</p>
+            </a>
+          </li>`
+  }).join('\n')
+
+  const body = `    <article class="blog-post guide-page">
+      <header class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <span>Save locations</span>
+        </nav>
+        <h1 class="blog-post-title pixel">${esc(title)}</h1>
+      </header>
+      <div class="blog-post-body">
+        <p><strong>Every game hides its saves somewhere different.</strong> This is the folder map Checkpoint64 ships with — the exact save path for every supported game, per platform. Open a game for the full breakdown, or just install the app: it already knows all of these.</p>
+        <p>Looking for the deep-dive backup guides instead? See the <a href="${prefix}games/">per-game backup guides</a>.</p>
+      </div>
+        <ul class="blog-list guide-games-grid" aria-label="All game save locations">
+${cards}
+        </ul>
+${ctaBlock(prefix)}
+    </article>`
+
+  const breadcrumbLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+      { '@type': 'ListItem', position: 2, name: 'Save locations', item: url },
+    ],
+  })
+  const itemListLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: games.map((g, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: g.displayName,
+      url: `${ORIGIN}/saves/${g.slug}/`,
+    })),
+  })
+
+  const head = [
+    socialMeta({ type: 'website', title, description, url }),
+    breadcrumbLd,
+    itemListLd,
+  ].join('\n')
+
+  return layout({
+    title: `${title} — Checkpoint64`,
+    description,
+    body,
+    depth,
+    head,
+  })
+}

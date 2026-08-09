@@ -1,0 +1,2027 @@
+{
+  "games": [
+    {
+      "slug": "7-days-to-die",
+      "displayName": "7 Days to Die",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/7DaysToDie/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/7DaysToDie/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/7DaysToDie/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "abiotic-factor",
+      "displayName": "Abiotic Factor",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/AbioticFactor/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "alchemy-factory",
+      "displayName": "Alchemy Factory",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/AlchemyFactory/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "anno-1800",
+      "displayName": "Anno 1800",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Anno 1800/accounts"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "aska",
+      "displayName": "ASKA",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Sand Sailor Studio/Aska/data"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "astroneer",
+      "displayName": "Astroneer",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Astro/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "bg3",
+      "displayName": "Baldur's Gate 3",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Larian Studios/Baldur's Gate 3/PlayerProfiles"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Larian Studios/Baldur's Gate 3/PlayerProfiles"
+        }
+      ],
+      "allowedFileExtensions": [
+        "lsv",
+        "lsfx",
+        "lsf",
+        "lsb",
+        "png",
+        "webp",
+        "json",
+        "savebackup"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "calyx",
+      "displayName": "Calyx",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Calyx/Saved"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "castle-story",
+      "displayName": "Castle Story",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Castle Story/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cemu",
+      "displayName": "Cemu (Wii U)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Cemu/mlc01/usr/save"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Cemu/mlc01/usr/save"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Cemu/mlc01/usr/save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cities-skylines",
+      "displayName": "Cities: Skylines",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Colossal Order/Cities_Skylines/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Colossal Order/Cities_Skylines/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Colossal Order/Cities_Skylines/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "crp"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "civ6",
+      "displayName": "Civilization VI",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Sid Meier's Civilization VI/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Sid Meier's Civilization VI/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/aspyr-media/Sid Meier's Civilization VI/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "civ6save"
+      ],
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "core-keeper",
+      "displayName": "Core Keeper",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Pugstorm/Core Keeper/Steam"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ck3",
+      "displayName": "Crusader Kings III",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Paradox Interactive/Crusader Kings III/save games"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Documents/Paradox Interactive/Crusader Kings III/save games"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Paradox Interactive/Crusader Kings III/save games"
+        }
+      ],
+      "allowedFileExtensions": [
+        "ck3"
+      ],
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cult-of-the-lamb",
+      "displayName": "Cult of the Lamb",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Massive Monster/Cult Of The Lamb/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Massive Monster/Cult Of The Lamb/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "cyberpunk-2077",
+      "displayName": "Cyberpunk 2077",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/CD Projekt Red/Cyberpunk 2077"
+        }
+      ],
+      "allowedFileExtensions": [
+        "dat",
+        "png",
+        "json"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dark-souls-3",
+      "displayName": "Dark Souls III",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/DarkSoulsIII"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dave-the-diver",
+      "displayName": "Dave the Diver",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/mintrocket/DAVE THE DIVER"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/com.nexon.dave/DAVE THE DIVER/SData"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "disco-elysium",
+      "displayName": "Disco Elysium",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/ZAUM Studio/Disco Elysium/SaveGames"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/ZAUM Studio/Disco Elysium/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dishonored-2",
+      "displayName": "Dishonored 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/Arkane Studios/dishonored2/base/savegame"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dos2",
+      "displayName": "Divinity: Original Sin 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Larian Studios/Divinity Original Sin 2 Definitive Edition/PlayerProfiles"
+        }
+      ],
+      "allowedFileExtensions": [
+        "lsv",
+        "lsfx",
+        "json",
+        "png"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dolphin",
+      "displayName": "Dolphin (GameCube / Wii)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Dolphin Emulator"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Dolphin"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/dolphin-emu"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dont-starve-together",
+      "displayName": "Don't Starve Together",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Klei/DoNotStarveTogether"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Documents/Klei/DoNotStarveTogether"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.klei/DoNotStarveTogether"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "duckstation",
+      "displayName": "DuckStation (PlayStation 1)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/DuckStation"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/DuckStation"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/duckstation"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "dyson-sphere-program",
+      "displayName": "Dyson Sphere Program",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Dyson Sphere Program"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "elden-ring",
+      "displayName": "Elden Ring",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/EldenRing"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sl2",
+        "bak",
+        "co2"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "enshrouded",
+      "displayName": "Enshrouded",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/Enshrouded"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "factorio",
+      "displayName": "Factorio",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Factorio/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/factorio/saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.factorio/saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "zip"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "fallout4",
+      "displayName": "Fallout 4",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Fallout4/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "fos",
+        "bak",
+        "f4se"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "fallout-nv",
+      "displayName": "Fallout: New Vegas",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/FalloutNV/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "frostpunk",
+      "displayName": "Frostpunk",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/11bitstudios/Frostpunk/Default/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/11bitstudios/FrostPunk/Default/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "gta-v",
+      "displayName": "Grand Theft Auto V",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Rockstar Games/GTA V/Profiles"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "grounded",
+      "displayName": "Grounded",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/Grounded"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "hades",
+      "displayName": "Hades",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Saved Games/Hades"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Supergiant Games/Hades"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav",
+        "bak"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "hollow-knight",
+      "displayName": "Hollow Knight",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Team Cherry/Hollow Knight"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/unity.Team Cherry.Hollow Knight"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/unity3d/Team Cherry/Hollow Knight"
+        }
+      ],
+      "allowedFileExtensions": [
+        "dat",
+        "bak"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "humanitz",
+      "displayName": "HumanitZ",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/TSSGame/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "hytale",
+      "displayName": "Hytale",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Hytale/UserData/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "icarus",
+      "displayName": "ICARUS",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Icarus/Saved/PlayerData"
+        }
+      ],
+      "allowedFileExtensions": [
+        "json"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "kenshi",
+      "displayName": "Kenshi",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Kenshi/save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "kingdom-come",
+      "displayName": "Kingdom Come: Deliverance",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/kingdomcome/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "kingdoms-reborn",
+      "displayName": "Kingdoms Reborn",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/PunCity/Saved/GameSaves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "mass-effect-le",
+      "displayName": "Mass Effect Legendary Edition",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/BioWare/Mass Effect Legendary Edition/Save"
+        }
+      ],
+      "allowedFileExtensions": [
+        "pcsav",
+        "bak",
+        "xml"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "medieval-dynasty",
+      "displayName": "Medieval Dynasty",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Medieval_Dynasty/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "metro-exodus",
+      "displayName": "Metro Exodus",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/metro exodus"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/MetroExodus"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/metro_3"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft-curseforge",
+      "displayName": "Minecraft (CurseForge)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/curseforge/minecraft/Instances"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "launcher",
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft-ftb",
+      "displayName": "Minecraft (Feed The Beast)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/.ftba/instances"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "launcher",
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft",
+      "displayName": "Minecraft (Java)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/.minecraft/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/minecraft/saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.minecraft/saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "dat",
+        "dat_old",
+        "mca",
+        "mcr",
+        "mcc",
+        "nbt",
+        "json",
+        "lock",
+        "txt"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft-modrinth",
+      "displayName": "Minecraft (Modrinth)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/ModrinthApp/profiles"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/ModrinthApp/profiles"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/ModrinthApp/profiles"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "launcher",
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft-pinecone",
+      "displayName": "Minecraft (PineconeMC)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/ElyPrismLauncher/instances"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/ElyPrismLauncher/instances"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/ElyPrismLauncher/instances"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "launcher",
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "minecraft-prism",
+      "displayName": "Minecraft (Prism Launcher)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/PrismLauncher/instances"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/PrismLauncher/instances"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/PrismLauncher/instances"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "launcher",
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "necesse",
+      "displayName": "Necesse",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Necesse/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Necesse/saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/Necesse/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "no-mans-sky",
+      "displayName": "No Man's Sky",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/HelloGames/NMS"
+        }
+      ],
+      "allowedFileExtensions": [
+        "hg",
+        "json"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "oxygen-not-included",
+      "displayName": "Oxygen Not Included",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Klei/OxygenNotIncluded/cloud_save_files"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/unity.Klei.Oxygen Not Included/save_files"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/unity3d/Klei/Oxygen Not Included/save_files"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "palworld",
+      "displayName": "Palworld",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Pal/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav",
+        "png"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "pcsx2",
+      "displayName": "PCSX2 (PlayStation 2)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/PCSX2"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/PCSX2"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/PCSX2"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ppsspp",
+      "displayName": "PPSSPP (PSP)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/PPSSPP/PSP/SAVEDATA"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/.config/ppsspp/PSP/SAVEDATA"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/ppsspp/PSP/SAVEDATA"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "prison-architect",
+      "displayName": "Prison Architect",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Introversion/Prison Architect"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Prison Architect"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.Prison Architect"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "project-zomboid",
+      "displayName": "Project Zomboid",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Zomboid/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Zomboid/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/Zomboid/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "raft",
+      "displayName": "Raft",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Redbeet Interactive/Raft/User"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "retroarch",
+      "displayName": "RetroArch",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/RetroArch"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "C:/RetroArch-Win64"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/RetroArch"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/retroarch"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rimworld",
+      "displayName": "RimWorld",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Ludeon Studios/RimWorld by Ludeon Studios/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/RimWorld/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/unity3d/Ludeon Studios/RimWorld by Ludeon Studios/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "rws",
+        "xml"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "roadside-research",
+      "displayName": "Roadside Research",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/CyberneticWalrus/Roadside Research"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "romestead",
+      "displayName": "Romestead",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Romestead"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rpcs3",
+      "displayName": "RPCS3 (PlayStation 3)",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/rpcs3/dev_hdd0/home/00000001/savedata"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/rpcs3/dev_hdd0/home/00000001/savedata"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "runescape-dragonwilds",
+      "displayName": "RuneScape: Dragonwilds",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/RSDragonwilds/Saved"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rvthereyet",
+      "displayName": "RV There Yet",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Ride/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "stalker-cop",
+      "displayName": "S.T.A.L.K.E.R.: Call of Pripyat",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/STALKER-COP/savedgames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "satisfactory",
+      "displayName": "Satisfactory",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/FactoryGame/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "schedule-1",
+      "displayName": "Schedule I",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/TVGS/Schedule I/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "scrap-mechanic",
+      "displayName": "Scrap Mechanic",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Axolot Games/Scrap Mechanic/User"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "sekiro",
+      "displayName": "Sekiro: Shadows Die Twice",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/Sekiro"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "skyrim-se",
+      "displayName": "Skyrim Special Edition",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Skyrim Special Edition/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "ess",
+        "bak",
+        "skse"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "sons-of-the-forest",
+      "displayName": "Sons of the Forest",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Endnight/SonsOfTheForest"
+        }
+      ],
+      "allowedFileExtensions": [
+        "json",
+        "sav"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "soulmask",
+      "displayName": "Soulmask",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/WS"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "space-engineers",
+      "displayName": "Space Engineers",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/SpaceEngineers/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "stardew",
+      "displayName": "Stardew Valley",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/StardewValley/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/.config/StardewValley/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/StardewValley/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "starrupture",
+      "displayName": "StarRupture",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/StarRupture/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav",
+        "met"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "stationeers",
+      "displayName": "Stationeers",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Stationeers/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "stellaris",
+      "displayName": "Stellaris",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Paradox Interactive/Stellaris/save games"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Documents/Paradox Interactive/Stellaris/save games"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Paradox Interactive/Stellaris/save games"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "subnautica",
+      "displayName": "Subnautica",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Unknown Worlds/Subnautica/SavedGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "json",
+        "bin",
+        "dat",
+        "png",
+        "jpg"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "subnautica-2",
+      "displayName": "Subnautica 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Subnautica2/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav",
+        "bak"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "sunkenland",
+      "displayName": "Sunkenland",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Vector3 Studio/Sunkenland"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "supermarket-simulator",
+      "displayName": "Supermarket Simulator",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Nokta Games/Supermarket Simulator"
+        }
+      ],
+      "allowedFileExtensions": [
+        "es3"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "terraria",
+      "displayName": "Terraria",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Terraria/Worlds"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Terraria/Worlds"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Terraria/Worlds"
+        }
+      ],
+      "allowedFileExtensions": [
+        "wld",
+        "bak",
+        "twld",
+        "plr",
+        "tplr",
+        "map",
+        "tmap"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "oblivion",
+      "displayName": "The Elder Scrolls IV: Oblivion",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Oblivion/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "the-long-dark",
+      "displayName": "The Long Dark",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Hinterland/TheLongDark"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Hinterland/TheLongDark"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "planet-crafter",
+      "displayName": "The Planet Crafter",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/MijuGames/Planet Crafter"
+        }
+      ],
+      "allowedFileExtensions": [
+        "json"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "sims-4",
+      "displayName": "The Sims 4",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Electronic Arts/The Sims 4/saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Documents/Electronic Arts/The Sims 4/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "witcher3",
+      "displayName": "The Witcher 3: Wild Hunt",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/The Witcher 3/gamesaves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav",
+        "png"
+      ],
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "tmodloader",
+      "displayName": "tModLoader",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Terraria/tModLoader"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Terraria/tModLoader"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/Terraria/tModLoader"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "v-rising",
+      "displayName": "V Rising",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Stunlock Studios/VRising/CloudSaves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "valheim",
+      "displayName": "Valheim",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/IronGate/Valheim/worlds_local"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/IronGate/Valheim/worlds_local"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/unity3d/IronGate/Valheim/worlds_local"
+        }
+      ],
+      "allowedFileExtensions": [
+        "db",
+        "fwl",
+        "old"
+      ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "vintage-story",
+      "displayName": "Vintage Story",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/VintagestoryData/Saves"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/VintagestoryData/Saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.config/VintagestoryData/Saves"
+        }
+      ],
+      "allowedFileExtensions": [
+        "vcdbs"
+      ],
+      "categories": [
+        "singleplayer",
+        "multiplayer",
+        "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "windrose",
+      "displayName": "Windrose",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/R5/Saved/SaveProfiles"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    }
+  ]
+}
