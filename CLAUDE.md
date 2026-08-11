@@ -37,6 +37,12 @@ Styling lives in `src/style.css`, organized by section with header comments. Pap
 
 ## Deployment
 
+`src/routes/sitemap.xml/+server.js` emits **`<lastmod>` only where a real date exists** — post date or `updated`
+frontmatter. The four homepage entries carry none (nothing on that page maps to a verifiable date), and there is
+deliberately no `|| today()` fallback: a lastmod that moves every build trains Google to ignore the element site-wide,
+which would waste the accurate dates on the other 62 URLs. Don't reintroduce one for a page that lacks a date — omit it.
+Note `/blog/` takes the **max** post date, not `posts[0]`, which is pinned-first.
+
 `.github/workflows/main.yml` builds and deploys to GitHub Pages on push to `master`, then POSTs every `sitemap.xml` URL
 to IndexNow (Bing/Yandex/Naver/Seznam). Ownership is proven by `static/<key>.txt` — a public file, not a secret; change
 the key in both places or not at all. `preview.yml` publishes PR previews to a subpath (which is why `vite.config.js`
