@@ -24,6 +24,7 @@ const ORIGIN = 'https://checkpoint64.com'
 // `updated` frontmatter) or omits the element entirely. There is deliberately no
 // `|| today()` fallback: that silently re-stamped a URL on every deploy.
 export async function GET() {
+  const today = () => new Date().toISOString().slice(0, 10)
   const posts = loadAllPosts(await getFeedPosts())
   const catalog = await getCatalog()
   // posts is pinned-first, so posts[0] is whichever post is pinned rather than
