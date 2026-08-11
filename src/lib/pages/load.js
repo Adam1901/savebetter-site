@@ -55,6 +55,26 @@ export function gameSlugs() {
   return [...GAMES]
 }
 
+// Guide slug ↔ backend-catalog slug, for cross-linking the hand-written
+// per-game guides with the generated /saves/<catalog-slug>/ location pages.
+// The convention is <catalog-slug>-save-backup; exceptions go here.
+const GUIDE_CATALOG_EXCEPTIONS = { 'skyrim-save-backup': 'skyrim-se' }
+
+/** Catalog slug for a game-guide slug, or null when the slug isn't a game guide. */
+export function catalogSlugForGuide(guideSlug) {
+  if (!GAMES.includes(guideSlug)) return null
+  return GUIDE_CATALOG_EXCEPTIONS[guideSlug] ?? guideSlug.replace(/-save-backup$/, '')
+}
+
+/** Guide slug for a catalog slug, or null when no hand-written guide exists. */
+export function guideSlugForCatalog(catalogSlug) {
+  for (const [guide, catalog] of Object.entries(GUIDE_CATALOG_EXCEPTIONS)) {
+    if (catalog === catalogSlug) return guide
+  }
+  const derived = `${catalogSlug}-save-backup`
+  return GAMES.includes(derived) ? derived : null
+}
+
 export function loadPage(slug) {
   if (!PAGES.includes(slug)) return null
   const path = PAGE_DIRS.map((dir) => join(dir, `${slug}.md`)).find(existsSync)

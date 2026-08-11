@@ -2,6 +2,7 @@ import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { legalSlugs, loadLegal } from '$lib/legal/load.js'
 import { pageSlugs, loadPage } from '$lib/pages/load.js'
+import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
 
 // A file, not a directory — override the global trailingSlash:'always' so the
@@ -23,7 +24,9 @@ const ORIGIN = 'https://checkpoint64.com'
 // `updated` frontmatter) or omits the element entirely. There is deliberately no
 // `|| today()` fallback: that silently re-stamped a URL on every deploy.
 export async function GET() {
+  const today = () => new Date().toISOString().slice(0, 10)
   const posts = loadAllPosts(await getFeedPosts())
+  const catalog = await getCatalog()
   // posts is pinned-first, so posts[0] is whichever post is pinned rather than
   // the newest — /blog/ used to report the pinned launch post's date and
   // under-state its own freshness by over a week. Take the real maximum.
@@ -77,6 +80,14 @@ export async function GET() {
         changefreq: 'monthly',
         priority: '0.8',
       })),
+    // Generated save-location pages, one per catalog game (+ their A–Z index).
+    { loc: '/saves/', lastmod: today(), changefreq: 'weekly', priority: '0.8' },
+    ...catalog.map((g) => ({
+      loc: `/saves/${g.slug}/`,
+      lastmod: today(),
+      changefreq: 'monthly',
+      priority: '0.7',
+    })),
   ]
   // Built line-by-line rather than as one interpolated string so a URL without a
   // real date drops the <lastmod> element instead of emitting an empty one.
