@@ -215,6 +215,7 @@ ${THEME_BOOTSTRAP}
     <link rel="alternate icon" href="${prefix}retro_save_icon.svg"/>
     <link rel="mask-icon" href="${prefix}retro_save_icon.svg" color="#ff5f4e"/>
     <link rel="apple-touch-icon" href="${prefix}retro_save_icon.svg"/>
+    <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="${prefix}rss.xml"/>
     <meta name="apple-mobile-web-app-title" content="Checkpoint64"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
