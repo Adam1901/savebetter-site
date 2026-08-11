@@ -24,11 +24,11 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 89 built-in presets.** 78 games, 7 emulators, and 4
-  modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB), each tagged by category
-  (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can filter the
-  list. Choose which files to back up and which to ignore — skip crash logs and
-  screenshots, keep the save.
+- **Per-game backup rules with 94 built-in presets.** 82 games, 7 emulators, and 5
+  modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
+  by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
+  filter the list. Choose which files to back up and which to ignore — skip crash logs
+  and screenshots, keep the save.
 - **Finds the games you already own.** Checkpoint64 scans your installed Steam library and
   offers up the games it recognises, so setup is picking from a list rather than hunting
   for folders.
@@ -94,10 +94,10 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-89 presets ship built in: 78 games, 7 emulators, and 4 modded-Minecraft launchers.
+94 presets ship built in: 82 games, 7 emulators, and 5 modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
-(vanilla plus CurseForge, Modrinth, Prism, and FTB launchers), Skyrim SE, Fallout 4,
+(vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
 Fallout: New Vegas, Oblivion, The Witcher 3, Dark Souls III, Sekiro, Kingdom Come:
 Deliverance, Disco Elysium, Dishonored 2, Metro Exodus, Cyberpunk 2077, Palworld,
 Enshrouded, Project Zomboid, Terraria, tModLoader, RimWorld, Kenshi, Frostpunk, Anno 1800,
@@ -144,6 +144,7 @@ the save back. The world's full history is preserved instead of overwritten.
 - Modded game save backup: https://checkpoint64.com/modded-game-save-backup/
 - Emulator save backup: https://checkpoint64.com/emulator-save-backup/
 - Blog: https://checkpoint64.com/blog/
+- Blog RSS feed: https://checkpoint64.com/rss.xml
 - Community Discord: https://discord.gg/kxeYwuuHEn
 - Sitemap: https://checkpoint64.com/sitemap.xml
 - robots.txt: https://checkpoint64.com/robots.txt
