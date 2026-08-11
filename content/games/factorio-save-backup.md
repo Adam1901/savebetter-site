@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up Factorio Saves (Megabases Included)"
-description: "A 200-hour Factorio base is one bad mod update or one crashed autosave away from gone. Checkpoint64 keeps every version of your save — megabases included — so a disaster is one click from undone. Free download for Windows, macOS, and Linux."
+description: "A 200-hour Factorio base is one bad mod update or one crashed autosave away from gone. Checkpoint64 keeps every version of your save — megabases included — so a disaster is one click from undone. Free download for Windows and Linux."
 updated: 2026-07-03
 breadcrumb: "Factorio save backup"
 faq:

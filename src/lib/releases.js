@@ -23,18 +23,11 @@ export const PLATFORMS = [
     prefer: [/\.msi$/i, /\.exe$/i],
     placeholderHint: '.msi',
   },
-  {
-    key: 'macos-arm',
-    label: 'MACOS · APPLE SILICON',
-    // Match arch tokens explicitly so an Intel-named binary can never land on
-    // this tile. There is deliberately NO Intel tile: the x86_64-apple-darwin
-    // build is disabled in the app's release matrix, and advertising one
-    // (even as "coming soon") would over-promise.
-    // Note: `\b` would NOT fire between `_` and `aarch64` because underscore
-    // is a word character; use lookarounds for the typical delimiters.
-    prefer: [/(?:^|[-_.])(aarch64|arm64|apple[-_]silicon)(?=[-_.]).*\.(dmg|pkg)$/i],
-    placeholderHint: '.dmg · arm64',
-  },
+  // No macOS tile. BOTH darwin shards (aarch64 and x86_64) are commented out of
+  // the app's release matrix — `# DISABLED (2026-06-14)` in tauri-bundle.yml — so
+  // no .dmg/.pkg asset is ever produced. With no matching asset this tile would
+  // still render, as '.dmg · arm64 · COMING SOON', promising a build that isn't
+  // coming. Re-add only when the darwin shards are uncommented and shipping.
   {
     key: 'linux',
     // .tar.gz is deliberately excluded — `Checkpoint64.app.tar.gz` is a

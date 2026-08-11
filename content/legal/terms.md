@@ -11,7 +11,7 @@ updated: 2026-06-13
 These Terms of Service ("**Terms**") are a contract between you and **[LEGAL ENTITY]** ("**Checkpoint64**", "**we**", "**us**", "**our**"). They govern your use of:
 
 - the website at [checkpoint64.com](https://checkpoint64.com/) and any subdomains we operate (the "**Site**"),
-- the Checkpoint64 desktop application for Windows, macOS, and Linux (the "**App**"), and
+- the Checkpoint64 desktop application for Windows and Linux (the "**App**"), and
 - the Checkpoint64 cloud backup service, account system, and APIs (together the "**Service**").
 
 By using the Site, downloading the App, or creating an account, you agree to these Terms. If you do not agree, do not use the Service.

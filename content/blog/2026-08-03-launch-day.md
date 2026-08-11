@@ -1,53 +1,113 @@
 ---
-title: Checkpoint64 is Live on Steam!
+title: Checkpoint64 1.0 is out on Steam
 date: 2026-08-03
-excerpt: Today is the day. Checkpoint64 1.0.0 is officially live on Steam. No more playtests, no more waitlists — just better saves for everyone.
-tags: [meta, launch, steam]
+excerpt: The playtest is over and Checkpoint64 1.0 is live on Steam. Auto-backup while you play, every version kept, one click to roll back. Here's what's in 1.0, what the playtest changed, and which platforms it ships on today.
+tags: [launch, steam]
 pinned: true
 ---
 
-Today is the day. After months of playtesting, countless bug reports from the community, and a lot of late nights, **Checkpoint64 is officially live on Steam.**
+Checkpoint64 1.0 is [live on Steam](https://store.steampowered.com/app/4790820).
+No request-access queue, no waitlist, no key to wait for. Install it and start
+a history under your saves.
 
-[Get Checkpoint64 on Steam](https://store.steampowered.com/app/4790820)
+If you wishlisted months ago and forgot why: Checkpoint64 backs up your game
+saves while you play and keeps every version, so a corrupted world at 2am is
+something you roll back instead of something you mourn. It watches the save
+folder, which means it covers the games Steam Cloud never did. Emulators,
+modded worlds, GOG and Epic copies, the ones whose devs never wired Cloud up.
 
-## Why Steam?
+## What's in 1.0
 
-We've been offering standalone builds for a while, but Steam is where the games are. By launching on Steam, we're making it easier for everyone to keep their saves safe, synced, and versioned without having to hunt for the latest installer.
+**Auto-backup that runs while you play.** Point it at a game once. It notices
+when the save changes and files a new version on its own, so the backup you
+need was taken before you knew you needed it.
 
-If you've been using the playtest build, thank you. Your feedback helped us nail down the edge cases in modded Minecraft, emulator memory cards, and those weirdly-named save folders that some games love to use.
+**Every version, not the latest one.** This is the difference between a backup
+and a sync. Restoring takes one click, and the version you restore *from* stays
+in your history, so rolling back doesn't cost you where you were.
 
-## What's new in 1.0?
+**80+ games and 7 emulators know their own save paths.** PCSX2, Dolphin,
+RetroArch, DuckStation, PPSSPP, RPCS3 and Cemu are in the box. Anything not in
+the catalog, point it at the folder yourself. It only ever touches save files,
+never games or ROMs.
 
-The 1.0 release isn't just a label. We've packed in some major improvements:
+**It finds what you already own.** Open Add Game and Checkpoint64 scans your
+installed Steam library, then offers the ones it recognises under "Installed on
+this PC". Playtesters asked for this one a lot, so it shipped for launch.
 
-- **One-click game discovery.** The app now scans your Steam, GOG, and Epic libraries to automatically find your saves.
-- **Improved diffing.** See exactly which files changed before you commit to a restore.
-- **More presets.** We now support over 100 games and emulators out of the box.
-- **Discord integration.** We're working on adding support for Discord integration.
+**Shared saves for people who play together.** Put a world in a team library
+and whoever sits down next gets the current save. An ownership lock stops two
+people overwriting each other's evening, and the logbook shows whose turn it
+was. Steam Cloud has no equivalent, because it was never trying to.
 
-## Whats next?
+**Discord, if you want it.** Link your account and the bot DMs your teammates
+when someone manually commits or restores a shared save. Auto-backups stay
+quiet on purpose, because nobody needs a ping every time a poll finds a changed
+file. You can add a save or ask for a new game preset without leaving Discord.
 
-We are only getting started. Here's what's coming next:
+**Achievements**, on the Steam build, because a backup habit may as well show
+up on your profile.
 
-- **Steam Deck support.** We're optiming the UI for the Steam Deck, making it the perfect companion for your portable library.
-- **Epic Game stores.**
-- **More game support.** We're expanding our library to include more game support.
-- **Optimizations.** We're working on improving performance and stability.
+## What the playtest changed
 
-## The Deal remains the same
+We opened the playtest expecting bug reports and got save folders instead,
+which was better. Modded Minecraft instances with a hundred jars under them.
+Emulator memory cards. A Valheim seed two friends had been passing back and
+forth in Discord for a year. Folders named things no reasonable person would
+name a folder.
 
-Even though we're on the world's biggest storefront, our philosophy hasn't changed. Checkpoint64 is still:
+Those broke things, which was the point. Multi-path games, whole-folder backup,
+half the catalog's save paths and a long tail of restore edge cases all got
+fixed because someone handed us a save we'd never have invented. If you filed
+one of those reports, 1.0 is measurably less bad because of you.
 
-1. **Free for everyone** who just needs the basics.
-2. **Buy once, own forever.** No subscriptions. If you want the Pro features or more space, it's a one-time purchase.
-3. **Local first.** Your data is yours. We just help you manage it.
+## Which platforms 1.0 ships on
+
+Worth being precise about, because the answer isn't the same everywhere:
+
+- **On Steam, 1.0 is the Windows build.** That's the only depot on the store
+  page today.
+- **Linux is a direct download.** A `.deb` or `.rpm`, x64 or ARM64, free from
+  [the download page](/#download).
+- **There's no Mac build.** It's on hold rather than shipping half-done. If
+  you're on a Mac and you've been waiting, sorry. It isn't forgotten.
+
+## The deal
+
+**Free is free.** Not a trial, no timer. It's the real product with less room in
+it, and plenty of people will never need more.
+
+**Lifetime is one payment.** More space, no renewal, no second invoice.
+
+**Pro is for crews** who share libraries and want the room for it. On Steam it's
+a one-time unlock like everything else there. Bought directly from us it's
+monthly, cancel whenever.
+
+Nobody gets charged per person, and nothing here bills you for a server sitting
+idle. Final numbers are on the [pricing section](/#pricing).
+
+## What we're building next
+
+- **Per-file restore and a "what changed" view.** Whole-version rollback works
+  today. Next is seeing what a restore will touch before you commit, and
+  pulling back one file instead of the whole save.
+- **Auto-detection beyond Steam.** Checkpoint64 already *backs up* GOG and Epic
+  saves, because it watches the folder and doesn't care which launcher put it
+  there. What it can't yet do is spot those games installed and offer them to
+  you. The library scan reads Steam today; GOG and Epic are next.
+- **More presets.** Every strange save someone reports is a candidate, so the
+  next person skips the path-hunting entirely.
+
+Launch is where we find out what to build, so tell us what's missing.
 
 ## Thank you
 
-To everyone who wishlisted, playtested, and shared their "I lost my 100-hour save" horror stories, this launch is for you. We're just getting started.
-
-See you on the next checkpoint.
+To everyone who wishlisted, filed a report, or sent us a story that started "so
+I lost a 100-hour save" — that's the whole reason this exists.
 
 ---
 
-[Check out Checkpoint64 on Steam](https://store.steampowered.com/app/4790820) and start a history under your saves today.
+[Get Checkpoint64 1.0 on Steam](https://store.steampowered.com/app/4790820) or
+[download it directly](/#download), and start a history under your saves today.
+
+See you on the next checkpoint.

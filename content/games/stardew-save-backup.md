@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up Stardew Valley Saves (and Undo a Bad Steam Cloud Sync)"
-description: "Stardew Valley's Steam Cloud sync can force a blind choice between two conflicting saves, and a bad SMAPI mod update can break the one you keep. Checkpoint64 keeps every version of your farm so you're never guessing. Free download for Windows, macOS, and Linux."
+description: "Stardew Valley's Steam Cloud sync can force a blind choice between two conflicting saves, and a bad SMAPI mod update can break the one you keep. Checkpoint64 keeps every version of your farm so you're never guessing. Free download for Windows and Linux."
 updated: 2026-07-03
 breadcrumb: "Stardew Valley save backup"
 faq:

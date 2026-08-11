@@ -1,6 +1,6 @@
 ---
 title: "How to Back Up Don't Starve Together Worlds (Solo or with a Group)"
-description: "Don't Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you've survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows, macOS, and Linux."
+description: "Don't Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you've survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows and Linux."
 updated: 2026-07-03
 breadcrumb: "Don't Starve Together save backup"
 faq:

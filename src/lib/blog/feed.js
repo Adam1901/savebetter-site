@@ -164,6 +164,49 @@ function sanitizeHtml(html) {
   return sanitizeHtmlLib(String(html || ''), SANITIZE_OPTIONS).trim()
 }
 
+// Factual corrections applied to imported copy.
+//
+// The feed is OUR content, authored in Soro, so the durable fix for anything
+// here is to edit the source article — these entries only stop a known-false
+// claim from rendering in the meantime. Sanitising above is a security concern;
+// this is an accuracy one, deliberately kept separate and deliberately tiny.
+//
+// Keep this list short and delete entries once the source is fixed. A stale
+// entry is harmless (it simply stops matching), and the warning below tells you
+// when that has happened so it can be removed rather than rotting here.
+//
+// Current entry: no macOS build ships on any channel — both darwin shards have
+// been commented out of the app's release matrix since 2026-06-14 — so an
+// imported article promising Apple Silicon support sends Mac users to a
+// download that does not exist.
+const FACT_CORRECTIONS = [
+  [
+    'with Windows, macOS on Apple Silicon and Linux covered',
+    'with Windows and Linux covered',
+  ],
+]
+
+// Applied to the item's HTML and to the summary the excerpt is built from, so a
+// correction can't survive in the card text or the OG description.
+function correctFacts(s) {
+  let out = String(s || '')
+  for (const [from, to] of FACT_CORRECTIONS) {
+    if (out.includes(from)) out = out.split(from).join(to)
+  }
+  return out
+}
+
+// Build-time drift check: warn once per build if an entry matched nothing across
+// the whole feed, which means either the source article was fixed (delete the
+// entry) or the wording changed and the claim is back unnoticed (update it).
+export function reportUnusedCorrections(xml) {
+  for (const [from] of FACT_CORRECTIONS) {
+    if (!String(xml || '').includes(from)) {
+      console.warn(`[feed] fact correction no longer matches — verify the source article, then remove it: "${from}"`)
+    }
+  }
+}
+
 // Excerpts are plain text, but feed summaries arrive as HTML with entities
 // (often inside CDATA, where XML leaves them literal) — decode them so we don't
 // print "&mdash;". `&amp;` is unescaped last to avoid double-decoding.
@@ -260,9 +303,9 @@ export function itemToPost(item, { feedTitle = '' } = {}) {
   if (!slug) return null
   const link = text(item.link).trim()
   // content:encoded carries full HTML; description is often only a summary.
-  const rawContent = text(item['content:encoded']) || text(item.description)
+  const rawContent = correctFacts(text(item['content:encoded']) || text(item.description))
   const contentHtml = sanitizeHtml(rawContent)
-  const excerpt = toExcerpt(text(item.description) || rawContent)
+  const excerpt = toExcerpt(correctFacts(text(item.description)) || rawContent)
   const host = hostOf(link)
   // Attribute off-site only for real http(s) links — never a javascript:/data:
   // link masquerading as a source.
@@ -299,6 +342,7 @@ export function parseFeedXml(xml) {
   if (!channel) return []
   const feedTitle = text(channel.title)
   const items = Array.isArray(channel.item) ? channel.item : []
+  reportUnusedCorrections(xml)
   return items.map((it) => itemToPost(it, { feedTitle })).filter(Boolean)
 }
 
