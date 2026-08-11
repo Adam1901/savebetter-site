@@ -37,10 +37,16 @@ const absoluteImageUrl = (url) => {
 }
 // Social cards need an absolute, raster image — SVG OG images are dropped by
 // Facebook/X/LinkedIn/Slack/Discord. Mirrors the homepage og:image.
-const OG_IMAGE = `${ORIGIN}/og-image.png`
+export const OG_IMAGE = `${ORIGIN}/og-image.png`
 const OG_IMAGE_ALT = 'Checkpoint64 — never lose a save again.'
-const PUBLISHER = {
+// Same @id the homepage stamps on its Organization block (i18n/head.js), so
+// Google merges every page's publisher into one entity instead of treating each
+// as its own island. The node stays fully populated on purpose — a bare
+// {"@id": …} would be a dangling reference on any page that doesn't also define
+// the node, and Google won't fetch the homepage to resolve it.
+export const PUBLISHER = {
   '@type': 'Organization',
+  '@id': `${ORIGIN}/#organization`,
   name: 'Checkpoint64',
   url: `${ORIGIN}/`,
   logo: { '@type': 'ImageObject', url: `${ORIGIN}/retro_save_icon.svg` },
@@ -109,6 +115,15 @@ export async function markdownToHtml(md) {
 // `depth` = how many `../` segments are needed to climb back to site root.
 // /blog/index.html        → depth 1
 // /blog/<slug>/index.html → depth 2
+//
+// The robots directive matches the homepage's (i18n/head.js) rather than the
+// bare `index, follow` this used to send: without max-image-preview:large,
+// Google caps result thumbnails at a small square and the page can't surface in
+// Discover — which mostly penalised the posts that carry a featured image. This
+// function serves the blog AND the guide pages, so one edit covers both. The
+// legal pages have their own private layout() in legal/render.js and keep the
+// bare directive on purpose — Terms/Privacy carry no images and aren't Discover
+// candidates, so the image/snippet allowances would be noise there.
 export function layout({ title, description, body, depth, head = '' }) {
   const prefix = depth === 0 ? './' : '../'.repeat(depth)
   const desc = description
@@ -116,9 +131,10 @@ export function layout({ title, description, body, depth, head = '' }) {
     : ''
   const headHtml = `  <title>${esc(title)}</title>
   ${desc}
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" type="image/svg+xml" href="${prefix}retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="${prefix}rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -277,7 +293,9 @@ ${relatedNav}    </article>`
       image,
       inLanguage: 'en',
       keywords: post.tags.length ? post.tags.join(', ') : undefined,
-      author: { '@type': 'Organization', name: 'Checkpoint64', url: `${ORIGIN}/` },
+      // Same node as publisher — one Checkpoint64 entity per page, not two
+      // near-identical Organizations Google has to guess are the same.
+      author: PUBLISHER,
       publisher: PUBLISHER,
     }),
   ].filter(Boolean).join('\n')
@@ -316,6 +334,17 @@ export function renderIndex(posts, { depth = 1 } = {}) {
   const description = 'Release notes and write-ups from the Checkpoint64 team.'
   const head = [
     socialMeta({ type: 'website', title: 'Logbook — Checkpoint64', description, url }),
+    // Home / Logbook. Posts have carried a breadcrumb since #25; the index that
+    // parents them did not, so the trail only existed from the second level
+    // down. Two levels, matching the links that actually resolve in the nav.
+    jsonLd({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
+        { '@type': 'ListItem', position: 2, name: 'Logbook', item: url },
+      ],
+    }),
     jsonLd({
       '@context': 'https://schema.org',
       '@type': 'Blog',

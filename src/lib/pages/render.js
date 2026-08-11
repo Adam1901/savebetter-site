@@ -1,6 +1,6 @@
-import { markdownToHtml, layout, socialMeta, jsonLd } from '../blog/render.js'
 import { pageSummaries, gameSummaries, catalogSlugForGuide } from './load.js'
 import { getCatalog } from '../catalog/load.js'
+import { markdownToHtml, layout, socialMeta, jsonLd, PUBLISHER, OG_IMAGE } from '../blog/render.js'
 import { esc } from '../esc.js'
 
 const ORIGIN = 'https://checkpoint64.com'
@@ -133,6 +133,27 @@ ${tail}
       { '@type': 'ListItem', position: 2, name: doc.breadcrumb, item: url },
     ],
   })
+  // The page-level entity. Without it these guides carried only a breadcrumb and
+  // an FAQ — structured data describing parts of a page with nothing saying what
+  // the page itself is. Same shape as the blog's BlogPosting so both read as one
+  // site. Only `dateModified` is emitted: frontmatter carries `updated`, which is
+  // a last-edit date, so mapping it to `datePublished` would claim a publication
+  // date that walks forward on every content edit. Gated on `doc.updated` being
+  // present (optional in frontmatter; jsonLd() drops undefined keys), so the
+  // structured date never claims more than the visible "Last updated" line.
+  const articleLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: doc.title,
+    description: doc.description || undefined,
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    dateModified: doc.updated || undefined,
+    image: OG_IMAGE,
+    inLanguage: 'en',
+    author: PUBLISHER,
+    publisher: PUBLISHER,
+  })
   const faqLd = doc.faq.length
     ? jsonLd({
         '@context': 'https://schema.org',
@@ -147,6 +168,7 @@ ${tail}
 
   const head = [
     socialMeta({ type: 'article', title: doc.title, description: doc.description, url }),
+    articleLd,
     breadcrumbLd,
     faqLd,
     isGamesHub ? gamesItemListLd() : '',

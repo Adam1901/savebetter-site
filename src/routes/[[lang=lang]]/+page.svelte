@@ -28,7 +28,7 @@
   // './' at the site root, '../' on the depth-1 localized pages — the rewrite
   // the old string build applied to every root-relative link.
   const prefix = data.locale === 'en' ? './' : '../'
-  const head = homeHead({ locale: data.locale, includeAnalytics: !dev })
+  const head = homeHead({ locale: data.locale, includeAnalytics: !dev, releaseTag: data.releases?.tag })
   const noscript = noscriptNotice(data.locale)
 
   // Cross-cutting interactivity: reformat every baked EUR money span into the

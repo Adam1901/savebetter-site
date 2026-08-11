@@ -86,10 +86,14 @@ function plainSavings(t, intl) {
   return `${lo}–${hi}${t.money.aYear}`
 }
 
-// The five JSON-LD blocks, regenerated in the target language. Unified on the
-// English index.html values (softwareVersion 0.4 / InStock) — resolving the old
-// en-vs-localized drift, which is the one intended change from the baseline.
-function jsonLdBlocks({ code, t, intl }) {
+// softwareVersion tracks the latest GitHub release, passed in from the page's
+// build-time release fetch — a hardcoded literal went stale (it still claimed
+// 0.4 long after v1.0 shipped, contradicting the site's own FAQ). This is only
+// the fallback for a build where that fetch failed, so keep it roughly current.
+const FALLBACK_VERSION = '1.0'
+
+// The five JSON-LD blocks, regenerated in the target language.
+function jsonLdBlocks({ code, t, intl, version }) {
   const j = t.jsonld
   // Stable @ids so the three site-level entities read as ONE graph instead of
   // three islands — Google merges cross-referencing @id nodes across separate
@@ -133,7 +137,7 @@ function jsonLdBlocks({ code, t, intl }) {
       url: `${ORIGIN}/`,
       description: j.softwareDescription,
       image: `${ORIGIN}/og-image.png`,
-      softwareVersion: '0.4',
+      softwareVersion: version,
       downloadUrl: `${ORIGIN}/#download`,
       isAccessibleForFree: true,
       sameAs: [STEAM_STORE_URL, `https://github.com/${REPO}`],
@@ -182,8 +186,9 @@ function jsonLdBlocks({ code, t, intl }) {
 }
 
 // Full homepage <head> inner HTML for `locale`. `includeAnalytics` is false in
-// dev (pass `!dev` from $app/environment at the call site).
-export function homeHead({ locale = 'en', includeAnalytics = true } = {}) {
+// dev (pass `!dev` from $app/environment at the call site). `releaseTag` is the
+// build-time GitHub tag ("v1.0.8"); null when that fetch failed.
+export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = null } = {}) {
   const L = getLocale(locale)
   const t = L.t
   const intl = L.intl
@@ -191,6 +196,7 @@ export function homeHead({ locale = 'en', includeAnalytics = true } = {}) {
   const ogLocale = L.ogLocale
   const prefix = code === 'en' ? './' : '../'
   const pageUrl = `${ORIGIN}${pathForLocale(code)}`
+  const version = String(releaseTag || '').replace(/^v/, '') || FALLBACK_VERSION
 
   return `    <meta name="msvalidate.01" content="91385F5B3EAE099308DBAAF85B0EF115"/>
 ${includeAnalytics ? `${ANALYTICS}\n` : ''}    <title>${esc(t.meta.title)}</title>
@@ -215,6 +221,7 @@ ${THEME_BOOTSTRAP}
     <link rel="alternate icon" href="${prefix}retro_save_icon.svg"/>
     <link rel="mask-icon" href="${prefix}retro_save_icon.svg" color="#ff5f4e"/>
     <link rel="apple-touch-icon" href="${prefix}retro_save_icon.svg"/>
+    <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="${prefix}rss.xml"/>
     <meta name="apple-mobile-web-app-title" content="Checkpoint64"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
@@ -238,7 +245,7 @@ ${THEME_BOOTSTRAP}
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap"/></noscript>
-${jsonLdBlocks({ code, t, intl })}`
+${jsonLdBlocks({ code, t, intl, version })}`
 }
 
 // The translated <noscript> notice that sits just after the app body.
