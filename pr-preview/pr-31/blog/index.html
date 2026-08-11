@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--u4k2t--><!---->  <title>Logbook — Checkpoint64</title>
   <meta name="description" content="Release notes and write-ups from the Checkpoint64 team." />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="color-scheme" content="light dark" />
   <link rel="icon" type="image/svg+xml" href="../retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="../rss.xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -42,6 +43,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logbook",
+        "item": "https://checkpoint64.com/blog/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "Blog",
     "name": "Checkpoint64 Logbook",
     "description": "Release notes and write-ups from the Checkpoint64 team.",
@@ -49,6 +70,7 @@
     "inLanguage": "en",
     "publisher": {
       "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
       "name": "Checkpoint64",
       "url": "https://checkpoint64.com/",
       "logo": {
@@ -59,9 +81,45 @@
     "blogPost": [
       {
         "@type": "BlogPosting",
+        "headline": "Checkpoint64 1.0 is out on Steam",
+        "url": "https://checkpoint64.com/blog/launch-day/",
+        "datePublished": "2026-08-03"
+      },
+      {
+        "@type": "BlogPosting",
         "headline": "Ditch the dedicated server; your co-op group is probably paying for empty hours",
         "url": "https://checkpoint64.com/blog/ditch-the-dedicated-server/",
         "datePublished": "2026-05-20"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "How to Preserve Game Progress Without Save Drama",
+        "url": "https://checkpoint64.com/blog/how-to-preserve-game-progress/",
+        "datePublished": "2026-08-11"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "7 Best Steam Cloud Alternatives for Save Safety",
+        "url": "https://checkpoint64.com/blog/best-steam-cloud-alternatives/",
+        "datePublished": "2026-08-09"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Modded Saves Compatibility Without Guesswork",
+        "url": "https://checkpoint64.com/blog/modded-saves-compatibility/",
+        "datePublished": "2026-08-07"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "How to Prevent Steam Save Overwrites for Good",
+        "url": "https://checkpoint64.com/blog/prevent-steam-save-overwrites/",
+        "datePublished": "2026-08-05"
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "How to Recover Deleted Game Worlds Safely",
+        "url": "https://checkpoint64.com/blog/recover-deleted-game-worlds/",
+        "datePublished": "2026-08-03"
       },
       {
         "@type": "BlogPosting",
@@ -296,12 +354,66 @@
     </header>
     <ul class="blog-list">
       <li class="blog-card pinned">
+        <a href="launch-day/" class="blog-card-link">
+          
+          <span class="blog-card-pin" aria-label="Pinned post">📌 Pinned</span>
+          <h2 class="blog-card-title">Checkpoint64 1.0 is out on Steam</h2>
+          <time class="blog-card-date" datetime="2026-08-03">2026-08-03</time>
+          <p class="blog-card-excerpt">The playtest is over and Checkpoint64 1.0 is live on Steam. Auto-backup while you play, every version kept, one click to roll back. Here&#39;s what&#39;s in 1.0, what the playtest changed, and which platforms it ships on today.</p>
+        </a>
+      </li>
+      <li class="blog-card pinned">
         <a href="ditch-the-dedicated-server/" class="blog-card-link">
           
           <span class="blog-card-pin" aria-label="Pinned post">📌 Pinned</span>
           <h2 class="blog-card-title">Ditch the dedicated server; your co-op group is probably paying for empty hours</h2>
           <time class="blog-card-date" datetime="2026-05-20">2026-05-20</time>
           <p class="blog-card-excerpt">A 24/7 rented box is great when ten people play every night. For the average co-op group, it&#39;s $120–$240 a year of idle uptime. Here&#39;s the math, and how Checkpoint64 covers ~90% of the use case for a one-time payment.</p>
+        </a>
+      </li>
+      <li class="blog-card">
+        <a href="how-to-preserve-game-progress/" class="blog-card-link">
+          <img class="blog-card-thumb" src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/2d17234f-fdf2-46d7-a4c6-71a3f0cb40c0.webp" alt="" loading="lazy" />
+          
+          <h2 class="blog-card-title">How to Preserve Game Progress Without Save Drama</h2>
+          <time class="blog-card-date" datetime="2026-08-11">2026-08-11</time>
+          <p class="blog-card-excerpt">Learn how to preserve game progress with automatic backups, version history and safer co-op handoffs, so a bad mod or overwrite does not erase your world.</p>
+        </a>
+      </li>
+      <li class="blog-card">
+        <a href="best-steam-cloud-alternatives/" class="blog-card-link">
+          <img class="blog-card-thumb" src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/d74879ea-57a0-4ad5-80d9-0051fafa26ca.webp" alt="" loading="lazy" />
+          
+          <h2 class="blog-card-title">7 Best Steam Cloud Alternatives for Save Safety</h2>
+          <time class="blog-card-date" datetime="2026-08-09">2026-08-09</time>
+          <p class="blog-card-excerpt">Looking for the best Steam Cloud alternatives? Compare smarter save backup options for version history, co-op worlds, mods and multi-PC play for gamers.</p>
+        </a>
+      </li>
+      <li class="blog-card">
+        <a href="modded-saves-compatibility/" class="blog-card-link">
+          <img class="blog-card-thumb" src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/ee1e3df8-d17b-40b3-8d73-87e5722d5413.webp" alt="" loading="lazy" />
+          
+          <h2 class="blog-card-title">Modded Saves Compatibility Without Guesswork</h2>
+          <time class="blog-card-date" datetime="2026-08-07">2026-08-07</time>
+          <p class="blog-card-excerpt">Modded saves compatibility is fragile. See what breaks worlds, how to test updates safely, and keep a hundred-hour modded run alive.</p>
+        </a>
+      </li>
+      <li class="blog-card">
+        <a href="prevent-steam-save-overwrites/" class="blog-card-link">
+          <img class="blog-card-thumb" src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/688f84b3-6472-43eb-86fa-71551fd0e5ff.webp" alt="" loading="lazy" />
+          
+          <h2 class="blog-card-title">How to Prevent Steam Save Overwrites for Good</h2>
+          <time class="blog-card-date" datetime="2026-08-05">2026-08-05</time>
+          <p class="blog-card-excerpt">Learn how to prevent Steam save overwrites with version history, sync checks and safer co-op handoffs, so one bad launch never ever deletes your progress.</p>
+        </a>
+      </li>
+      <li class="blog-card">
+        <a href="recover-deleted-game-worlds/" class="blog-card-link">
+          <img class="blog-card-thumb" src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/3f035230-3257-42ac-bd08-94c72f0c306c/1381dc9c-098e-4ab3-b66a-df226e2d5485.webp" alt="" loading="lazy" />
+          
+          <h2 class="blog-card-title">How to Recover Deleted Game Worlds Safely</h2>
+          <time class="blog-card-date" datetime="2026-08-03">2026-08-03</time>
+          <p class="blog-card-excerpt">Learn how to recover deleted game worlds, stop sync disasters and protect co-op saves with version history, without renting a server or babysitting folders.</p>
         </a>
       </li>
       <li class="blog-card">
