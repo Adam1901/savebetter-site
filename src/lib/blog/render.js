@@ -37,10 +37,16 @@ const absoluteImageUrl = (url) => {
 }
 // Social cards need an absolute, raster image — SVG OG images are dropped by
 // Facebook/X/LinkedIn/Slack/Discord. Mirrors the homepage og:image.
-const OG_IMAGE = `${ORIGIN}/og-image.png`
+export const OG_IMAGE = `${ORIGIN}/og-image.png`
 const OG_IMAGE_ALT = 'Checkpoint64 — never lose a save again.'
-const PUBLISHER = {
+// Same @id the homepage stamps on its Organization block (i18n/head.js), so
+// Google merges every page's publisher into one entity instead of treating each
+// as its own island. The node stays fully populated on purpose — a bare
+// {"@id": …} would be a dangling reference on any page that doesn't also define
+// the node, and Google won't fetch the homepage to resolve it.
+export const PUBLISHER = {
   '@type': 'Organization',
+  '@id': `${ORIGIN}/#organization`,
   name: 'Checkpoint64',
   url: `${ORIGIN}/`,
   logo: { '@type': 'ImageObject', url: `${ORIGIN}/retro_save_icon.svg` },
@@ -277,7 +283,9 @@ ${relatedNav}    </article>`
       image,
       inLanguage: 'en',
       keywords: post.tags.length ? post.tags.join(', ') : undefined,
-      author: { '@type': 'Organization', name: 'Checkpoint64', url: `${ORIGIN}/` },
+      // Same node as publisher — one Checkpoint64 entity per page, not two
+      // near-identical Organizations Google has to guess are the same.
+      author: PUBLISHER,
       publisher: PUBLISHER,
     }),
   ].filter(Boolean).join('\n')
