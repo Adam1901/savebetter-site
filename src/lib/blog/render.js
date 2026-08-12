@@ -100,6 +100,21 @@ marked.use({
     code({ __html, text }) {
       return __html || `<pre><code>${esc(text)}</code></pre>`
     },
+    // GitHub-style slug ids on headings, so a page can deep-link its own
+    // sections. The privacy policy's quick-answers table depends on these;
+    // everything else just gains anchors it wasn't using.
+    // ponytail: no de-duplication suffix — two identical headings in one
+    // document would collide. Add a seen-count map if that ever happens.
+    heading({ tokens, depth }) {
+      const html = this.parser.parseInline(tokens)
+      const id = html
+        .replace(/<[^>]+>/g, '')
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .trim()
+        .replace(/\s+/g, '-')
+      return `<h${depth} id="${id}">${html}</h${depth}>\n`
+    },
   },
 })
 

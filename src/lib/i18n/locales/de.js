@@ -241,6 +241,14 @@ export default {
     ],
   },
 
+  consent: {
+    title: 'Cookies',
+    body: 'Google Analytics zeigt uns, welche Seiten wirklich gelesen werden. Es setzt Cookies und läuft deshalb nur, wenn du zustimmst. Lehnst du ab, funktioniert die Seite genauso.',
+    link: 'Datenschutzerklärung',
+    accept: 'Annehmen',
+    reject: 'Ablehnen',
+  },
+
   footer: {
     blurb: 'Ein sicherer Ort für deine großen Runs. Gebaut von Leuten, die eine 200-Stunden-Factorio-Basis verloren und es nie verwunden haben.',
     sign: 'für mich gemacht.',
@@ -257,6 +265,7 @@ export default {
       discord: 'Discord',
       terms: 'AGB',
       privacy: 'Datenschutz',
+      cookies: 'Cookie-Einstellungen',
     },
     ariaProduct: 'Produkt',
     ariaResources: 'Ressourcen',

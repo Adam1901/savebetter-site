@@ -23,17 +23,37 @@ const KEYWORDS = 'game save backup, cloud save sync, save file versioning, rollb
 // in dev (replaces the old stripAnalyticsInDev plugin). Simple Analytics and
 // Microsoft Clarity were removed to cut page-load weight — Clarity's session
 // recorder was the single heaviest third party on the page.
+//
+// Ahrefs is cookieless, so PECR consent does not apply and it loads outright.
+// GA4 sets cookies, so it must NOT run until the visitor opts in: the tag is
+// deliberately NOT a static <script> here. cp64LoadGA injects it on demand and
+// is called from exactly two places — this bootstrap, for a visitor who
+// accepted on an earlier visit, and CookieBanner.svelte's Accept button. Do not
+// "simplify" this back into a plain script tag; that is the defect this fixes.
 // GA_ID: the GA4 Measurement ID for checkpoint64.com.
 const GA_ID = 'G-Z6QH00W8CG'
 const ANALYTICS = `    <script src="https://analytics.ahrefs.com/analytics.js" data-key="n2SnzJRiCEhdWzHYmrw/Yg" async></script>
 
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_ID}"></script>
+    <!-- Google Analytics (GA4) — consent-gated, see CookieBanner.svelte -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${GA_ID}');
+        (function () {
+            var loaded = false;
+            window.cp64LoadGA = function () {
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=${GA_ID}';
+                document.head.appendChild(s);
+                window.dataLayer = window.dataLayer || [];
+                window.gtag = function () { window.dataLayer.push(arguments); };
+                window.gtag('js', new Date());
+                window.gtag('config', '${GA_ID}');
+            };
+            try {
+                if (localStorage.getItem('cp64-consent') === 'granted') window.cp64LoadGA();
+            } catch (e) { /* storage blocked — stay opted out */ }
+        })();
     </script>`
 
 // Language auto-detect: on the apex root only, first-time visitors whose browser
