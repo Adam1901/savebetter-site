@@ -247,6 +247,14 @@ export default {
     ],
   },
 
+  consent: {
+    title: 'Cookies',
+    body: 'Google Analytics tells us which pages people actually read. It sets cookies, so it only runs if you say yes. Say no and the site works exactly the same.',
+    link: 'Privacy policy',
+    accept: 'Accept',
+    reject: 'Reject',
+  },
+
   footer: {
     blurb: 'A safe place for your big runs. Built by people who lost a 200-hour Factorio base and never got over it.',
     sign: 'made for me.',
@@ -263,6 +271,7 @@ export default {
       discord: 'Discord',
       terms: 'Terms',
       privacy: 'Privacy',
+      cookies: 'Cookie settings',
     },
     ariaProduct: 'Product',
     ariaResources: 'Resources',

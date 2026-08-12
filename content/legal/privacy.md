@@ -85,7 +85,7 @@ We do **not** use session-replay or heatmap tools. Microsoft Clarity and Simple 
 
 The Site also loads **Google Fonts** from Google's servers, which means Google receives your browser's IP address when it fetches a font. We use **Google Search Console** and **Bing Webmaster Tools** for search-performance reporting; these rely on a verification file or meta tag and do not set tracking cookies on your visit.
 
-**On consent:** we do not currently show a cookie-consent banner, so these analytics load on the homepages without asking first. We consider this a gap we intend to close; in the meantime, Section 4 explains how to block them, and you can object to this processing at any time under Section 11.
+**On consent:** Google Analytics sets cookies, so it does **not** load until you accept it. On your first visit to a homepage you will see a banner offering *Accept* and *Reject* as equally prominent choices. Nothing that stores cookies runs until you pick one, and closing or ignoring the banner is **not** treated as consent. Your choice is remembered in your browser and you can change it at any time via **Cookie settings** in the site footer. Ahrefs is cookieless, so it is not gated behind the banner.
 
 ### 2.5 Analytics and telemetry in the desktop app
 
@@ -119,7 +119,8 @@ Three things about this:
 | Malware scanning of team save files (Section 2.7) | **Legitimate interests** (Art. 6(1)(f)) — protecting members of a shared namespace from a malicious or infected upload by another member. |
 | Optional integrations you initiate: Discord linking, Patreon supporter access, Steam achievements | **Contract** (Art. 6(1)(b)) where the feature is part of the Service; **consent** (Art. 6(1)(a)) for the act of linking an external account, which you can withdraw by unlinking. |
 | Improving the App and Service: pseudonymous product analytics and crash reports | **Legitimate interests** (Art. 6(1)(f)) — understanding which features are used and where the App fails. |
-| Marketing-website analytics (Google Analytics 4, Ahrefs) | **Legitimate interests** (Art. 6(1)(f)) — measuring traffic and content performance. Where your local law requires consent for the underlying storage or access on your device (PECR in the UK, national ePrivacy implementations in the EEA), that consent has not yet been collected — see Section 2.4. |
+| Marketing-website analytics — Google Analytics 4 | **Consent** (Art. 6(1)(a)), collected through the cookie banner before the tag loads, and withdrawable at any time from Cookie settings in the footer. |
+| Marketing-website analytics — Ahrefs (cookieless) | **Legitimate interests** (Art. 6(1)(f)) — measuring traffic and content performance without storing anything on your device, so no PECR consent is required. |
 | Complying with our legal obligations (responding to lawful requests, retaining accounting records) | **Legal obligation** (Art. 6(1)(c)). |
 | Defending or pursuing legal claims | **Legitimate interests** (Art. 6(1)(f)). |
 
@@ -131,8 +132,8 @@ You can ask us for our legitimate-interests assessment on any row above by email
 
 The Service uses cookies and similar technologies (including browser local storage) for these purposes:
 
-- **Strictly necessary** — keeping you signed in, CSRF protection, and rate-limit state. These do not require consent. The App additionally stores your session tokens in your OS credential store, and your interface preferences (language, theme) in local storage on your device.
-- **Analytics** — Google Analytics 4 sets cookies on the marketing-site homepages. Ahrefs Web Analytics is cookieless. As stated in Section 2.4, **we do not currently ask for consent before these load**.
+- **Strictly necessary** — keeping you signed in, CSRF protection, and rate-limit state. These do not require consent. The App additionally stores your session tokens in your OS credential store, and your interface preferences (language, theme) in local storage on your device. Your cookie choice itself is stored in local storage: that record is strictly necessary, because without it we could not honour a refusal.
+- **Analytics** — Google Analytics 4 sets cookies on the marketing-site homepages, and **loads only if you accept it** in the consent banner. Ahrefs Web Analytics is cookieless and needs no consent. You can change or withdraw your choice at any time from **Cookie settings** in the footer.
 - **Third-party content** — Google Fonts is fetched from Google's servers, which exposes your IP address to Google.
 
 **How to block them.** You can block or delete cookies in your browser settings, use a content blocker (Google Analytics and Ahrefs are blocked by all mainstream blocking lists), send a Do Not Track / Global Privacy Control signal, or install Google's [opt-out browser add-on](https://tools.google.com/dlpage/gaoptout). Blocking analytics does not affect your use of the Service in any way. Blocking strictly-necessary cookies will prevent you from signing in.

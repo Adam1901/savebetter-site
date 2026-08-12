@@ -241,6 +241,14 @@ export default {
     ],
   },
 
+  consent: {
+    title: 'Cookies',
+    body: 'Google Analytics nos muestra qué páginas se leen de verdad. Usa cookies, así que solo se carga si aceptas. Si lo rechazas, el sitio funciona exactamente igual.',
+    link: 'Política de privacidad',
+    accept: 'Aceptar',
+    reject: 'Rechazar',
+  },
+
   footer: {
     blurb: 'Un lugar seguro para tus grandes partidas. Hecho por gente que perdió una base de Factorio de 200 horas y nunca lo superó.',
     sign: 'hecho para mí.',
@@ -257,6 +265,7 @@ export default {
       discord: 'Discord',
       terms: 'Términos',
       privacy: 'Privacidad',
+      cookies: 'Configuración de cookies',
     },
     ariaProduct: 'Producto',
     ariaResources: 'Recursos',

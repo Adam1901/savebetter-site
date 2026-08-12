@@ -1414,6 +1414,49 @@ footer.bot .copyline {
 .tilt-p2 { transform: rotate(2deg); }
 .tilt-p5 { transform: rotate(5deg); }
 
+/* ---------- COOKIE CONSENT ----------
+   Bottom bar, not a modal: it must not trap focus or block reading, since
+   refusing is a valid outcome and the page works fully either way.
+   Accept and Reject deliberately share one class — equal prominence is a
+   regulatory requirement, so do not promote one to .btn.prim. */
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+  background: var(--bg-2);
+  border-top: 2px solid var(--accent);
+  padding: 16px 0;
+}
+.consent-inner {
+  width: min(1100px, calc(100% - 40px)); margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; flex-wrap: wrap;
+}
+.consent-copy { flex: 1 1 420px; }
+.consent-title {
+  font-family: var(--f-pixel); font-size: 11px; color: var(--fg);
+  margin: 0 0 8px;
+}
+.consent-body {
+  font-family: var(--f-mono); font-size: 12px; line-height: 1.6;
+  color: rgba(var(--fg-rgb), 0.75); margin: 0;
+}
+.consent-body a { color: var(--accent); }
+.consent-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.consent-actions .btn { font-size: 11px; padding: 11px 16px; }
+
+/* Footer "Cookie settings" is a button (it reopens the banner) but has to read
+   as one of the links beside it. */
+.footer-linkbtn {
+  background: none; border: 0; padding: 0;
+  font: inherit; color: inherit; opacity: 0.75;
+  cursor: pointer; text-align: left;
+}
+.footer-linkbtn:hover { color: var(--accent); opacity: 1; }
+
+@media (max-width: 640px) {
+  .consent-inner { flex-direction: column; align-items: stretch; }
+  .consent-actions .btn { flex: 1; justify-content: center; }
+}
+
 /* ---------- MOBILE TIGHTENING ----------
    The desktop layout uses generous vertical rhythm and hard-offset
    box-shadows that look great on a 1440px monitor but waste a screen

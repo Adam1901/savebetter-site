@@ -3,7 +3,7 @@
 
   // Resources-column guide labels stay hardcoded English (the pages are EN-only);
   // `prefix` handles './' at root vs '../' on the localized pages.
-  let { t, year, prefix } = $props()
+  let { t, year, prefix, onCookieSettings } = $props()
   const f = t.footer
 </script>
 
@@ -44,6 +44,7 @@
           <li><a href="https://discord.gg/kxeYwuuHEn" target="_blank" rel="noopener noreferrer" aria-label={f.discordAria}>{f.links.discord}</a></li>
           <li><a href="{prefix}terms/">{f.links.terms}</a></li>
           <li><a href="{prefix}privacy/">{f.links.privacy}</a></li>
+          <li><button type="button" class="footer-linkbtn" onclick={onCookieSettings}>{f.links.cookies}</button></li>
         </ul>
       </nav>
     </div>

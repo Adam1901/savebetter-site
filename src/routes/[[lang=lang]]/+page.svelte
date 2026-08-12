@@ -20,6 +20,11 @@
   import DownloadStrip from '$lib/components/DownloadStrip.svelte'
   import Faq from '$lib/components/Faq.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import CookieBanner from '$lib/components/CookieBanner.svelte'
+
+  // Consent must be as easy to withdraw as to give, so the footer can reopen
+  // the banner after a choice has been made.
+  let consentOpen = $state(false)
 
   let { data } = $props()
   const L = getLocale(data.locale)
@@ -73,5 +78,6 @@
   <DownloadStrip {t} releases={data.releases} />
   <Faq {t} {intl} />
 </main>
-<Footer {t} year={data.year} {prefix} />
+<Footer {t} year={data.year} {prefix} onCookieSettings={() => (consentOpen = true)} />
+<CookieBanner {t} {prefix} bind:open={consentOpen} />
 {@html noscript}

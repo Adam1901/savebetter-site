@@ -241,6 +241,14 @@ export default {
     ],
   },
 
+  consent: {
+    title: 'Cookies',
+    body: "Google Analytics nous montre quelles pages sont vraiment lues. Il dépose des cookies, il ne se charge donc que si vous acceptez. Si vous refusez, le site fonctionne exactement pareil.",
+    link: 'Politique de confidentialité',
+    accept: 'Accepter',
+    reject: 'Refuser',
+  },
+
   footer: {
     blurb: "Un endroit sûr pour vos grandes parties. Conçu par des gens qui ont perdu une base Factorio de 200 heures et ne s'en sont jamais remis.",
     sign: 'fait pour moi.',
@@ -257,6 +265,7 @@ export default {
       discord: 'Discord',
       terms: 'Conditions',
       privacy: 'Confidentialité',
+      cookies: 'Paramètres des cookies',
     },
     ariaProduct: 'Produit',
     ariaResources: 'Ressources',
