@@ -137,7 +137,7 @@
 </ul>
 <p>We do <strong>not</strong> use session-replay or heatmap tools. Microsoft Clarity and Simple Analytics were used previously and have both been <strong>removed</strong>.</p>
 <p>The Site also loads <strong>Google Fonts</strong> from Google&#39;s servers, which means Google receives your browser&#39;s IP address when it fetches a font. We use <strong>Google Search Console</strong> and <strong>Bing Webmaster Tools</strong> for search-performance reporting; these rely on a verification file or meta tag and do not set tracking cookies on your visit.</p>
-<p><strong>On consent:</strong> we do not currently show a cookie-consent banner, so these analytics load on the homepages without asking first. We consider this a gap we intend to close; in the meantime, Section 4 explains how to block them, and you can object to this processing at any time under Section 11.</p>
+<p><strong>On consent:</strong> Google Analytics sets cookies, so it does <strong>not</strong> load until you accept it. On your first visit to a homepage you will see a banner offering <em>Accept</em> and <em>Reject</em> as equally prominent choices. Nothing that stores cookies runs until you pick one, and closing or ignoring the banner is <strong>not</strong> treated as consent. Your choice is remembered in your browser and you can change it at any time via <strong>Cookie settings</strong> in the site footer. Ahrefs is cookieless, so it is not gated behind the banner.</p>
 <h3 id="25-analytics-and-telemetry-in-the-desktop-app">2.5 Analytics and telemetry in the desktop app</h3>
 <p>The App sends pseudonymous product-analytics events to <strong>Aptabase</strong> — for example, &quot;the user opened the Versions panel&quot;, &quot;an auto-backup completed&quot;, or a <strong>stable, content-free error label</strong> when an operation fails. These events tell us which features are used and where the App breaks.</p>
 <p>What these events <strong>do not</strong> contain: the contents of your save files, your file paths, your file names, your email address, or your password. Aptabase is EU-hosted and is designed not to use cookies or persistent device identifiers.</p>
@@ -185,8 +185,12 @@
 <td><strong>Legitimate interests</strong> (Art. 6(1)(f)) — understanding which features are used and where the App fails.</td>
 </tr>
 <tr>
-<td>Marketing-website analytics (Google Analytics 4, Ahrefs)</td>
-<td><strong>Legitimate interests</strong> (Art. 6(1)(f)) — measuring traffic and content performance. Where your local law requires consent for the underlying storage or access on your device (PECR in the UK, national ePrivacy implementations in the EEA), that consent has not yet been collected — see Section 2.4.</td>
+<td>Marketing-website analytics — Google Analytics 4</td>
+<td><strong>Consent</strong> (Art. 6(1)(a)), collected through the cookie banner before the tag loads, and withdrawable at any time from Cookie settings in the footer.</td>
+</tr>
+<tr>
+<td>Marketing-website analytics — Ahrefs (cookieless)</td>
+<td><strong>Legitimate interests</strong> (Art. 6(1)(f)) — measuring traffic and content performance without storing anything on your device, so no PECR consent is required.</td>
 </tr>
 <tr>
 <td>Complying with our legal obligations (responding to lawful requests, retaining accounting records)</td>
@@ -202,8 +206,8 @@
 <h2 id="4-cookies-and-similar-technologies">4. Cookies and similar technologies</h2>
 <p>The Service uses cookies and similar technologies (including browser local storage) for these purposes:</p>
 <ul>
-<li><strong>Strictly necessary</strong> — keeping you signed in, CSRF protection, and rate-limit state. These do not require consent. The App additionally stores your session tokens in your OS credential store, and your interface preferences (language, theme) in local storage on your device.</li>
-<li><strong>Analytics</strong> — Google Analytics 4 sets cookies on the marketing-site homepages. Ahrefs Web Analytics is cookieless. As stated in Section 2.4, <strong>we do not currently ask for consent before these load</strong>.</li>
+<li><strong>Strictly necessary</strong> — keeping you signed in, CSRF protection, and rate-limit state. These do not require consent. The App additionally stores your session tokens in your OS credential store, and your interface preferences (language, theme) in local storage on your device. Your cookie choice itself is stored in local storage: that record is strictly necessary, because without it we could not honour a refusal.</li>
+<li><strong>Analytics</strong> — Google Analytics 4 sets cookies on the marketing-site homepages, and <strong>loads only if you accept it</strong> in the consent banner. Ahrefs Web Analytics is cookieless and needs no consent. You can change or withdraw your choice at any time from <strong>Cookie settings</strong> in the footer.</li>
 <li><strong>Third-party content</strong> — Google Fonts is fetched from Google&#39;s servers, which exposes your IP address to Google.</li>
 </ul>
 <p><strong>How to block them.</strong> You can block or delete cookies in your browser settings, use a content blocker (Google Analytics and Ahrefs are blocked by all mainstream blocking lists), send a Do Not Track / Global Privacy Control signal, or install Google&#39;s <a href="https://tools.google.com/dlpage/gaoptout">opt-out browser add-on</a>. Blocking analytics does not affect your use of the Service in any way. Blocking strictly-necessary cookies will prevent you from signing in.</p>
