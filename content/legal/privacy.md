@@ -294,9 +294,11 @@ You can also complain to the [Information Commissioner's Office](https://ico.org
 
 The **data controller** responsible for the personal data described in this policy is:
 
-- **Trading name:** Checkpoint64
+- **Controller:** **Adam Meadows**, a sole trader trading as **Checkpoint64**
 - **Country of establishment:** United Kingdom
 - **Contact for data-protection matters:** [privacy@checkpoint64.com](mailto:privacy@checkpoint64.com)
-- **Registered legal entity, company number, and registered office address:** *being finalised. If you need our full registered details — to make a data-subject request, to serve notice, or to complain to the ICO — email [privacy@checkpoint64.com](mailto:privacy@checkpoint64.com) and we will supply them promptly.*
+- **Postal address:** available on request — email [privacy@checkpoint64.com](mailto:privacy@checkpoint64.com) and we will provide it, for example if you need to serve notice or to give our details to the ICO.
 
-We have not appointed a statutory Data Protection Officer, as we are not required to under Article 37 of the UK GDPR. Data-protection questions go to the address above and are handled by the operator of the Service.
+Checkpoint64 is **not a registered company**, and no "Ltd" or "Limited" entity stands behind the Service. It is operated by an individual sole trader, who is the data controller and is personally responsible for the obligations in this policy.
+
+We have not appointed a statutory Data Protection Officer, as we are not required to under Article 37 of the UK GDPR. Data-protection questions go to the email address above and are handled by the operator of the Service.

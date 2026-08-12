@@ -1,14 +1,14 @@
 ---
 title: Terms of Service
 description: The terms you agree to when you use the Checkpoint64 website, desktop app, and cloud service.
-updated: 2026-06-13
+updated: 2026-08-12
 ---
 
 # Terms of Service
 
-**Last updated:** 13 June 2026
+**Last updated:** 12 August 2026
 
-These Terms of Service ("**Terms**") are a contract between you and **[LEGAL ENTITY]** ("**Checkpoint64**", "**we**", "**us**", "**our**"). They govern your use of:
+These Terms of Service ("**Terms**") are a contract between you and **Adam Meadows**, a sole trader trading as **Checkpoint64** ("**Checkpoint64**", "**we**", "**us**", "**our**"). They govern your use of:
 
 - the website at [checkpoint64.com](https://checkpoint64.com/) and any subdomains we operate (the "**Site**"),
 - the Checkpoint64 desktop application for Windows, macOS, and Linux (the "**App**"), and
@@ -179,3 +179,5 @@ Nothing in this section prevents either party from seeking urgent interim or inj
 ## 19. Contact
 
 Questions about these Terms? Email [legal@checkpoint64.com](mailto:legal@checkpoint64.com).
+
+Checkpoint64 is operated by **Adam Meadows**, a sole trader established in the United Kingdom. It is not a registered company. Our postal address is available on request by email, including where you need it to serve notice.
