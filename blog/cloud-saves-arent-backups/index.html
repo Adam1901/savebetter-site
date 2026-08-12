@@ -146,7 +146,7 @@
 they both involve your save file living somewhere other than your hard drive.
 But they solve two completely different problems, and the gap between them is
 exactly where 200 hours of progress goes to die.</p>
-<h2>Sync keeps one copy current. A backup keeps old copies safe.</h2>
+<h2 id="sync-keeps-one-copy-current-a-backup-keeps-old-copies-safe">Sync keeps one copy current. A backup keeps old copies safe.</h2>
 <p>Steam Cloud, GOG Galaxy, Epic, the console services — they&#39;re <strong>sync</strong>. Their
 job is to make sure the save on your desktop, your laptop, and your Steam Deck
 are all the same file. When the save changes on one machine, the new version is
@@ -161,7 +161,7 @@ wrong?&quot;</p>
 <p>You can see why one cannot stand in for the other. The failure mode you&#39;re
 afraid of — a save going bad — is precisely the event sync is built to
 propagate.</p>
-<h2>How &quot;I had cloud saves on&quot; turns into a loss</h2>
+<h2 id="how-quoti-had-cloud-saves-onquot-turns-into-a-loss">How &quot;I had cloud saves on&quot; turns into a loss</h2>
 <p>Run the tape forward on a normal bad day:</p>
 <ul>
 <li>The game autosaves into a corrupt state because it crashed mid-write, or a mod
@@ -177,7 +177,7 @@ there too.</li>
 one copy of your save and it&#39;s the bad one, mirrored faithfully to every device
 you own. The good version isn&#39;t in a folder somewhere — it was overwritten the
 instant the bad one was written.</p>
-<h2>&quot;But Steam keeps multiple cloud copies&quot;</h2>
+<h2 id="quotbut-steam-keeps-multiple-cloud-copiesquot">&quot;But Steam keeps multiple cloud copies&quot;</h2>
 <p>Sometimes, a little. Some platforms and some games retain a few recent revisions
 server-side, and occasionally support can dig one out for you. But this is a
 safety net you don&#39;t control, can&#39;t browse, can&#39;t count on, and definitely can&#39;t
@@ -194,7 +194,7 @@ two machines clobbering each other, not to let you rewind.</li>
 </ul>
 <p>A feature that <em>might</em> have <em>maybe</em> the version you need, that you <em>can&#39;t look
 at</em> until you&#39;ve already lost the file, is not a backup. It&#39;s a lottery ticket.</p>
-<h2>What a backup actually has to do</h2>
+<h2 id="what-a-backup-actually-has-to-do">What a backup actually has to do</h2>
 <p>For a save file, &quot;backed up&quot; means three things sync never promises:</p>
 <ol>
 <li><strong>It keeps old versions, not just the current one.</strong> Every meaningful state
@@ -212,7 +212,7 @@ quietly, in the background. Old versions don&#39;t get overwritten; they get
 <strong>stacked into a history.</strong> When today&#39;s save turns out to be the problem, you
 open the timeline, find the one from before it went wrong, and restore the real
 file the game reads. No support ticket, no lottery.</p>
-<h2>Use both — they&#39;re not rivals</h2>
+<h2 id="use-both-they39re-not-rivals">Use both — they&#39;re not rivals</h2>
 <p>This isn&#39;t an argument to turn cloud saves off. Sync solves &quot;I want to play on
 two machines,&quot; and it solves it well. Keep it on.</p>
 <p>It&#39;s an argument to stop <em>trusting sync to do a job it was never built for.</em> Let
@@ -222,7 +222,7 @@ copy around. Versioning makes sure the latest copy is never the only copy.</p>
 <p>The difference only ever matters once — on the day the newest save is the one
 you&#39;d give anything to undo. Sync is on the wrong side of that day by design. A
 backup is the thing that&#39;s on yours.</p>
-<h2>Where this fits</h2>
+<h2 id="where-this-fits">Where this fits</h2>
 <p>It&#39;s the same idea behind everything we build. For save states and emulators,
 that history is <a href="/blog/checkpoint64-for-emulators/">a rewind button that outlives the
 emulator</a>. For co-op worlds, it&#39;s

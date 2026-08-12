@@ -166,15 +166,15 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Palworld&#39;s Level.sav only gets bigger as your world ages, and a crash or a bad shutdown mid-save is one of the most commonly reported ways it ends up corrupted.</strong> Checkpoint64 backs up the whole world folder automatically and keeps every version, so a bad save means restoring the last healthy one, not starting over.</p>
-<h2>Where Palworld saves live</h2>
+<h2 id="where-palworld-saves-live">Where Palworld saves live</h2>
 <pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>%LOCALAPPDATA%\Pal\Saved\SaveGames</span></span></code></pre><p>Inside that folder, saves nest under your Steam ID and then the world itself. <code>Level.sav</code> holds the world — bases, Pals, everything you&#39;ve built — plus <code>LevelMeta.sav</code> and <code>WorldOption.sav</code> for settings, and a <code>.sav</code> per player under <code>Players</code>. Worlds usually carry a <code>.png</code> thumbnail too, which is why Palworld&#39;s preset backs up both <code>.sav</code> and <code>.png</code> files. Palworld writes only to Windows in the app&#39;s game catalog, so this folder is the whole picture.</p>
-<h2>Why big worlds get slow — and more crash-prone</h2>
+<h2 id="why-big-worlds-get-slow-and-more-crash-prone">Why big worlds get slow — and more crash-prone</h2>
 <p><code>Level.sav</code> just keeps growing the longer a world runs: more bases, more Pals, more of the map explored. It&#39;s well documented in the community that an old, large world takes noticeably longer to save and load, and can crash outright on weaker hardware or a dedicated server running short on memory. That doesn&#39;t make the save file smaller, but it does mean the odds of a bad save climb the longer a world lives — exactly when a recent backup matters most.</p>
-<h2>Surviving a crash or a bad shutdown</h2>
+<h2 id="surviving-a-crash-or-a-bad-shutdown">Surviving a crash or a bad shutdown</h2>
 <p>Palworld — or a dedicated server running it — crashing, losing power, or getting force-closed mid-save is one of the most commonly reported ways <code>Level.sav</code> ends up unreadable; the write just never finishes. Checkpoint64 keeps every version it backed up, so recovering from a bad shutdown means restoring the last healthy version from before the crash, not losing the world.</p>
-<h2>Sharing one world without a rented server</h2>
+<h2 id="sharing-one-world-without-a-rented-server">Sharing one world without a rented server</h2>
 <p>Palworld has exactly one live world file at a time, same as Valheim or Factorio — whoever&#39;s hosting holds the only copy, and a rented dedicated server is the usual answer for keeping it online without leaving one PC running. Checkpoint64 covers most of the same need for a small group with version history plus a lock, so only one person saves over the world at a time. The <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> covers the trade-off in depth.</p>
-<h2>How Checkpoint64 backs up Palworld</h2>
+<h2 id="how-checkpoint64-backs-up-palworld">How Checkpoint64 backs up Palworld</h2>
 <ol>
 <li><strong>Pick Palworld.</strong> The SaveGames path is already known.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed world and uploads a new version, sending only what changed.</li>

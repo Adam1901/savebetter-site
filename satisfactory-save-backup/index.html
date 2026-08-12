@@ -166,11 +166,11 @@
       </header>
       <div class="blog-post-body">
 <p><strong>A Satisfactory save is hundreds of hours of factory, and the moment you commit to a big redesign — or an autosave writes over the state you wanted back — that work is at risk.</strong> Checkpoint64 keeps every version of your <code>.sav</code> files, so you can experiment freely and roll back the instant a change goes wrong.</p>
-<h2>Where Satisfactory saves live</h2>
+<h2 id="where-satisfactory-saves-live">Where Satisfactory saves live</h2>
 <p>On Windows, your saves are here:</p>
 <pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>%LOCALAPPDATA%\FactoryGame\Saved\SaveGames</span></span></code></pre><p>That&#39;s the <code>AppData\Local</code> path (the folder is <code>FactoryGame</code> because that&#39;s the engine&#39;s project name, not &quot;Satisfactory&quot;). Each save is a <code>.sav</code> file. Satisfactory writes autosaves on a rotation, so a state from earlier in your session can quietly get overwritten. Checkpoint64 watches this folder and keeps every version — long past what the game&#39;s own rotation holds onto.</p>
 <p>Satisfactory writes only to Windows in the app&#39;s game catalog, so this one folder is the whole picture.</p>
-<h2>Redesign without fear</h2>
+<h2 id="redesign-without-fear">Redesign without fear</h2>
 <p>The best part of Satisfactory is also the scariest: the urge to rip out a working factory and rebuild it better. A backup with real version history turns that from a gamble into a safe experiment.</p>
 <ol>
 <li>Let Checkpoint64 capture your current save.</li>
@@ -178,9 +178,9 @@
 <li>If throughput craters — or you just liked it better before — restore the pre-redesign <code>.sav</code> and you&#39;re exactly where you started.</li>
 </ol>
 <p>No copying save files to your desktop, no cryptic filenames, no wondering which backup was the good one. Every version is labelled and dated.</p>
-<h2>Big factories, light backups</h2>
+<h2 id="big-factories-light-backups">Big factories, light backups</h2>
 <p>Late-game Satisfactory saves get large — a sprawling world can run to tens of megabytes. Checkpoint64 only sends the parts of a save that actually changed between versions, so backing up a huge factory doesn&#39;t re-upload the whole file each time. It stays quick as your build grows.</p>
-<h2>Co-op factories</h2>
+<h2 id="co-op-factories">Co-op factories</h2>
 <p>In co-op, one world is canonical, and &quot;who&#39;s got the latest save?&quot; gets messy when players host separate sessions. Checkpoint64 gives that world a single backed-up history with version locks, so one save moves forward instead of forking into three. If you&#39;re coordinating co-op without renting a 24/7 machine, the <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> goes deeper.</p>
 
       </div>

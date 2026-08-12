@@ -166,16 +166,16 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Elden Ring keeps every character in one .sl2 file, Steam Cloud has a well-documented history of corrupting it, and the game gives you no way to undo New Game+ or a respec once you commit.</strong> Checkpoint64 backs that file up automatically and keeps every version, so a bad sync or a decision you regret is one Restore away.</p>
-<h2>Where Elden Ring saves live</h2>
+<h2 id="where-elden-ring-saves-live">Where Elden Ring saves live</h2>
 <pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>%APPDATA%\EldenRing\&#x3C;your Steam ID>\ER0000.sl2</span></span></code></pre><p>That single <code>.sl2</code> file holds every character slot you&#39;ve got — there&#39;s no per-character save file to lose track of, just the one. If you run the Seamless Co-op mod, it keeps its own <code>ER0000.co2</code> alongside it, so your modded co-op runs never touch the vanilla save. Checkpoint64 backs up both files. Elden Ring writes only to Windows in the app&#39;s game catalog, so this one folder is the whole picture.</p>
-<h2>Steam Cloud&#39;s rocky history with this game</h2>
+<h2 id="steam-cloud39s-rocky-history-with-this-game">Steam Cloud&#39;s rocky history with this game</h2>
 <p>Elden Ring has a well-known reputation, especially since launch, for Steam Cloud sync corrupting or silently overwriting saves — common enough that plenty of player guides tell you to just turn Steam Cloud off for this game and back up manually instead.</p>
 <p>Checkpoint64 is that manual backup, minus the manual part. It keeps a dated version history of the actual <code>.sl2</code> file that doesn&#39;t depend on Steam&#39;s sync working correctly, so if a cloud sync ever does go wrong, it doesn&#39;t take your only copy with it.</p>
-<h2>Backing up before New Game+ or a big respec</h2>
+<h2 id="backing-up-before-new-game-or-a-big-respec">Backing up before New Game+ or a big respec</h2>
 <p>Elden Ring doesn&#39;t let you undo either of these. Start New Game+ and the world moves forward with you — there&#39;s no going back to NG. Respec past what your Larval Tears cover and you&#39;re stuck with the build. Both are exactly the kind of commitment where a backup taken five minutes earlier pays for itself: regret it, restore the <code>.sl2</code> from before you committed, and you&#39;ve got the old character back.</p>
-<h2>Seamless Co-op and modded saves</h2>
+<h2 id="seamless-co-op-and-modded-saves">Seamless Co-op and modded saves</h2>
 <p>Modded runs get the same treatment — Checkpoint64 backs up the <code>.co2</code> save the Seamless Co-op mod keeps, right alongside the vanilla file, so a modded co-op character has the same version history as a solo one. The <a href="../modded-game-save-backup/">modded game save backup guide</a> covers the general approach for the rest of your modded library.</p>
-<h2>How Checkpoint64 backs up Elden Ring</h2>
+<h2 id="how-checkpoint64-backs-up-elden-ring">How Checkpoint64 backs up Elden Ring</h2>
 <ol>
 <li><strong>Pick Elden Ring.</strong> The save path — Steam ID subfolder included — is already known.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.</li>

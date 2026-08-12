@@ -149,7 +149,7 @@ Most emulators give you a handful of numbered slots. You overwrite slot 1, slot
 wanted is gone. There&#39;s no undo on an undo.</p>
 <p>That&#39;s the gap Checkpoint64 fills. It doesn&#39;t replace your emulator&#39;s save
 states — it sits underneath them and keeps every one you&#39;ve ever written.</p>
-<h2>What an emulator actually puts on disk</h2>
+<h2 id="what-an-emulator-actually-puts-on-disk">What an emulator actually puts on disk</h2>
 <p>Three kinds of files, and Checkpoint64 treats all of them the same way: as
 something worth versioning.</p>
 <ul>
@@ -165,7 +165,7 @@ it that much worse.</li>
 </ul>
 <p>Every one of these is just a file in a folder. Point Checkpoint64 at that
 folder once and it watches for changes.</p>
-<h2>Auto-backup is the killer feature here</h2>
+<h2 id="auto-backup-is-the-killer-feature-here">Auto-backup is the killer feature here</h2>
 <p>Emulation is the use case auto-backup was made for. You&#39;re not going to manually
 checkpoint before every risky boss attempt — but your emulator is already
 writing <code>.state</code> files constantly, and Checkpoint64 notices.</p>
@@ -177,7 +177,7 @@ through, each one stamped with when it happened.</p>
 <p>So when you save-state into a room, get ambushed, and reflexively overwrite your
 good state with the ambush, the old one isn&#39;t gone. It&#39;s a version. You restore
 it and you&#39;re back on solid ground.</p>
-<h2>Restore is a rewind that outlives the emulator</h2>
+<h2 id="restore-is-a-rewind-that-outlives-the-emulator">Restore is a rewind that outlives the emulator</h2>
 <p>This is the part that matters for hard games. A save state lets you rewind a few
 seconds inside one emulator session. <strong>Restore lets you rewind hours, across
 sessions, across machines.</strong></p>
@@ -189,7 +189,7 @@ Restore the last good copy instead of losing every game on the card.</p>
 <p>Because the restore writes the real file your emulator reads, there&#39;s no import
 dance and no proprietary format — it works through the same path a normal save
 would. The emulator never knows the difference.</p>
-<h2>Why this beats copying the folder yourself</h2>
+<h2 id="why-this-beats-copying-the-folder-yourself">Why this beats copying the folder yourself</h2>
 <p>Everyone who emulates seriously has, at some point, zipped their saves folder
 and dropped it in a Dropbox. It works right up until it doesn&#39;t:</p>
 <ul>
@@ -205,7 +205,7 @@ at a time. And because every version carries a note, you can leave yourself a
 <strong>logbook</strong> — &quot;cleared the water temple,&quot; &quot;pre-final-boss,&quot; &quot;soft-locked, do not
 load&quot; — so the timeline reads like a save log instead of a wall of identical
 filenames.</p>
-<h2>One tool across every emulator you run</h2>
+<h2 id="one-tool-across-every-emulator-you-run">One tool across every emulator you run</h2>
 <p>Most emulator setups aren&#39;t one emulator. You&#39;ve got a standalone for one
 system, RetroArch for a dozen cores, something else for the platform neither
 handles well. Each writes its saves to its own folder in its own format.</p>
@@ -213,7 +213,7 @@ handles well. Each writes its saves to its own folder in its own format.</p>
 about which emulator wrote them. Add each save directory and they all get the
 same history, the same auto-backup, the same restore. One backup tool instead of
 trusting each emulator&#39;s built-in slot system and hoping for the best.</p>
-<h2>Where this fits</h2>
+<h2 id="where-this-fits">Where this fits</h2>
 <p>If you&#39;re the kind of player who keeps three save states going because you don&#39;t
 trust any single one, Checkpoint64 is the tool that lets you stop. It&#39;s the same
 philosophy behind everything we build: your save file is the most valuable thing

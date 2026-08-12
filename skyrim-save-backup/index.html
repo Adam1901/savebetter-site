@@ -166,15 +166,15 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Skyrim Special Edition keeps every character in one folder of <code>.ess</code> files, and the things that make a modded playthrough great — script mods, load-order tweaks, hundreds of hours of experimentation — are exactly the things that corrupt those files.</strong> Checkpoint64 backs that folder up automatically and keeps every version, so a save bricked by a mod change is one click from being undone.</p>
-<h2>Where Skyrim SE saves live</h2>
+<h2 id="where-skyrim-se-saves-live">Where Skyrim SE saves live</h2>
 <p>On Windows, your saves are here:</p>
 <pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>Documents\My Games\Skyrim Special Edition\Saves</span></span></code></pre><p>Inside you&#39;ll find numbered <code>.ess</code> files — one per save slot — and, if you run the Skyrim Script Extender (SKSE), a matching <code>.skse</code> co-save alongside each one. That co-save holds the extra state that script mods rely on, which is why restoring an <code>.ess</code> without its <code>.skse</code> can leave a modded save confused. Checkpoint64 captures both together.</p>
 <p>Skyrim SE writes only to Windows in the app&#39;s game catalog — there&#39;s no separate macOS or Linux save path, so a single Windows folder is the whole story.</p>
-<h2>The two ways a modded Skyrim save dies</h2>
+<h2 id="the-two-ways-a-modded-skyrim-save-dies">The two ways a modded Skyrim save dies</h2>
 <p><strong>Load-order changes.</strong> Your save bakes in references to the mods that were active when you saved. Remove one mid-playthrough, or shuffle the order, and the save still reaches for scripts and records that aren&#39;t there anymore. Result: an infinite load screen or a crash to desktop. The only clean recovery is a save from <em>before</em> the change.</p>
 <p><strong>Save bloat.</strong> Some script-heavy mods leave orphaned scripts churning inside the save. The <code>.ess</code> swells, load times balloon, and eventually the character becomes unplayable. You can&#39;t un-bloat a save — but you can go back to an earlier one from before it happened.</p>
 <p>Both problems have the same answer: a save you kept from before things went wrong. Skyrim&#39;s own save system rotates and overwrites; it won&#39;t keep that history for you.</p>
-<h2>How Checkpoint64 backs up Skyrim</h2>
+<h2 id="how-checkpoint64-backs-up-skyrim">How Checkpoint64 backs up Skyrim</h2>
 <ol>
 <li><strong>Pick Skyrim Special Edition.</strong> Checkpoint64 already knows the save folder — no path hunting.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version. Only what changed is sent, so a big save folder stays light.</li>

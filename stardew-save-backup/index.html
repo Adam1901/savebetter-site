@@ -166,7 +166,7 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Steam Cloud can force you to pick between two conflicting Stardew Valley saves with no way to preview either, and a SMAPI mod update can break the one you keep.</strong> Checkpoint64 backs up your farm folder automatically and keeps every version, so both problems have the same fix: restore the save from before it happened.</p>
-<h2>Where Stardew Valley saves live</h2>
+<h2 id="where-stardew-valley-saves-live">Where Stardew Valley saves live</h2>
 <p>Each farm is a folder inside your <code>Saves</code> directory:</p>
 <ul>
 <li><strong>Windows</strong> — <code>%APPDATA%\StardewValley\Saves</code></li>
@@ -174,13 +174,13 @@
 <li><strong>Linux</strong> — <code>~/.config/StardewValley/Saves</code></li>
 </ul>
 <p>The folder is named after your farm and a save ID — something like <code>Ellie_281324075</code> — and inside it the actual save data has no file extension, just a file matching the folder name plus a small <code>SaveGameInfo</code> file the game uses to preview the save in the load menu. Checkpoint64 backs up the whole folder, extensionless files and all, and keeps every version.</p>
-<h2>The Steam Cloud conflict you can&#39;t preview</h2>
+<h2 id="the-steam-cloud-conflict-you-can39t-preview">The Steam Cloud conflict you can&#39;t preview</h2>
 <p>If you&#39;ve played Stardew on more than one PC, you&#39;ve probably hit the dialog: Steam Cloud notices your local save and the cloud copy don&#39;t match, and asks you to keep one or the other. There&#39;s no way to see what&#39;s actually in either file first — you&#39;re picking blind, and picking wrong quietly erases whatever progress only existed in the one you didn&#39;t choose.</p>
 <p>Checkpoint64 keeps a dated history of the real save file, independent of Steam Cloud. If a sync ever goes sideways, you&#39;re not guessing between two black boxes — you restore the specific version you know was good.</p>
-<h2>Undoing the small disasters (and the mod ones)</h2>
+<h2 id="undoing-the-small-disasters-and-the-mod-ones">Undoing the small disasters (and the mod ones)</h2>
 <p>Half the reason people go looking for an old Stardew save isn&#39;t corruption — it&#39;s a dumb mistake. Sold the dinosaur egg. Gifted away the Stardrop you were hoarding. Married the wrong person to test a heart event. A version from ten minutes earlier undoes exactly that, without rolling back the rest of your day.</p>
 <p>The other half is SMAPI. Update or remove a mod mid-playthrough and your save can end up referencing content that&#39;s no longer there — the same failure mode that breaks modded Skyrim saves. Checkpoint64 keeps every version, so restoring the last good one and sorting the mod out afterward is a two-minute fix instead of a lost farm.</p>
-<h2>How Checkpoint64 backs up Stardew Valley</h2>
+<h2 id="how-checkpoint64-backs-up-stardew-valley">How Checkpoint64 backs up Stardew Valley</h2>
 <ol>
 <li><strong>Pick Stardew Valley.</strong> The Saves folder is already known on all three platforms.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.</li>

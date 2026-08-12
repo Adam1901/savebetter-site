@@ -166,20 +166,20 @@
       </header>
       <div class="blog-post-body">
 <p><strong>A Factorio save can represent hundreds of hours of belts, trains, and production chains — Checkpoint64 exists partly because its makers lost a 200-hour Factorio base once and never got over it.</strong> Checkpoint64 keeps every version of your save file automatically, megabases included, so the next crashed autosave or incompatible mod update means restoring the last good version, not starting over.</p>
-<h2>Where Factorio saves live</h2>
+<h2 id="where-factorio-saves-live">Where Factorio saves live</h2>
 <ul>
 <li><strong>Windows</strong> — <code>%APPDATA%\Factorio\saves</code></li>
 <li><strong>macOS</strong> — <code>~/Library/Application Support/factorio/saves</code></li>
 <li><strong>Linux</strong> — <code>~/.factorio/saves</code></li>
 </ul>
 <p>Each save is a single <code>.zip</code> archive with the whole world packed inside, so there&#39;s no separate folder of loose files to track down. Checkpoint64 watches the <code>saves</code> folder and keeps every version of everything in it, autosaves included.</p>
-<h2>Megabases don&#39;t slow this down</h2>
+<h2 id="megabases-don39t-slow-this-down">Megabases don&#39;t slow this down</h2>
 <p>Late-game Factorio saves get big — big enough that Checkpoint64 raises its usual per-file size cap specifically for this game. But the file size isn&#39;t really what matters for backup speed: only the parts of the <code>.zip</code> that changed since the last version get uploaded, so a sprawling megabase backs up about as fast as a small starter base once the first full version is in.</p>
-<h2>Recovering from a mod update that breaks your save</h2>
+<h2 id="recovering-from-a-mod-update-that-breaks-your-save">Recovering from a mod update that breaks your save</h2>
 <p>&quot;This save requires the following mods&quot; is the classic Factorio failure — a mod updated, got removed, or changed its data format, and your save still references the version that&#39;s gone. There&#39;s no built-in way back except an old copy you happened to keep. Checkpoint64 keeps every version it backed up, so restoring the save from right before the mod update — then sorting your mod list out at your own pace — is a quick fix instead of losing the base.</p>
-<h2>Co-op Factorio without a dedicated server</h2>
+<h2 id="co-op-factorio-without-a-dedicated-server">Co-op Factorio without a dedicated server</h2>
 <p>Factorio has exactly one live save at a time, same as Valheim: whoever&#39;s hosting has the only current copy, and a rented dedicated server is the usual way to keep the world online without leaving a PC running. Checkpoint64 covers most of that need for a small group — full version history plus a lock so nobody uploads over someone else&#39;s session. The <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> goes deeper on that trade-off.</p>
-<h2>How Checkpoint64 backs up Factorio</h2>
+<h2 id="how-checkpoint64-backs-up-factorio">How Checkpoint64 backs up Factorio</h2>
 <ol>
 <li><strong>Pick Factorio.</strong> The saves folder is already known on all three platforms.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.</li>

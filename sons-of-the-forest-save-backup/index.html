@@ -166,15 +166,15 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Sons of the Forest keeps one live save per world, and whoever&#39;s hosting is the only copy that actually matters — lose that save to a crash and the base is gone no matter how much progress the rest of the group saw.</strong> Checkpoint64 backs up the host&#39;s save automatically and keeps every version, so a bad session doesn&#39;t cost the base.</p>
-<h2>Where Sons of the Forest saves live</h2>
+<h2 id="where-sons-of-the-forest-saves-live">Where Sons of the Forest saves live</h2>
 <pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>%USERPROFILE%\AppData\LocalLow\Endnight\SonsOfTheForest</span></span></code></pre><p>That&#39;s the save data Checkpoint64 watches — buried in the <code>LocalLow</code> folder, which is hidden by default and easy to lose track of. Sons of the Forest writes only to Windows in the app&#39;s game catalog, so this one folder is the whole picture.</p>
-<h2>Why only the host&#39;s save matters</h2>
+<h2 id="why-only-the-host39s-save-matters">Why only the host&#39;s save matters</h2>
 <p>Like most small-group survival co-op games, Sons of the Forest runs on one live world held by whoever&#39;s hosting. Everyone else plays into that session, but there&#39;s no separate guest copy keeping its own history — if the host&#39;s save is lost or corrupted, the world goes with it, regardless of what anyone else experienced. That makes the host&#39;s save the one file in the whole session worth actually protecting.</p>
-<h2>Recovering after a crash</h2>
+<h2 id="recovering-after-a-crash">Recovering after a crash</h2>
 <p>A crash or a force-close mid-save is the usual way this kind of save gets damaged, and it&#39;s an especially bad time to lose progress after a group&#39;s put real hours into one base. Checkpoint64 keeps every version it backed up, so recovering means restoring the last healthy save from before the crash, not starting the world over.</p>
-<h2>Hosting a group without a rented server</h2>
+<h2 id="hosting-a-group-without-a-rented-server">Hosting a group without a rented server</h2>
 <p>For a small group, Checkpoint64 covers most of what a rented dedicated server is for: a version history on the host&#39;s world plus a lock so only one session saves over it at a time, without a recurring bill. The <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> covers Sons of the Forest alongside similar games and goes deeper on the trade-off.</p>
-<h2>How Checkpoint64 backs up Sons of the Forest</h2>
+<h2 id="how-checkpoint64-backs-up-sons-of-the-forest">How Checkpoint64 backs up Sons of the Forest</h2>
 <ol>
 <li><strong>Pick Sons of the Forest.</strong> The LocalLow save path is already known.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.</li>

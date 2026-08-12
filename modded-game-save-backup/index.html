@@ -166,7 +166,7 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Mods are the number-one cause of save corruption — and a version history is the only real fix.</strong> Checkpoint64 automatically keeps every version of your modded saves, so a bad mod update, a broken load order, or a mod you removed is one rollback away instead of a lost playthrough.</p>
-<h2>Why modded saves corrupt</h2>
+<h2 id="why-modded-saves-corrupt">Why modded saves corrupt</h2>
 <p>Three failure modes account for nearly every &quot;my modded save won&#39;t load&quot; post:</p>
 <ul>
 <li><strong>Save bloat.</strong> Heavily-scripted mods keep writing state into your save. Over a long playthrough it grows until the save loads slowly — or stops loading at all.</li>
@@ -174,9 +174,9 @@
 <li><strong>Load-order and update changes.</strong> Reordering mods or taking an update mid-save can leave the file referencing things that moved or vanished.</li>
 </ul>
 <p>All three are effectively irreversible <em>once they happen</em>. The only reliable protection is prevention: keep earlier versions so you can drop back to a healthy save from before the change.</p>
-<h2>What to back up in a modded game</h2>
+<h2 id="what-to-back-up-in-a-modded-game">What to back up in a modded game</h2>
 <p>Back up the <strong>whole save folder</strong>, not just the obvious save file. Modded games often write companion files your save depends on — modded Skyrim writes an <code>.ess</code> save plus a matching <code>.skse</code> co-save; modpacks write per-world config and mod data alongside the world. Checkpoint64 grabs the folder by default, so the pieces always travel together, and lets you skip the junk (crash logs, screenshots) while keeping the save.</p>
-<h2>Modded games with presets</h2>
+<h2 id="modded-games-with-presets">Modded games with presets</h2>
 <p>Checkpoint64 ships knowing where these keep their saves:</p>
 <ul>
 <li><strong>Modded Minecraft</strong> — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers</li>
@@ -184,7 +184,7 @@
 <li><strong>Stardew Valley</strong>, <strong>Fallout 4</strong>, <strong>RimWorld</strong>, <strong>Factorio</strong>, and 50+ more</li>
 </ul>
 <p>Anything not on the list still works — point Checkpoint64 at the save folder and choose the files yourself.</p>
-<h2>Manual backup vs Checkpoint64</h2>
+<h2 id="manual-backup-vs-checkpoint64">Manual backup vs Checkpoint64</h2>
 <table>
 <thead>
 <tr>
@@ -219,7 +219,7 @@
 <td>Restore anywhere you&#39;re signed in</td>
 </tr>
 </tbody></table>
-<h2>How to back up a modded save</h2>
+<h2 id="how-to-back-up-a-modded-save">How to back up a modded save</h2>
 <ol>
 <li><strong>Point Checkpoint64 at the game.</strong> Presets know the folder; for anything else, pick it yourself.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version — only the changed files are sent.</li>

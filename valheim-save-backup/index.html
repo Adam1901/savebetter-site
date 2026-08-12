@@ -166,7 +166,7 @@
       </header>
       <div class="blog-post-body">
 <p><strong>Valheim stores each world as a <code>.db</code> and <code>.fwl</code> pair in a folder most players can&#39;t even find, and co-op groups lose track of the newest copy constantly.</strong> Checkpoint64 backs up that folder automatically, keeps every version, and uses version locks so one canonical world moves forward instead of forking across everyone&#39;s PCs.</p>
-<h2>Where Valheim worlds live</h2>
+<h2 id="where-valheim-worlds-live">Where Valheim worlds live</h2>
 <p>Local worlds are in the <code>worlds_local</code> folder:</p>
 <ul>
 <li><strong>Windows</strong> — <code>%USERPROFILE%\AppData\LocalLow\IronGate\Valheim\worlds_local</code></li>
@@ -175,13 +175,13 @@
 </ul>
 <p>Each world is a <code>.db</code> file — the actual terrain, buildings, and dropped items — plus a matching <code>.fwl</code> that holds the seed and metadata. You need <strong>both</strong>; a <code>.db</code> without its <code>.fwl</code> won&#39;t load right. Checkpoint64 backs up the whole folder, so a restored world always keeps its pair together.</p>
 <p>On Windows the folder lives under <strong><code>AppData\LocalLow</code></strong> — a hidden sibling of the better-known <code>Roaming</code> and <code>Local</code>. That&#39;s why manual Valheim backups so often get skipped: people simply can&#39;t find it. Checkpoint64 already knows the path.</p>
-<h2>Solving &quot;who has the latest save?&quot;</h2>
+<h2 id="solving-quotwho-has-the-latest-savequot">Solving &quot;who has the latest save?&quot;</h2>
 <p>The defining pain of Valheim co-op: with no dedicated server, whoever&#39;s online hosts, each player keeps their own local copy, and after a few sessions nobody knows which world is newest. Restore the wrong one and you undo a night&#39;s progress for the whole group.</p>
 <p>Checkpoint64 gives the shared world a single history with <strong>version locks</strong> — one player holds it at a time, everyone backs up and restores from the same canonical copy, and there&#39;s a dated version list settling exactly which save is latest. No more three-worlds-and-a-guess.</p>
 <p>If you&#39;re running co-op without paying for a 24/7 machine, the <a href="../dedicated-server-alternative/">dedicated server alternative guide</a> covers the coordination side in depth.</p>
-<h2>Recovering a corrupted world</h2>
+<h2 id="recovering-a-corrupted-world">Recovering a corrupted world</h2>
 <p>Valheim writes a single <code>.db.old</code> fallback. It&#39;s one generation deep — one crash-during-save past it and there&#39;s nothing left to recover. Checkpoint64 keeps every version it uploaded, so a corrupted world means restoring a healthy <code>.db</code>/<code>.fwl</code> pair from before the problem, not rolling a fresh character.</p>
-<h2>How Checkpoint64 backs up Valheim</h2>
+<h2 id="how-checkpoint64-backs-up-valheim">How Checkpoint64 backs up Valheim</h2>
 <ol>
 <li><strong>Pick Valheim.</strong> The <code>worlds_local</code> path — LocalLow and all — is already known.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for changes and uploads a new version, sending only what changed.</li>

@@ -146,7 +146,7 @@ that used to be your run and is now an error message.</p>
 Corruption is a specific physical event, and once you know the shape of it, the
 fix is obvious: the problem is the <em>moment of writing</em>, and the answer is to have
 kept the version from before that moment.</p>
-<h2>What a save file actually is</h2>
+<h2 id="what-a-save-file-actually-is">What a save file actually is</h2>
 <p>Strip away the game and a save is just bytes in a file: a structured blob the
 game knows how to read back. Depending on the game it might be one binary file,
 a zip of several files, a little embedded database, or a folder full of region
@@ -163,8 +163,8 @@ the existing file with the new one. For the brief window of that write, the
 <p>That second point is the whole story. Corruption is almost never something that
 happens to a file sitting peacefully on disk. It&#39;s something that happens
 <strong>while the file is being written.</strong></p>
-<h2>The three ways it goes wrong</h2>
-<h3>1. The interrupted write (the classic)</h3>
+<h2 id="the-three-ways-it-goes-wrong">The three ways it goes wrong</h2>
+<h3 id="1-the-interrupted-write-the-classic">1. The interrupted write (the classic)</h3>
 <p>Writing a file isn&#39;t instant. The game opens the save, starts streaming bytes,
 and finishes. If something cuts that off partway — a crash, a power loss, a
 force-quit, the battery dying, yanking the Steam Deck off the dock at the wrong
@@ -176,7 +176,7 @@ doesn&#39;t add up, and refuses. That&#39;s a corrupt save, and it&#39;s the sin
 common kind. The cruelest part: the game overwrote the good save <em>first</em> and was
 killed before it finished writing the replacement, so both the old version and
 the new one are gone in one stroke.</p>
-<h3>2. The bad in-place edit</h3>
+<h3 id="2-the-bad-in-place-edit">2. The bad in-place edit</h3>
 <p>Some games update the save without fully rewriting it — they seek to an offset
 and patch a few bytes (your gold, your position, a quest flag). If the game has a
 bug, or it crashes between two edits that were supposed to happen together, the
@@ -184,14 +184,14 @@ file is internally inconsistent: the inventory says you have an item the item
 table doesn&#39;t list, a pointer aims at the wrong place, a length field disagrees
 with the data after it. Structurally it&#39;s a complete file. Logically it&#39;s
 nonsense, and the loader trips over the contradiction.</p>
-<h3>3. The format mismatch</h3>
+<h3 id="3-the-format-mismatch">3. The format mismatch</h3>
 <p>The bytes are perfectly intact — but the thing reading them changed. A game
 patch alters the save format, a mod that wrote custom data into the save gets
 removed or updated, an emulator core changes how it lays out a memory card. Now a
 loader that expects layout B is handed a file written in layout A. Nothing was
 damaged; the two sides just stopped agreeing on what the bytes mean, and &quot;won&#39;t
 load&quot; looks identical to corruption from where you&#39;re sitting.</p>
-<h2>Why one save slot is a single point of failure</h2>
+<h2 id="why-one-save-slot-is-a-single-point-of-failure">Why one save slot is a single point of failure</h2>
 <p>Notice what every one of these has in common: there was a last-known-good version
 of the save that existed <em>right up until the bad write happened.</em> The interrupted
 write had a complete old file a second earlier. The bad edit had a consistent
@@ -205,7 +205,7 @@ the last good one.</p>
 <p>A single save slot isn&#39;t just risky. It&#39;s a design where the failure and the loss
 of your only recovery option are <strong>the same event.</strong> You can&#39;t separate them after
 the fact.</p>
-<h2>How versioning turns a catastrophe into a shrug</h2>
+<h2 id="how-versioning-turns-a-catastrophe-into-a-shrug">How versioning turns a catastrophe into a shrug</h2>
 <p>This is the entire reason Checkpoint64 exists, and it&#39;s almost boringly direct
 once you&#39;ve seen the anatomy: keep the old versions, so the bad write is never the
 only copy.</p>
@@ -230,14 +230,14 @@ the version mismatch instead of losing them.</li>
 save would use — no import dance, no proprietary container. The game launches and
 loads the world as it was, and the corruption goes from &quot;200 hours gone&quot; to &quot;lost
 about ninety seconds.&quot;</p>
-<h2>The takeaway</h2>
+<h2 id="the-takeaway">The takeaway</h2>
 <p>Corruption isn&#39;t rot and it isn&#39;t really luck. It&#39;s a write that didn&#39;t finish,
 or an edit that didn&#39;t add up, or two pieces of software that stopped agreeing —
 and in every case there was a good version of your save that existed up to that
 exact instant. The only question that decides whether a corruption is a disaster
 is whether anything kept that version around.</p>
 <p>A single slot doesn&#39;t. That&#39;s the bug. Versioning is the fix.</p>
-<h2>Where this fits</h2>
+<h2 id="where-this-fits">Where this fits</h2>
 <p>This is the same reason <a href="/blog/cloud-saves-arent-backups/">cloud saves aren&#39;t
 backups</a> — sync will faithfully push the
 corrupted file everywhere before you notice. It&#39;s the same rewind that makes

@@ -149,7 +149,7 @@ the next patch. Pick-the-files backup has a blind spot baked into it: it only
 knows about the files that were there the day you set it up. Anything that shows
 up later is invisible to it — not backed up, not versioned, not even noticed.
 Right up until the day you need it.</p>
-<h2>Back up the whole folder</h2>
+<h2 id="back-up-the-whole-folder">Back up the whole folder</h2>
 <p>So we added a second way to do it. For the games where it fits, the setup wizard
 now offers a choice: instead of hand-picking files, <strong>back up the whole save
 folder.</strong> Pick that, and Checkpoint64 watches the folder itself — not a fixed
@@ -161,7 +161,7 @@ is <em>just saves</em> — nothing else living in there to sweep up by accident.
 <strong>Stardew Valley is first.</strong> As we confirm each game&#39;s folder is clean, it gets
 the option too. Games that aren&#39;t enabled yet keep working exactly as before,
 picking files one at a time.</p>
-<h2>Without re-uploading the whole folder</h2>
+<h2 id="without-re-uploading-the-whole-folder">Without re-uploading the whole folder</h2>
 <p>Watching a folder sounds expensive. It isn&#39;t, because of how Checkpoint64 stores
 things in the first place: it uploads files by their contents, and a file whose
 contents it has already seen never uploads twice. So a whole-folder backup after
@@ -171,7 +171,7 @@ actually changed and skips everything that didn&#39;t.</p>
 quota. On the free plan&#39;s 20 MiB that adds up faster than tracking a single save,
 so it&#39;s worth knowing. But the <em>bandwidth</em> per backup stays small — you&#39;re paying
 for what changed, not for the whole folder, every time.</p>
-<h2>Restoring got safer, too</h2>
+<h2 id="restoring-got-safer-too">Restoring got safer, too</h2>
 <p>The other half of a backup is the day you actually reach for it, and we tightened
 two things there.</p>
 <p><strong>You can look inside a backup before you restore it.</strong> Every version now lists
@@ -190,7 +190,7 @@ end of a run: never let the only copy be the one getting overwritten. It&#39;s t
 exact gap that makes <a href="/blog/cloud-saves-arent-backups/">cloud sync a poor stand-in for a
 backup</a> — and now it&#39;s closed on the restore
 side too.</p>
-<h2>Also in this build</h2>
+<h2 id="also-in-this-build">Also in this build</h2>
 <p>A few smaller things you&#39;ll notice the moment you open it:</p>
 <ul>
 <li><strong>&quot;Space&quot; is now &quot;Library.&quot;</strong> The place your saves live got a plainer name —
