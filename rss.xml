@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 11 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>How to Verify Save Integrity Before It Bites</title>
+      <link>https://checkpoint64.com/blog/how-to-verify-save-integrity/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-verify-save-integrity/</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to verify save integrity, spot corrupted or missing files, test safe restores, and protect solo, co-op, modded and emulator progress quickly.</description>
+    </item>
     <item>
       <title>How to Preserve Game Progress Without Save Drama</title>
       <link>https://checkpoint64.com/blog/how-to-preserve-game-progress/</link>
