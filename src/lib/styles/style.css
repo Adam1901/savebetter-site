@@ -51,6 +51,17 @@
   --f-hand: "Patrick Hand", cursive;
 }
 
+/* Press Start 2P and JetBrains Mono both ship cyrillic subsets, so headings and
+   body copy need nothing for Russian. Patrick Hand does not — the handwritten
+   margin notes would drop to the system cursive face (Comic Sans on Windows).
+   Caveat is the closest marker font Google serves with cyrillic. Scoped to
+   :root:lang(ru) — :lang() matches <html>, the same element as :root, so a bare
+   :lang(ru) loses the specificity tie. Other locales never reference Caveat, so
+   they download none of it. */
+:root:lang(ru) {
+  --f-hand: "Caveat", cursive;
+}
+
 [data-theme="light"] {
   --bg: var(--paper);
   --bg-2: var(--paper-deep);

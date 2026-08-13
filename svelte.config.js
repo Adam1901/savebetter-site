@@ -15,7 +15,11 @@ const config = {
     // was swallowing the default `_app/` bundle dir and 404ing all CSS/JS.
     appDir: 'app',
     prerender: {
-      entries: ['*', '/', '/de/', '/fr/', '/es/', '/sitemap.xml'],
+      // '*' does not enumerate optional-param routes, so every localized
+      // homepage has to be listed by hand. Miss one and the build stays green
+      // while hreflang + sitemap.xml advertise a URL GitHub Pages 404s — add
+      // the entry whenever you add a locale to src/lib/i18n/config.js.
+      entries: ['*', '/', '/de/', '/fr/', '/es/', '/ru/', '/sitemap.xml'],
       handleHttpError: 'fail',
     },
     files: {

@@ -8,7 +8,7 @@
 // deep ("../…"). Locale-varying: title, description, canonical/og:url, og/
 // twitter text, og:locale, the 5 JSON-LD blocks (regenerated in-language), and
 // the icon-link prefix. Everything else is identical on all four home pages.
-import { getLocale, pathForLocale, fmt } from './config.js'
+import { getLocale, pathForLocale, fmt, LOCALES, SUBDIR_LOCALE_CODES } from './config.js'
 import { DEFAULT_CURRENCY, formatMoney } from '../currency.js'
 import { esc } from '../esc.js'
 import { STEAM_STORE_URL } from '../steam.js'
@@ -57,15 +57,15 @@ const ANALYTICS = `    <script src="https://analytics.ahrefs.com/analytics.js" d
     </script>`
 
 // Language auto-detect: on the apex root only, first-time visitors whose browser
-// prefers de/fr/es get redirected. Self-guards on pathname so it's inert on the
-// localized copies (which still carry it, matching the old build).
+// prefers a locale we ship get redirected. Self-guards on pathname so it's inert
+// on the localized copies (which still carry it, matching the old build).
 const LANG_REDIRECT = `    <script>
         (function () {
             try {
                 if (location.pathname !== '/') return;
                 if (localStorage.getItem('cp64-lang')) return;
                 if (/bot|crawl|spider|slurp|bingpreview/i.test(navigator.userAgent || '')) return;
-                var supported = ['de', 'fr', 'es'];
+                var supported = ${JSON.stringify(SUBDIR_LOCALE_CODES)};
                 var langs = (navigator.languages && navigator.languages.length)
                     ? navigator.languages : [navigator.language || ''];
                 for (var i = 0; i < langs.length; i++) {
@@ -89,12 +89,11 @@ const THEME_BOOTSTRAP = `    <script>
         })();
     </script>`
 
-// Identical hreflang set on every page (absolute URLs).
+// Identical hreflang set on every page (absolute URLs), straight off the
+// registry so it can't drift from sitemap.xml — which builds its own alternates
+// the same way.
 const HREFLANG = [
-  `    <link rel="alternate" hreflang="en" href="${ORIGIN}/"/>`,
-  `    <link rel="alternate" hreflang="de" href="${ORIGIN}/de/"/>`,
-  `    <link rel="alternate" hreflang="fr" href="${ORIGIN}/fr/"/>`,
-  `    <link rel="alternate" hreflang="es" href="${ORIGIN}/es/"/>`,
+  ...LOCALES.map((l) => `    <link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code)}"/>`),
   `    <link rel="alternate" hreflang="x-default" href="${ORIGIN}/"/>`,
 ].join('\n')
 
@@ -263,8 +262,8 @@ ${THEME_BOOTSTRAP}
     <meta name="twitter:image:alt" content="${esc(t.meta.twitterImageAlt)}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap"/></noscript>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=Caveat&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=Caveat&family=JetBrains+Mono:wght@400;500;700&display=swap"/></noscript>
 ${jsonLdBlocks({ code, t, intl, version })}`
 }
 
