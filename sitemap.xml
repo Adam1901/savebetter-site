@@ -8,6 +8,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/"/>
       <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/"/>
       <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
   </url>
   <url>
@@ -18,6 +19,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/"/>
       <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/"/>
       <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
   </url>
   <url>
@@ -28,6 +30,7 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/"/>
       <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/"/>
       <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
   </url>
   <url>
@@ -38,6 +41,18 @@
       <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/"/>
       <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/"/>
       <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/"/>
       <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
   </url>
   <url>
@@ -905,6 +920,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/shapez-2-factory/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/skyrim-se/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -960,6 +981,12 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/subnautica-2/</loc>
+    <lastmod>2026-08-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/suicide-squad-kill-the-justice-league/</loc>
     <lastmod>2026-08-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
