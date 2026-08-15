@@ -146,6 +146,9 @@ the save back. The world's full history is preserved instead of overwritten.
 
 ## The site in other languages
 
+The app is localized into 9 languages (listed at the top); this marketing site is
+published in 5.
+
 - [English](https://checkpoint64.com/)
 - [Deutsch](https://checkpoint64.com/de/)
 - [Français](https://checkpoint64.com/fr/)
