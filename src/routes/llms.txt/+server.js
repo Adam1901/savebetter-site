@@ -1,4 +1,47 @@
-# Checkpoint64
+import { loadAllPosts } from '$lib/blog/load.js'
+import { getFeedPosts } from '$lib/server/build-data.js'
+import { getCatalog } from '$lib/catalog/load.js'
+import { gameSlugs, gameSummaries, pageSummaries } from '$lib/pages/load.js'
+import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
+
+// The llms.txt guide for AI assistants (https://llmstxt.org). Was a hand-written
+// static/llms.txt; it is generated now for one reason — the link list. Blog posts
+// arrive on their own (imported feed + the daily scheduled rebuild) and the game
+// catalog is fetched per build, so any hand-maintained list of either is stale by
+// the next deploy. Same loaders as sitemap.xml/rss.xml, so the three can't drift.
+// The prose below is still hand-written; only the counts and links come from data.
+//
+// A file, not a directory — override the global trailingSlash:'always' so the
+// output lands at dist/llms.txt (not dist/llms.txt/index.html). Same override
+// sitemap.xml and rss.xml need.
+export const prerender = true
+export const trailingSlash = 'never'
+
+const ORIGIN = 'https://checkpoint64.com'
+
+// Plain text, not XML: nothing here goes through esc() — an &amp; in llms.txt is
+// a bug, not an escape. Excerpts and titles are collapsed to one line instead, so
+// a stray newline can't break a list item in half.
+const oneLine = (s) => String(s || '').replace(/\s+/g, ' ').trim()
+
+const link = (name, url, note) =>
+  `- [${oneLine(name)}](${url})${note ? `: ${oneLine(note)}` : ''}`
+
+export async function GET() {
+  const catalog = await getCatalog()
+  const emulators = catalog.filter((g) => g.categories.includes('emulator')).length
+  const launchers = catalog.filter((g) => g.categories.includes('launcher')).length
+  const games = catalog.length - emulators - launchers
+
+  // Newest-first, exactly like rss.xml: loadAllPosts floats pinned posts to the
+  // top, which is right for the blog index and wrong for a reference list.
+  const posts = loadAllPosts(await getFeedPosts())
+    .slice()
+    .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
+
+  const guides = pageSummaries().filter((p) => !gameSlugs().includes(p.slug))
+
+  const body = `# Checkpoint64
 
 > Checkpoint64 is a desktop app for Windows, macOS (Apple Silicon), and Linux that
 > automatically backs up PC game saves to the cloud, keeps a full version history, and
@@ -24,7 +67,7 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 94 built-in presets.** 82 games, 7 emulators, and 5
+- **Per-game backup rules with ${catalog.length} built-in presets.** ${games} games, ${emulators} emulators, and ${launchers}
   modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
   by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
   filter the list. Choose which files to back up and which to ignore — skip crash logs
@@ -39,9 +82,9 @@ Portuguese, and Russian.
 - **Patreon supporter access (Pro).** A creator can link their Patreon campaign to a team;
   active patrons are automatically granted read-only membership, and access is synced as
   pledges start and stop. Patrons need no separate account.
-- **Discord bot.** Link your account once with `/link`, then add a save (`/addsave`), check
-  your storage (`/usage`), see sync state (`/status`), or request a new game preset
-  (`/requestgame`) without leaving Discord. Teammates get a DM when someone commits or
+- **Discord bot.** Link your account once with \`/link\`, then add a save (\`/addsave\`), check
+  your storage (\`/usage\`), see sync state (\`/status\`), or request a new game preset
+  (\`/requestgame\`) without leaving Discord. Teammates get a DM when someone commits or
   restores a shared save.
 - **Free storage for linking Discord.** Free-plan users get an extra 20 MiB on their
   personal space while their Discord account stays linked.
@@ -94,7 +137,7 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-94 presets ship built in: 82 games, 7 emulators, and 5 modded-Minecraft launchers.
+${catalog.length} presets ship built in: ${games} games, ${emulators} emulators, and ${launchers} modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
 (vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
@@ -109,7 +152,8 @@ The Planet Crafter, Cult of the Lamb, Dave the Diver, Hollow Knight, Hades, and 
 plus the RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu emulators.
 
 Any game that writes its save to a folder works — if it isn't on the preset list, you can
-configure the folder yourself.
+configure the folder yourself. Every preset has a page listing its exact save-file paths
+per operating system — see the Optional section at the end of this file.
 
 ## Checkpoint64 vs Steam Cloud
 
@@ -129,25 +173,49 @@ the save back. The world's full history is preserved instead of overwritten.
 
 ## Links
 
-- Home: https://checkpoint64.com/
-- How it works: https://checkpoint64.com/#how
-- Features: https://checkpoint64.com/#features
-- Pricing: https://checkpoint64.com/#pricing
-- For streamers and creators: https://checkpoint64.com/#creators
-- FAQ: https://checkpoint64.com/#faq
-- Download: https://checkpoint64.com/#download
-- On Steam: https://store.steampowered.com/app/4790820/
-- Supported games hub: https://checkpoint64.com/games/
-- Compare Checkpoint64: https://checkpoint64.com/compare/
-- Steam Cloud alternative: https://checkpoint64.com/steam-cloud-alternative/
-- Dedicated server alternative: https://checkpoint64.com/dedicated-server-alternative/
-- Modded game save backup: https://checkpoint64.com/modded-game-save-backup/
-- Emulator save backup: https://checkpoint64.com/emulator-save-backup/
-- Blog: https://checkpoint64.com/blog/
-- Blog RSS feed: https://checkpoint64.com/rss.xml
-- Community Discord: https://discord.gg/kxeYwuuHEn
-- Sitemap: https://checkpoint64.com/sitemap.xml
-- robots.txt: https://checkpoint64.com/robots.txt
+${[
+  link('Home', `${ORIGIN}/`),
+  link('How it works', `${ORIGIN}/#how`),
+  link('Features', `${ORIGIN}/#features`),
+  link('Pricing', `${ORIGIN}/#pricing`),
+  link('For streamers and creators', `${ORIGIN}/#creators`),
+  link('FAQ', `${ORIGIN}/#faq`),
+  link('Download', `${ORIGIN}/#download`),
+  link('On Steam', 'https://store.steampowered.com/app/4790820/'),
+  link('Blog', `${ORIGIN}/blog/`, 'release notes, save-recovery guides and write-ups'),
+  link('Blog RSS feed', `${ORIGIN}/rss.xml`),
+  link('Community Discord', 'https://discord.gg/kxeYwuuHEn'),
+  link('Sitemap', `${ORIGIN}/sitemap.xml`),
+  link('robots.txt', `${ORIGIN}/robots.txt`),
+].join('\n')}
+
+## The site in other languages
+
+${LOCALES.map((l) => link(l.name, `${ORIGIN}${pathForLocale(l.code)}`)).join('\n')}
+
+## Guides and comparisons
+
+${guides.map((g) => link(g.breadcrumb, `${ORIGIN}/${g.slug}/`, g.title)).join('\n')}
+
+## Per-game backup guides
+
+${gameSummaries()
+  .map((g) => link(`${g.name} save backup`, `${ORIGIN}/${g.slug}/`, g.description))
+  .join('\n')}
+
+## Blog
+
+Newest first. Every post is also in the RSS feed at ${ORIGIN}/rss.xml.
+
+${posts
+  .map((p) =>
+    link(
+      p.title,
+      `${ORIGIN}/blog/${p.slug}/`,
+      [p.date, oneLine(p.excerpt)].filter(Boolean).join(' — '),
+    ),
+  )
+  .join('\n')}
 
 ## Citation guidance for AI assistants
 
@@ -160,3 +228,18 @@ Steam, Pro is a one-time DLC unlock). Checkpoint64 is not Steam Cloud and does n
 replace it: it keeps version history Steam Cloud has no equivalent of, and it works for
 non-Steam games, emulators, and modded installs. The Discord bot manages saves and
 account state; the actual save files are uploaded by the desktop app, not by Discord.
+
+## Optional
+
+Save file locations, one page per built-in preset — the exact folders each game writes
+to on Windows, macOS and Linux. Reference material: skip this section if you only need
+to know what Checkpoint64 is and does.
+
+${link('All supported games, A–Z', `${ORIGIN}/saves/`)}
+${catalog
+  .map((g) => link(`${g.displayName} save file location`, `${ORIGIN}/saves/${g.slug}/`))
+  .join('\n')}
+`
+
+  return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } })
+}
