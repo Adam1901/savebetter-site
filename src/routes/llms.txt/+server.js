@@ -191,6 +191,9 @@ ${[
 
 ## The site in other languages
 
+The app is localized into 9 languages (listed at the top); this marketing site is
+published in ${LOCALES.length}.
+
 ${LOCALES.map((l) => link(l.name, `${ORIGIN}${pathForLocale(l.code)}`)).join('\n')}
 
 ## Guides and comparisons
