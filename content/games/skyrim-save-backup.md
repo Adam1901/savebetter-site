@@ -24,7 +24,7 @@ On Windows, your saves are here:
 Documents\My Games\Skyrim Special Edition\Saves
 ```
 
-Inside you'll find numbered `.ess` files — one per save slot — and, if you run the Skyrim Script Extender (SKSE), a matching `.skse` co-save alongside each one. That co-save holds the extra state that script mods rely on, which is why restoring an `.ess` without its `.skse` can leave a modded save confused. Checkpoint64 captures both together.
+Inside you'll find numbered `.ess` files — one per save slot — and, if you run the Skyrim Script Extender (SKSE), a matching `.skse` co-save alongside each one. That co-save holds the extra state that script mods rely on, which is why restoring an `.ess` without its `.skse` can leave a modded save confused. Checkpoint64 captures both together — the same [whole-folder principle](../blog/back-up-the-whole-folder/) that keeps companion files from slipping through a backup.
 
 Skyrim SE writes only to Windows in the app's game catalog — there's no separate macOS or Linux save path, so a single Windows folder is the whole story.
 

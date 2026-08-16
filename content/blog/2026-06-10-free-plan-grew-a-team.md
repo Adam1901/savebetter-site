@@ -7,8 +7,9 @@ tags: [pricing, free-plan, co-op, teams]
 
 Until this week, the free plan was a strictly single-player affair: one
 personal space, no teams. You could *join* a friend's team if they paid, but
-you couldn't start one yourself. Two free users who wanted to share a Valheim
-world hit a wall that only a card could knock down.
+you couldn't start one yourself. Two free users who wanted to share a
+[Valheim world](/valheim-save-backup/) hit a wall that only a card could knock
+down.
 
 That wall is gone. **Free accounts can now create one team.**
 
@@ -37,9 +38,11 @@ logbook when they take over.
 ## The fine print (there's not much)
 
 Your team space gets the same **20 MiB** as your personal one. That's honest
-friction, not a trick — 20 MiB comfortably holds a Stardew farm, a Hollow
-Knight run, or a stack of emulator saves, and it will absolutely not hold your
-500 MB modded Minecraft world. When you hit the cap, you've outgrown the free
+friction, not a trick — 20 MiB comfortably holds a
+[Stardew farm](/stardew-save-backup/), a
+[Hollow Knight run](/saves/hollow-knight/), or a stack of
+[emulator saves](/emulator-save-backup/), and it will absolutely not hold your
+500 MB [modded Minecraft world](/minecraft-save-backup/). When you hit the cap, you've outgrown the free
 plan and you'll know it. That's the moment Lifetime exists for: pay once, get
 1 GiB per space, never think about it again.
 

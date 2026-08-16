@@ -30,7 +30,7 @@ DST doesn't really have a non-multiplayer mode — even solo, the game starts a 
 
 ## Recovering after a crash
 
-A crash or a force-close mid-autosave is the most common way a DST save goes bad — especially with the Master and Caves shards trying to stay in sync. Klei's own fallback here is thin; if the write didn't finish cleanly, the cluster can come back corrupted with no built-in history to fall back on. Checkpoint64 keeps every version it uploaded, so recovering means restoring the cluster folder from before the crash, not starting the world over.
+A crash or a force-close mid-autosave is the most common way a DST save goes bad — especially with the Master and Caves shards trying to stay in sync. Klei's own fallback here is thin; if the [write didn't finish cleanly](../blog/anatomy-of-a-save-corruption/), the cluster can come back corrupted with no built-in history to fall back on. Checkpoint64 keeps every version it uploaded, so recovering means restoring the cluster folder from before the crash, not starting the world over.
 
 ## Hosting for a group without a rented server
 

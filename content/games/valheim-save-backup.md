@@ -34,7 +34,7 @@ The defining pain of Valheim co-op: with no dedicated server, whoever's online h
 
 Checkpoint64 gives the shared world a single history with **version locks** — one player holds it at a time, everyone backs up and restores from the same canonical copy, and there's a dated version list settling exactly which save is latest. No more three-worlds-and-a-guess.
 
-If you're running co-op without paying for a 24/7 machine, the [dedicated server alternative guide](../dedicated-server-alternative/) covers the coordination side in depth.
+If you're running co-op without paying for a 24/7 machine, the [dedicated server alternative guide](../dedicated-server-alternative/) covers the coordination side in depth — and the [cost math on idle server hours](../blog/ditch-the-dedicated-server/) shows what that rented box actually buys.
 
 ## Recovering a corrupted world
 

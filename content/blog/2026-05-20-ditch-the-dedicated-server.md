@@ -6,9 +6,12 @@ tags: [savings, co-op, dedicated-servers]
 pinned: true
 ---
 
-If you've ever played Valheim, Factorio, Satisfactory, V Rising, Project Zomboid,
-7 Days to Die, or any of the other "world lives in one file" co-op games with
-friends, the conversation always goes the same way:
+If you've ever played [Valheim](/valheim-save-backup/),
+[Factorio](/factorio-save-backup/), [Satisfactory](/satisfactory-save-backup/),
+[V Rising](/saves/v-rising/), [Project Zomboid](/saves/project-zomboid/),
+[7 Days to Die](/7-days-to-die-save-backup/), or any of the other "world lives
+in one file" co-op games with friends, the conversation always goes the same
+way:
 
 > "Someone needs to host. Or we rent a server."
 
@@ -94,9 +97,12 @@ are real scenarios where you still want one:
 If that's your group, keep your server. We're not here to argue with people
 who actually use the uptime.
 
-For the rest — the four-friend co-op, the weekend modded Minecraft group, the
-two-person Factorio playthrough that goes for six months — paying for empty
-hours doesn't pencil out.
+For the rest — the four-friend co-op, the weekend
+[modded Minecraft group](/minecraft-save-backup/), the two-person Factorio
+playthrough that goes for six months — paying for empty hours doesn't pencil
+out. (The [dedicated server alternative guide](/dedicated-server-alternative/)
+is the reference version of this argument, with a side-by-side table and the
+list of games it works for.)
 
 ## What you save, concretely
 

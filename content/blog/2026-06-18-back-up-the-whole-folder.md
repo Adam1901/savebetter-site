@@ -6,9 +6,10 @@ tags: [release, backups, whole-folder, restore]
 ---
 
 When you add a game to Checkpoint64, you tell it which files to watch. You point
-it at your Stardew farm, the save your modlist writes, or the three files your
-emulator drops on disk — and from then on, every change to those files gets
-versioned automatically, quietly, in the background.
+it at your Stardew farm, the save
+[your modlist writes](/modded-game-save-backup/), or the three files
+[your emulator drops on disk](/emulator-save-backup/) — and from then on, every
+change to those files gets versioned automatically, quietly, in the background.
 
 That works right up until your game writes a file you never pointed at.
 
@@ -30,7 +31,7 @@ trip back into settings to add them by hand.
 
 We're turning this on **game by game**, starting with the ones whose save folder
 is *just saves* — nothing else living in there to sweep up by accident.
-**Stardew Valley is first.** As we confirm each game's folder is clean, it gets
+**[Stardew Valley](/stardew-save-backup/) is first.** As we confirm each game's folder is clean, it gets
 the option too. Games that aren't enabled yet keep working exactly as before,
 picking files one at a time.
 

@@ -14,7 +14,7 @@ Today is the day. After months of playtesting, countless bug reports from the co
 
 We've been offering standalone builds for a while, but Steam is where the games are. By launching on Steam, we're making it easier for everyone to keep their saves safe, synced, and versioned without having to hunt for the latest installer.
 
-If you've been using the playtest build, thank you. Your feedback helped us nail down the edge cases in modded Minecraft, emulator memory cards, and those weirdly-named save folders that some games love to use.
+If you've been using the playtest build, thank you. Your feedback helped us nail down the edge cases in [modded Minecraft](/minecraft-save-backup/), [emulator memory cards](/emulator-save-backup/), and those [weirdly-named save folders](/saves/) that some games love to use.
 
 ## What's new in 1.0?
 

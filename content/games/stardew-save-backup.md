@@ -30,7 +30,7 @@ The folder is named after your farm and a save ID — something like `Ellie_2813
 
 If you've played Stardew on more than one PC, you've probably hit the dialog: Steam Cloud notices your local save and the cloud copy don't match, and asks you to keep one or the other. There's no way to see what's actually in either file first — you're picking blind, and picking wrong quietly erases whatever progress only existed in the one you didn't choose.
 
-Checkpoint64 keeps a dated history of the real save file, independent of Steam Cloud. If a sync ever goes sideways, you're not guessing between two black boxes — you restore the specific version you know was good.
+Checkpoint64 keeps a dated history of the real save file, independent of Steam Cloud. If a sync ever goes sideways, you're not guessing between two black boxes — you restore the specific version you know was good. This conflict dialog is the textbook case of why [cloud saves aren't backups](../blog/cloud-saves-arent-backups/): sync keeps one copy current, and a history is what saves you when current is wrong.
 
 ## Undoing the small disasters (and the mod ones)
 

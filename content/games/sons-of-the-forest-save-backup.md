@@ -30,7 +30,7 @@ Like most small-group survival co-op games, Sons of the Forest runs on one live 
 
 ## Recovering after a crash
 
-A crash or a force-close mid-save is the usual way this kind of save gets damaged, and it's an especially bad time to lose progress after a group's put real hours into one base. Checkpoint64 keeps every version it backed up, so recovering means restoring the last healthy save from before the crash, not starting the world over.
+A crash or a force-close mid-save is the usual way this kind of save gets damaged — the [interrupted write](../blog/anatomy-of-a-save-corruption/) that leaves a half-finished file — and it's an especially bad time to lose progress after a group's put real hours into one base. Checkpoint64 keeps every version it backed up, so recovering means restoring the last healthy save from before the crash, not starting the world over.
 
 ## Hosting a group without a rented server
 

@@ -30,7 +30,7 @@ Enshrouded's own dedicated server tool is the real solution if your group needs 
 
 ## Recovering after a crash or an update
 
-Early Access means world-format changes between updates are a real possibility, and a crash mid-save is always a risk on top of that. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy world from before the crash or the update, rather than losing the build.
+Early Access means [world-format changes between updates](../blog/anatomy-of-a-save-corruption/) are a real possibility, and a crash mid-save is always a risk on top of that. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy world from before the crash or the update, rather than losing the build.
 
 ## How Checkpoint64 backs up Enshrouded
 

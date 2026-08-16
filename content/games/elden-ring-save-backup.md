@@ -26,7 +26,7 @@ That single `.sl2` file holds every character slot you've got — there's no per
 
 ## Steam Cloud's rocky history with this game
 
-Elden Ring has a well-known reputation, especially since launch, for Steam Cloud sync corrupting or silently overwriting saves — common enough that plenty of player guides tell you to just turn Steam Cloud off for this game and back up manually instead.
+Elden Ring has a well-known reputation, especially since launch, for Steam Cloud sync corrupting or silently overwriting saves — common enough that plenty of player guides tell you to just turn Steam Cloud off for this game and back up manually instead. It's the sharpest example of why [cloud saves aren't backups](../blog/cloud-saves-arent-backups/): sync's whole job is replacing the old copy with the new one, even when the new one is broken.
 
 Checkpoint64 is that manual backup, minus the manual part. It keeps a dated version history of the actual `.sl2` file that doesn't depend on Steam's sync working correctly, so if a cloud sync ever does go wrong, it doesn't take your only copy with it.
 

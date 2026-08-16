@@ -75,6 +75,37 @@ export function guideSlugForCatalog(catalogSlug) {
   return GAMES.includes(derived) ? derived : null
 }
 
+// Catalog entries with no 1:1 guide that still have an obviously-relevant
+// deep-dive: the Minecraft launcher variants share the Minecraft guide (it
+// covers the modpack launchers explicitly), the seven emulators share the
+// emulator guide, and tModLoader (modded Terraria) fits the modded guide.
+// One-directional on purpose — catalogSlugForGuide() must stay 1:1 so a
+// guide's "save file location" link never points at a launcher variant.
+const CATALOG_FAMILY_GUIDES = {
+  'minecraft-curseforge': 'minecraft-save-backup',
+  'minecraft-ftb': 'minecraft-save-backup',
+  'minecraft-modrinth': 'minecraft-save-backup',
+  'minecraft-pinecone': 'minecraft-save-backup',
+  'minecraft-prism': 'minecraft-save-backup',
+  retroarch: 'emulator-save-backup',
+  dolphin: 'emulator-save-backup',
+  pcsx2: 'emulator-save-backup',
+  duckstation: 'emulator-save-backup',
+  ppsspp: 'emulator-save-backup',
+  rpcs3: 'emulator-save-backup',
+  cemu: 'emulator-save-backup',
+  tmodloader: 'modded-game-save-backup',
+}
+
+/**
+ * Best deep-dive guide for a catalog slug: the 1:1 game guide when one
+ * exists, else the family guide (launcher variant → game guide, emulator →
+ * emulator guide), else null. For the /saves/ pages' cross-link.
+ */
+export function relatedGuideSlugForCatalog(catalogSlug) {
+  return guideSlugForCatalog(catalogSlug) ?? CATALOG_FAMILY_GUIDES[catalogSlug] ?? null
+}
+
 export function loadPage(slug) {
   if (!PAGES.includes(slug)) return null
   const path = PAGE_DIRS.map((dir) => join(dir, `${slug}.md`)).find(existsSync)

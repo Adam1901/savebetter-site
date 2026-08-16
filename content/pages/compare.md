@@ -34,7 +34,7 @@ faq:
 
 ## Steam Cloud vs Checkpoint64
 
-Steam Cloud is automatic and free, but it's opt-in per game — plenty of titles aren't covered, or only sync part of their save data — and it only ever holds your latest sync. A corrupted or overwritten save that syncs up simply replaces the good copy, with nothing to roll back to. Checkpoint64 works on any game that writes a save to a folder and keeps every version, so a bad save is one restore away instead of the only copy left.
+Steam Cloud is automatic and free, but it's opt-in per game — plenty of titles aren't covered, or only sync part of their save data — and it only ever holds your latest sync. A corrupted or overwritten save that syncs up simply replaces the good copy, with nothing to roll back to. Checkpoint64 works on any game that writes a save to a folder and keeps every version, so a bad save is one restore away instead of the only copy left. The [Steam Cloud alternative guide](../steam-cloud-alternative/) goes deeper on this comparison, and [cloud saves aren't backups](../blog/cloud-saves-arent-backups/) walks through the failure step by step.
 
 ## Local backup tools vs Checkpoint64
 
@@ -54,10 +54,10 @@ Every alternative above is a reasonable choice in the right situation:
 - **Steam Cloud** is enough for a single supported game, on one PC, with no mods and no disasters.
 - **Local backup tools** are the right call if you only ever play on one PC and just want a fast, organized local archive.
 
-Where all four run out of road at the same point: a save gets corrupted, overwritten, or lost with no earlier version to fall back to — or you play with anyone else and need to know whose save is current.
+Where all four run out of road at the same point: a save gets [corrupted](../blog/anatomy-of-a-save-corruption/), overwritten, or lost with no earlier version to fall back to — or you [play with anyone else](../dedicated-server-alternative/) and need to know whose save is current.
 
 ## How Checkpoint64 covers the gap
 
-1. **Install it and point it at your save folder.** Presets for 75+ games and 7 emulators already know where to look.
+1. **Install it and point it at your save folder.** Presets for [75+ games](../saves/) and [7 emulators](../emulator-save-backup/) already know where to look.
 2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.
 3. **Roll back whenever something goes wrong.** Open Versions, pick a save from before the problem, and Restore.

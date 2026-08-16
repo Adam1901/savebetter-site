@@ -24,7 +24,7 @@ Three failure modes account for nearly every "my modded save won't load" post:
 - **Removing a mod mid-playthrough.** Uninstall a mod and your save still references scripts and items that no longer exist. The damage is often silent for hours, then fatal.
 - **Load-order and update changes.** Reordering mods or taking an update mid-save can leave the file referencing things that moved or vanished.
 
-All three are effectively irreversible *once they happen*. The only reliable protection is prevention: keep earlier versions so you can drop back to a healthy save from before the change.
+All three are effectively irreversible *once they happen*. The only reliable protection is prevention: keep earlier versions so you can drop back to a healthy save from before the change. (For what's actually happening on disk when a save dies, the [anatomy of a save corruption](../blog/anatomy-of-a-save-corruption/) post takes it apart byte by byte.)
 
 ## What to back up in a modded game
 
@@ -34,9 +34,10 @@ Back up the **whole save folder**, not just the obvious save file. Modded games 
 
 Checkpoint64 ships knowing where these keep their saves:
 
-- **Modded Minecraft** — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers
-- **Skyrim Special Edition** — `.ess` saves and `.skse` co-saves
-- **Stardew Valley**, **Fallout 4**, **RimWorld**, **Factorio**, and 50+ more
+- **[Modded Minecraft](../minecraft-save-backup/)** — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers
+- **[Skyrim Special Edition](../skyrim-save-backup/)** — `.ess` saves and `.skse` co-saves
+- **[Elden Ring](../elden-ring-save-backup/)** — the Seamless Co-op mod's `.co2` save alongside the vanilla `.sl2`
+- **[Stardew Valley](../stardew-save-backup/)**, **[Fallout 4](../saves/fallout4/)**, **[RimWorld](../saves/rimworld/)**, **[Factorio](../factorio-save-backup/)**, and 50+ more
 
 Anything not on the list still works — point Checkpoint64 at the save folder and choose the files yourself.
 
