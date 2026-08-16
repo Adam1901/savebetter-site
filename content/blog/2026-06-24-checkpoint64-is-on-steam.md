@@ -42,14 +42,17 @@ knocking it — but "the latest save, everywhere" is exactly the wrong tool the
 moment your latest save is the broken one. Sync will faithfully copy a corrupted
 file to every device you have before you notice anything is wrong. There's no
 "yesterday" to go back to, because sync only ever cares about *now*. We wrote a
-whole post on why [cloud saves aren't backups](/blog/cloud-saves-arent-backups/);
-the short version is that a copy of one file isn't a history of it.
+whole post on why [cloud saves aren't backups](/blog/cloud-saves-arent-backups/),
+and there's a feature-by-feature
+[Steam Cloud comparison](/steam-cloud-alternative/) if you want the table; the
+short version is that a copy of one file isn't a history of it.
 
 **Steam Cloud only covers Steam games that opted in.** A surprising number don't,
 and that's before you leave Steam at all. Checkpoint64 watches the *folder*, so
 it works across Steam, GOG, Epic, the Microsoft Store, emulators, and modded
-launchers the same way — presets for 75+ games and 7 emulators out of the box,
-and "point it at any folder" for everything else. Your GOG copy of a game and
+launchers the same way — presets for [75+ games](/saves/) and
+[7 emulators](/emulator-save-backup/) out of the box, and "point it at any
+folder" for everything else. Your GOG copy of a game and
 your Steam copy land in the same logbook.
 
 **Steam Cloud is yours alone.** It has no concept of handing a world to a friend,
@@ -69,9 +72,10 @@ version underneath so a bad write is never the only copy.
    the needle on whether Valve shows the page to anyone else.
 2. **Join the playtest** if you want to run a real save through it before 1.0 and
    tell us where it creaks.
-3. **Bring a weird save.** A 40-hour modded Minecraft world, an emulator memory
-   card, a co-op Valheim seed two people pass back and forth — the edge cases are
-   the most useful thing you can hand us.
+3. **Bring a weird save.** A 40-hour
+   [modded Minecraft world](/minecraft-save-backup/), an emulator memory card,
+   a co-op [Valheim seed](/valheim-save-backup/) two people pass back and
+   forth — the edge cases are the most useful thing you can hand us.
 
 ---
 

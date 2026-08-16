@@ -38,9 +38,9 @@ propagate.
 
 Run the tape forward on a normal bad day:
 
-- The game autosaves into a corrupt state because it crashed mid-write, or a mod
-  update changed the save format, or you made a decision you'd give anything to
-  take back.
+- The game autosaves into a corrupt state because it crashed mid-write, or
+  [a mod update changed the save format](/modded-game-save-backup/), or you
+  made a decision you'd give anything to take back.
 - That save is now the newest version on disk.
 - Sync notices the file changed and does exactly what it promises: it uploads
   the new, broken save and overwrites the good cloud copy.
@@ -104,6 +104,13 @@ copy around. Versioning makes sure the latest copy is never the only copy.
 The difference only ever matters once — on the day the newest save is the one
 you'd give anything to undo. Sync is on the wrong side of that day by design. A
 backup is the thing that's on yours.
+
+If you want the two side by side, the
+[Steam Cloud alternative guide](/steam-cloud-alternative/) has the
+feature-by-feature table. And it isn't hypothetical: Steam Cloud's
+[history of corrupting Elden Ring saves](/elden-ring-save-backup/) and
+Stardew Valley's [pick-one-blind sync conflict dialog](/stardew-save-backup/)
+are both this exact failure with a game's name on it.
 
 ## Where this fits
 

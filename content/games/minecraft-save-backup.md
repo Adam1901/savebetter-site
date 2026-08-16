@@ -28,7 +28,7 @@ Inside a world, the `region` folder holds the `.mca` files that store your terra
 
 ## Why "world corrupted" happens — and why Minecraft can't save you
 
-Minecraft writes region files continuously as you explore. A crash mid-write, a full disk, or a misbehaving mod can leave a `.mca` half-written, and the next load throws the dreaded corruption error. The game keeps a `session.lock` and, for the world data, a single `level.dat_old` — one fallback, one generation deep. If the good copy is older than that, there's nothing to roll back to.
+Minecraft writes region files continuously as you explore. A [crash mid-write](../blog/anatomy-of-a-save-corruption/), a full disk, or a misbehaving mod can leave a `.mca` half-written, and the next load throws the dreaded corruption error. The game keeps a `session.lock` and, for the world data, a single `level.dat_old` — one fallback, one generation deep. If the good copy is older than that, there's nothing to roll back to.
 
 Checkpoint64 keeps every version it has uploaded, labelled and dated. Open Versions, pick a world from before the corruption, and Restore.
 

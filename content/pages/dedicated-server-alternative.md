@@ -24,7 +24,7 @@ A dedicated server fixes both problems by keeping the world in one always-on pla
 
 ## What a dedicated server actually costs
 
-A rented co-op server runs about **€120–240 per year**. And most small groups play in the same evening window, so the server sits **idle roughly 18 hours a day** — you're paying 24/7 for a few hours of use.
+A rented co-op server runs about **€120–240 per year**. And most small groups play in the same evening window, so the server sits **idle roughly 18 hours a day** — you're paying 24/7 for a few hours of use. The [long-form cost math](../blog/ditch-the-dedicated-server/) runs those numbers session by session, if you want to plug in your own group's schedule.
 
 ## How Checkpoint64 covers most of it
 
@@ -53,4 +53,4 @@ Be honest about the 10%. A dedicated server still wins if your group needs the w
 
 ## Games this works for
 
-Single-world co-op games where only one save is live at a time: **Valheim, Factorio, Satisfactory, Don't Starve Together, 7 Days to Die, Sons of the Forest, Enshrouded, and Palworld** — plus any other game where the group shares one world folder.
+Single-world co-op games where only one save is live at a time: **[Valheim](../valheim-save-backup/), [Factorio](../factorio-save-backup/), [Satisfactory](../satisfactory-save-backup/), [Don't Starve Together](../dont-starve-together-save-backup/), [7 Days to Die](../7-days-to-die-save-backup/), [Sons of the Forest](../sons-of-the-forest-save-backup/), [Enshrouded](../enshrouded-save-backup/), and [Palworld](../palworld-save-backup/)** — plus any other game where the group shares one world folder. Each link is that game's full backup guide: where the saves live, how they break, and how the lock-and-pass flow fits.

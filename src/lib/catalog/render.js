@@ -1,6 +1,6 @@
 import { layout, socialMeta, jsonLd } from '../blog/render.js'
 import { ctaBlock, faqSection } from '../pages/render.js'
-import { guideSlugForCatalog, loadPage } from '../pages/load.js'
+import { relatedGuideSlugForCatalog, loadPage } from '../pages/load.js'
 import { esc } from '../esc.js'
 
 // Generated "save file location" pages — one per backend-catalog game
@@ -200,7 +200,7 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
   const first = rows[0]
   const description = `${game.displayName} keeps its save files at ${first.paths[0]} on ${first.label}. Exact save folder paths for ${platformList(rows, { prose: true })}, and how to back them up automatically with Checkpoint64.`
 
-  const guideSlug = guideSlugForCatalog(game.slug)
+  const guideSlug = relatedGuideSlugForCatalog(game.slug)
   const guide = guideSlug ? loadPage(guideSlug) : null
   const faq = buildFaq(game, rows)
 

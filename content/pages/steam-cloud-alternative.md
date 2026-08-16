@@ -22,9 +22,11 @@ No. Steam Cloud syncs your *latest* save and nothing older. The moment a bad sav
 
 Checkpoint64 keeps every upload as a labelled version. Open **Versions** on any save, pick a healthy one from before the problem, and click **Restore** — the files go back on disk and that version becomes current.
 
+The [cloud saves aren't backups](../blog/cloud-saves-arent-backups/) post walks through exactly how a sync turns one bad save into the only copy you have left.
+
 ## Does Steam Cloud back up all my games?
 
-No. Steam Cloud is opt-in per game: each developer has to build it in, and plenty don't — or only sync part of their save data. That's why your progress in one game rides along fine and another game loses everything.
+No. Steam Cloud is opt-in per game: each developer has to build it in, and plenty don't — or only sync part of their save data. That's why your progress in one game rides along fine and another game loses everything. And opting in is no guarantee either: [Elden Ring's Steam Cloud corruption history](../elden-ring-save-backup/) is exactly why player guides tell you to keep a manual backup for that game.
 
 Checkpoint64 doesn't depend on the developer. If a game writes its save to a folder — which is nearly all of them — Checkpoint64 can back it up. It ships with presets for 75+ games and 7 emulators, and you can point it at any folder it doesn't already know.
 
@@ -47,9 +49,9 @@ Steam Cloud is fine for the simple case: one PC, one supported game, no disaster
 You need more the moment any of these is true:
 
 - You play a game Steam Cloud **doesn't support** (or only half-supports).
-- You run **mods** — the #1 cause of save corruption, and exactly what version history exists to undo.
-- You play the same save on **two machines** and have been bitten by a sync conflict.
-- You play **co-op single-world games** (Valheim, Factorio, Satisfactory) where "who has the latest save?" is a recurring headache.
+- You run **mods** — the [#1 cause of save corruption](../modded-game-save-backup/), and exactly what version history exists to undo.
+- You play the same save on **two machines** and have been bitten by a [sync conflict](../stardew-save-backup/).
+- You play **co-op single-world games** ([Valheim](../valheim-save-backup/), [Factorio](../factorio-save-backup/), [Satisfactory](../satisfactory-save-backup/)) where "who has the latest save?" is a recurring headache.
 
 ## How to replace Steam Cloud with Checkpoint64
 

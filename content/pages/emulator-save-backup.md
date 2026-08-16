@@ -18,7 +18,7 @@ faq:
 
 ## Why emulator saves need backup
 
-Save states are the fast, fragile heart of emulation. They snapshot the whole machine in an instant — and they're just as easy to overwrite in an instant. There's no cloud behind most emulators, an update can break old states, and one wrong slot can wipe hours of a challenge run. If you're speedrunning, doing a low-level challenge, or grinding a long RPG on a handheld emulator, a single overwrite hurts.
+Save states are the fast, fragile heart of emulation. They snapshot the whole machine in an instant — and they're just as easy to overwrite in an instant. There's no cloud behind most emulators, an update can break old states, and one wrong slot can wipe hours of a challenge run. If you're speedrunning, doing a low-level challenge, or grinding a long RPG on a handheld emulator, a single overwrite hurts. The [emulators deep-dive](../blog/checkpoint64-for-emulators/) covers the save-state-timeline idea in full — what emulators put on disk and why a history beats slots.
 
 ## Save states vs in-game saves vs memory cards
 
@@ -32,13 +32,15 @@ Checkpoint64 backs up all three — whatever your emulator writes to its save fo
 
 | Emulator | Systems |
 |---|---|
-| **RetroArch** | Multi-system front-end (NES → PSP and beyond) |
-| **Dolphin** | GameCube, Wii |
-| **PCSX2** | PlayStation 2 |
-| **DuckStation** | PlayStation 1 |
-| **PPSSPP** | PSP |
-| **RPCS3** | PlayStation 3 |
-| **Cemu** | Wii U |
+| **[RetroArch](../saves/retroarch/)** | Multi-system front-end (NES → PSP and beyond) |
+| **[Dolphin](../saves/dolphin/)** | GameCube, Wii |
+| **[PCSX2](../saves/pcsx2/)** | PlayStation 2 |
+| **[DuckStation](../saves/duckstation/)** | PlayStation 1 |
+| **[PPSSPP](../saves/ppsspp/)** | PSP |
+| **[RPCS3](../saves/rpcs3/)** | PlayStation 3 |
+| **[Cemu](../saves/cemu/)** | Wii U |
+
+Each link is that emulator's save-location page — the exact folder it writes to, per platform.
 
 Not listed? Any emulator works — point Checkpoint64 at its save folder and choose the files yourself.
 

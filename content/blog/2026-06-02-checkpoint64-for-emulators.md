@@ -96,7 +96,11 @@ handles well. Each writes its saves to its own folder in its own format.
 Checkpoint64 doesn't care. It versions *files in folders* — it has no opinion
 about which emulator wrote them. Add each save directory and they all get the
 same history, the same auto-backup, the same restore. One backup tool instead of
-trusting each emulator's built-in slot system and hoping for the best.
+trusting each emulator's built-in slot system and hoping for the best. Seven
+emulators — [RetroArch](/saves/retroarch/), Dolphin, PCSX2, DuckStation,
+PPSSPP, RPCS3, and Cemu — have presets out of the box; the
+[emulator save backup guide](/emulator-save-backup/) covers what each one
+gets you and how to point the app at anything else.
 
 ## Where this fits
 
