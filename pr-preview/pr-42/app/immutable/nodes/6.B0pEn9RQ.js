@@ -1,0 +1,1 @@
+import{H as e,N as t,U as n,b as r,d as i,m as a,y as o}from"../chunks/DYnTivDG.js";import"../chunks/DfMGQaZ7.js";function s(s,c){n(c,!0);var l=r();i(`1teoznn`,e=>{var n=r();a(t(n),()=>c.data.head),o(e,n)}),a(t(l),()=>c.data.body),o(s,l),e()}export{s as component};

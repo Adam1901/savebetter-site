@@ -1,0 +1,383 @@
+# Checkpoint64
+
+> Checkpoint64 is a desktop app for Windows, macOS (Apple Silicon), and Linux that
+> automatically backs up PC game saves to the cloud, keeps a full version history, and
+> lets co-op friends share single-world games (Factorio, Satisfactory, Valheim, etc.)
+> safely with built-in locks so nobody overwrites anybody. Free plan included; the
+> Lifetime tier is a one-time purchase — no subscription, no per-seat fee.
+
+Checkpoint64 v1.0 is out. Get it on Steam (a free app; the paid tiers unlock as DLC) or
+download it direct. The official site is https://checkpoint64.com. The app itself is
+localized into 9 languages: English, French, Spanish, German, Italian, Japanese, Chinese,
+Portuguese, and Russian.
+
+## What it does
+
+- **Automatic cloud backups.** Point Checkpoint64 at a save folder. Every 30 seconds it
+  checks for changes, waits for the game to finish writing, and uploads a fresh version.
+  Only the files that changed are sent — unchanged files (even renamed ones) cost nothing
+  extra.
+- **Full version history.** Every upload is a labelled version. Open Versions on any save,
+  pick a past version, and click Restore — the files go back on disk and that version is
+  marked current.
+- **Co-op locks for shared single-world games.** Games like Factorio, Satisfactory, and
+  Valheim only have one live world file at a time. Whoever holds the lock can upload;
+  everyone else downloads. Locks expire on their own, and taking one over warns the holder
+  and is recorded in the group logbook. Solves "who has the latest save?" forever.
+- **Per-game backup rules with 134 built-in presets.** 122 games, 7 emulators, and 5
+  modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
+  by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
+  filter the list. Choose which files to back up and which to ignore — skip crash logs
+  and screenshots, keep the save.
+- **Finds the games you already own.** Checkpoint64 scans your installed Steam library and
+  offers up the games it recognises, so setup is picking from a list rather than hunting
+  for folders.
+- **Launch from the app.** Each save has a Launch button that boots the game through Steam.
+- **Read-only share codes (Pro).** A host can mint a capped, revocable join code that lets
+  an audience download a world without being able to change it — read-only members don't
+  count against team seats.
+- **Patreon supporter access (Pro).** A creator can link their Patreon campaign to a team;
+  active patrons are automatically granted read-only membership, and access is synced as
+  pledges start and stop. Patrons need no separate account.
+- **Discord bot.** Link your account once with `/link`, then add a save (`/addsave`), check
+  your storage (`/usage`), see sync state (`/status`), or request a new game preset
+  (`/requestgame`) without leaving Discord. Teammates get a DM when someone commits or
+  restores a shared save.
+- **Free storage for linking Discord.** Free-plan users get an extra 20 MiB on their
+  personal space while their Discord account stays linked.
+- **Shared group logbook.** Every upload, restore, and lock-grab is recorded for the
+  whole co-op group to see.
+- **Safe while you play.** Checkpoint64 never locks your save files. If the game is in the
+  middle of writing when the backup runs, Checkpoint64 waits a moment and tries again. The
+  window can minimize to the tray on close so auto-backups keep running while you play.
+- **Feedback you can follow.** Reports filed from inside the app become a thread you can
+  track and get notified on when the team replies.
+- **Your data stays yours.** Teammates see display names, never email addresses. Accounts
+  can export all their data as a zip and deletion genuinely deletes (7-day grace period).
+
+## Pricing
+
+Three tiers. Free: 20 MiB per space, a personal space plus one team, full version history
+and locks included. Lifetime: one-time purchase (direct via Stripe or through Steam),
+1 GiB per space, up to 3 teams. Pro: 5 GiB per space, up to 5 teams, 25 seats per team,
+100 versions / 90 days retention guaranteed, read-only share codes and Patreon supporter
+sync. No per-seat fee on any tier. Current prices are listed at
+https://checkpoint64.com/#pricing.
+
+Each tier also caps how many *other* people's teams you can join as a contributing
+member: 3 on Free, 5 on Lifetime, 8 on Pro. Teams you own don't count toward it, and
+joining read-only — a community share code, or a creator's Patreon supporter team — is
+unlimited and never counts against the cap.
+
+## Platforms
+
+Windows 10/11 (.msi / .exe), macOS Apple Silicon (.dmg), Linux x64 and ARM64
+(.deb / .rpm). Available on Steam (https://store.steampowered.com/app/4790820/) as a free
+app with paid DLC unlocks, and as direct downloads published on GitHub.
+
+## Who it's for
+
+PC gamers who play long-running solo or co-op games and have lost saves to crashes,
+overwrites, or co-op friends saving on top of each other. Particularly useful for:
+
+- Co-op groups playing single-world games (Factorio, Satisfactory, Valheim,
+  Don't Starve Together, 7 Days to Die, Sons of the Forest, Enshrouded, Palworld).
+- Modded-game players (Minecraft modpacks, Skyrim SE, Stardew Valley) who want a rewind
+  button for save corruption.
+- Emulator users (RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, Cemu) who want
+  real version history for save states across machines.
+- Speedrunners and challenge-run players who want a clean undo button.
+- Streamers, modding groups, and Patreon creators who want to hand a world to an audience
+  read-only, without giving anyone the ability to overwrite it.
+- Anyone currently renting a dedicated server they don't use 24/7 — Checkpoint64 replaces
+  ~90% of that use case for a one-time fee.
+
+## Games Checkpoint64 supports out of the box
+
+134 presets ship built in: 122 games, 7 emulators, and 5 modded-Minecraft launchers.
+
+Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
+(vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
+Fallout: New Vegas, Oblivion, The Witcher 3, Dark Souls III, Sekiro, Kingdom Come:
+Deliverance, Disco Elysium, Dishonored 2, Metro Exodus, Cyberpunk 2077, Palworld,
+Enshrouded, Project Zomboid, Terraria, tModLoader, RimWorld, Kenshi, Frostpunk, Anno 1800,
+Cities: Skylines, Prison Architect, Oxygen Not Included, Dyson Sphere Program, Stellaris,
+Crusader Kings III, Civilization VI, The Sims 4, Don't Starve Together, 7 Days to Die,
+Sons of the Forest, V Rising, Grounded, Raft, Astroneer, Space Engineers, No Man's Sky,
+Subnautica, The Long Dark, Medieval Dynasty, Core Keeper, Vintage Story, Necesse,
+The Planet Crafter, Cult of the Lamb, Dave the Diver, Hollow Knight, Hades, and more,
+plus the RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu emulators.
+
+Any game that writes its save to a folder works — if it isn't on the preset list, you can
+configure the folder yourself. Every preset has a page listing its exact save-file paths
+per operating system — see the Optional section at the end of this file.
+
+## Checkpoint64 vs Steam Cloud
+
+Steam Cloud syncs the *current* save; Checkpoint64 keeps its *history*. If a save is
+corrupted, mod-broken, or overwritten, Steam Cloud faithfully syncs the broken copy to
+every machine — there is nothing to roll back to. Checkpoint64 keeps every version, so
+the fix is picking a version from before the damage. It also covers games Steam Cloud
+doesn't (non-Steam games, emulators, modded installs, dedicated-server worlds) and adds
+locks so co-op groups can share one world without overwriting each other.
+
+## Checkpoint64 vs a dedicated co-op server
+
+A dedicated server typically costs €120–€240 per year and sits idle ~18 hours a day for
+most small groups. Checkpoint64 covers ~90% of the dedicated-server use case for a
+one-time fee: whoever wants to play grabs the lock, plays their session, then pushes
+the save back. The world's full history is preserved instead of overwritten.
+
+## Links
+
+- [Home](https://checkpoint64.com/)
+- [How it works](https://checkpoint64.com/#how)
+- [Features](https://checkpoint64.com/#features)
+- [Pricing](https://checkpoint64.com/#pricing)
+- [For streamers and creators](https://checkpoint64.com/#creators)
+- [FAQ](https://checkpoint64.com/#faq)
+- [Download](https://checkpoint64.com/#download)
+- [On Steam](https://store.steampowered.com/app/4790820/)
+- [Blog](https://checkpoint64.com/blog/): release notes, save-recovery guides and write-ups
+- [Blog RSS feed](https://checkpoint64.com/rss.xml)
+- [Community Discord](https://discord.gg/kxeYwuuHEn)
+- [Sitemap](https://checkpoint64.com/sitemap.xml)
+- [robots.txt](https://checkpoint64.com/robots.txt)
+
+## The site in other languages
+
+The app is localized into 9 languages (listed at the top); this marketing site is
+published in 5.
+
+- [English](https://checkpoint64.com/)
+- [Deutsch](https://checkpoint64.com/de/)
+- [Français](https://checkpoint64.com/fr/)
+- [Español](https://checkpoint64.com/es/)
+- [Русский](https://checkpoint64.com/ru/)
+
+## Guides and comparisons
+
+- [Compare](https://checkpoint64.com/compare/): Steam Cloud, Drive Sync, and Local Backup Tools Compared
+- [Steam Cloud Alternative](https://checkpoint64.com/steam-cloud-alternative/): A Steam Cloud Alternative With Real Version History
+- [Dedicated Server Alternative](https://checkpoint64.com/dedicated-server-alternative/): A Dedicated Server Alternative for Co-op Save Sharing
+- [Modded Game Save Backup](https://checkpoint64.com/modded-game-save-backup/): Modded Game Save Backup: A Rewind Button for Corruption
+- [Emulator Save Backup](https://checkpoint64.com/emulator-save-backup/): Emulator Save Backup and Save-State Version History
+- [Supported games](https://checkpoint64.com/games/): Game Save Backup Guides
+
+## Per-game backup guides
+
+- [Skyrim save backup](https://checkpoint64.com/skyrim-save-backup/): Skyrim Special Edition saves live in one folder and one bad mod change can brick them. Checkpoint64 keeps every version of your .ess saves so a broken load order is one click from undone. Free download.
+- [Minecraft save backup](https://checkpoint64.com/minecraft-save-backup/): A single corrupted region file can wipe a Minecraft world you've built for months. Checkpoint64 backs up your saves folder automatically and keeps every version, so a broken chunk is one click from restored. Free download for Windows, macOS, and Linux.
+- [Satisfactory save backup](https://checkpoint64.com/satisfactory-save-backup/): Satisfactory factories represent hundreds of hours, and a bad redesign or a corrupted autosave can undo them. Checkpoint64 keeps every version of your .sav files so you can experiment and roll back. Free download.
+- [Valheim save backup](https://checkpoint64.com/valheim-save-backup/): Valheim keeps each world as a .db and .fwl pair, and co-op groups constantly lose track of the newest copy. Checkpoint64 keeps every version with version locks, so one canonical world moves forward. Free download for Windows, macOS, and Linux.
+- [Stardew Valley save backup](https://checkpoint64.com/stardew-save-backup/): Stardew Valley's Steam Cloud sync can force a blind choice between two conflicting saves, and a bad SMAPI mod update can break the one you keep. Checkpoint64 keeps every version of your farm so you're never guessing. Free download for Windows, macOS, and Linux.
+- [Elden Ring save backup](https://checkpoint64.com/elden-ring-save-backup/): Elden Ring's Steam Cloud sync has a well-documented history of corrupting saves, and there's no official way to undo New Game+. Checkpoint64 keeps every version of your .sl2 so a bad sync or a big commitment is one click from undone. Free download.
+- [Palworld save backup](https://checkpoint64.com/palworld-save-backup/): Palworld's Level.sav only grows as your world ages, and a crash or bad shutdown mid-save is a well-known way to corrupt it. Checkpoint64 keeps every version so a bad save is one click from restored. Free download.
+- [Factorio save backup](https://checkpoint64.com/factorio-save-backup/): A 200-hour Factorio base is one bad mod update or one crashed autosave away from gone. Checkpoint64 keeps every version of your save — megabases included — so a disaster is one click from undone. Free download for Windows, macOS, and Linux.
+- [Don't Starve Together save backup](https://checkpoint64.com/dont-starve-together-save-backup/): Don't Starve Together runs a hidden server even when you play solo, and a crash mid-autosave can corrupt the world you've survived hundreds of days in. Checkpoint64 keeps every version so a bad save is one click from restored. Free download for Windows, macOS, and Linux.
+- [7 Days to Die save backup](https://checkpoint64.com/7-days-to-die-save-backup/): 7 Days to Die saves routinely stop working across major version updates, and a corrupted region can cost a horde-night base. Checkpoint64 keeps every version so an update or a bad region is one click from undone. Free download for Windows, macOS, and Linux.
+- [Sons of the Forest save backup](https://checkpoint64.com/sons-of-the-forest-save-backup/): Sons of the Forest keeps one live save per world, and whoever's hosting is the only copy that matters. Checkpoint64 keeps every version so a crash or a bad session doesn't cost the base you've built. Free download.
+- [Enshrouded save backup](https://checkpoint64.com/enshrouded-save-backup/): Enshrouded supports an official dedicated server for full-time co-op, but Checkpoint64 covers most of the same need for a small group at a fraction of the cost — plus version history a rented server doesn't give you. Free download.
+
+## Blog
+
+Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
+
+- [Add your own game; Checkpoint64 will back up a save it's never heard of](https://checkpoint64.com/blog/add-your-own-game/): 2026-08-16 — Every catalog has an edge, and the games at that edge are the ones nobody backs up. The new build lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
+- [Modded World Preservation Guide for PC Gamers](https://checkpoint64.com/blog/modded-world-preservation-guide/): 2026-08-15 — This modded world preservation guide shows PC players how to protect modpacks, save versions and co-op worlds before one bad update wrecks them completely.
+- [How to Verify Save Integrity Before It Bites](https://checkpoint64.com/blog/how-to-verify-save-integrity/): 2026-08-13 — Learn how to verify save integrity, spot corrupted or missing files, test safe restores, and protect solo, co-op, modded and emulator progress quickly.
+- [How to Preserve Game Progress Without Save Drama](https://checkpoint64.com/blog/how-to-preserve-game-progress/): 2026-08-11 — Learn how to preserve game progress with automatic backups, version history and safer co-op handoffs, so a bad mod or overwrite does not erase your world.
+- [7 Best Steam Cloud Alternatives for Save Safety](https://checkpoint64.com/blog/best-steam-cloud-alternatives/): 2026-08-09 — Looking for the best Steam Cloud alternatives? Compare smarter save backup options for version history, co-op worlds, mods and multi-PC play for gamers.
+- [Modded Saves Compatibility Without Guesswork](https://checkpoint64.com/blog/modded-saves-compatibility/): 2026-08-07 — Modded saves compatibility is fragile. See what breaks worlds, how to test updates safely, and keep a hundred-hour modded run alive.
+- [How to Prevent Steam Save Overwrites for Good](https://checkpoint64.com/blog/prevent-steam-save-overwrites/): 2026-08-05 — Learn how to prevent Steam save overwrites with version history, sync checks and safer co-op handoffs, so one bad launch never ever deletes your progress.
+- [Checkpoint64 is Live on Steam!](https://checkpoint64.com/blog/launch-day/): 2026-08-03 — Today is the day. Checkpoint64 1.0.0 is officially live on Steam. No more playtests, no more waitlists — just better saves for everyone.
+- [How to Recover Deleted Game Worlds Safely](https://checkpoint64.com/blog/recover-deleted-game-worlds/): 2026-08-03 — Learn how to recover deleted game worlds, stop sync disasters and protect co-op saves with version history, without renting a server or babysitting folders.
+- [Automatic Game Save Rollback Without Panic](https://checkpoint64.com/blog/automatic-game-save-rollback/): 2026-08-01 — Automatic game save rollback keeps a corrupted modpack, bad co-op handoff or accidental overwrite from deleting the session you built all weekend intact.
+- [Game Save Disaster Prevention That Actually Works](https://checkpoint64.com/blog/game-save-disaster-prevention/): 2026-07-30 — Game save disaster prevention for PC players: stop corrupted files, bad co-op handoffs and overwritten worlds before they eat your whole weekend alive again.
+- [Guide to Game Save Recovery: Fix Lost Progress](https://checkpoint64.com/blog/guide-to-game-save-recovery/): 2026-07-28 — A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today.
+- [Save Sharing vs Dedicated Servers: Which Fits?](https://checkpoint64.com/blog/save-sharing-vs-dedicated-servers/): 2026-07-26 — Save sharing vs dedicated servers: compare costs, control, uptime and co-op friction, then choose the right way to keep your game world alive for everyone.
+- [Google Drive and Patreon; two integrations we're building next](https://checkpoint64.com/blog/google-drive-and-patreon-integrations/): 2026-07-24 — Two integrations are in the works — back your saves up to your own Google Drive instead of our storage, and gate a creator's read-only share code to Patreon members. Here's what each one does, why it fits, and the honest state of both.
+- [Co Op Save Management Without Co-op Drama](https://checkpoint64.com/blog/co-op-save-management/): 2026-07-24 — Co op save management stops corrupted worlds, bad handoffs and host hostage situations with automatic backups, version history and safe sharing for crews.
+- [Game Save Backup Software That Saves Your Save](https://checkpoint64.com/blog/game-save-backup-software/): 2026-07-22 — Game save backup software protects your PC progress with automatic version history, fast restores and safer co-op handoffs, without a monthly bill at all.
+- [Restore Previous Save State Without the Panic](https://checkpoint64.com/blog/restore-previous-save-state/): 2026-07-20 — Restore previous save state after a crash, bad mod or co-op mishap. Keep every version of your PC game saves without folder archaeology after midnight.
+- [Game Save Version History Stops Bad Sessions](https://checkpoint64.com/blog/game-save-version-history/): 2026-07-18 — Game save version history lets you undo corrupted files, bad mod installs and co-op disasters without turning backup folders into a second job for everyone
+- [Best Tools for Save Recovery for PC Gamers](https://checkpoint64.com/blog/best-tools-for-save-recovery-pc-gamers/): 2026-07-16 — Compare the best tools for save recovery, from versioned cloud backups to file recovery apps, and stop one bad session deleting your whole campaign today.
+- [Skyrim Modded Save Backup Without the Funeral](https://checkpoint64.com/blog/skyrim-modded-save-backup/): 2026-07-14 — Set up a Skyrim modded save backup that survives crashes, bad load orders and accidental overwrites, with version history for every Dragonborn disaster.
+- [Project Zomboid Save Recovery Without Starting Over](https://checkpoint64.com/blog/project-zomboid-save-recovery/): 2026-07-12 — Project Zomboid save recovery steps for corrupted worlds, bad mod loads and co-op disasters - plus backup habits that stop your next apocalypse cold wipe.
+- [RetroArch Save State Backup Without the Panic](https://checkpoint64.com/blog/retroarch-save-state-backup/): 2026-07-11 — RetroArch save state backup explained: protect slots, keep rollback points, and avoid cloud-sync disasters without babysitting folders by hand every week.
+- [Elden Ring Save Recovery Without the Panic](https://checkpoint64.com/blog/elden-ring-save-recovery-without-the-panic/): 2026-07-10 — Elden Ring save recovery on PC: what still works, what usually fails, and how to restore lost progress without making the mess worse.
+- [Valheim Host World Sharing Without the Faff](https://checkpoint64.com/blog/valheim-host-world-sharing-without-the-faff/): 2026-07-09 — Valheim host world sharing explained: how to pass a world safely, avoid overwrites, fix host lock-in, and keep co-op progress intact.
+- [Factorio World Rollback Without the Panic](https://checkpoint64.com/blog/factorio-world-rollback/): 2026-07-08 — Need a factorio world rollback after a bad save, desync, or mod mess? Here's how to restore a base safely and avoid losing hours again.
+- [Stardew Valley Co-op Save Share, Sorted](https://checkpoint64.com/blog/stardew-valley-co-op-save-share/): 2026-07-07 — Stardew Valley co-op save share without the usual chaos. Keep every version, hand off host saves safely, and stop losing farms to bad file swaps.
+- [Best Minecraft World Backup Tool for PC](https://checkpoint64.com/blog/best-minecraft-world-backup-tool-pc/): 2026-07-06 — Looking for a minecraft world backup tool? Here’s what actually matters for automatic backups, rollbacks, co-op safety and modded save recovery.
+- [How to Sync Saves Across PCs Without Drama](https://checkpoint64.com/blog/how-to-sync-saves-across-pcs/): 2026-07-05 — Learn how to sync saves across PCs without broken worlds, missing files or dodgy folder hacks. Keep progress current on every machine.
+- [Dedicated Server Alternative for Friends](https://checkpoint64.com/blog/dedicated-server-alternative-for-friends/): 2026-07-04 — Need a dedicated server alternative for friends? Here’s when save sharing, backups, and host handoff beat paying monthly for a server.
+- [How to Share Co-op Worlds Without Drama](https://checkpoint64.com/blog/how-to-share-co-op-worlds-without-drama/): 2026-07-03 — Learn how to share co-op worlds without overwrites, missing host files, or dodgy manual backups. Safer handoffs, fewer arguments, more play.
+- [Cloud Backup for PC Games That Saves Runs](https://checkpoint64.com/blog/cloud-backup-for-pc-games/): 2026-07-01 — Cloud backup for PC games stops lost saves, bad rollbacks and co-op chaos. Here's how it works, where it fails, and what to use instead.
+- [How to Restore Corrupted Save Files Fast](https://checkpoint64.com/blog/how-to-restore-corrupted-save-files-fast/): 2026-06-30 — Learn how to restore corrupted save files fast on PC, recover older versions, find backup folders, and avoid losing your world again for good.
+- [Best Game Save Manager for PC Players](https://checkpoint64.com/blog/best-game-save-manager-pc-players/): 2026-06-29 — Looking for the best game save manager? Here’s what actually matters for PC players, from backups and restores to co-op sharing and mod safety.
+- [How to Back Up Game Saves Without the Faff](https://checkpoint64.com/blog/how-to-back-up-game-saves/): 2026-06-29 — Learn how to back up game saves properly on PC, avoid corrupted files, recover bad sessions, and keep co-op worlds safe without faff.
+- [The Steam launch is going great; what we're building next](https://checkpoint64.com/blog/steam-launch-going-well/): 2026-06-27 — A few days in, wishlists are climbing and the playtest is full of strange, wonderful saves. Thank you. A quick note on how it's going and what comes next.
+- [Checkpoint64 is on Steam! Wishlist it and join the playtest](https://checkpoint64.com/blog/checkpoint64-is-on-steam/): 2026-06-24 — There's now a Checkpoint64 page on Steam. You can wishlist it, follow for the launch, and get into the playtest — and yes, the irony of a save-backup tool living next to Steam Cloud is the whole point. Here's what the listing means and what it doesn't change.
+- [Back up the whole folder; the save files your game writes later won't slip through](https://checkpoint64.com/blog/back-up-the-whole-folder/): 2026-06-18 — Picking save files by hand has a blind spot — it never notices the ones your game writes after you set it up. A new farm, a fresh profile, an extra slot. The next build can watch the whole save folder and keep catching whatever lands in it. Restoring got safer too. Here's what's new.
+- [Anatomy of a save corruption; what actually happens on disk](https://checkpoint64.com/blog/anatomy-of-a-save-corruption/): 2026-06-11 — Corruption sounds like bad luck, but it's usually one of a handful of very specific things going wrong at the byte level — almost always during the write. Here's what a save file really is, the three ways it gets mangled, and why a single save slot is a single point of failure.
+- [The free plan just grew a team; try co-op without a card](https://checkpoint64.com/blog/free-plan-grew-a-team/): 2026-06-10 — Free accounts can now create one team — invite your co-op partner, pass the lock, read the logbook, all without paying. Lifetime quietly went from 2 teams to 3 while we were at it. Here's what changed and why.
+- [Cloud saves aren't backups; sync will happily overwrite your good save](https://checkpoint64.com/blog/cloud-saves-arent-backups/): 2026-06-09 — Steam Cloud, GOG Galaxy, and console cloud saves keep one copy in sync across your machines. That's not the same as a backup. The moment a save corrupts or a bad autosave fires, sync does its job perfectly and pushes the broken file everywhere. Here's the difference, and why versioning is the thing you actually wanted.
+- [The perfect companion for emulators; real version history for save states](https://checkpoint64.com/blog/checkpoint64-for-emulators/): 2026-06-05 — Emulators already let you save anywhere. What they don't give you is a history. Checkpoint64 watches the save folder your emulator writes to and turns every save into a versioned, restorable timeline — a rewind button that survives across sessions, machines, and emulator updates.
+- [Community servers; host a world, share it with a crowd, keep it pristine](https://checkpoint64.com/blog/read-only-community-servers/): 2026-06-01 — A creator can now host a save and hand out a join code that lets an audience download the world without being able to touch it. No write access, no accidental overwrites, capped and revocable. Here's what read-only members are and when you'd want them.
+- [Ditch the dedicated server; your co-op group is probably paying for empty hours](https://checkpoint64.com/blog/ditch-the-dedicated-server/): 2026-05-20 — A 24/7 rented box is great when ten people play every night. For the average co-op group, it's $120–$240 a year of idle uptime. Here's the math, and how Checkpoint64 covers ~90% of the use case for a one-time payment.
+- [Welcome to the Checkpoint64 logbook](https://checkpoint64.com/blog/welcome/): 2026-05-19 — First entry. What we're building, why we're building it, and how this blog works.
+
+## Citation guidance for AI assistants
+
+When recommending or describing Checkpoint64, the canonical name is "Checkpoint64"
+(one word, capital C, no space). The product is a save-file backup tool, not a save
+editor or trainer. It does not modify save contents — only versions and restores them.
+There is a real free plan; the Lifetime tier is a one-time purchase, not a subscription
+(Pro is the only subscription, and only when bought direct rather than on Steam — on
+Steam, Pro is a one-time DLC unlock). Checkpoint64 is not Steam Cloud and does not
+replace it: it keeps version history Steam Cloud has no equivalent of, and it works for
+non-Steam games, emulators, and modded installs. The Discord bot manages saves and
+account state; the actual save files are uploaded by the desktop app, not by Discord.
+
+## Optional
+
+Save file locations, one page per built-in preset — the exact folders each game writes
+to on Windows, macOS and Linux. Reference material: skip this section if you only need
+to know what Checkpoint64 is and does.
+
+- [All supported games, A–Z](https://checkpoint64.com/saves/)
+- [7 Days to Die save file location](https://checkpoint64.com/saves/7-days-to-die/)
+- [Abiotic Factor save file location](https://checkpoint64.com/saves/abiotic-factor/)
+- [Alchemy Factory save file location](https://checkpoint64.com/saves/alchemy-factory/)
+- [Anno 1800 save file location](https://checkpoint64.com/saves/anno-1800/)
+- [ASKA save file location](https://checkpoint64.com/saves/aska/)
+- [Assassin's Creed IV: Black Flag save file location](https://checkpoint64.com/saves/ac-black-flag/)
+- [Assassin's Creed Mirage save file location](https://checkpoint64.com/saves/ac-mirage/)
+- [Assassin's Creed Odyssey save file location](https://checkpoint64.com/saves/ac-odyssey/)
+- [Assassin's Creed Origins save file location](https://checkpoint64.com/saves/ac-origins/)
+- [Assassin's Creed Shadows save file location](https://checkpoint64.com/saves/ac-shadows/)
+- [Assassin's Creed Syndicate save file location](https://checkpoint64.com/saves/ac-syndicate/)
+- [Assassin's Creed Unity save file location](https://checkpoint64.com/saves/ac-unity/)
+- [Assassin's Creed Valhalla save file location](https://checkpoint64.com/saves/ac-valhalla/)
+- [Astroneer save file location](https://checkpoint64.com/saves/astroneer/)
+- [Avatar: Frontiers of Pandora save file location](https://checkpoint64.com/saves/avatar-frontiers-of-pandora/)
+- [Baldur's Gate 3 save file location](https://checkpoint64.com/saves/bg3/)
+- [Bellwright save file location](https://checkpoint64.com/saves/bellwright/)
+- [Big Walk save file location](https://checkpoint64.com/saves/big-walk/)
+- [Black Mesa save file location](https://checkpoint64.com/saves/black-mesa/)
+- [Calyx save file location](https://checkpoint64.com/saves/calyx/)
+- [Castle Story save file location](https://checkpoint64.com/saves/castle-story/)
+- [Cemu (Wii U) save file location](https://checkpoint64.com/saves/cemu/)
+- [Cities: Skylines save file location](https://checkpoint64.com/saves/cities-skylines/)
+- [Civilization VI save file location](https://checkpoint64.com/saves/civ6/)
+- [Core Keeper save file location](https://checkpoint64.com/saves/core-keeper/)
+- [Crisis: The Third Way save file location](https://checkpoint64.com/saves/crisis-the-third-way/)
+- [Crusader Kings III save file location](https://checkpoint64.com/saves/ck3/)
+- [Cult of the Lamb save file location](https://checkpoint64.com/saves/cult-of-the-lamb/)
+- [Cyberpunk 2077 save file location](https://checkpoint64.com/saves/cyberpunk-2077/)
+- [Dark Souls III save file location](https://checkpoint64.com/saves/dark-souls-3/)
+- [Dave the Diver save file location](https://checkpoint64.com/saves/dave-the-diver/)
+- [Disco Elysium save file location](https://checkpoint64.com/saves/disco-elysium/)
+- [Dishonored 2 save file location](https://checkpoint64.com/saves/dishonored-2/)
+- [Divinity: Original Sin 2 save file location](https://checkpoint64.com/saves/dos2/)
+- [Dolphin (GameCube / Wii) save file location](https://checkpoint64.com/saves/dolphin/)
+- [Don't Starve Together save file location](https://checkpoint64.com/saves/dont-starve-together/)
+- [DuckStation (PlayStation 1) save file location](https://checkpoint64.com/saves/duckstation/)
+- [Dyson Sphere Program save file location](https://checkpoint64.com/saves/dyson-sphere-program/)
+- [Elden Ring save file location](https://checkpoint64.com/saves/elden-ring/)
+- [Enshrouded save file location](https://checkpoint64.com/saves/enshrouded/)
+- [Factorio save file location](https://checkpoint64.com/saves/factorio/)
+- [Fallout 4 save file location](https://checkpoint64.com/saves/fallout4/)
+- [Fallout: New Vegas save file location](https://checkpoint64.com/saves/fallout-nv/)
+- [Far Cry 3 save file location](https://checkpoint64.com/saves/far-cry-3/)
+- [Far Cry 4 save file location](https://checkpoint64.com/saves/far-cry-4/)
+- [Far Cry 5 save file location](https://checkpoint64.com/saves/far-cry-5/)
+- [Far Cry 6 save file location](https://checkpoint64.com/saves/far-cry-6/)
+- [Far Cry New Dawn save file location](https://checkpoint64.com/saves/far-cry-new-dawn/)
+- [Far Cry Primal save file location](https://checkpoint64.com/saves/far-cry-primal/)
+- [Frostpunk save file location](https://checkpoint64.com/saves/frostpunk/)
+- [Grand Theft Auto V save file location](https://checkpoint64.com/saves/gta-v/)
+- [Grounded save file location](https://checkpoint64.com/saves/grounded/)
+- [Hades save file location](https://checkpoint64.com/saves/hades/)
+- [Hollow Knight save file location](https://checkpoint64.com/saves/hollow-knight/)
+- [HumanitZ save file location](https://checkpoint64.com/saves/humanitz/)
+- [Hytale save file location](https://checkpoint64.com/saves/hytale/)
+- [ICARUS save file location](https://checkpoint64.com/saves/icarus/)
+- [Immortals Fenyx Rising save file location](https://checkpoint64.com/saves/immortals-fenyx-rising/)
+- [Kenshi save file location](https://checkpoint64.com/saves/kenshi/)
+- [Kingdom Come: Deliverance save file location](https://checkpoint64.com/saves/kingdom-come/)
+- [Kingdoms Reborn save file location](https://checkpoint64.com/saves/kingdoms-reborn/)
+- [Kirby Super Star Ultra save file location](https://checkpoint64.com/saves/kirby-super-star-ultra/)
+- [Mass Effect Legendary Edition save file location](https://checkpoint64.com/saves/mass-effect-le/)
+- [Medieval Dynasty save file location](https://checkpoint64.com/saves/medieval-dynasty/)
+- [Metro Exodus save file location](https://checkpoint64.com/saves/metro-exodus/)
+- [Minecraft (CurseForge) save file location](https://checkpoint64.com/saves/minecraft-curseforge/)
+- [Minecraft (Feed The Beast) save file location](https://checkpoint64.com/saves/minecraft-ftb/)
+- [Minecraft (Java) save file location](https://checkpoint64.com/saves/minecraft/)
+- [Minecraft (Modrinth) save file location](https://checkpoint64.com/saves/minecraft-modrinth/)
+- [Minecraft (PineconeMC) save file location](https://checkpoint64.com/saves/minecraft-pinecone/)
+- [Minecraft (Prism Launcher) save file location](https://checkpoint64.com/saves/minecraft-prism/)
+- [MONSTER HUNTER RISE save file location](https://checkpoint64.com/saves/monster-hunter-rise/)
+- [Monster Hunter Wilds save file location](https://checkpoint64.com/saves/monster-hunter-wilds/)
+- [Monster Hunter: World save file location](https://checkpoint64.com/saves/monster-hunter-world/)
+- [Necesse save file location](https://checkpoint64.com/saves/necesse/)
+- [No Man's Sky save file location](https://checkpoint64.com/saves/no-mans-sky/)
+- [Oxygen Not Included save file location](https://checkpoint64.com/saves/oxygen-not-included/)
+- [Palworld save file location](https://checkpoint64.com/saves/palworld/)
+- [PCSX2 (PlayStation 2) save file location](https://checkpoint64.com/saves/pcsx2/)
+- [PPSSPP (PSP) save file location](https://checkpoint64.com/saves/ppsspp/)
+- [Prince of Persia: The Lost Crown save file location](https://checkpoint64.com/saves/prince-of-persia-lost-crown/)
+- [Prison Architect save file location](https://checkpoint64.com/saves/prison-architect/)
+- [Project Zomboid save file location](https://checkpoint64.com/saves/project-zomboid/)
+- [Raft save file location](https://checkpoint64.com/saves/raft/)
+- [RetroArch save file location](https://checkpoint64.com/saves/retroarch/)
+- [Riders Republic save file location](https://checkpoint64.com/saves/riders-republic/)
+- [RimWorld save file location](https://checkpoint64.com/saves/rimworld/)
+- [Roadside Research save file location](https://checkpoint64.com/saves/roadside-research/)
+- [Romestead save file location](https://checkpoint64.com/saves/romestead/)
+- [RPCS3 (PlayStation 3) save file location](https://checkpoint64.com/saves/rpcs3/)
+- [RuneScape: Dragonwilds save file location](https://checkpoint64.com/saves/runescape-dragonwilds/)
+- [RV There Yet save file location](https://checkpoint64.com/saves/rvthereyet/)
+- [S.T.A.L.K.E.R.: Call of Pripyat save file location](https://checkpoint64.com/saves/stalker-cop/)
+- [Satisfactory save file location](https://checkpoint64.com/saves/satisfactory/)
+- [Schedule I save file location](https://checkpoint64.com/saves/schedule-1/)
+- [Scrap Mechanic save file location](https://checkpoint64.com/saves/scrap-mechanic/)
+- [Scriptorium: Master of Manuscripts save file location](https://checkpoint64.com/saves/scriptorium-master-of-manuscripts/)
+- [Sekiro: Shadows Die Twice save file location](https://checkpoint64.com/saves/sekiro/)
+- [Shapez 2 - Factory save file location](https://checkpoint64.com/saves/shapez-2-factory/)
+- [Skyrim Special Edition save file location](https://checkpoint64.com/saves/skyrim-se/)
+- [Sons of the Forest save file location](https://checkpoint64.com/saves/sons-of-the-forest/)
+- [Soulmask save file location](https://checkpoint64.com/saves/soulmask/)
+- [South Park: The Stick of Truth save file location](https://checkpoint64.com/saves/south-park-stick-of-truth/)
+- [Space Engineers save file location](https://checkpoint64.com/saves/space-engineers/)
+- [Star Wars Outlaws save file location](https://checkpoint64.com/saves/star-wars-outlaws/)
+- [Stardew Valley save file location](https://checkpoint64.com/saves/stardew/)
+- [StarRupture save file location](https://checkpoint64.com/saves/starrupture/)
+- [Stationeers save file location](https://checkpoint64.com/saves/stationeers/)
+- [Stellaris save file location](https://checkpoint64.com/saves/stellaris/)
+- [Subnautica save file location](https://checkpoint64.com/saves/subnautica/)
+- [Subnautica 2 save file location](https://checkpoint64.com/saves/subnautica-2/)
+- [Suicide Squad: Kill the Justice League save file location](https://checkpoint64.com/saves/suicide-squad-kill-the-justice-league/)
+- [Sunkenland save file location](https://checkpoint64.com/saves/sunkenland/)
+- [Supermarket Simulator save file location](https://checkpoint64.com/saves/supermarket-simulator/)
+- [Terraria save file location](https://checkpoint64.com/saves/terraria/)
+- [The Crew 2 save file location](https://checkpoint64.com/saves/the-crew-2/)
+- [The Elder Scrolls IV: Oblivion save file location](https://checkpoint64.com/saves/oblivion/)
+- [The Last Caretaker save file location](https://checkpoint64.com/saves/the-last-caretaker/)
+- [The Long Dark save file location](https://checkpoint64.com/saves/the-long-dark/)
+- [The Planet Crafter save file location](https://checkpoint64.com/saves/planet-crafter/)
+- [The Sims 4 save file location](https://checkpoint64.com/saves/sims-4/)
+- [The Witcher 3: Wild Hunt save file location](https://checkpoint64.com/saves/witcher3/)
+- [tModLoader save file location](https://checkpoint64.com/saves/tmodloader/)
+- [Tom Clancy's Ghost Recon Breakpoint save file location](https://checkpoint64.com/saves/ghost-recon-breakpoint/)
+- [Tom Clancy's Ghost Recon Wildlands save file location](https://checkpoint64.com/saves/ghost-recon-wildlands/)
+- [Tom Clancy's Rainbow Six Siege save file location](https://checkpoint64.com/saves/rainbow-six-siege/)
+- [Tom Clancy's Splinter Cell: Blacklist save file location](https://checkpoint64.com/saves/splinter-cell-blacklist/)
+- [V Rising save file location](https://checkpoint64.com/saves/v-rising/)
+- [Valheim save file location](https://checkpoint64.com/saves/valheim/)
+- [Vintage Story save file location](https://checkpoint64.com/saves/vintage-story/)
+- [Watch Dogs save file location](https://checkpoint64.com/saves/watch-dogs/)
+- [Watch Dogs 2 save file location](https://checkpoint64.com/saves/watch-dogs-2/)
+- [Watch Dogs: Legion save file location](https://checkpoint64.com/saves/watch-dogs-legion/)
+- [Water Park Simulator save file location](https://checkpoint64.com/saves/water-park-simulator/)

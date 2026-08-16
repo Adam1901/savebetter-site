@@ -1,0 +1,326 @@
+/* Checkpoint64 blog — standalone stylesheet, no dependency on src/style.css.
+   Mirrors the same paper/cartridge palette and type system so blog pages feel
+   continuous with the marketing site. */
+
+:root {
+  --ink: #1a1814;
+  --paper: #f4ecd8;
+  --paper-deep: #ede4cf;
+  --night: #0c0b09;
+  --night-2: #15130f;
+  --accent: #ff5f4e;
+  --accent-ink: #1a1814;
+
+  /* Theme tokens — swapped by [data-theme="light"]. Mirrors src/style.css. */
+  --bg: var(--night);
+  --bg-2: var(--night-2);
+  --fg: var(--paper);
+  --fg-rgb: 244, 236, 216;
+  --bg-nav: rgba(12, 11, 9, 0.78);
+  --night-line: rgba(var(--fg-rgb), 0.08);
+
+  --f-pixel: "Press Start 2P", monospace;
+  --f-vt: "VT323", monospace;
+  --f-mono: "JetBrains Mono", ui-monospace, monospace;
+  --f-hand: "Patrick Hand", cursive;
+}
+
+[data-theme="light"] {
+  --bg: var(--paper);
+  --bg-2: var(--paper-deep);
+  --fg: var(--ink);
+  --fg-rgb: 26, 24, 20;
+  --bg-nav: rgba(244, 236, 216, 0.82);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-mono);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(var(--fg-rgb), 0.04) 39px 40px),
+    repeating-linear-gradient(90deg, transparent 0 39px, rgba(var(--fg-rgb), 0.04) 39px 40px);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.pixel { font-family: var(--f-pixel); letter-spacing: -1px; line-height: 1.1; }
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 10px 14px; font-family: var(--f-pixel); font-size: 11px;
+  text-decoration: none; z-index: 1000;
+}
+.skip-link:focus { left: 12px; top: 12px; outline: 2px solid var(--ink); }
+
+.blog-wrap { max-width: 760px; margin: 0 auto; padding: 0 28px; }
+
+/* ---------- NAV ---------- */
+.blog-nav {
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+  background: var(--bg-nav);
+  border-bottom: 1px solid var(--night-line);
+}
+.blog-nav .blog-wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px; padding-bottom: 16px;
+}
+.blog-brand {
+  font-size: 14px; color: var(--fg); text-decoration: none;
+}
+.blog-nav-right {
+  display: flex; align-items: center; gap: 14px;
+}
+.blog-allposts {
+  font-family: var(--f-mono); font-size: 13px; color: var(--fg);
+  opacity: 0.75;
+}
+.blog-allposts:hover { opacity: 1; text-decoration: none; }
+
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 32px; height: 32px;
+  border: 1.5px solid var(--fg);
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  opacity: 0.78;
+  transition: opacity 120ms ease, transform 80ms ease, background 120ms ease, color 120ms ease;
+  padding: 0;
+}
+.theme-toggle:hover {
+  opacity: 1;
+  transform: translate(-1px, -1px);
+  background: var(--fg);
+  color: var(--bg);
+  text-decoration: none;
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  opacity: 1;
+}
+.theme-toggle-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ---------- MAIN ---------- */
+.blog-main { padding: 64px 28px 96px; }
+
+/* ---------- INDEX ---------- */
+.blog-index-header { margin-bottom: 48px; }
+.blog-index-header h1 {
+  font-size: 32px; color: var(--accent); margin: 0 0 12px;
+}
+.blog-index-tagline {
+  font-family: var(--f-hand); font-size: 22px;
+  color: var(--fg); opacity: 0.8; margin: 0;
+}
+
+.blog-list { list-style: none; padding: 0; margin: 0; }
+.blog-card {
+  border: 1px solid var(--night-line);
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.blog-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.blog-card-link {
+  display: block; padding: 24px 28px;
+  color: var(--fg); text-decoration: none;
+}
+.blog-card-link:hover { text-decoration: none; }
+/* Pinned posts sit at the top of the list and read as highlighted: accent
+   border, a faint accent wash, and a pin badge above the title. */
+.blog-card.pinned {
+  border-color: var(--accent);
+  background:
+    linear-gradient(rgba(255, 95, 78, 0.06), rgba(255, 95, 78, 0.06));
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.blog-card.pinned:hover { box-shadow: 0 0 0 1px var(--accent); }
+.blog-card-pin {
+  display: inline-block; margin: 0 0 10px;
+  font-family: var(--f-mono); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent);
+}
+/* Featured-image thumbnail at the top of a card (feed posts always have one;
+   local posts only if they set an `image` in frontmatter). Bleeds to the card
+   edges by cancelling the link padding, and sits above the pin badge/title. */
+.blog-card-thumb {
+  display: block; width: calc(100% + 56px);
+  margin: -24px -28px 20px; border-radius: 6px 6px 0 0;
+  aspect-ratio: 16 / 9; object-fit: cover;
+  border-bottom: 1px solid var(--night-line);
+}
+.blog-card-title {
+  font-family: var(--f-pixel); font-size: 16px; line-height: 1.3;
+  color: var(--fg); margin: 0 0 8px;
+}
+.blog-card-date {
+  font-family: var(--f-mono); font-size: 12px;
+  opacity: 0.6; letter-spacing: 0.04em;
+}
+.blog-card-excerpt {
+  margin: 12px 0 0; color: var(--fg); opacity: 0.85;
+}
+.blog-empty {
+  list-style: none; padding: 32px; border: 1px dashed var(--night-line);
+  border-radius: 6px; opacity: 0.7;
+}
+.blog-empty code {
+  background: var(--bg-2); padding: 2px 6px; border-radius: 3px;
+}
+
+/* ---------- POST ---------- */
+.blog-post-header { margin-bottom: 40px; }
+.blog-post-meta {
+  font-family: var(--f-mono); font-size: 12px;
+  opacity: 0.65; letter-spacing: 0.04em; margin: 0 0 12px;
+}
+.blog-tag {
+  display: inline-block; padding: 2px 8px;
+  border: 1px solid var(--night-line); border-radius: 3px;
+  font-size: 11px; margin-right: 4px;
+}
+.blog-post-title {
+  font-size: 28px; color: var(--accent); margin: 0;
+}
+.blog-post-source {
+  font-family: var(--f-mono); font-size: 12px;
+  opacity: 0.65; margin: 12px 0 0;
+}
+.blog-post-source a { color: inherit; }
+
+/* Featured/lead image for a post, above the body prose. */
+.blog-post-lead { margin: 0 0 40px; }
+.blog-post-lead img {
+  display: block; width: 100%; height: auto;
+  border-radius: 6px; border: 1px solid var(--night-line);
+}
+
+.blog-post-body { font-size: 16px; }
+.blog-post-body h2 {
+  font-family: var(--f-pixel); font-size: 18px; line-height: 1.3;
+  color: var(--fg); margin: 48px 0 16px;
+}
+.blog-post-body h3 {
+  font-family: var(--f-pixel); font-size: 14px;
+  color: var(--fg); margin: 36px 0 12px;
+}
+.blog-post-body p { margin: 0 0 1.2em; }
+.blog-post-body ul, .blog-post-body ol { padding-left: 1.5em; margin: 0 0 1.2em; }
+.blog-post-body li { margin-bottom: 0.4em; }
+.blog-post-body blockquote {
+  border-left: 3px solid var(--accent);
+  margin: 1.2em 0; padding: 0.2em 0 0.2em 1em;
+  font-family: var(--f-hand); font-size: 20px; opacity: 0.9;
+}
+.blog-post-body code:not(pre code) {
+  background: var(--night-2); padding: 2px 6px; border-radius: 3px;
+  font-size: 0.9em; color: var(--accent);
+}
+.blog-post-body pre {
+  background: var(--night-2) !important;
+  padding: 18px 20px; border-radius: 6px;
+  border: 1px solid rgba(244, 236, 216, 0.08);
+  overflow-x: auto; font-size: 13px; line-height: 1.5;
+  margin: 1.4em 0;
+  color: #e1e4e8;
+}
+.blog-post-body pre code { background: transparent !important; padding: 0; color: inherit; }
+.blog-post-body img {
+  max-width: 100%; height: auto; border-radius: 4px;
+  border: 1px solid var(--night-line);
+}
+.blog-post-body hr {
+  border: none; border-top: 1px dashed var(--night-line); margin: 2.4em 0;
+}
+.blog-post-body table {
+  border-collapse: collapse; width: 100%; margin: 1.2em 0;
+}
+.blog-post-body th, .blog-post-body td {
+  border: 1px solid var(--night-line); padding: 8px 12px; text-align: left;
+}
+.blog-post-body th { background: var(--bg-2); }
+
+/* ---------- FOOTER ---------- */
+.blog-footer {
+  border-top: 1px solid var(--night-line);
+  padding: 32px 0; margin-top: 64px;
+  font-size: 13px; opacity: 0.7;
+}
+.blog-footer a { color: var(--fg); }
+
+@media (max-width: 600px) {
+  .blog-main { padding: 40px 20px 64px; }
+  .blog-post-title { font-size: 22px; }
+  .blog-index-header h1 { font-size: 24px; }
+  .blog-card-link { padding: 20px; }
+  .blog-card-thumb { width: calc(100% + 40px); margin: -20px -20px 16px; }
+}
+
+/* ---------- GUIDE PAGES (comparison + hub landing pages) ---------- */
+/* These reuse .blog-post / .blog-post-body for prose + tables; the rules below
+   style only the extra chrome the guides add: breadcrumb, FAQ accordion,
+   download CTA, and the related-guides cross-links. */
+.guide-crumb {
+  font-family: var(--f-mono); font-size: 12px;
+  opacity: 0.65; letter-spacing: 0.04em; margin: 0 0 18px;
+}
+.guide-crumb a { color: var(--fg); opacity: 0.9; }
+.guide-crumb span[aria-hidden] { padding: 0 6px; opacity: 0.4; }
+
+.guide-faq { margin: 56px 0 0; }
+.guide-faq > h2, .guide-related > h2 {
+  font-family: var(--f-pixel); font-size: 16px; line-height: 1.3;
+  color: var(--fg); margin: 0 0 20px;
+}
+.guide-faq-item { border-top: 1px solid var(--night-line); padding: 16px 0; }
+.guide-faq-item:last-of-type { border-bottom: 1px solid var(--night-line); }
+.guide-faq-item summary {
+  font-family: var(--f-mono); font-weight: 700; font-size: 16px;
+  color: var(--fg); cursor: pointer; list-style: none; display: flex; gap: 10px;
+}
+.guide-faq-item summary::-webkit-details-marker { display: none; }
+.guide-faq-item summary::before { content: "\25B8"; color: var(--accent); flex: none; }
+.guide-faq-item[open] summary::before { content: "\25BE"; }
+.guide-faq-item p { margin: 12px 0 0; padding-left: 20px; opacity: 0.85; font-size: 15px; }
+
+.guide-cta {
+  margin: 48px 0 0; padding: 28px; text-align: center;
+  border: 1px solid var(--accent); border-radius: 8px;
+  background: linear-gradient(rgba(255, 95, 78, 0.06), rgba(255, 95, 78, 0.06));
+}
+.guide-cta-title { font-size: 15px; color: var(--accent); margin: 0 0 10px; }
+.guide-cta p { margin: 0 0 18px; opacity: 0.85; }
+.guide-cta-btn {
+  display: inline-block; font-size: 11px;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 13px 20px; border-radius: 3px; text-decoration: none;
+}
+.guide-cta-btn:hover { text-decoration: none; filter: brightness(1.06); }
+
+.guide-related { margin: 56px 0 0; }
+.guide-related ul { list-style: none; padding: 0; margin: 0; }
+.guide-related li { margin: 0 0 10px; }
+.guide-related li a {
+  color: var(--fg); opacity: 0.9;
+  border-bottom: 1px solid var(--night-line); padding-bottom: 1px;
+}
+.guide-related li a:hover { color: var(--accent); opacity: 1; text-decoration: none; }
