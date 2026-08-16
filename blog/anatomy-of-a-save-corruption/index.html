@@ -149,8 +149,9 @@ kept the version from before that moment.</p>
 <h2 id="what-a-save-file-actually-is">What a save file actually is</h2>
 <p>Strip away the game and a save is just bytes in a file: a structured blob the
 game knows how to read back. Depending on the game it might be one binary file,
-a zip of several files, a little embedded database, or a folder full of region
-chunks. Whatever the shape, two things are usually true:</p>
+a zip of several files, a little embedded database, or a
+<a href="/minecraft-save-backup/">folder full of region chunks</a>. Whatever the shape,
+two things are usually true:</p>
 <ul>
 <li><strong>It has structure the game trusts.</strong> A header, offsets, lengths, sometimes a
 checksum. The loader reads byte 0, expects a magic number, jumps to where the
@@ -186,11 +187,14 @@ with the data after it. Structurally it&#39;s a complete file. Logically it&#39;
 nonsense, and the loader trips over the contradiction.</p>
 <h3 id="3-the-format-mismatch">3. The format mismatch</h3>
 <p>The bytes are perfectly intact — but the thing reading them changed. A game
-patch alters the save format, a mod that wrote custom data into the save gets
-removed or updated, an emulator core changes how it lays out a memory card. Now a
-loader that expects layout B is handed a file written in layout A. Nothing was
-damaged; the two sides just stopped agreeing on what the bytes mean, and &quot;won&#39;t
-load&quot; looks identical to corruption from where you&#39;re sitting.</p>
+patch alters the save format
+(<a href="/7-days-to-die-save-backup/">7 Days to Die does this on most major updates</a>),
+a <a href="/modded-game-save-backup/">mod that wrote custom data into the save</a> gets
+removed or updated, an
+<a href="/emulator-save-backup/">emulator core changes how it lays out a memory card</a>.
+Now a loader that expects layout B is handed a file written in layout A. Nothing
+was damaged; the two sides just stopped agreeing on what the bytes mean, and
+&quot;won&#39;t load&quot; looks identical to corruption from where you&#39;re sitting.</p>
 <h2 id="why-one-save-slot-is-a-single-point-of-failure">Why one save slot is a single point of failure</h2>
 <p>Notice what every one of these has in common: there was a last-known-good version
 of the save that existed <em>right up until the bad write happened.</em> The interrupted

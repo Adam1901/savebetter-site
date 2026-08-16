@@ -169,8 +169,9 @@
 <h2 id="does-steam-cloud-keep-a-version-history">Does Steam Cloud keep a version history?</h2>
 <p>No. Steam Cloud syncs your <em>latest</em> save and nothing older. The moment a bad save is written — a corruption, a botched mod change, an accidental overwrite — Steam happily syncs that bad version up and the good one is gone. There is no &quot;previous versions&quot; list to fall back on.</p>
 <p>Checkpoint64 keeps every upload as a labelled version. Open <strong>Versions</strong> on any save, pick a healthy one from before the problem, and click <strong>Restore</strong> — the files go back on disk and that version becomes current.</p>
+<p>The <a href="../blog/cloud-saves-arent-backups/">cloud saves aren&#39;t backups</a> post walks through exactly how a sync turns one bad save into the only copy you have left.</p>
 <h2 id="does-steam-cloud-back-up-all-my-games">Does Steam Cloud back up all my games?</h2>
-<p>No. Steam Cloud is opt-in per game: each developer has to build it in, and plenty don&#39;t — or only sync part of their save data. That&#39;s why your progress in one game rides along fine and another game loses everything.</p>
+<p>No. Steam Cloud is opt-in per game: each developer has to build it in, and plenty don&#39;t — or only sync part of their save data. That&#39;s why your progress in one game rides along fine and another game loses everything. And opting in is no guarantee either: <a href="../elden-ring-save-backup/">Elden Ring&#39;s Steam Cloud corruption history</a> is exactly why player guides tell you to keep a manual backup for that game.</p>
 <p>Checkpoint64 doesn&#39;t depend on the developer. If a game writes its save to a folder — which is nearly all of them — Checkpoint64 can back it up. It ships with presets for 75+ games and 7 emulators, and you can point it at any folder it doesn&#39;t already know.</p>
 <h2 id="steam-cloud-vs-checkpoint64">Steam Cloud vs Checkpoint64</h2>
 <table>
@@ -222,9 +223,9 @@
 <p>You need more the moment any of these is true:</p>
 <ul>
 <li>You play a game Steam Cloud <strong>doesn&#39;t support</strong> (or only half-supports).</li>
-<li>You run <strong>mods</strong> — the #1 cause of save corruption, and exactly what version history exists to undo.</li>
-<li>You play the same save on <strong>two machines</strong> and have been bitten by a sync conflict.</li>
-<li>You play <strong>co-op single-world games</strong> (Valheim, Factorio, Satisfactory) where &quot;who has the latest save?&quot; is a recurring headache.</li>
+<li>You run <strong>mods</strong> — the <a href="../modded-game-save-backup/">#1 cause of save corruption</a>, and exactly what version history exists to undo.</li>
+<li>You play the same save on <strong>two machines</strong> and have been bitten by a <a href="../stardew-save-backup/">sync conflict</a>.</li>
+<li>You play <strong>co-op single-world games</strong> (<a href="../valheim-save-backup/">Valheim</a>, <a href="../factorio-save-backup/">Factorio</a>, <a href="../satisfactory-save-backup/">Satisfactory</a>) where &quot;who has the latest save?&quot; is a recurring headache.</li>
 </ul>
 <h2 id="how-to-replace-steam-cloud-with-checkpoint64">How to replace Steam Cloud with Checkpoint64</h2>
 <ol>

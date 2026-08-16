@@ -204,7 +204,7 @@
 </tr>
 </tbody></table>
 <h2 id="steam-cloud-vs-checkpoint64">Steam Cloud vs Checkpoint64</h2>
-<p>Steam Cloud is automatic and free, but it&#39;s opt-in per game — plenty of titles aren&#39;t covered, or only sync part of their save data — and it only ever holds your latest sync. A corrupted or overwritten save that syncs up simply replaces the good copy, with nothing to roll back to. Checkpoint64 works on any game that writes a save to a folder and keeps every version, so a bad save is one restore away instead of the only copy left.</p>
+<p>Steam Cloud is automatic and free, but it&#39;s opt-in per game — plenty of titles aren&#39;t covered, or only sync part of their save data — and it only ever holds your latest sync. A corrupted or overwritten save that syncs up simply replaces the good copy, with nothing to roll back to. Checkpoint64 works on any game that writes a save to a folder and keeps every version, so a bad save is one restore away instead of the only copy left. The <a href="../steam-cloud-alternative/">Steam Cloud alternative guide</a> goes deeper on this comparison, and <a href="../blog/cloud-saves-arent-backups/">cloud saves aren&#39;t backups</a> walks through the failure step by step.</p>
 <h2 id="local-backup-tools-vs-checkpoint64">Local backup tools vs Checkpoint64</h2>
 <table>
 <thead>
@@ -243,10 +243,10 @@
 <li><strong>Steam Cloud</strong> is enough for a single supported game, on one PC, with no mods and no disasters.</li>
 <li><strong>Local backup tools</strong> are the right call if you only ever play on one PC and just want a fast, organized local archive.</li>
 </ul>
-<p>Where all four run out of road at the same point: a save gets corrupted, overwritten, or lost with no earlier version to fall back to — or you play with anyone else and need to know whose save is current.</p>
+<p>Where all four run out of road at the same point: a save gets <a href="../blog/anatomy-of-a-save-corruption/">corrupted</a>, overwritten, or lost with no earlier version to fall back to — or you <a href="../dedicated-server-alternative/">play with anyone else</a> and need to know whose save is current.</p>
 <h2 id="how-checkpoint64-covers-the-gap">How Checkpoint64 covers the gap</h2>
 <ol>
-<li><strong>Install it and point it at your save folder.</strong> Presets for 75+ games and 7 emulators already know where to look.</li>
+<li><strong>Install it and point it at your save folder.</strong> Presets for <a href="../saves/">75+ games</a> and <a href="../emulator-save-backup/">7 emulators</a> already know where to look.</li>
 <li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.</li>
 <li><strong>Roll back whenever something goes wrong.</strong> Open Versions, pick a save from before the problem, and Restore.</li>
 </ol>

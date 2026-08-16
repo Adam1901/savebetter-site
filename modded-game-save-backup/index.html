@@ -173,15 +173,16 @@
 <li><strong>Removing a mod mid-playthrough.</strong> Uninstall a mod and your save still references scripts and items that no longer exist. The damage is often silent for hours, then fatal.</li>
 <li><strong>Load-order and update changes.</strong> Reordering mods or taking an update mid-save can leave the file referencing things that moved or vanished.</li>
 </ul>
-<p>All three are effectively irreversible <em>once they happen</em>. The only reliable protection is prevention: keep earlier versions so you can drop back to a healthy save from before the change.</p>
+<p>All three are effectively irreversible <em>once they happen</em>. The only reliable protection is prevention: keep earlier versions so you can drop back to a healthy save from before the change. (For what&#39;s actually happening on disk when a save dies, the <a href="../blog/anatomy-of-a-save-corruption/">anatomy of a save corruption</a> post takes it apart byte by byte.)</p>
 <h2 id="what-to-back-up-in-a-modded-game">What to back up in a modded game</h2>
 <p>Back up the <strong>whole save folder</strong>, not just the obvious save file. Modded games often write companion files your save depends on — modded Skyrim writes an <code>.ess</code> save plus a matching <code>.skse</code> co-save; modpacks write per-world config and mod data alongside the world. Checkpoint64 grabs the folder by default, so the pieces always travel together, and lets you skip the junk (crash logs, screenshots) while keeping the save.</p>
 <h2 id="modded-games-with-presets">Modded games with presets</h2>
 <p>Checkpoint64 ships knowing where these keep their saves:</p>
 <ul>
-<li><strong>Modded Minecraft</strong> — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers</li>
-<li><strong>Skyrim Special Edition</strong> — <code>.ess</code> saves and <code>.skse</code> co-saves</li>
-<li><strong>Stardew Valley</strong>, <strong>Fallout 4</strong>, <strong>RimWorld</strong>, <strong>Factorio</strong>, and 50+ more</li>
+<li><strong><a href="../minecraft-save-backup/">Modded Minecraft</a></strong> — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers</li>
+<li><strong><a href="../skyrim-save-backup/">Skyrim Special Edition</a></strong> — <code>.ess</code> saves and <code>.skse</code> co-saves</li>
+<li><strong><a href="../elden-ring-save-backup/">Elden Ring</a></strong> — the Seamless Co-op mod&#39;s <code>.co2</code> save alongside the vanilla <code>.sl2</code></li>
+<li><strong><a href="../stardew-save-backup/">Stardew Valley</a></strong>, <strong><a href="../saves/fallout4/">Fallout 4</a></strong>, <strong><a href="../saves/rimworld/">RimWorld</a></strong>, <strong><a href="../factorio-save-backup/">Factorio</a></strong>, and 50+ more</li>
 </ul>
 <p>Anything not on the list still works — point Checkpoint64 at the save folder and choose the files yourself.</p>
 <h2 id="manual-backup-vs-checkpoint64">Manual backup vs Checkpoint64</h2>

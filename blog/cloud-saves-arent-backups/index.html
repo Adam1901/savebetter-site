@@ -164,9 +164,9 @@ propagate.</p>
 <h2 id="how-quoti-had-cloud-saves-onquot-turns-into-a-loss">How &quot;I had cloud saves on&quot; turns into a loss</h2>
 <p>Run the tape forward on a normal bad day:</p>
 <ul>
-<li>The game autosaves into a corrupt state because it crashed mid-write, or a mod
-update changed the save format, or you made a decision you&#39;d give anything to
-take back.</li>
+<li>The game autosaves into a corrupt state because it crashed mid-write, or
+<a href="/modded-game-save-backup/">a mod update changed the save format</a>, or you
+made a decision you&#39;d give anything to take back.</li>
 <li>That save is now the newest version on disk.</li>
 <li>Sync notices the file changed and does exactly what it promises: it uploads
 the new, broken save and overwrites the good cloud copy.</li>
@@ -222,6 +222,12 @@ copy around. Versioning makes sure the latest copy is never the only copy.</p>
 <p>The difference only ever matters once — on the day the newest save is the one
 you&#39;d give anything to undo. Sync is on the wrong side of that day by design. A
 backup is the thing that&#39;s on yours.</p>
+<p>If you want the two side by side, the
+<a href="/steam-cloud-alternative/">Steam Cloud alternative guide</a> has the
+feature-by-feature table. And it isn&#39;t hypothetical: Steam Cloud&#39;s
+<a href="/elden-ring-save-backup/">history of corrupting Elden Ring saves</a> and
+Stardew Valley&#39;s <a href="/stardew-save-backup/">pick-one-blind sync conflict dialog</a>
+are both this exact failure with a game&#39;s name on it.</p>
 <h2 id="where-this-fits">Where this fits</h2>
 <p>It&#39;s the same idea behind everything we build. For save states and emulators,
 that history is <a href="/blog/checkpoint64-for-emulators/">a rewind button that outlives the
