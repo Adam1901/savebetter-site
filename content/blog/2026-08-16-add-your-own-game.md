@@ -1,8 +1,8 @@
 ---
-title: Add your own game; Checkpoint64 will back up a save it's never heard of
+title: Add your own game; Checkpoint64 will back up a save it's never heard of. Version 1.1.0 available now
 date: 2026-08-16
-excerpt: Every catalog has an edge, and the games at that edge are the ones nobody backs up. The new build lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
-tags: [release, catalog, custom-games, save-folders, ubisoft]
+excerpt: Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
+tags: [update, release, catalog, custom-games, save-folders, ubisoft]
 pinned: true
 ---
 
