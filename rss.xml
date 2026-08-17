@@ -6,7 +6,27 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 15 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Cross Platform Saves: What Actually Carries Over</title>
+      <link>https://checkpoint64.com/blog/cross-platform-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/cross-platform-saves/</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.</description>
+    </item>
+    <item>
+      <title>Add your own game; Checkpoint64 will back up a save it&#39;s never heard of. Version 1.1.0 available now</title>
+      <link>https://checkpoint64.com/blog/add-your-own-game/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/add-your-own-game/</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don&#39;t stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.</description>
+      <category>update</category>
+      <category>release</category>
+      <category>catalog</category>
+      <category>custom-games</category>
+      <category>save-folders</category>
+      <category>ubisoft</category>
+    </item>
     <item>
       <title>Modded World Preservation Guide for PC Gamers</title>
       <link>https://checkpoint64.com/blog/modded-world-preservation-guide/</link>

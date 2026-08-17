@@ -183,6 +183,8 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Cross Platform Saves: What Actually Carries Over](https://checkpoint64.com/blog/cross-platform-saves/): 2026-08-17 — Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.
+- [Add your own game; Checkpoint64 will back up a save it's never heard of. Version 1.1.0 available now](https://checkpoint64.com/blog/add-your-own-game/): 2026-08-16 — Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
 - [Modded World Preservation Guide for PC Gamers](https://checkpoint64.com/blog/modded-world-preservation-guide/): 2026-08-15 — This modded world preservation guide shows PC players how to protect modpacks, save versions and co-op worlds before one bad update wrecks them completely.
 - [How to Verify Save Integrity Before It Bites](https://checkpoint64.com/blog/how-to-verify-save-integrity/): 2026-08-13 — Learn how to verify save integrity, spot corrupted or missing files, test safe restores, and protect solo, co-op, modded and emulator progress quickly.
 - [How to Preserve Game Progress Without Save Drama](https://checkpoint64.com/blog/how-to-preserve-game-progress/): 2026-08-11 — Learn how to preserve game progress with automatic backups, version history and safer co-op handoffs, so a bad mod or overwrite does not erase your world.
