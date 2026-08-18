@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 17 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 18 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Serverless Multiplayer: Co-op Without Rent</title>
+      <link>https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file.</description>
+    </item>
     <item>
       <title>Cross Platform Saves: What Actually Carries Over</title>
       <link>https://checkpoint64.com/blog/cross-platform-saves/</link>

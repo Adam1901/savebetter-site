@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Serverless Multiplayer: Co-op Without Rent](https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/): 2026-08-18 — Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file.
 - [Cross Platform Saves: What Actually Carries Over](https://checkpoint64.com/blog/cross-platform-saves/): 2026-08-17 — Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.
 - [Add your own game; Checkpoint64 will back up a save it's never heard of. Version 1.1.0 available now](https://checkpoint64.com/blog/add-your-own-game/): 2026-08-16 — Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
 - [Modded World Preservation Guide for PC Gamers](https://checkpoint64.com/blog/modded-world-preservation-guide/): 2026-08-15 — This modded world preservation guide shows PC players how to protect modpacks, save versions and co-op worlds before one bad update wrecks them completely.
