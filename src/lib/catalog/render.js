@@ -1,4 +1,5 @@
-import { layout, socialMeta, jsonLd } from '../blog/render.js'
+import { layout, socialMeta, jsonLd, PUBLISHER } from '../blog/render.js'
+import { aboutGame, POPULAR_SLUGS } from './entities.js'
 import { ctaBlock, faqSection } from '../pages/render.js'
 import { relatedGuideSlugForCatalog, loadPage } from '../pages/load.js'
 import { esc } from '../esc.js'
@@ -159,18 +160,29 @@ function buildFaq(game, rows) {
   return faq
 }
 
-// A few alphabetical neighbours for the related block — a stable internal-link
-// mesh across the /saves/ set without dumping all ~90 links on every page.
-function neighbours(games, slug, n = 6) {
+// Links for the related block: the popular titles first, then alphabetical
+// neighbours to fill. Pure A–Z (what this was) spends link equity by spelling —
+// Elden Ring's inbound links went to Enshrouded and Don't Starve purely because
+// of where they sort — so the money pages now get linked from every other
+// save-location page, while the neighbours keep the long tail meshed.
+function neighbours(games, slug, n = 6, popularCount = 3) {
   const i = games.findIndex((g) => g.slug === slug)
   if (i < 0) return []
-  const out = []
+  const bySlug = new Map(games.map((g) => [g.slug, g]))
+  const out = POPULAR_SLUGS
+    .filter((s) => s !== slug)
+    .map((s) => bySlug.get(s))
+    .filter(Boolean)
+    .slice(0, popularCount)
+  const taken = new Set(out.map((g) => g.slug))
   for (let step = 1; out.length < n && step < games.length; step++) {
-    const after = games[i + step]
-    if (after) out.push(after)
-    if (out.length >= n) break
-    const before = games[i - step]
-    if (before) out.push(before)
+    for (const g of [games[i + step], games[i - step]]) {
+      if (out.length >= n) break
+      if (g && !taken.has(g.slug)) {
+        out.push(g)
+        taken.add(g.slug)
+      }
+    }
   }
   return out
 }
@@ -245,8 +257,23 @@ ${relatedSection(game, games, prefix)}
     })),
   })
 
+  // These pages had no article node at all — just a breadcrumb and an FAQ —
+  // which left every one of them unattached to the Organization that each other
+  // page type links itself to, and saying nothing about which game they cover.
+  const articleLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: title,
+    description,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    author: PUBLISHER,
+    publisher: PUBLISHER,
+    about: aboutGame(game),
+  })
+
   const head = [
     socialMeta({ type: 'article', title, description, url }),
+    articleLd,
     breadcrumbLd,
     faqLd,
   ].join('\n')

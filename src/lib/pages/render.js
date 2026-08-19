@@ -1,5 +1,6 @@
 import { pageSummaries, gameSummaries, catalogSlugForGuide } from './load.js'
 import { getCatalog } from '../catalog/load.js'
+import { aboutGame } from '../catalog/entities.js'
 import { markdownToHtml, layout, socialMeta, jsonLd, PUBLISHER, OG_IMAGE } from '../blog/render.js'
 import { esc } from '../esc.js'
 
@@ -98,13 +99,17 @@ export async function renderPage(doc, { depth = 1 } = {}) {
   // Game guides cross-link their generated /saves/ location page (exact paths
   // straight from the app's catalog) when the game is in the catalog.
   const catalogSlug = catalogSlugForGuide(doc.slug)
-  const locationLinks =
-    catalogSlug && (await getCatalog()).some((g) => g.slug === catalogSlug)
-      ? [{
-          href: `${prefix}saves/${catalogSlug}/`,
-          label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
-        }]
-      : []
+  // Resolved to the catalog entry (not just tested for existence) because the
+  // Article's `about` needs the game's display name too.
+  const catalogGame = catalogSlug
+    ? (await getCatalog()).find((g) => g.slug === catalogSlug)
+    : null
+  const locationLinks = catalogGame
+    ? [{
+        href: `${prefix}saves/${catalogSlug}/`,
+        label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
+      }]
+    : []
   // The hub fans out to the per-game guides (grid before the CTA); every other
   // page keeps the original CTA-then-related-guides tail.
   const tail = isGamesHub
@@ -153,6 +158,10 @@ ${tail}
     inLanguage: 'en',
     author: PUBLISHER,
     publisher: PUBLISHER,
+    // Ties a per-game guide to the game itself in the knowledge graph. Only the
+    // game guides resolve a catalog entry; the comparison/hub pages aren't about
+    // one game and correctly get nothing.
+    about: catalogGame ? aboutGame(catalogGame) : undefined,
   })
   const faqLd = doc.faq.length
     ? jsonLd({
