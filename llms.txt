@@ -24,7 +24,7 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 134 built-in presets.** 122 games, 7 emulators, and 5
+- **Per-game backup rules with 135 built-in presets.** 123 games, 7 emulators, and 5
   modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
   by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
   filter the list. Choose which files to back up and which to ignore — skip crash logs
@@ -94,7 +94,7 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-134 presets ship built in: 122 games, 7 emulators, and 5 modded-Minecraft launchers.
+135 presets ship built in: 123 games, 7 emulators, and 5 modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
 (vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Best Tools for Modded Saves That Stop Disasters](https://checkpoint64.com/blog/best-tools-for-modded-saves/): 2026-08-19 — Find the best tools for modded saves, from load-order helpers to versioned backups, and keep worlds safe when a modpack goes sideways before it breaks.
 - [Serverless Multiplayer: Co-op Without Rent](https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/): 2026-08-18 — Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file.
 - [Cross Platform Saves: What Actually Carries Over](https://checkpoint64.com/blog/cross-platform-saves/): 2026-08-17 — Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.
 - [Add your own game; Checkpoint64 will back up a save it's never heard of. Version 1.1.0 available now](https://checkpoint64.com/blog/add-your-own-game/): 2026-08-16 — Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don't stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.
@@ -376,6 +377,7 @@ to know what Checkpoint64 is and does.
 - [Tom Clancy's Ghost Recon Wildlands save file location](https://checkpoint64.com/saves/ghost-recon-wildlands/)
 - [Tom Clancy's Rainbow Six Siege save file location](https://checkpoint64.com/saves/rainbow-six-siege/)
 - [Tom Clancy's Splinter Cell: Blacklist save file location](https://checkpoint64.com/saves/splinter-cell-blacklist/)
+- [Twisted Tower save file location](https://checkpoint64.com/saves/twisted-tower/)
 - [V Rising save file location](https://checkpoint64.com/saves/v-rising/)
 - [Valheim save file location](https://checkpoint64.com/saves/valheim/)
 - [Vintage Story save file location](https://checkpoint64.com/saves/vintage-story/)

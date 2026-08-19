@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Tue, 18 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Best Tools for Modded Saves That Stop Disasters</title>
+      <link>https://checkpoint64.com/blog/best-tools-for-modded-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-tools-for-modded-saves/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Find the best tools for modded saves, from load-order helpers to versioned backups, and keep worlds safe when a modpack goes sideways before it breaks.</description>
+    </item>
     <item>
       <title>Serverless Multiplayer: Co-op Without Rent</title>
       <link>https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/</link>
