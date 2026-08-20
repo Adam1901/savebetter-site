@@ -52,6 +52,25 @@ ${cards}
         </ul>`
 }
 
+// The dedicated-server guide names the 8 games it has deep-dive guides for, but
+// the catalog knows 63 co-op ones — and every one of their /saves/ pages now
+// links *here*. Without this the co-op cluster only links one way, which is
+// most of what that linking is worth. Driven by the same `coop` category
+// catalog/render.js gates on, so the two sides can't drift apart.
+function coopGamesList(prefix, games) {
+  const coop = games.filter((g) => g.categories.includes('coop'))
+  if (!coop.length) return ''
+  const links = coop.map((g) =>
+    `            <li><a href="${prefix}saves/${esc(g.slug)}/">${esc(g.displayName)}</a></li>`).join('\n')
+  return `        <nav class="guide-related" aria-label="Co-op games with presets">
+          <h2>Every co-op game Checkpoint64 has a preset for</h2>
+          <p>${coop.length} games in the catalog have co-op. Each link is that game's save file location — the folder the take-turns flow above passes around.</p>
+          <ul>
+${links}
+          </ul>
+        </nav>`
+}
+
 // ItemList schema for the hub — tells search engines this page enumerates the
 // per-game guides, and in what order.
 function gamesItemListLd() {
@@ -110,11 +129,15 @@ export async function renderPage(doc, { depth = 1 } = {}) {
         label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
       }]
     : []
+  // Only this one guide grows a roster; every other page keeps the plain tail.
+  const coopRoster = doc.slug === 'dedicated-server-alternative'
+    ? coopGamesList(prefix, await getCatalog()) + '\n'
+    : ''
   // The hub fans out to the per-game guides (grid before the CTA); every other
   // page keeps the original CTA-then-related-guides tail.
   const tail = isGamesHub
     ? `${gamesGrid(prefix)}\n${ctaBlock(prefix)}`
-    : `${ctaBlock(prefix)}\n${relatedGuides(doc.slug, prefix, locationLinks)}`
+    : `${coopRoster}${ctaBlock(prefix)}\n${relatedGuides(doc.slug, prefix, locationLinks)}`
 
   const body = `    <article class="blog-post guide-page">
       <header class="blog-post-header">

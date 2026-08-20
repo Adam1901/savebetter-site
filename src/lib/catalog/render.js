@@ -130,6 +130,22 @@ function backupSection(game, prefix, guide) {
         </ol>${guideLink}`
 }
 
+// Co-op games get a second intent on the same page. The folder above sits on
+// one person's PC — the host's — which is the "who has the latest world?"
+// problem, a query family these pages said nothing about. Gated on the
+// catalog's own `coop` category (63 of 147 games) rather than a hand-kept list,
+// so it tracks the catalog for free as games are added.
+function isCoop(game) {
+  return game.categories.includes('coop')
+}
+
+function coopSection(game, prefix) {
+  const name = esc(game.displayName)
+  return `        <h2>Sharing ${name} saves with friends</h2>
+        <p>${name} has co-op, so the folder above usually lives on one person's PC — whoever hosts. When they're offline nobody else can carry on, and if two people play separately, one session quietly overwrites the other.</p>
+        <p>Checkpoint64 lets a small group pass one ${name} world around instead of renting a dedicated server. Whoever plays next takes a server-enforced lock, pulls the latest save, plays, and pushes it back; everyone else stays read-only until the lock frees up, so nobody saves over anybody. Every version is kept, so a bad session is one restore away. The <a href="${prefix}dedicated-server-alternative/">dedicated server alternative</a> guide walks through the full take-turns flow.</p>`
+}
+
 function buildFaq(game, rows) {
   const name = game.displayName
   const first = rows[0]
@@ -157,6 +173,12 @@ function buildFaq(game, rows) {
     q: `How do I restore an earlier ${name} save?`,
     a: `With Checkpoint64, open the save's version list and restore any earlier version in one click — it puts those exact files back in ${name}'s save folder. Without a backup tool there's usually nothing to go back to: the folder only holds the latest files.`,
   })
+  if (isCoop(game)) {
+    faq.push({
+      q: `Can I share ${name} saves with friends?`,
+      a: `Yes. Checkpoint64 syncs the ${name} save folder to a shared team, so a friend can pull the latest world and keep playing even when the host is offline. A server-enforced lock means only one person can push a new save at a time, so two people can't overwrite each other — it's how a small group takes turns hosting without paying for a dedicated server.`,
+    })
+  }
   return faq
 }
 
@@ -210,7 +232,12 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
   const url = `${ORIGIN}/saves/${game.slug}/`
   const title = `${game.displayName} Save File Location (${platformList(rows)})`
   const first = rows[0]
-  const description = `${game.displayName} keeps its save files at ${first.paths[0]} on ${first.label}. Exact save folder paths for ${platformList(rows, { prose: true })}, and how to back them up automatically with Checkpoint64.`
+  // The title is deliberately left alone: it exact-matches this page's highest-volume
+  // query and is already near the truncation limit. The description is the free slot.
+  const backupTail = isCoop(game)
+    ? 'how to back them up automatically, and how to share the world with friends when the host is offline.'
+    : 'and how to back them up automatically with Checkpoint64.'
+  const description = `${game.displayName} keeps its save files at ${first.paths[0]} on ${first.label}. Exact save folder paths for ${platformList(rows, { prose: true })}, ${backupTail}`
 
   const guideSlug = relatedGuideSlugForCatalog(game.slug)
   const guide = guideSlug ? loadPage(guideSlug) : null
@@ -232,6 +259,7 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
 ${pathListSection(game, rows)}
 ${openFolderSection(rows)}
 ${backupSection(game, prefix, guide)}
+${isCoop(game) ? coopSection(game, prefix) : ''}
       </div>
 ${faqSection({ faq })}
 ${ctaBlock(prefix)}
