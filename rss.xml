@@ -8,11 +8,47 @@
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
     <lastBuildDate>Thu, 20 Aug 2026 00:00:00 GMT</lastBuildDate>
     <item>
+      <title>Where Steam Deck game saves actually live; inside a Proton prefix nobody can guess</title>
+      <link>https://checkpoint64.com/blog/steam-deck-save-file-location/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-deck-save-file-location/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <description>On a Steam Deck, a Windows game&#39;s save doesn&#39;t sit where the game&#39;s own documentation says it does. Proton hands every game a private, Windows-shaped filesystem buried under a numeric folder, and the save is somewhere inside it. Here&#39;s the exact shape of that path, why the number is the hard part, and how Checkpoint64 finds it without being told.</description>
+      <category>steam-deck</category>
+      <category>linux</category>
+      <category>proton</category>
+      <category>save-folders</category>
+      <category>steam</category>
+    </item>
+    <item>
       <title>A Version History App for Saves Gone Sideways</title>
       <link>https://checkpoint64.com/blog/version-history-app-game-saves/</link>
       <guid isPermaLink="true">https://checkpoint64.com/blog/version-history-app-game-saves/</guid>
       <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
       <description>A version history app keeps every game save change, so a corrupted mod, bad boss choice or co-op overwrite cannot erase a weekend of progress outright.</description>
+    </item>
+    <item>
+      <title>Moving a save between your Steam Deck and your PC; the path re-resolves itself</title>
+      <link>https://checkpoint64.com/blog/move-game-saves-between-steam-deck-and-pc/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/move-game-saves-between-steam-deck-and-pc/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Back up a save on Windows, restore it on a Steam Deck, and those files have to land somewhere completely different — a Proton prefix instead of %APPDATA%. Checkpoint64 works the destination out on whichever machine is doing the restoring, so you never carry a path across. What it deliberately won&#39;t do is move your save behind your back.</description>
+      <category>steam-deck</category>
+      <category>cross-device</category>
+      <category>linux</category>
+      <category>proton</category>
+      <category>restore</category>
+    </item>
+    <item>
+      <title>Co-op on the couch; taking the shared world to your Steam Deck without stranding the group</title>
+      <link>https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you&#39;ve become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current.</description>
+      <category>steam-deck</category>
+      <category>co-op</category>
+      <category>linux</category>
+      <category>save-sharing</category>
+      <category>locks</category>
     </item>
     <item>
       <title>Best Tools for Modded Saves That Stop Disasters</title>
