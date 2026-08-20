@@ -3,7 +3,7 @@
     {
       "slug": "7-days-to-die",
       "displayName": "7 Days to Die",
-      "iconUrl": null,
+      "iconUrl": "https://merch.thefunpimps.com/cdn/shop/collections/logo_7dtd.jpg?v=1706289330&width=1920",
       "paths": [
         {
           "platform": "windows",
@@ -102,6 +102,180 @@
       "note": null
     },
     {
+      "slug": "ac-black-flag",
+      "displayName": "Assassin's Creed IV: Black Flag",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/273"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/437"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-mirage",
+      "displayName": "Assassin's Creed Mirage",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/6100"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/6101"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-odyssey",
+      "displayName": "Assassin's Creed Odyssey",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5059"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5092"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-origins",
+      "displayName": "Assassin's Creed Origins",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/3539"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/4923"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-shadows",
+      "displayName": "Assassin's Creed Shadows",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/8006"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1081"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-syndicate",
+      "displayName": "Assassin's Creed Syndicate",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1875"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1955"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1956"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1957"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1958"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-unity",
+      "displayName": "Assassin's Creed Unity",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/720"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/857"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ac-valhalla",
+      "displayName": "Assassin's Creed Valhalla",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/13504"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/7013"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "astroneer",
       "displayName": "Astroneer",
       "iconUrl": null,
@@ -116,6 +290,27 @@
         "singleplayer",
         "coop",
         "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "avatar-frontiers-of-pandora",
+      "displayName": "Avatar: Frontiers of Pandora",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/4740"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5093"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
       ],
       "note": null
     },
@@ -147,6 +342,79 @@
         "singleplayer",
         "coop",
         "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "bellwright",
+      "displayName": "Bellwright",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}\\Bellwright\\Saved\\SaveGames\\"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "big-walk",
+      "displayName": "Big Walk",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}\\House House\\Big Walk\\user_data\\save_games"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/compatdata/1478500/pfx/drive_c/users/steamuser/AppData/LocalLow/House House/Big Walk/user_data/save_games"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": null,
+      "note": "Linux paths unconfirmed"
+    },
+    {
+      "slug": "black-mesa",
+      "displayName": "Black Mesa",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{STEAM}/steamapps/common/Black Mesa/bms/save"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{STEAM}/steamapps/common/Black Mesa/bms/save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "black-myth-wukong",
+      "displayName": "Black Myth: Wukong",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{STEAM}/steamapps/common/BlackMythWukong/b1/Saved/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
       ],
       "note": null
     },
@@ -278,6 +546,20 @@
         "server"
       ],
       "note": null
+    },
+    {
+      "slug": "crisis-the-third-way",
+      "displayName": "Crisis: The Third Way",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}\\Andrealphus\\Third Crisis"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": null,
+      "note": "Unverified. English not supported"
     },
     {
       "slug": "ck3",
@@ -640,6 +922,153 @@
       "note": null
     },
     {
+      "slug": "far-cry-3",
+      "displayName": "Far Cry 3",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/46"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "far-cry-4",
+      "displayName": "Far Cry 4",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/420"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/856"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/971"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "far-cry-5",
+      "displayName": "Far Cry 5",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1803"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/4311"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "far-cry-6",
+      "displayName": "Far Cry 6",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5266"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/920"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "far-cry-new-dawn",
+      "displayName": "Far Cry New Dawn",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5210"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5211"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
+      "slug": "far-cry-primal",
+      "displayName": "Far Cry Primal",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/2010"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/2029"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "fields-of-mistria",
+      "displayName": "Fields of Mistria",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/FieldsOfMistria/saves"
+        },
+        {
+          "platform": "linux",
+          "pathTemplate": "{HOME}/.local/share/FieldsOfMistria/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "frostpunk",
       "displayName": "Frostpunk",
       "iconUrl": null,
@@ -667,6 +1096,10 @@
         {
           "platform": "windows",
           "pathTemplate": "{DOCUMENTS}/Rockstar Games/GTA V/Profiles"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/Rockstar Games/GTAV Enhanced/Profiles"
         }
       ],
       "allowedFileExtensions": null,
@@ -804,6 +1237,26 @@
       "note": null
     },
     {
+      "slug": "immortals-fenyx-rising",
+      "displayName": "Immortals Fenyx Rising",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5405"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/62326"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "kenshi",
       "displayName": "Kenshi",
       "iconUrl": null,
@@ -836,6 +1289,22 @@
       "note": null
     },
     {
+      "slug": "kcd2",
+      "displayName": "Kingdom Come: Deliverance II",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/kingdomcome2/saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "kingdoms-reborn",
       "displayName": "Kingdoms Reborn",
       "iconUrl": null,
@@ -849,6 +1318,38 @@
       "categories": [
         "singleplayer",
         "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "kirby-super-star-ultra",
+      "displayName": "Kirby Super Star Ultra",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Downloads/kirby games/Kirby Super Star Ultra (USA)"
+        }
+      ],
+      "allowedFileExtensions": [
+        "sav"
+      ],
+      "categories": null,
+      "note": null
+    },
+    {
+      "slug": "mafia-old-country",
+      "displayName": "Mafia: The Old Country",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Hangar 13 Games/Mafia The Old Country/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
       ],
       "note": null
     },
@@ -887,6 +1388,22 @@
         "singleplayer",
         "coop",
         "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "metaphor-refantazio",
+      "displayName": "Metaphor: ReFantazio",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/SEGA/METAPHOR"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
       ],
       "note": null
     },
@@ -1076,6 +1593,55 @@
       "note": null
     },
     {
+      "slug": "monster-hunter-rise",
+      "displayName": "MONSTER HUNTER RISE",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{steam}\\1446780\\remote"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}\\Packages\\F024294D.50755C2F12831_8fty0by30jkny\\SystemAppData\\wgs"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": null,
+      "note": null
+    },
+    {
+      "slug": "monster-hunter-wilds",
+      "displayName": "Monster Hunter Wilds",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{steam}\\2246340\\remote\\win64_save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": null,
+      "note": null
+    },
+    {
+      "slug": "monster-hunter-world",
+      "displayName": "Monster Hunter: World",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{STEAM}\\582010\\remote"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
       "slug": "necesse",
       "displayName": "Necesse",
       "iconUrl": null,
@@ -1116,6 +1682,24 @@
         "hg",
         "json"
       ],
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "no-rest-for-the-wicked",
+      "displayName": "No Rest for the Wicked",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Moon Studios/NoRestForTheWicked/DataStore"
+        }
+      ],
+      "allowedFileExtensions": null,
       "categories": [
         "singleplayer",
         "coop",
@@ -1194,6 +1778,38 @@
       "note": null
     },
     {
+      "slug": "persona-3-reload",
+      "displayName": "Persona 3 Reload",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/SEGA/P3R"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "planet-coaster-2",
+      "displayName": "Planet Coaster 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{HOME}/Saved Games/Frontier Developments/Planet Coaster 2"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "ppsspp",
       "displayName": "PPSSPP (PSP)",
       "iconUrl": null,
@@ -1214,6 +1830,22 @@
       "allowedFileExtensions": null,
       "categories": [
         "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "prince-of-persia-lost-crown",
+      "displayName": "Prince of Persia: The Lost Crown",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/Prince Of Persia The Lost Crown"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
       ],
       "note": null
     },
@@ -1300,6 +1932,10 @@
           "pathTemplate": "C:/RetroArch-Win64"
         },
         {
+          "platform": "windows",
+          "pathTemplate": "G:\\Emulation\\saves\\retroarch\\saves"
+        },
+        {
           "platform": "macos",
           "pathTemplate": "{HOME}/Library/Application Support/RetroArch"
         },
@@ -1311,6 +1947,23 @@
       "allowedFileExtensions": null,
       "categories": [
         "emulator"
+      ],
+      "note": null
+    },
+    {
+      "slug": "riders-republic",
+      "displayName": "Riders Republic",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/5780"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
       ],
       "note": null
     },
@@ -1434,6 +2087,30 @@
       "note": null
     },
     {
+      "slug": "stalker-2",
+      "displayName": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Stalker2/Saved/STEAM/SaveGames"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Stalker2/Saved/EOS/SaveGames"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}/Stalker2/Saved/GOG/SaveGames"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "stalker-cop",
       "displayName": "S.T.A.L.K.E.R.: Call of Pripyat",
       "iconUrl": null,
@@ -1460,7 +2137,11 @@
         }
       ],
       "allowedFileExtensions": [
-        "sav"
+        "sav",
+        "sbp",
+        "sbpcfg",
+        "cbp",
+        "vdf"
       ],
       "categories": [
         "singleplayer",
@@ -1505,6 +2186,22 @@
       "note": null
     },
     {
+      "slug": "scriptorium-master-of-manuscripts",
+      "displayName": "Scriptorium: Master of Manuscripts",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}\\Yaza Games\\Scriptorium"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "sekiro",
       "displayName": "Sekiro: Shadows Die Twice",
       "iconUrl": null,
@@ -1518,6 +2215,23 @@
       "categories": [
         "singleplayer"
       ],
+      "note": null
+    },
+    {
+      "slug": "shapez-2-factory",
+      "displayName": "Shapez 2 - Factory",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}\\tobspr Games\\shapez 2\\savegames"
+        }
+      ],
+      "allowedFileExtensions": [
+        "spz2",
+        "vdf"
+      ],
+      "categories": null,
       "note": null
     },
     {
@@ -1581,6 +2295,26 @@
       "note": null
     },
     {
+      "slug": "south-park-stick-of-truth",
+      "displayName": "South Park: The Stick of Truth",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/3584"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/My Games/South Park - The Stick of Truth/save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "space-engineers",
       "displayName": "Space Engineers",
       "iconUrl": null,
@@ -1596,6 +2330,26 @@
         "coop",
         "multiplayer",
         "server"
+      ],
+      "note": null
+    },
+    {
+      "slug": "star-wars-outlaws",
+      "displayName": "Star Wars Outlaws",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/17903"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/64181"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
       ],
       "note": null
     },
@@ -1735,6 +2489,23 @@
       "note": null
     },
     {
+      "slug": "suicide-squad-kill-the-justice-league",
+      "displayName": "Suicide Squad: Kill the Justice League",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}\\Suicide Squad - Kill the Justice League\\"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
+      ],
+      "note": null
+    },
+    {
       "slug": "sunkenland",
       "displayName": "Sunkenland",
       "iconUrl": null,
@@ -1806,6 +2577,23 @@
       "note": null
     },
     {
+      "slug": "the-crew-2",
+      "displayName": "The Crew 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{DOCUMENTS}/The Crew 2/Save"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "oblivion",
       "displayName": "The Elder Scrolls IV: Oblivion",
       "iconUrl": null,
@@ -1813,6 +2601,22 @@
         {
           "platform": "windows",
           "pathTemplate": "{DOCUMENTS}/My Games/Oblivion/Saves"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "the-last-caretaker",
+      "displayName": "The Last Caretaker",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALAPPDATA}\\Voyage\\Saved\\SaveGames\\"
         }
       ],
       "allowedFileExtensions": null,
@@ -1928,6 +2732,145 @@
       "note": null
     },
     {
+      "slug": "ghost-recon-breakpoint",
+      "displayName": "Tom Clancy's Ghost Recon Breakpoint",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/11903"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "ghost-recon-wildlands",
+      "displayName": "Tom Clancy's Ghost Recon Wildlands",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1771"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/3559"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "rainbow-six-siege",
+      "displayName": "Tom Clancy's Rainbow Six Siege",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/635"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/1843"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "splinter-cell-blacklist",
+      "displayName": "Tom Clancy's Splinter Cell: Blacklist",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/91"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/449"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "total-war-warhammer-3",
+      "displayName": "Total War: WARHAMMER III",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/The Creative Assembly/Warhammer3/save_games"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/The Creative Assembly/Warhammer3/EOS/save_games"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{APPDATA}/The Creative Assembly/Warhammer3/GDK/save_games"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "twisted-tower",
+      "displayName": "Twisted Tower",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}\\Atmos Games, LLC\\Twisted Tower\\"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "two-point-museum",
+      "displayName": "Two Point Museum",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}/Two Point Studios/Two Point Museum/Cloud"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
       "slug": "v-rising",
       "displayName": "V Rising",
       "iconUrl": null,
@@ -2006,13 +2949,58 @@
       "note": null
     },
     {
-      "slug": "windrose",
-      "displayName": "Windrose",
+      "slug": "rogue-trader",
+      "displayName": "Warhammer 40,000: Rogue Trader",
       "iconUrl": null,
       "paths": [
         {
           "platform": "windows",
-          "pathTemplate": "{LOCALAPPDATA}/R5/Saved/SaveProfiles"
+          "pathTemplate": "{LOCALLOW}/Owlcat Games/Warhammer 40000 Rogue Trader/Saved Games"
+        },
+        {
+          "platform": "macos",
+          "pathTemplate": "{HOME}/Library/Application Support/Owlcat Games/Warhammer 40000 Rogue Trader/Saved Games"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "watch-dogs",
+      "displayName": "Watch Dogs",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/274"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/541"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "watch-dogs-2",
+      "displayName": "Watch Dogs 2",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/2688"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/3619"
         }
       ],
       "allowedFileExtensions": null,
@@ -2020,6 +3008,45 @@
         "singleplayer",
         "coop",
         "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "watch-dogs-legion",
+      "displayName": "Watch Dogs: Legion",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/3353"
+        },
+        {
+          "platform": "windows",
+          "pathTemplate": "{UBISOFT}/7017"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop",
+        "multiplayer"
+      ],
+      "note": null
+    },
+    {
+      "slug": "water-park-simulator",
+      "displayName": "Water Park Simulator",
+      "iconUrl": null,
+      "paths": [
+        {
+          "platform": "windows",
+          "pathTemplate": "{LOCALLOW}\\CayPlay\\WaterparkSimulator\\slots"
+        }
+      ],
+      "allowedFileExtensions": null,
+      "categories": [
+        "singleplayer",
+        "coop"
       ],
       "note": null
     }

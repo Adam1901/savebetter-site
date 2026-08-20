@@ -9,7 +9,7 @@
 // prerender, so GH Pages serves its default 404 exactly like today.
 import { SUBDIR_LOCALE_CODES } from '$lib/i18n/config.js'
 
-const RESERVED = new Set([...SUBDIR_LOCALE_CODES, 'blog', 'terms', 'privacy', 'saves', 'sitemap.xml'])
+const RESERVED = new Set([...SUBDIR_LOCALE_CODES, 'blog', 'terms', 'privacy', 'press', 'saves', 'sitemap.xml'])
 
 /** @type {import('@sveltejs/kit').ParamMatcher} */
 export function match(param) {
