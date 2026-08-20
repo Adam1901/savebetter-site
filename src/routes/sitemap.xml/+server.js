@@ -2,6 +2,7 @@ import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { legalSlugs, loadLegal } from '$lib/legal/load.js'
 import { pageSlugs, loadPage } from '$lib/pages/load.js'
+import { loadPress } from '$lib/press.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
 
@@ -80,6 +81,12 @@ export async function GET() {
         changefreq: 'monthly',
         priority: '0.8',
       })),
+    {
+      loc: '/press/',
+      lastmod: loadPress().updated,
+      changefreq: 'monthly',
+      priority: '0.5',
+    },
     // Generated save-location pages, one per catalog game (+ their A–Z index).
     { loc: '/saves/', lastmod: today(), changefreq: 'weekly', priority: '0.8' },
     ...catalog.map((g) => ({
