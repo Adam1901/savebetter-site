@@ -18,7 +18,6 @@ and we will send them the same day.
 |  |  |
 |---|---|
 | **Name** | Checkpoint64 |
-| **Developer** | Adam Meadows, a sole trader trading as Checkpoint64 |
 | **Based in** | United Kingdom |
 | **Released** | 3 August 2026 |
 | **Current version** | {{version}} |
@@ -111,12 +110,6 @@ section of [checkpoint64.com](https://checkpoint64.com) — please take them fro
 one number to update rather than two.
 
 ## Assets
-
-**Available here**
-
-- [Logo / mark (SVG)](../retro_save_icon.svg) — the cartridge mark, vector
-- [App icon (SVG)](../favicon.svg)
-- [Social card (PNG, 1200×630)](../og-image.png)
 
 **On request — email [press@checkpoint64.com](mailto:press@checkpoint64.com)**
 
