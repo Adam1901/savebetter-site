@@ -24,7 +24,7 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 147 built-in presets.** 135 games, 7 emulators, and 5
+- **Per-game backup rules with 148 built-in presets.** 136 games, 7 emulators, and 5
   modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
   by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
   filter the list. Choose which files to back up and which to ignore — skip crash logs
@@ -94,7 +94,7 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-147 presets ship built in: 135 games, 7 emulators, and 5 modded-Minecraft launchers.
+148 presets ship built in: 136 games, 7 emulators, and 5 modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
 (vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [How to Protect Modded Worlds Without Losing Progress](https://checkpoint64.com/blog/how-to-protect-modded-worlds/): 2026-08-21 — Learn how to protect modded worlds from broken updates, corrupt saves and co-op chaos with version history, tested mods and sensible rollback plans today.
 - [Where Steam Deck game saves actually live; inside a Proton prefix nobody can guess](https://checkpoint64.com/blog/steam-deck-save-file-location/): 2026-08-20 — On a Steam Deck, a Windows game's save doesn't sit where the game's own documentation says it does. Proton hands every game a private, Windows-shaped filesystem buried under a numeric folder, and the save is somewhere inside it. Here's the exact shape of that path, why the number is the hard part, and how Checkpoint64 finds it without being told.
 - [A Version History App for Saves Gone Sideways](https://checkpoint64.com/blog/version-history-app-game-saves/): 2026-08-20 — A version history app keeps every game save change, so a corrupted mod, bad boss choice or co-op overwrite cannot erase a weekend of progress outright.
 - [Moving a save between your Steam Deck and your PC; the path re-resolves itself](https://checkpoint64.com/blog/move-game-saves-between-steam-deck-and-pc/): 2026-08-19 — Back up a save on Windows, restore it on a Steam Deck, and those files have to land somewhere completely different — a Proton prefix instead of %APPDATA%. Checkpoint64 works the destination out on whichever machine is doing the restoring, so you never carry a path across. What it deliberately won't do is move your save behind your back.
@@ -306,6 +307,7 @@ to know what Checkpoint64 is and does.
 - [Far Cry Primal save file location](https://checkpoint64.com/saves/far-cry-primal/)
 - [Fields of Mistria save file location](https://checkpoint64.com/saves/fields-of-mistria/)
 - [Frostpunk save file location](https://checkpoint64.com/saves/frostpunk/)
+- [Gothic 1 Remake save file location](https://checkpoint64.com/saves/gothic-1-remake/)
 - [Grand Theft Auto V save file location](https://checkpoint64.com/saves/gta-v/)
 - [Grounded save file location](https://checkpoint64.com/saves/grounded/)
 - [Hades save file location](https://checkpoint64.com/saves/hades/)
