@@ -1,5 +1,5 @@
 <script>
-  import { fmt } from '$lib/i18n/config.js'
+  import {fmt} from '$lib/i18n/config.js'
 
   // Resources-column guide labels stay hardcoded English (the pages are EN-only);
   // `prefix` handles './' at root vs '../' on the localized pages.
@@ -22,6 +22,7 @@
           <li><a href="#features">{f.links.features}</a></li>
           <li><a href="#pricing">{f.links.pricing}</a></li>
           <li><a href="#download">{f.links.joinList}</a></li>
+          <li><a href="{prefix}/press">Press</a></li>
           <li><a href="https://github.com/checkpoint64/checkpoint64/releases" target="_blank" rel="noopener noreferrer" aria-label={f.changelogAria}>{f.links.changelog}</a></li>
         </ul>
       </nav>
