@@ -2,7 +2,7 @@ import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { legalSlugs, loadLegal } from '$lib/legal/load.js'
 import { pageSlugs, loadPage } from '$lib/pages/load.js'
-import { loadPress } from '$lib/press.js'
+import { loadDoc } from '$lib/press.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
 
@@ -83,10 +83,19 @@ export async function GET() {
       })),
     {
       loc: '/press/',
-      lastmod: loadPress().updated,
+      lastmod: loadDoc('press').updated,
       changefreq: 'monthly',
       priority: '0.5',
     },
+    // Trust anchors. Their /about.md and /contact.md twins are deliberately not
+    // listed: they are alternate representations of these two URLs, not extra
+    // pages, and a sitemap entry would invite a duplicate-content read.
+    ...['about', 'contact'].map((slug) => ({
+      loc: `/${slug}/`,
+      lastmod: loadDoc(slug).updated,
+      changefreq: 'yearly',
+      priority: '0.5',
+    })),
     // Generated save-location pages, one per catalog game (+ their A–Z index).
     { loc: '/saves/', lastmod: today(), changefreq: 'weekly', priority: '0.8' },
     ...catalog.map((g) => ({

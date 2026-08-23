@@ -12,7 +12,12 @@
   ]
 </script>
 
-<header class="hero" role="banner">
+<!-- A <section>, not a <header>: boilerplate-stripping extractors (the
+     Readability shape most AI crawlers use) drop <header>/<footer>/<nav>
+     subtrees as site chrome, which took the page's only <h1> and ~1.5k chars
+     of copy with it. role="banner" was also invalid here — a banner landmark
+     may not nest inside <main>. -->
+<section class="hero" aria-labelledby="hero-title">
   <div class="wrap">
     <div class="grid">
       <div>
@@ -20,7 +25,7 @@
           <span class="dot" aria-hidden="true"></span>
           OUT NOW · FREE · WIN · MAC · LINUX
         </p>
-        <h1>{@html h.h1Html}</h1>
+        <h1 id="hero-title">{@html h.h1Html}</h1>
         <p class="sub">{h.sub}</p>
         <div class="ctas">
           <a href="#download" class="btn prim" aria-label={h.ctaPrimaryAria}>{h.ctaPrimary} <span aria-hidden="true">↗</span></a>
@@ -43,4 +48,4 @@
       </div>
     </div>
   </div>
-</header>
+</section>

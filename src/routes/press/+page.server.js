@@ -1,5 +1,5 @@
 import { renderLegal } from '$lib/legal/render.js'
-import { loadPress } from '$lib/press.js'
+import { loadDoc } from '$lib/press.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { getReleases } from '$lib/server/build-data.js'
 
@@ -27,7 +27,7 @@ function fill(md, values) {
 
 export async function load() {
   const [release, catalog] = await Promise.all([getReleases(), getCatalog()])
-  const doc = loadPress()
+  const doc = loadDoc('press')
 
   // getReleases() fails soft to null on a flaky GitHub API — never print
   // "Version undefined" on a page journalists quote from.

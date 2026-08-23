@@ -38,6 +38,12 @@ jobs:
         if: github.event.action != 'closed'
         run: npm run build
 
+      # Same dist/ contract check the deploy workflow runs — a PR that breaks it
+      # should fail here, not after merge.
+      - name: Test built output
+        if: github.event.action != 'closed'
+        run: npm test
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:

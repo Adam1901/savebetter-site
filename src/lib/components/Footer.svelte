@@ -41,6 +41,8 @@
       <nav aria-label={f.ariaCompany}>
         <h2 class="footer-h">{f.company}</h2>
         <ul>
+          <li><a href="{prefix}about/">About</a></li>
+          <li><a href="{prefix}contact/">Contact</a></li>
           <li><a href="https://discord.gg/kxeYwuuHEn" target="_blank" rel="noopener noreferrer" aria-label={f.discordAria}>{f.links.discord}</a></li>
           <li><a href="{prefix}terms/">{f.links.terms}</a></li>
           <li><a href="{prefix}privacy/">{f.links.privacy}</a></li>

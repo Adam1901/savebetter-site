@@ -21,6 +21,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      # Asserts the machine-readable contract of dist/ (see tests/). It reads the
+      # built output, so it has to run after the build and before the deploy.
+      - run: npm test
       - run: echo "checkpoint64.com" > dist/CNAME
       - uses: JamesIves/github-pages-deploy-action@v4
         with:

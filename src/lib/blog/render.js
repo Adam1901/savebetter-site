@@ -1,6 +1,7 @@
 import { marked } from 'marked'
 import { codeToHtml } from 'shiki'
 import { esc } from '../esc.js'
+import { organizationNode } from '../organization.js'
 
 // Only http(s) URLs may appear in a feed-controlled href. esc() prevents
 // attribute breakout but not a `javascript:`/`data:` scheme, so validate the
@@ -44,13 +45,7 @@ const OG_IMAGE_ALT = 'Checkpoint64 — never lose a save again.'
 // as its own island. The node stays fully populated on purpose — a bare
 // {"@id": …} would be a dangling reference on any page that doesn't also define
 // the node, and Google won't fetch the homepage to resolve it.
-export const PUBLISHER = {
-  '@type': 'Organization',
-  '@id': `${ORIGIN}/#organization`,
-  name: 'Checkpoint64',
-  url: `${ORIGIN}/`,
-  logo: { '@type': 'ImageObject', url: `${ORIGIN}/retro_save_icon.svg` },
-}
+export const PUBLISHER = organizationNode()
 
 // Emit a JSON-LD <script>. Keys whose value is `undefined` are dropped by
 // JSON.stringify, so callers can pass optional fields without guarding each one.
@@ -270,12 +265,18 @@ ${related.map((p) => `          <li><a href="${prefix}blog/${esc(p.slug)}/">${es
         </ul>
       </nav>\n`
     : ''
+  // .blog-post-header is a <div>, not a <header>: this title block is the
+  // page's content, not site chrome, and boilerplate-stripping extractors (the
+  // Readability shape most AI crawlers use) drop <header>/<footer>/<nav>
+  // subtrees wholesale — which took the <h1> off every post, guide and
+  // save-location page. Same reason Hero.svelte is a <section>. The class is
+  // shared by catalog/, legal/ and pages/ — keep all five in step.
   const body = `    <article class="blog-post">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
 ${breadcrumbNav}
         <p class="blog-post-meta">${meta}</p>
         <h1 class="blog-post-title pixel">${esc(post.title)}</h1>${sourceNote}
-      </header>
+      </div>
 ${leadImage}      <div class="blog-post-body">
 ${html}
       </div>
@@ -339,10 +340,10 @@ export function renderIndex(posts, { depth = 1 } = {}) {
       </li>`
     }).join('')
     : '<li class="blog-empty">No posts yet — drop a markdown file in <code>content/blog/</code>.</li>'
-  const body = `    <header class="blog-index-header">
+  const body = `    <div class="blog-index-header">
       <h1 class="pixel">LOGBOOK</h1>
       <p class="blog-index-tagline">Notes from the Checkpoint64 team.</p>
-    </header>
+    </div>
     <ul class="blog-list">${items}
     </ul>`
   const url = `${ORIGIN}/blog/`

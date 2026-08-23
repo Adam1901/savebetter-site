@@ -140,11 +140,11 @@ export async function renderPage(doc, { depth = 1 } = {}) {
     : `${coopRoster}${ctaBlock(prefix)}\n${relatedGuides(doc.slug, prefix, locationLinks)}`
 
   const body = `    <article class="blog-post guide-page">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
 ${breadcrumbNav(doc, prefix)}
         <h1 class="blog-post-title pixel">${esc(doc.title)}</h1>
         ${updated}
-      </header>
+      </div>
       <div class="blog-post-body">
 ${bodyHtml}
       </div>
