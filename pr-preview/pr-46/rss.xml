@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Checkpoint64 Logbook</title>
+    <link>https://checkpoint64.com/blog/</link>
+    <description>Release notes and write-ups from the Checkpoint64 team.</description>
+    <language>en</language>
+    <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Can Steam Cloud Lose Progress? Yes, Here’s Why</title>
+      <link>https://checkpoint64.com/blog/can-steam-cloud-lose-progress/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/can-steam-cloud-lose-progress/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Can Steam Cloud lose progress? Yes. See why sync conflicts and overwrites happen, then keep rollback-ready copies of every extra save without the drama.</description>
+    </item>
+    <item>
+      <title>Game Backups Versus Server Rentals Explained</title>
+      <link>https://checkpoint64.com/blog/game-backups-versus-server-rentals/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/game-backups-versus-server-rentals/</guid>
+      <pubDate>Sat, 22 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Game backups versus server rentals: compare cost, control and co-op access, then pick the setup that protects your world without wasted monthly fees.</description>
+    </item>
+    <item>
+      <title>How to Protect Modded Worlds Without Losing Progress</title>
+      <link>https://checkpoint64.com/blog/how-to-protect-modded-worlds/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-protect-modded-worlds/</guid>
+      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to protect modded worlds from broken updates, corrupt saves and co-op chaos with version history, tested mods and sensible rollback plans today.</description>
+    </item>
+    <item>
+      <title>Where Steam Deck game saves actually live; inside a Proton prefix nobody can guess</title>
+      <link>https://checkpoint64.com/blog/steam-deck-save-file-location/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-deck-save-file-location/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <description>On a Steam Deck, a Windows game&#39;s save doesn&#39;t sit where the game&#39;s own documentation says it does. Proton hands every game a private, Windows-shaped filesystem buried under a numeric folder, and the save is somewhere inside it. Here&#39;s the exact shape of that path, why the number is the hard part, and how Checkpoint64 finds it without being told.</description>
+      <category>steam-deck</category>
+      <category>linux</category>
+      <category>proton</category>
+      <category>save-folders</category>
+      <category>steam</category>
+    </item>
+    <item>
+      <title>A Version History App for Saves Gone Sideways</title>
+      <link>https://checkpoint64.com/blog/version-history-app-game-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/version-history-app-game-saves/</guid>
+      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A version history app keeps every game save change, so a corrupted mod, bad boss choice or co-op overwrite cannot erase a weekend of progress outright.</description>
+    </item>
+    <item>
+      <title>Moving a save between your Steam Deck and your PC; the path re-resolves itself</title>
+      <link>https://checkpoint64.com/blog/move-game-saves-between-steam-deck-and-pc/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/move-game-saves-between-steam-deck-and-pc/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Back up a save on Windows, restore it on a Steam Deck, and those files have to land somewhere completely different — a Proton prefix instead of %APPDATA%. Checkpoint64 works the destination out on whichever machine is doing the restoring, so you never carry a path across. What it deliberately won&#39;t do is move your save behind your back.</description>
+      <category>steam-deck</category>
+      <category>cross-device</category>
+      <category>linux</category>
+      <category>proton</category>
+      <category>restore</category>
+    </item>
+    <item>
+      <title>Co-op on the couch; taking the shared world to your Steam Deck without stranding the group</title>
+      <link>https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you&#39;ve become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current.</description>
+      <category>steam-deck</category>
+      <category>co-op</category>
+      <category>linux</category>
+      <category>save-sharing</category>
+      <category>locks</category>
+    </item>
+    <item>
+      <title>Best Tools for Modded Saves That Stop Disasters</title>
+      <link>https://checkpoint64.com/blog/best-tools-for-modded-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-tools-for-modded-saves/</guid>
+      <pubDate>Wed, 19 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Find the best tools for modded saves, from load-order helpers to versioned backups, and keep worlds safe when a modpack goes sideways before it breaks.</description>
+    </item>
+    <item>
+      <title>Serverless Multiplayer: Co-op Without Rent</title>
+      <link>https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file.</description>
+    </item>
+    <item>
+      <title>Cross Platform Saves: What Actually Carries Over</title>
+      <link>https://checkpoint64.com/blog/cross-platform-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/cross-platform-saves/</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.</description>
+    </item>
+    <item>
+      <title>Add your own game; Checkpoint64 will back up a save it&#39;s never heard of. Version 1.1.0 available now</title>
+      <link>https://checkpoint64.com/blog/add-your-own-game/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/add-your-own-game/</guid>
+      <pubDate>Sun, 16 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Every catalog has an edge, and the games at that edge are the ones nobody backs up. The latest version lets you point any game at your own save folder, and add games we don&#39;t stock at all — name, folder, done. Plus 28 Ubisoft Connect titles and a second way into a Steam-only account.</description>
+      <category>update</category>
+      <category>release</category>
+      <category>catalog</category>
+      <category>custom-games</category>
+      <category>save-folders</category>
+      <category>ubisoft</category>
+    </item>
+    <item>
+      <title>Modded World Preservation Guide for PC Gamers</title>
+      <link>https://checkpoint64.com/blog/modded-world-preservation-guide/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/modded-world-preservation-guide/</guid>
+      <pubDate>Sat, 15 Aug 2026 00:00:00 GMT</pubDate>
+      <description>This modded world preservation guide shows PC players how to protect modpacks, save versions and co-op worlds before one bad update wrecks them completely.</description>
+    </item>
+    <item>
+      <title>How to Verify Save Integrity Before It Bites</title>
+      <link>https://checkpoint64.com/blog/how-to-verify-save-integrity/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-verify-save-integrity/</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to verify save integrity, spot corrupted or missing files, test safe restores, and protect solo, co-op, modded and emulator progress quickly.</description>
+    </item>
+    <item>
+      <title>How to Preserve Game Progress Without Save Drama</title>
+      <link>https://checkpoint64.com/blog/how-to-preserve-game-progress/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-preserve-game-progress/</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to preserve game progress with automatic backups, version history and safer co-op handoffs, so a bad mod or overwrite does not erase your world.</description>
+    </item>
+    <item>
+      <title>7 Best Steam Cloud Alternatives for Save Safety</title>
+      <link>https://checkpoint64.com/blog/best-steam-cloud-alternatives/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-steam-cloud-alternatives/</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Looking for the best Steam Cloud alternatives? Compare smarter save backup options for version history, co-op worlds, mods and multi-PC play for gamers.</description>
+    </item>
+    <item>
+      <title>Modded Saves Compatibility Without Guesswork</title>
+      <link>https://checkpoint64.com/blog/modded-saves-compatibility/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/modded-saves-compatibility/</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Modded saves compatibility is fragile. See what breaks worlds, how to test updates safely, and keep a hundred-hour modded run alive.</description>
+    </item>
+    <item>
+      <title>How to Prevent Steam Save Overwrites for Good</title>
+      <link>https://checkpoint64.com/blog/prevent-steam-save-overwrites/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/prevent-steam-save-overwrites/</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to prevent Steam save overwrites with version history, sync checks and safer co-op handoffs, so one bad launch never ever deletes your progress.</description>
+    </item>
+    <item>
+      <title>Checkpoint64 is Live on Steam!</title>
+      <link>https://checkpoint64.com/blog/launch-day/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/launch-day/</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Today is the day. Checkpoint64 1.0.0 is officially live on Steam. No more playtests, no more waitlists — just better saves for everyone.</description>
+      <category>meta</category>
+      <category>launch</category>
+      <category>steam</category>
+    </item>
+    <item>
+      <title>How to Recover Deleted Game Worlds Safely</title>
+      <link>https://checkpoint64.com/blog/recover-deleted-game-worlds/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/recover-deleted-game-worlds/</guid>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to recover deleted game worlds, stop sync disasters and protect co-op saves with version history, without renting a server or babysitting folders.</description>
+    </item>
+    <item>
+      <title>Automatic Game Save Rollback Without Panic</title>
+      <link>https://checkpoint64.com/blog/automatic-game-save-rollback/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/automatic-game-save-rollback/</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Automatic game save rollback keeps a corrupted modpack, bad co-op handoff or accidental overwrite from deleting the session you built all weekend intact.</description>
+    </item>
+    <item>
+      <title>Game Save Disaster Prevention That Actually Works</title>
+      <link>https://checkpoint64.com/blog/game-save-disaster-prevention/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/game-save-disaster-prevention/</guid>
+      <pubDate>Thu, 30 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Game save disaster prevention for PC players: stop corrupted files, bad co-op handoffs and overwritten worlds before they eat your whole weekend alive again.</description>
+    </item>
+    <item>
+      <title>Guide to Game Save Recovery: Fix Lost Progress</title>
+      <link>https://checkpoint64.com/blog/guide-to-game-save-recovery/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/guide-to-game-save-recovery/</guid>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 GMT</pubDate>
+      <description>A guide to game save recovery: find missing files, stop sync damage, restore older versions, and protect PC worlds properly today.</description>
+    </item>
+    <item>
+      <title>Save Sharing vs Dedicated Servers: Which Fits?</title>
+      <link>https://checkpoint64.com/blog/save-sharing-vs-dedicated-servers/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/save-sharing-vs-dedicated-servers/</guid>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Save sharing vs dedicated servers: compare costs, control, uptime and co-op friction, then choose the right way to keep your game world alive for everyone.</description>
+    </item>
+    <item>
+      <title>Google Drive and Patreon; two integrations we&#39;re building next</title>
+      <link>https://checkpoint64.com/blog/google-drive-and-patreon-integrations/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/google-drive-and-patreon-integrations/</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Two integrations are in the works — back your saves up to your own Google Drive instead of our storage, and gate a creator&#39;s read-only share code to Patreon members. Here&#39;s what each one does, why it fits, and the honest state of both.</description>
+      <category>integrations</category>
+      <category>google-drive</category>
+      <category>patreon</category>
+      <category>roadmap</category>
+    </item>
+    <item>
+      <title>Co Op Save Management Without Co-op Drama</title>
+      <link>https://checkpoint64.com/blog/co-op-save-management/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/co-op-save-management/</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Co op save management stops corrupted worlds, bad handoffs and host hostage situations with automatic backups, version history and safe sharing for crews.</description>
+    </item>
+    <item>
+      <title>Game Save Backup Software That Saves Your Save</title>
+      <link>https://checkpoint64.com/blog/game-save-backup-software/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/game-save-backup-software/</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Game save backup software protects your PC progress with automatic version history, fast restores and safer co-op handoffs, without a monthly bill at all.</description>
+    </item>
+    <item>
+      <title>Restore Previous Save State Without the Panic</title>
+      <link>https://checkpoint64.com/blog/restore-previous-save-state/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/restore-previous-save-state/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Restore previous save state after a crash, bad mod or co-op mishap. Keep every version of your PC game saves without folder archaeology after midnight.</description>
+    </item>
+    <item>
+      <title>Game Save Version History Stops Bad Sessions</title>
+      <link>https://checkpoint64.com/blog/game-save-version-history/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/game-save-version-history/</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Game save version history lets you undo corrupted files, bad mod installs and co-op disasters without turning backup folders into a second job for everyone</description>
+    </item>
+    <item>
+      <title>Best Tools for Save Recovery for PC Gamers</title>
+      <link>https://checkpoint64.com/blog/best-tools-for-save-recovery-pc-gamers/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-tools-for-save-recovery-pc-gamers/</guid>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Compare the best tools for save recovery, from versioned cloud backups to file recovery apps, and stop one bad session deleting your whole campaign today.</description>
+    </item>
+    <item>
+      <title>Skyrim Modded Save Backup Without the Funeral</title>
+      <link>https://checkpoint64.com/blog/skyrim-modded-save-backup/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/skyrim-modded-save-backup/</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Set up a Skyrim modded save backup that survives crashes, bad load orders and accidental overwrites, with version history for every Dragonborn disaster.</description>
+    </item>
+    <item>
+      <title>Project Zomboid Save Recovery Without Starting Over</title>
+      <link>https://checkpoint64.com/blog/project-zomboid-save-recovery/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/project-zomboid-save-recovery/</guid>
+      <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Project Zomboid save recovery steps for corrupted worlds, bad mod loads and co-op disasters - plus backup habits that stop your next apocalypse cold wipe.</description>
+    </item>
+    <item>
+      <title>RetroArch Save State Backup Without the Panic</title>
+      <link>https://checkpoint64.com/blog/retroarch-save-state-backup/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/retroarch-save-state-backup/</guid>
+      <pubDate>Sat, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <description>RetroArch save state backup explained: protect slots, keep rollback points, and avoid cloud-sync disasters without babysitting folders by hand every week.</description>
+    </item>
+    <item>
+      <title>Elden Ring Save Recovery Without the Panic</title>
+      <link>https://checkpoint64.com/blog/elden-ring-save-recovery-without-the-panic/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/elden-ring-save-recovery-without-the-panic/</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Elden Ring save recovery on PC: what still works, what usually fails, and how to restore lost progress without making the mess worse.</description>
+    </item>
+    <item>
+      <title>Valheim Host World Sharing Without the Faff</title>
+      <link>https://checkpoint64.com/blog/valheim-host-world-sharing-without-the-faff/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/valheim-host-world-sharing-without-the-faff/</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Valheim host world sharing explained: how to pass a world safely, avoid overwrites, fix host lock-in, and keep co-op progress intact.</description>
+    </item>
+    <item>
+      <title>Factorio World Rollback Without the Panic</title>
+      <link>https://checkpoint64.com/blog/factorio-world-rollback/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/factorio-world-rollback/</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Need a factorio world rollback after a bad save, desync, or mod mess? Here&#39;s how to restore a base safely and avoid losing hours again.</description>
+    </item>
+    <item>
+      <title>Stardew Valley Co-op Save Share, Sorted</title>
+      <link>https://checkpoint64.com/blog/stardew-valley-co-op-save-share/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/stardew-valley-co-op-save-share/</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Stardew Valley co-op save share without the usual chaos. Keep every version, hand off host saves safely, and stop losing farms to bad file swaps.</description>
+    </item>
+    <item>
+      <title>Best Minecraft World Backup Tool for PC</title>
+      <link>https://checkpoint64.com/blog/best-minecraft-world-backup-tool-pc/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-minecraft-world-backup-tool-pc/</guid>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Looking for a minecraft world backup tool? Here’s what actually matters for automatic backups, rollbacks, co-op safety and modded save recovery.</description>
+    </item>
+    <item>
+      <title>How to Sync Saves Across PCs Without Drama</title>
+      <link>https://checkpoint64.com/blog/how-to-sync-saves-across-pcs/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-sync-saves-across-pcs/</guid>
+      <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to sync saves across PCs without broken worlds, missing files or dodgy folder hacks. Keep progress current on every machine.</description>
+    </item>
+    <item>
+      <title>Dedicated Server Alternative for Friends</title>
+      <link>https://checkpoint64.com/blog/dedicated-server-alternative-for-friends/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/dedicated-server-alternative-for-friends/</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Need a dedicated server alternative for friends? Here’s when save sharing, backups, and host handoff beat paying monthly for a server.</description>
+    </item>
+    <item>
+      <title>How to Share Co-op Worlds Without Drama</title>
+      <link>https://checkpoint64.com/blog/how-to-share-co-op-worlds-without-drama/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-share-co-op-worlds-without-drama/</guid>
+      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to share co-op worlds without overwrites, missing host files, or dodgy manual backups. Safer handoffs, fewer arguments, more play.</description>
+    </item>
+    <item>
+      <title>Cloud Backup for PC Games That Saves Runs</title>
+      <link>https://checkpoint64.com/blog/cloud-backup-for-pc-games/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/cloud-backup-for-pc-games/</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Cloud backup for PC games stops lost saves, bad rollbacks and co-op chaos. Here&#39;s how it works, where it fails, and what to use instead.</description>
+    </item>
+    <item>
+      <title>How to Restore Corrupted Save Files Fast</title>
+      <link>https://checkpoint64.com/blog/how-to-restore-corrupted-save-files-fast/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-restore-corrupted-save-files-fast/</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to restore corrupted save files fast on PC, recover older versions, find backup folders, and avoid losing your world again for good.</description>
+    </item>
+    <item>
+      <title>Best Game Save Manager for PC Players</title>
+      <link>https://checkpoint64.com/blog/best-game-save-manager-pc-players/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/best-game-save-manager-pc-players/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Looking for the best game save manager? Here’s what actually matters for PC players, from backups and restores to co-op sharing and mod safety.</description>
+    </item>
+    <item>
+      <title>How to Back Up Game Saves Without the Faff</title>
+      <link>https://checkpoint64.com/blog/how-to-back-up-game-saves/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/how-to-back-up-game-saves/</guid>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Learn how to back up game saves properly on PC, avoid corrupted files, recover bad sessions, and keep co-op worlds safe without faff.</description>
+    </item>
+    <item>
+      <title>The Steam launch is going great; what we&#39;re building next</title>
+      <link>https://checkpoint64.com/blog/steam-launch-going-well/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-launch-going-well/</guid>
+      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A few days in, wishlists are climbing and the playtest is full of strange, wonderful saves. Thank you. A quick note on how it&#39;s going and what comes next.</description>
+      <category>launch</category>
+      <category>steam</category>
+      <category>roadmap</category>
+    </item>
+    <item>
+      <title>Checkpoint64 is on Steam! Wishlist it and join the playtest</title>
+      <link>https://checkpoint64.com/blog/checkpoint64-is-on-steam/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/checkpoint64-is-on-steam/</guid>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 GMT</pubDate>
+      <description>There&#39;s now a Checkpoint64 page on Steam. You can wishlist it, follow for the launch, and get into the playtest — and yes, the irony of a save-backup tool living next to Steam Cloud is the whole point. Here&#39;s what the listing means and what it doesn&#39;t change.</description>
+      <category>launch</category>
+      <category>steam</category>
+      <category>playtest</category>
+    </item>
+    <item>
+      <title>Back up the whole folder; the save files your game writes later won&#39;t slip through</title>
+      <link>https://checkpoint64.com/blog/back-up-the-whole-folder/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/back-up-the-whole-folder/</guid>
+      <pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Picking save files by hand has a blind spot — it never notices the ones your game writes after you set it up. A new farm, a fresh profile, an extra slot. The next build can watch the whole save folder and keep catching whatever lands in it. Restoring got safer too. Here&#39;s what&#39;s new.</description>
+      <category>release</category>
+      <category>backups</category>
+      <category>whole-folder</category>
+      <category>restore</category>
+    </item>
+    <item>
+      <title>Anatomy of a save corruption; what actually happens on disk</title>
+      <link>https://checkpoint64.com/blog/anatomy-of-a-save-corruption/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/anatomy-of-a-save-corruption/</guid>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Corruption sounds like bad luck, but it&#39;s usually one of a handful of very specific things going wrong at the byte level — almost always during the write. Here&#39;s what a save file really is, the three ways it gets mangled, and why a single save slot is a single point of failure.</description>
+      <category>post-mortem</category>
+      <category>corruption</category>
+      <category>backups</category>
+      <category>versioning</category>
+    </item>
+    <item>
+      <title>The free plan just grew a team; try co-op without a card</title>
+      <link>https://checkpoint64.com/blog/free-plan-grew-a-team/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/free-plan-grew-a-team/</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Free accounts can now create one team — invite your co-op partner, pass the lock, read the logbook, all without paying. Lifetime quietly went from 2 teams to 3 while we were at it. Here&#39;s what changed and why.</description>
+      <category>pricing</category>
+      <category>free-plan</category>
+      <category>co-op</category>
+      <category>teams</category>
+    </item>
+    <item>
+      <title>Cloud saves aren&#39;t backups; sync will happily overwrite your good save</title>
+      <link>https://checkpoint64.com/blog/cloud-saves-arent-backups/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/cloud-saves-arent-backups/</guid>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Steam Cloud, GOG Galaxy, and console cloud saves keep one copy in sync across your machines. That&#39;s not the same as a backup. The moment a save corrupts or a bad autosave fires, sync does its job perfectly and pushes the broken file everywhere. Here&#39;s the difference, and why versioning is the thing you actually wanted.</description>
+      <category>cloud-saves</category>
+      <category>backups</category>
+      <category>versioning</category>
+      <category>steam-cloud</category>
+    </item>
+    <item>
+      <title>The perfect companion for emulators; real version history for save states</title>
+      <link>https://checkpoint64.com/blog/checkpoint64-for-emulators/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/checkpoint64-for-emulators/</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Emulators already let you save anywhere. What they don&#39;t give you is a history. Checkpoint64 watches the save folder your emulator writes to and turns every save into a versioned, restorable timeline — a rewind button that survives across sessions, machines, and emulator updates.</description>
+      <category>emulation</category>
+      <category>save-states</category>
+      <category>versioning</category>
+      <category>retroarch</category>
+    </item>
+    <item>
+      <title>Community servers; host a world, share it with a crowd, keep it pristine</title>
+      <link>https://checkpoint64.com/blog/read-only-community-servers/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/read-only-community-servers/</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description>A creator can now host a save and hand out a join code that lets an audience download the world without being able to touch it. No write access, no accidental overwrites, capped and revocable. Here&#39;s what read-only members are and when you&#39;d want them.</description>
+      <category>community</category>
+      <category>hosted-saves</category>
+      <category>read-only</category>
+    </item>
+    <item>
+      <title>Ditch the dedicated server; your co-op group is probably paying for empty hours</title>
+      <link>https://checkpoint64.com/blog/ditch-the-dedicated-server/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/ditch-the-dedicated-server/</guid>
+      <pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate>
+      <description>A 24/7 rented box is great when ten people play every night. For the average co-op group, it&#39;s $120–$240 a year of idle uptime. Here&#39;s the math, and how Checkpoint64 covers ~90% of the use case for a one-time payment.</description>
+      <category>savings</category>
+      <category>co-op</category>
+      <category>dedicated-servers</category>
+    </item>
+    <item>
+      <title>Welcome to the Checkpoint64 logbook</title>
+      <link>https://checkpoint64.com/blog/welcome/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/welcome/</guid>
+      <pubDate>Tue, 19 May 2026 00:00:00 GMT</pubDate>
+      <description>First entry. What we&#39;re building, why we&#39;re building it, and how this blog works.</description>
+      <category>meta</category>
+      <category>launch</category>
+    </item>
+  </channel>
+</rss>
