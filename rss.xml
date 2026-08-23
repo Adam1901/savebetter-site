@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sat, 22 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Can Steam Cloud Lose Progress? Yes, Here’s Why</title>
+      <link>https://checkpoint64.com/blog/can-steam-cloud-lose-progress/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/can-steam-cloud-lose-progress/</guid>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Can Steam Cloud lose progress? Yes. See why sync conflicts and overwrites happen, then keep rollback-ready copies of every extra save without the drama.</description>
+    </item>
     <item>
       <title>Game Backups Versus Server Rentals Explained</title>
       <link>https://checkpoint64.com/blog/game-backups-versus-server-rentals/</link>

@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Can Steam Cloud Lose Progress? Yes, Here’s Why](https://checkpoint64.com/blog/can-steam-cloud-lose-progress/): 2026-08-23 — Can Steam Cloud lose progress? Yes. See why sync conflicts and overwrites happen, then keep rollback-ready copies of every extra save without the drama.
 - [Game Backups Versus Server Rentals Explained](https://checkpoint64.com/blog/game-backups-versus-server-rentals/): 2026-08-22 — Game backups versus server rentals: compare cost, control and co-op access, then pick the setup that protects your world without wasted monthly fees.
 - [How to Protect Modded Worlds Without Losing Progress](https://checkpoint64.com/blog/how-to-protect-modded-worlds/): 2026-08-21 — Learn how to protect modded worlds from broken updates, corrupt saves and co-op chaos with version history, tested mods and sensible rollback plans today.
 - [Where Steam Deck game saves actually live; inside a Proton prefix nobody can guess](https://checkpoint64.com/blog/steam-deck-save-file-location/): 2026-08-20 — On a Steam Deck, a Windows game's save doesn't sit where the game's own documentation says it does. Proton hands every game a private, Windows-shaped filesystem buried under a numeric folder, and the save is somewhere inside it. Here's the exact shape of that path, why the number is the hard part, and how Checkpoint64 finds it without being told.
