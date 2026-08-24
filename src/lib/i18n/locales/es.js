@@ -198,7 +198,7 @@ export default {
         cta: 'CONSEGUIR LIFETIME',
       },
       {
-        tag: 'PRO', unit: 'mensual, cancela cuando quieras',
+        tag: 'PRO', unit: 'pago único, tuyo para siempre',
         tagline: 'para grupos, streamers, equipos de mods',
         features: [
           'espacio personal + hasta 5 equipos',

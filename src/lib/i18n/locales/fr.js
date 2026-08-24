@@ -198,7 +198,7 @@ export default {
         cta: 'OBTENIR LIFETIME',
       },
       {
-        tag: 'PRO', unit: 'mensuel, résiliable à tout moment',
+        tag: 'PRO', unit: 'unique, à vous pour toujours',
         tagline: 'pour les groupes, streamers, équipes de mod',
         features: [
           "espace personnel + jusqu'à 5 équipes",

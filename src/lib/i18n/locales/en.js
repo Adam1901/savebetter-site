@@ -203,7 +203,7 @@ export default {
         cta: 'GET LIFETIME',
       },
       {
-        tag: 'PRO', unit: 'monthly, cancel anytime',
+        tag: 'PRO', unit: 'one-time, yours forever',
         tagline: 'for crews, streamers, modding groups',
         features: [
           'personal space + up to 5 teams',

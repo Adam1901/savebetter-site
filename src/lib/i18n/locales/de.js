@@ -198,7 +198,7 @@ export default {
         cta: 'LIFETIME HOLEN',
       },
       {
-        tag: 'PRO', unit: 'monatlich, jederzeit kündbar',
+        tag: 'PRO', unit: 'einmalig, für immer deins',
         tagline: 'für Crews, Streamer, Modding-Gruppen',
         features: [
           'persönlicher Bereich + bis zu 5 Teams',
