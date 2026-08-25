@@ -86,7 +86,7 @@ export default {
       { tag: 'VERSION HISTORY', title: 'EVERY UPLOAD\nIS A VERSION.', body: 'Scroll through every backup with file count, size, and what changed since last time. Hit Restore and the files go back on disk, marked as current — no guessing, no “final_v2_REAL” folders.' },
       { tag: 'CO-OP LOCKS', title: 'ONE PERSON\nHOLDS THE WORLD.', body: 'Games like Factorio, Valheim, and Satisfactory have one live world at a time. Whoever holds the lock uploads; everyone else downloads. Holder gone quiet? Locks expire on their own, and you can take over — with a warning, and a logbook entry so everyone knows.' },
       { tag: 'ONLY WHAT CHANGED', title: 'TINY\nUPLOADS.', body: 'Only the files that changed get uploaded — renamed files cost nothing extra. A 500 MB Minecraft world re-uploads as a few MB after a normal session, not the whole thing. Easy on your internet, easy on your storage.' },
-      { tag: '75+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 75+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
+      { tag: '140+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 140+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
       { tag: 'SHARE CODES', title: 'ONE WORLD,\nWHOLE CROWD.', body: 'Running a community world? Mint a join code and anyone holding it can download your save — but never upload over it. Codes are capped and revocable, and read-only visitors don’t use up seats. (Pro)' },
       { tag: 'LOGBOOK', title: 'WHO DID WHAT,\nWHEN.', body: 'Every upload, restore, and lock-grab gets written down in your group’s logbook. Handy when your co-op partner blames you for the bad run.' },
     ],
@@ -236,7 +236,7 @@ export default {
     h2Html: 'FREQUENTLY <span class="accent">CHECKED.</span>',
     // `a` values are raw HTML; item index 3 uses {0} for the savings figure.
     items: [
-      { q: "WHAT COUNTS AS A 'SAVE'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 75+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
+      { q: "WHAT COUNTS AS A 'SAVE'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 140+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
       { q: 'DO YOU UPLOAD WHILE THE GAME IS RUNNING?', a: 'Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won’t notice it while playing.' },
       { q: 'WHAT IF MY CO-OP PARTNER OVERWRITES MY UPLOAD?', a: 'They can’t, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history.' },
       { q: 'DO I STILL NEED A DEDICATED SERVER?', a: 'For most groups, no. The whole point of a dedicated server is keeping your world online when the host’s PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day.' },
@@ -285,25 +285,25 @@ export default {
   meta: {
     skipLink: 'Skip to content',
     title: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    description: 'Automatic cloud backup and full version history for PC game saves. Roll back corrupted saves and share co-op worlds with locks. Works with Minecraft, Stardew Valley, Elden Ring and 75+ games. Free download for Windows, Mac, Linux.',
+    description: 'Automatic cloud backup and full version history for PC game saves. Roll back corrupted saves and share co-op worlds with locks. Works with Minecraft, Stardew Valley, Elden Ring and 140+ games. Free download for Windows, Mac, Linux.',
     ogTitle: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    ogDescription: 'Never lose a save again. Automatic backups, full version history, and co-op locks so friends can share worlds without overwriting each other. 75+ games ready. Free download — pay once for more space.',
+    ogDescription: 'Never lose a save again. Automatic backups, full version history, and co-op locks so friends can share worlds without overwriting each other. 140+ games ready. Free download — pay once for more space.',
     ogImageAlt: 'Checkpoint64 — never lose a save again. A retro cartridge shelf of game saves.',
     twitterTitle: 'Checkpoint64 — Never Lose a Save Again, Solo or Co-op',
-    twitterDescription: 'Never lose a save again. Automatic cloud backups, full version history, co-op locks. 75+ games ready. Free download for Windows, Mac, Linux.',
+    twitterDescription: 'Never lose a save again. Automatic cloud backups, full version history, co-op locks. 140+ games ready. Free download for Windows, Mac, Linux.',
     twitterImageAlt: 'Checkpoint64 — never lose a save again.',
     noscriptHtml: 'Heads-up — JavaScript is disabled, so the animated demo on this page won’t work. The rest of the content is fully visible above.',
   },
 
   jsonld: {
     orgDescription: 'Checkpoint64 makes a save-file backup tool for PC gamers — automatic cloud backups, full version history, and co-op locks so friends can share worlds without overwriting each other.',
-    softwareDescription: 'Automatic cloud backup, full version history, and co-op locks for PC game saves. Free plan included; pay once for more space. Works with Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 75+ more games and 7 emulators out of the box.',
+    softwareDescription: 'Automatic cloud backup, full version history, and co-op locks for PC game saves. Free plan included; pay once for more space. Works with Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 140+ more games and 7 emulators out of the box.',
     featureList: [
       'Automatic background backups every 30 seconds',
       'Full version history with one-click restore',
       'Server-enforced co-op locks — one world holder at a time',
       'Deduplicated uploads — only the files that changed are sent',
-      'Presets for 75+ games and 7 emulators',
+      'Presets for 140+ games and 7 emulators',
       'Shared activity logbook for teams',
       'Read-only share codes for community worlds',
       'Pay-once Lifetime plan — no subscription required',
@@ -323,7 +323,7 @@ export default {
     // Plain-text FAQ for the FAQPage block. Mirrors the visible FAQ; index 3
     // takes the savings figure as {0}.
     faq: [
-      { q: "What counts as a 'save'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 75+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
+      { q: "What counts as a 'save'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 140+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
       { q: 'Do you upload while the game is running?', a: "Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won't notice it while playing." },
       { q: 'What if my co-op partner overwrites my upload?', a: "They can't, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history." },
       { q: 'Do I still need a dedicated server?', a: "For most groups, no. The whole point of a dedicated server is keeping your world online when the host's PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day." },
