@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 24 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 25 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Steam Cloud versus versioning for game saves</title>
+      <link>https://checkpoint64.com/blog/steam-cloud-versus-versioning/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/steam-cloud-versus-versioning/</guid>
+      <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Steam Cloud versus versioning: see why syncing one current save is not the same as keeping recoverable history for co-op, mods, and mistakes in games.</description>
+    </item>
     <item>
       <title>Save Ownership Keeps Your Worlds in Your Hands</title>
       <link>https://checkpoint64.com/blog/save-ownership-keeps-worlds-in-your-hands/</link>
