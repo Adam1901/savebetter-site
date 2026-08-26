@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Can Friends Host the Same World? Yes, But Carefully](https://checkpoint64.com/blog/can-friends-host-the-same-world/): 2026-08-26 — Can friends host the same world? Learn what shared saves allow, where host-only co-op fails, and how to hand a world over without losing progress safely.
 - [Steam Cloud versus versioning for game saves](https://checkpoint64.com/blog/steam-cloud-versus-versioning/): 2026-08-25 — Steam Cloud versus versioning: see why syncing one current save is not the same as keeping recoverable history for co-op, mods, and mistakes in games.
 - [Save Ownership Keeps Your Worlds in Your Hands](https://checkpoint64.com/blog/save-ownership-keeps-worlds-in-your-hands/): 2026-08-24 — Save ownership means your progress stays yours: every version, every co-op handoff, and a way back when a mod, mate or crash wrecks the world completely.
 - [Can Steam Cloud Lose Progress? Yes, Here’s Why](https://checkpoint64.com/blog/can-steam-cloud-lose-progress/): 2026-08-23 — Can Steam Cloud lose progress? Yes. See why sync conflicts and overwrites happen, then keep rollback-ready copies of every extra save without the drama.
