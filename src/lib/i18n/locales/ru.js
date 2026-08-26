@@ -281,6 +281,7 @@ export default {
       discord: 'Discord',
       terms: 'Условия',
       privacy: 'Конфиденциальность',
+      press: "нажимать",
       cookies: 'Настройки куки',
     },
     ariaProduct: 'Продукт',

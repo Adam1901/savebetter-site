@@ -266,6 +266,7 @@ export default {
       terms: 'AGB',
       privacy: 'Datenschutz',
       cookies: 'Cookie-Einstellungen',
+      press: 'Drücken',
     },
     ariaProduct: 'Produkt',
     ariaResources: 'Ressourcen',

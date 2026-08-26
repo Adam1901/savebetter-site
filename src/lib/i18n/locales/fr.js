@@ -265,6 +265,7 @@ export default {
       discord: 'Discord',
       terms: 'Conditions',
       privacy: 'Confidentialité',
+      press: "Presse",
       cookies: 'Paramètres des cookies',
     },
     ariaProduct: 'Produit',

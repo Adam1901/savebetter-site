@@ -1,5 +1,5 @@
 <script>
-  import { fmt } from '$lib/i18n/config.js'
+  import {fmt} from '$lib/i18n/config.js'
 
   // Resources-column guide labels stay hardcoded English (the pages are EN-only);
   // `prefix` handles './' at root vs '../' on the localized pages.
@@ -44,6 +44,7 @@
           <li><a href="https://discord.gg/kxeYwuuHEn" target="_blank" rel="noopener noreferrer" aria-label={f.discordAria}>{f.links.discord}</a></li>
           <li><a href="{prefix}terms/">{f.links.terms}</a></li>
           <li><a href="{prefix}privacy/">{f.links.privacy}</a></li>
+          <li><a href="{prefix}press/">{f.links.press}</a></li>
           <li><button type="button" class="footer-linkbtn" onclick={onCookieSettings}>{f.links.cookies}</button></li>
         </ul>
       </nav>

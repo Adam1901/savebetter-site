@@ -271,6 +271,7 @@ export default {
       discord: 'Discord',
       terms: 'Terms',
       privacy: 'Privacy',
+      press: 'Press',
       cookies: 'Cookie settings',
     },
     ariaProduct: 'Product',
