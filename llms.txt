@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Palworld Multiplayer Save Backup Without the Panic](https://checkpoint64.com/blog/palworld-multiplayer-save-backup/): 2026-08-28 — Set up a Palworld multiplayer save backup that survives bad mods, overwrites and host hand-offs, with full history and no monthly server bill for co-op.
 - [A Game Save Storage Guide for PC Gamers](https://checkpoint64.com/blog/game-save-storage-guide-pc-gamers/): 2026-08-27 — Game save storage guide for PC gamers: protect worlds, keep version history, share co-op saves safely, and stop one bad session erasing weeks of work.
 - [Can Friends Host the Same World? Yes, But Carefully](https://checkpoint64.com/blog/can-friends-host-the-same-world/): 2026-08-26 — Can friends host the same world? Learn what shared saves allow, where host-only co-op fails, and how to hand a world over without losing progress safely.
 - [Steam Cloud versus versioning for game saves](https://checkpoint64.com/blog/steam-cloud-versus-versioning/): 2026-08-25 — Steam Cloud versus versioning: see why syncing one current save is not the same as keeping recoverable history for co-op, mods, and mistakes in games.
