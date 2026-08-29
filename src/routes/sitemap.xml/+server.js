@@ -24,8 +24,16 @@ const ORIGIN = 'https://checkpoint64.com'
 // URLs below. So every entry here either carries a real date (post date, or
 // `updated` frontmatter) or omits the element entirely. There is deliberately no
 // `|| today()` fallback: that silently re-stamped a URL on every deploy.
+//
+// The generated /saves/ pages are why that rule earns its keep. They are the
+// bulk of this sitemap and they grow with the catalog — ~150 of 238 URLs at
+// the time of writing, against 83 that carry a real date — and main.yml
+// rebuilds daily. Stamping them with today(), which this did until the
+// entries below dropped it, re-dated roughly two thirds of the sitemap every
+// single day: exactly the signal that teaches Google to distrust <lastmod>
+// site-wide, wasting the accurate dates above. A catalog row carries no
+// per-game date, so those entries omit the element, like the homepage.
 export async function GET() {
-  const today = () => new Date().toISOString().slice(0, 10)
   const posts = loadAllPosts(await getFeedPosts())
   const catalog = await getCatalog()
   // posts is pinned-first, so posts[0] is whichever post is pinned rather than
@@ -88,10 +96,9 @@ export async function GET() {
       priority: '0.5',
     },
     // Generated save-location pages, one per catalog game (+ their A–Z index).
-    { loc: '/saves/', lastmod: today(), changefreq: 'weekly', priority: '0.8' },
+    { loc: '/saves/', changefreq: 'weekly', priority: '0.8' },
     ...catalog.map((g) => ({
       loc: `/saves/${g.slug}/`,
-      lastmod: today(),
       changefreq: 'monthly',
       priority: '0.7',
     })),
