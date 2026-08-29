@@ -1,0 +1,111 @@
+# Checkpoint64 — robots.txt
+# Allow all well-behaved crawlers and AI assistants. Keep PR previews out of the index.
+
+User-agent: *
+Allow: /
+Disallow: /pr-preview/
+
+# ---------- AI / LLM crawlers (explicitly welcomed) ----------
+# OpenAI — training & GPT model improvement
+User-agent: GPTBot
+Allow: /
+
+# OpenAI — when a user asks ChatGPT to browse a link
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI — SearchGPT index crawler
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic — Claude crawler (training/index)
+User-agent: ClaudeBot
+Allow: /
+
+# Anthropic — legacy identifier
+User-agent: anthropic-ai
+Allow: /
+
+# Anthropic — when a Claude user clicks a link / asks for a fetch
+User-agent: Claude-User
+Allow: /
+
+# Anthropic — Claude search index
+User-agent: Claude-SearchBot
+Allow: /
+
+# Anthropic — legacy web fetcher
+User-agent: Claude-Web
+Allow: /
+
+# Google — controls inclusion in Bard / Gemini / Vertex AI grounding
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity — search index
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity — on-demand user fetches
+User-agent: Perplexity-User
+Allow: /
+
+# Apple — Apple Intelligence / Siri grounding
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta — Llama training crawler
+User-agent: meta-externalagent
+Allow: /
+
+# Meta — Llama / search
+User-agent: FacebookBot
+Allow: /
+
+# DuckDuckGo — DuckAssist
+User-agent: DuckAssistBot
+Allow: /
+
+# Common Crawl — feeds many open-source LLMs
+User-agent: CCBot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Diffbot (used by some AI products for live retrieval)
+User-agent: Diffbot
+Allow: /
+
+# Amazon — Alexa / Bedrock training crawler
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance — Doubao / TikTok search
+User-agent: Bytespider
+Allow: /
+
+# ---------- Known SEO/marketing scrapers (politely blocked) ----------
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+Sitemap: https://checkpoint64.com/sitemap.xml
+Host: https://checkpoint64.com
