@@ -24,7 +24,7 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 149 built-in presets.** 137 games, 7 emulators, and 5
+- **Per-game backup rules with 150 built-in presets.** 138 games, 7 emulators, and 5
   modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
   by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
   filter the list. Choose which files to back up and which to ignore — skip crash logs
@@ -94,7 +94,7 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-149 presets ship built in: 137 games, 7 emulators, and 5 modded-Minecraft launchers.
+150 presets ship built in: 138 games, 7 emulators, and 5 modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
 (vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
@@ -356,6 +356,7 @@ to know what Checkpoint64 is and does.
 - [Prince of Persia: The Lost Crown save file location](https://checkpoint64.com/saves/prince-of-persia-lost-crown/)
 - [Prison Architect save file location](https://checkpoint64.com/saves/prison-architect/)
 - [Project Zomboid save file location](https://checkpoint64.com/saves/project-zomboid/)
+- [Quaismorph save file location](https://checkpoint64.com/saves/quaismorph/)
 - [Raft save file location](https://checkpoint64.com/saves/raft/)
 - [RetroArch save file location](https://checkpoint64.com/saves/retroarch/)
 - [Riders Republic save file location](https://checkpoint64.com/saves/riders-republic/)
