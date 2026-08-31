@@ -183,6 +183,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [World Overwrite Example: Recover a Lost Save](https://checkpoint64.com/blog/world-overwrite-example/): 2026-08-31 — A world overwrite example for gamers: see how one bad save replacement happens, what recovery looks like, and how version history prevents a total wipe.
 - [Modded Save Protection Without the Rituals](https://checkpoint64.com/blog/modded-save-protection/): 2026-08-29 — Modded save protection keeps your worlds recoverable when mods misbehave, updates collide or a mate overwrites the only good save. Keep versions safe.
 - [Palworld Multiplayer Save Backup Without the Panic](https://checkpoint64.com/blog/palworld-multiplayer-save-backup/): 2026-08-28 — Set up a Palworld multiplayer save backup that survives bad mods, overwrites and host hand-offs, with full history and no monthly server bill for co-op.
 - [A Game Save Storage Guide for PC Gamers](https://checkpoint64.com/blog/game-save-storage-guide-pc-gamers/): 2026-08-27 — Game save storage guide for PC gamers: protect worlds, keep version history, share co-op saves safely, and stop one bad session erasing weeks of work.
