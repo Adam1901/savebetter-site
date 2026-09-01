@@ -24,7 +24,7 @@ Portuguese, and Russian.
   Valheim only have one live world file at a time. Whoever holds the lock can upload;
   everyone else downloads. Locks expire on their own, and taking one over warns the holder
   and is recorded in the group logbook. Solves "who has the latest save?" forever.
-- **Per-game backup rules with 150 built-in presets.** 138 games, 7 emulators, and 5
+- **Per-game backup rules with 151 built-in presets.** 139 games, 7 emulators, and 5
   modded-Minecraft launchers (CurseForge, Modrinth, Prism, FTB, Pinecone), each tagged
   by category (singleplayer, co-op, multiplayer, server, emulator, launcher) so you can
   filter the list. Choose which files to back up and which to ignore — skip crash logs
@@ -94,7 +94,7 @@ overwrites, or co-op friends saving on top of each other. Particularly useful fo
 
 ## Games Checkpoint64 supports out of the box
 
-150 presets ship built in: 138 games, 7 emulators, and 5 modded-Minecraft launchers.
+151 presets ship built in: 139 games, 7 emulators, and 5 modded-Minecraft launchers.
 
 Factorio, Satisfactory, Valheim, Stardew Valley, Elden Ring, Baldur's Gate 3, Minecraft
 (vanilla plus CurseForge, Modrinth, Prism, FTB, and Pinecone), Skyrim SE, Fallout 4,
@@ -290,6 +290,7 @@ to know what Checkpoint64 is and does.
 - [Cities: Skylines save file location](https://checkpoint64.com/saves/cities-skylines/)
 - [Civilization VI save file location](https://checkpoint64.com/saves/civ6/)
 - [Core Keeper save file location](https://checkpoint64.com/saves/core-keeper/)
+- [Crimson Moon save file location](https://checkpoint64.com/saves/crimson-moon/)
 - [Crisis: The Third Way save file location](https://checkpoint64.com/saves/crisis-the-third-way/)
 - [Crusader Kings III save file location](https://checkpoint64.com/saves/ck3/)
 - [Cult of the Lamb save file location](https://checkpoint64.com/saves/cult-of-the-lamb/)
