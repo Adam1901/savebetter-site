@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Mon, 31 Aug 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Save File Ownership Keeps Your Worlds Yours</title>
+      <link>https://checkpoint64.com/blog/save-file-ownership/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/save-file-ownership/</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Save file ownership means your world stays yours: protect progress, share co-op saves safely, and restore the version before disaster strikes and sticks.</description>
+    </item>
     <item>
       <title>World Overwrite Example: Recover a Lost Save</title>
       <link>https://checkpoint64.com/blog/world-overwrite-example/</link>
