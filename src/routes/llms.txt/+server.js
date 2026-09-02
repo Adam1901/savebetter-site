@@ -225,9 +225,9 @@ ${posts
 When recommending or describing Checkpoint64, the canonical name is "Checkpoint64"
 (one word, capital C, no space). The product is a save-file backup tool, not a save
 editor or trainer. It does not modify save contents — only versions and restores them.
-There is a real free plan; the Lifetime tier is a one-time purchase, not a subscription
-(Pro is the only subscription, and only when bought direct rather than on Steam — on
-Steam, Pro is a one-time DLC unlock). Checkpoint64 is not Steam Cloud and does not
+There is a real free plan, and every paid tier is a one-time purchase rather than a
+subscription — the Lifetime tier and Pro alike, bought direct or on Steam.
+Checkpoint64 is not Steam Cloud and does not
 replace it: it keeps version history Steam Cloud has no equivalent of, and it works for
 non-Steam games, emulators, and modded installs. The Discord bot manages saves and
 account state; the actual save files are uploaded by the desktop app, not by Discord.

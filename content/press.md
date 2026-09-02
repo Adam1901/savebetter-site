@@ -101,8 +101,8 @@ progress, and a logbook showing whose turn it was.
 Free to download, and the free plan is a real one rather than a time-limited trial.
 
 - **Lifetime** — one-time payment, more storage. Available direct and on Steam.
-- **Pro** — for larger groups. A one-time unlock on Steam; a monthly subscription when bought
-  directly. There are no subscriptions of any kind on Steam.
+- **Pro** — for larger groups. A one-time unlock, bought direct or on Steam. There are no
+  subscriptions on any platform.
 - No per-seat charge on any tier.
 
 Exact prices live on the [Steam page](https://store.steampowered.com/app/4790820) and in the pricing
