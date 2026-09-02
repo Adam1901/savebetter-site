@@ -13,10 +13,15 @@
 
 export const BACKEND_ORIGIN = 'https://app.checkpoint64.com'
 
-// Pricing-card index → the plan name the backend understands. Index 0 (FREE)
-// has nothing to sell, so it is deliberately absent and its button keeps
-// jumping to the download section.
-export const PLAN_BY_CARD = { 1: 'paid', 2: 'pro' }
+// Statuses that mean "there is nothing to sell yet", which is the expected
+// answer today and must never reach the console:
+//   404 — the prepay route is not deployed at all (savebetter#515 not merged);
+//   503 — it is deployed, but SAVEBETTER_STRIPE_PREPAY_ENABLED is off, or no
+//         price ID is configured for this plan.
+// Verified against the live backend, which answers 404 right now. Logging
+// either one would put a red error in every visitor's console on a site that
+// is working exactly as designed.
+export const EXPECTED_OFF_STATUSES = new Set([404, 503])
 
 export function prepayEndpoint(plan, origin = BACKEND_ORIGIN) {
   return `${origin}/billing/checkout/prepay?plan=${encodeURIComponent(plan)}`
@@ -27,11 +32,11 @@ export function prepayEndpoint(plan, origin = BACKEND_ORIGIN) {
  *
  * Returns the URL, or `null` meaning "there is no checkout to send them to —
  * fall back to whatever the link already pointed at". That null is the
- * *expected* answer today: prepay ships behind SAVEBETTER_STRIPE_PREPAY_ENABLED,
- * which is off until the Stripe side is live, and an off backend answers 503.
- * Degrading quietly is what lets this land before the flag flips — the buttons
- * keep doing exactly what they did before, and start selling the moment the
- * backend is switched on, with no site deploy.
+ * *expected* answer today: the prepay route is not in prod yet, and once it is
+ * it stays behind SAVEBETTER_STRIPE_PREPAY_ENABLED until the Stripe side is
+ * live. Degrading quietly is what lets this land first — the buttons keep doing
+ * exactly what they did before, and start selling the moment the backend is
+ * switched on, with no site deploy.
  */
 export async function fetchCheckoutUrl(plan, { fetcher = globalThis.fetch, origin = BACKEND_ORIGIN } = {}) {
   if (typeof fetcher !== 'function' || !plan) return null
@@ -48,12 +53,12 @@ export async function fetchCheckoutUrl(plan, { fetcher = globalThis.fetch, origi
   }
 
   if (!res.ok) {
-    // 503 is the designed pre-launch state (prepay off, or no price ID for this
-    // plan), so it stays silent. Anything else means prepay is live and
-    // something actually broke — 502 from Stripe, 429 from the per-IP cooldown
-    // — which is worth a console line even though the buyer still lands
-    // somewhere sensible.
-    if (res.status !== 503) console.error(`[checkout] prepay for "${plan}" returned HTTP ${res.status}`)
+    // Anything outside the pre-launch pair means prepay is live and something
+    // actually broke — 502 from Stripe, 429 from the per-IP cooldown — which is
+    // worth a console line even though the buyer still lands somewhere sensible.
+    if (!EXPECTED_OFF_STATUSES.has(res.status)) {
+      console.error(`[checkout] prepay for "${plan}" returned HTTP ${res.status}`)
+    }
     return null
   }
 

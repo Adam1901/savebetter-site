@@ -12,11 +12,12 @@ import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import {
   BACKEND_ORIGIN,
-  PLAN_BY_CARD,
+  EXPECTED_OFF_STATUSES,
   fetchCheckoutUrl,
   isSafeCheckoutUrl,
   prepayEndpoint,
 } from '../src/lib/checkout.js'
+import { LOCALES } from '../src/lib/i18n/config.js'
 
 const STRIPE_URL = 'https://checkout.stripe.com/c/pay/cs_test_a1b2c3'
 
@@ -49,12 +50,21 @@ async function quietly(fn) {
   }
 }
 
-test('the paid cards map to the plans the backend accepts', () => {
-  // Card 0 is FREE and has nothing to sell — its button must stay a plain
-  // jump to #download.
-  assert.equal(PLAN_BY_CARD[0], undefined)
-  assert.equal(PLAN_BY_CARD[1], 'paid')
-  assert.equal(PLAN_BY_CARD[2], 'pro')
+// Pricing.svelte keys price, highlight and now billing plan off the card index,
+// so the order of `pricing.cards` in the locale files decides what a buyer is
+// charged. A reorder shows a visibly wrong price on the page, but an inserted
+// card would shift LIFETIME and PRO by one with nothing to notice, which is the
+// case worth a test.
+test('every locale still has the three pricing cards, in the English order', () => {
+  for (const { code, t } of LOCALES) {
+    assert.equal(t.pricing.cards.length, 3, `${code} has the wrong number of pricing cards`)
+  }
+  const en = LOCALES.find((l) => l.code === 'en')
+  assert.deepEqual(
+    en.t.pricing.cards.map((c) => c.tag),
+    ['FREE', 'LIFETIME', 'PRO'],
+    'card order changed — check the CARDS list in Pricing.svelte before shipping',
+  )
 })
 
 test('prepayEndpoint targets the app backend and encodes the plan', () => {
@@ -82,14 +92,20 @@ test('a checkout url is returned as-is', async () => {
   assert.equal(await fetchCheckoutUrl('paid', { fetcher }), STRIPE_URL)
 })
 
-test('prepay switched off (503) degrades silently to no checkout', async () => {
-  const { fetcher } = stubFetch(json(503, {}))
-  const [result, logged] = await quietly(() => fetchCheckoutUrl('paid', { fetcher }))
+test('the two pre-launch statuses degrade silently to no checkout', async () => {
+  // 404 = the prepay route is not deployed yet (which is what the live backend
+  // answers today); 503 = deployed but SAVEBETTER_STRIPE_PREPAY_ENABLED is off.
+  // Both are the site working as designed, so neither may reach the console —
+  // otherwise every visitor who clicks LIFETIME or PRO sees a red error.
+  assert.deepEqual([...EXPECTED_OFF_STATUSES].sort(), [404, 503])
 
-  assert.equal(result, null)
-  // This is the expected state until the backend flag flips. Logging it would
-  // put a red line in every visitor's console for a working site.
-  assert.deepEqual(logged, [])
+  for (const status of EXPECTED_OFF_STATUSES) {
+    const { fetcher } = stubFetch(json(status, {}))
+    const [result, logged] = await quietly(() => fetchCheckoutUrl('paid', { fetcher }))
+
+    assert.equal(result, null, `status ${status}`)
+    assert.deepEqual(logged, [], `status ${status}`)
+  }
 })
 
 test('a real failure (502) still degrades, but is complained about', async () => {

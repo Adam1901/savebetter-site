@@ -44,12 +44,15 @@ stripping and fails if any page in `dist/` loses its `<h1>` to it.
   (`POST https://app.checkpoint64.com/billing/checkout/prepay?plan=paid|pro`) for a Stripe Checkout
   URL and send the buyer there; paying mints them an account already at that tier and emails the
   download link. The contract is `docs/STRIPE_PREPAY.md` in the app repo — don't restate it here.
-  **It is dormant right now**: the backend ships prepay behind `SAVEBETTER_STRIPE_PREPAY_ENABLED`
-  and answers 503 until that flips, which `fetchCheckoutUrl` turns into `null` so the click falls
-  through to the `href="#download"` these buttons have always had. That silence is the point — they
-  start selling the moment the backend is switched on, with no site deploy — so keep the 503 branch
-  quiet, and keep the CTAs real anchors: no-JS, middle-click and the flag-off path all ride on the
-  href. The request deliberately carries no body and no custom headers, which is what keeps it a
+  **It is dormant right now**: prod answers **404** (the route ships with savebetter#515), and once
+  it lands it answers **503** until `SAVEBETTER_STRIPE_PREPAY_ENABLED` flips. `fetchCheckoutUrl`
+  turns both into `null`, so the click falls through to the `href="#download"` these buttons have
+  always had. That silence is the point — they start selling the moment the backend is switched on,
+  with no site deploy — so keep `EXPECTED_OFF_STATUSES` quiet (a `console.error` there would put a
+  red line in every visitor's console on a working site) and keep the CTAs real anchors: no-JS,
+  middle-click and the flag-off path all ride on the href. Which plan each card buys lives in
+  `Pricing.svelte`'s `CARDS`, next to the price, because both are keyed off the card's **index** in
+  `pricing.cards` — reorder or insert one and a buyer is charged for the wrong tier. The request deliberately carries no body and no custom headers, which is what keeps it a
   CORS *simple* request (either one would add a preflight round-trip to every click); it is
   readable cross-origin only because `checkpoint64.com` is listed in the backend's
   `savebetter.auth.allowed-origins`.

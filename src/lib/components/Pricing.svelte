@@ -1,12 +1,26 @@
 <script>
   import { money } from '$lib/money.js'
-  import { fetchCheckoutUrl, PLAN_BY_CARD } from '$lib/checkout.js'
+  import { fetchCheckoutUrl } from '$lib/checkout.js'
 
   let { t, intl } = $props()
   const pr = t.pricing
+
+  // The cards are index-keyed against this list, so their order in the locale
+  // files is load-bearing in three ways now: the price shown, the "most carts"
+  // highlight, and — since prepay — which plan the buyer is charged for. Price
+  // and plan sit on one line deliberately, so a reordered card cannot move one
+  // without the other staring back at you, and indexing is unguarded so a card
+  // added to a locale fails the prerender loudly instead of silently selling
+  // the wrong tier. `npm test` also asserts the shape (see checkout.test.js).
+  //
   // Only the free tier ($0) is a currency-rewritable money span; the paid prices
-  // are rendered as-is, matching the old build.
-  const prices = [money(0, { intl }), money(9.99, { intl }), money(5, { intl })]
+  // are rendered as-is, matching the old build. FREE has nothing to sell, so no
+  // plan — its button stays a plain jump to #download.
+  const CARDS = [
+    { price: money(0, { intl }), plan: null },
+    { price: money(9.99, { intl }), plan: 'paid' },
+    { price: money(5, { intl }), plan: 'pro' },
+  ]
 
   // Index of the card whose checkout session is being minted, if any. Guards
   // against a double-click opening two Stripe sessions — and against the second
@@ -20,7 +34,7 @@
   // a Stripe URL falls through to the href, which is the behaviour these buttons
   // have always had.
   async function buy(event, i) {
-    const plan = PLAN_BY_CARD[i]
+    const plan = CARDS[i].plan
     if (!plan) return
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
     event.preventDefault()
@@ -47,7 +61,7 @@
           {#if i === 1}<div class="badge">{pr.badge}</div>{/if}
           <div class="tag">▮ {c.tag}</div>
           <div class="priceline">
-            <span class="price">{@html prices[i]}</span>
+            <span class="price">{@html CARDS[i].price}</span>
             <span class="unit">{c.unit}</span>
           </div>
           <div class="tagline">{c.tagline}</div>
