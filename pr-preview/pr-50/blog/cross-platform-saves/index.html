@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1teoznn--><!---->  <title>Cross Platform Saves: What Actually Carries Over — Checkpoint64</title>
+  <meta name="description" content="Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../../retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="../../rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/blog/cross-platform-saves/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Cross Platform Saves: What Actually Carries Over" />
+  <meta property="og:description" content="Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not." />
+  <meta property="og:url" content="https://checkpoint64.com/blog/cross-platform-saves/" />
+  <meta property="og:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/a64ee3d6-714e-4c64-8b7e-685cc11f10cb.webp" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cross Platform Saves: What Actually Carries Over" />
+  <meta name="twitter:description" content="Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not." />
+  <meta name="twitter:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/a64ee3d6-714e-4c64-8b7e-685cc11f10cb.webp" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta property="article:published_time" content="2026-08-17" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logbook",
+        "item": "https://checkpoint64.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Cross Platform Saves: What Actually Carries Over",
+        "item": "https://checkpoint64.com/blog/cross-platform-saves/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Cross Platform Saves: What Actually Carries Over",
+    "description": "Cross platform saves let your progress travel between devices, but platform rules can still ruin the handoff. Here is what carries over and what does not.",
+    "url": "https://checkpoint64.com/blog/cross-platform-saves/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://checkpoint64.com/blog/cross-platform-saves/"
+    },
+    "datePublished": "2026-08-17",
+    "dateModified": "2026-08-17",
+    "image": "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/a64ee3d6-714e-4c64-8b7e-685cc11f10cb.webp",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    }
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post">
+      <div class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../../">Home</a> <span aria-hidden="true">/</span> <a href="../../blog/">Logbook</a> <span aria-hidden="true">/</span> <span>Cross Platform Saves: What Actually Carries Over</span>
+        </nav>
+        <p class="blog-post-meta"><time datetime="2026-08-17">2026-08-17</time> · <span class="blog-author">By the Checkpoint64 team</span></p>
+        <h1 class="blog-post-title pixel">Cross Platform Saves: What Actually Carries Over</h1>
+      </div>
+      <figure class="blog-post-lead">
+        <img src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/a64ee3d6-714e-4c64-8b7e-685cc11f10cb.webp" alt="Cross Platform Saves: What Actually Carries Over" loading="eager" />
+      </figure>
+      <div class="blog-post-body">
+<p>Your character has a legendary sword, 80 hours of progress and a base held together by pure stubbornness. You buy the game on another platform, boot it up, and find a fresh save slot staring back at you. Cross platform saves sound like a basic promise: my stuff, wherever I play. In practice, they are a tangle of platform rules, publisher accounts, incompatible file formats and, occasionally, a cloud system that confidently uploads the wrong save.</p>
+<p>The short version: cross-save can be brilliant, but only when the game and its platforms explicitly support it. Owning the same game twice is not a magic key. Neither is seeing a cloud icon.</p>
+<h2>What cross platform saves actually mean</h2>
+<p>Cross platform saves, also called cross-save or cross-progression, let one player profile carry progress between different hardware ecosystems. That might mean moving from a PC to a console, from Xbox to PlayStation, or from Steam Deck to your desktop PC.</p>
+<p>The key word is <strong>platform</strong>. A save moving between two PCs is usually a file-management problem. A save moving from PC to PlayStation is usually a publisher-and-platform-holder problem. Those are very different beasts.</p>
+<p>For a game to support true cross-save, it generally needs three things: a shared account system run by the publisher, server-side storage for your progress, and permission from each platform involved. The publisher has to map your character, purchases and progress to an account that exists above Steam, Xbox, PlayStation or Nintendo. Then each platform has to allow that data to be read and written safely.</p>
+<p>That is why games such as live-service shooters and big online RPGs are more likely to offer cross-progression than a single-player game from 2014. They already treat your character as an online account record. Meanwhile, a game with one local folder full of world files, mods and screenshots has a much harder job.</p>
+<h2>Cross-save is not the same as cross-play</h2>
+<p>These terms get thrown around like they came from the same loot box. They do not mean the same thing.</p>
+<p>Cross-play means players on different platforms can play together. You might join a mate on Xbox while you are on PC. Cross-save means your own progress follows you when you switch platforms. A game can have one without the other.</p>
+<p>A cross-play game may let PC and console players fight side by side while each platform keeps separate progression. Equally, a single-player game may support cross-save between PC and console without offering any multiplayer at all. Check the game’s official feature list, not just a forum post from someone whose cousin “got it working”.</p>
+<p>There is also cross-generation support. Moving a save from PlayStation 4 to PlayStation 5, or Xbox One to Xbox Series X|S, can be easier than crossing to PC, but it is still not guaranteed. Sometimes the upgrade path is one-way. Sometimes it requires an in-game upload step. Sometimes the publisher has quietly stopped maintaining it because the next release is already on the shelf.</p>
+<h2>Why your local PC saves are a different problem</h2>
+<p>On PC, your save usually belongs in a folder somewhere. It may sit in Documents, AppData, Steam’s userdata folder, a game install directory, or a location apparently chosen by a wizard with a grudge against future you.</p>
+<p>That means PC-to-PC continuity is often possible even when a game has no official cross-save feature. You can copy the save manually, sync it through a cloud folder, or use a <a href="https://checkpoint64.com/blog/how-to-back-up-game-saves/" rel="nofollow noopener">save backup tool</a> that watches the correct folders. But possible is not the same as safe.</p>
+<p>Manual copying creates predictable ways to ruin a perfectly good evening. You can copy an old version over a newer one. You can miss a second folder containing character data. You can bring over a modded world without the required mods, then wonder why every chest has become an interpretive art piece. If two devices both play offline, a sync service may also see two different versions and pick a winner with the judgement of a coin toss.</p>
+<p>For PC saves, version history matters more than people think. The question is not merely, “Did my save sync?” It is, “Can I get back to the version from <a href="https://checkpoint64.com/blog/restore-previous-save-state/" rel="nofollow noopener">before the crash</a>, bad mod update or accidental delete?” Those are not the same feature.</p>
+<p>Checkpoint64 is built for this side of the mess: it watches supported PC save folders, backs up changed files and keeps prior versions so a bad session is a rollback, not a memorial service. The free plan is actually free, and upgrades are pay once, keep it forever. No subscription ritual. No ‘powered by AI’ sticker slapped on your save folder.</p>
+<h2>The usual limits on cross platform saves</h2>
+<p>Even when a game advertises cross-save, read the small print before you build your plans around it. Restrictions tend to land in a few familiar places.</p>
+<h3>Purchases may stay behind</h3>
+<p>Progress can transfer while paid cosmetics, currency or DLC do not. Console storefront rules, licensing agreements and premium currency policies can keep items tied to the platform where they were bought. Your level 50 character may arrive intact, while their wardrobe is suddenly doing the default-skin walk of shame.</p>
+<p>Some games solve this by making most purchases account-wide. Others transfer earned items but not paid currency. A few treat every platform as its own locked cupboard. It depends on the game, not on what feels reasonable.</p>
+<h3>Mods can break the journey</h3>
+<p>PC modded saves are especially awkward. Consoles may not support mods at all, may allow only curated mods, or may run a different game version. Even a PC-to-PC transfer can fail if the receiving machine lacks the same mod list, load order or required asset packs.</p>
+<p>Before moving a modded save, record the game version, mod manager, active mods and load order. Back up the unmodded original too. That sounds fussy until a missing dependency turns your 200-hour colony into a loading screen that never blinks.</p>
+<h3>Different editions can mean different saves</h3>
+<p>Standard, deluxe, remastered, complete and next-gen editions do not always share a save format. Nor do regional releases in every case. If a game has multiple launchers on PC, such as Steam, Microsoft Store or Epic, save locations and cloud behaviour can differ even when the game itself is identical.</p>
+<p>Do not move files until you know the target edition can read them. If the developer provides an import tool, use that rather than improvising with folders.</p>
+<h3>Some transfers are one-way</h3>
+<p>A publisher may let you import an old save into a newer version but refuse an export back. Once the save is converted, your older copy may no longer understand it. Keep the pre-conversion version as a separate backup. This is not paranoia. This is respecting the sacred law that you will want to go back ten minutes after clicking Confirm.</p>
+<h2>A safer way to move saves between devices</h2>
+<p>If you are moving between PC devices, treat it like a handoff rather than a casual copy-paste job. First, close the game completely on both machines. Check Task Manager too, because some launchers and games continue hovering in the background like an unwanted ghost.</p>
+<p>Next, make a dated backup of the source save before touching anything. If the game uses Steam Cloud or another built-in service, let it finish syncing and verify which device holds the newest progress. Do not launch the game on the second device until you are certain its old local save cannot overwrite the newer one.</p>
+<p>Copy every required save component, not just the file with the most obvious name. For world-based games, that can include world data, player data, configuration files and mod settings. Then launch the target game once, check the expected character, world and progress, and keep the original backup until you have played and saved successfully.</p>
+<p>For co-op worlds, the risk changes. The problem is not only getting the save to another computer. It is stopping two people from editing separate copies of the same world. If your group takes turns hosting, agree who has the current world, who is allowed to host next, and when the handoff happens. A proper <a href="https://checkpoint64.com/blog/valheim-host-world-sharing-without-the-faff/" rel="nofollow noopener">lock-based handoff system</a> is better than a Discord message saying “pretty sure this is the latest one”.</p>
+<h2>Before you trust a game’s cross-save claim</h2>
+<p>Look for a clear answer to four questions: which platforms are supported, whether you need to link a publisher account, whether purchases transfer, and whether the feature works both ways. Also check whether the game supports every edition you own, not just the newest release.</p>
+<p>If the answers are vague, assume nothing. Make a test save, move it, and verify it before you commit your main character or shared world. Ten minutes of testing beats explaining to your co-op crew why last Saturday’s fortress has travelled backwards in time.</p>
+<p>The best cross-save setup is the one you never have to think about - until something goes wrong. Then it should give you a clear choice, a known-good version and a way back, rather than a folder full of files named `save_old_FINAL_final2`.</p>
+      </div>
+      <nav class="guide-related" aria-label="More from the Logbook">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="../../blog/modded-world-preservation-guide/">Modded World Preservation Guide for PC Gamers</a></li>
+          <li><a href="../../blog/how-to-verify-save-integrity/">How to Verify Save Integrity Before It Bites</a></li>
+          <li><a href="../../blog/how-to-preserve-game-progress/">How to Preserve Game Progress Without Save Drama</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>
