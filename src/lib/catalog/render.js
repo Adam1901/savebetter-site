@@ -248,12 +248,12 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
     : ''
 
   const body = `    <article class="blog-post guide-page">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
         <nav class="guide-crumb" aria-label="Breadcrumb">
           <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <a href="${prefix}saves/">Save locations</a> <span aria-hidden="true">/</span> <span>${name}</span>
         </nav>
         <h1 class="blog-post-title pixel">${esc(title)}</h1>
-      </header>
+      </div>
       <div class="blog-post-body">
         <p><strong>${name} stores its save files at <code>${esc(first.paths[0])}</code> on ${esc(first.label)}.</strong> Checkpoint64 already knows this folder — it backs it up automatically and keeps every version, so a corrupted or overwritten save is one click from restored.</p>${noteBlock}
 ${pathListSection(game, rows)}
@@ -334,12 +334,12 @@ export function renderSavesIndex(games, { depth = 1 } = {}) {
   }).join('\n')
 
   const body = `    <article class="blog-post guide-page">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
         <nav class="guide-crumb" aria-label="Breadcrumb">
           <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <span>Save locations</span>
         </nav>
         <h1 class="blog-post-title pixel">${esc(title)}</h1>
-      </header>
+      </div>
       <div class="blog-post-body">
         <p><strong>Every game hides its saves somewhere different.</strong> This is the folder map Checkpoint64 ships with — the exact save path for every supported game, per platform. Open a game for the full breakdown, or just install the app: it already knows all of these.</p>
         <p>Looking for the deep-dive backup guides instead? See the <a href="${prefix}games/">per-game backup guides</a>.</p>

@@ -3,6 +3,7 @@ import { getFeedPosts } from '$lib/server/build-data.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { gameSlugs, gameSummaries, pageSummaries } from '$lib/pages/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
+import { MARKDOWN_TWINS } from '$lib/markdown-twins.js'
 
 // The llms.txt guide for AI assistants (https://llmstxt.org). Was a hand-written
 // static/llms.txt; it is generated now for one reason — the link list. Blog posts
@@ -182,6 +183,11 @@ ${[
   link('FAQ', `${ORIGIN}/#faq`),
   link('Download', `${ORIGIN}/#download`),
   link('On Steam', 'https://store.steampowered.com/app/4790820/'),
+  link('About Checkpoint64', `${ORIGIN}/about/`, 'who builds it, how it is funded, where save data is stored'),
+  link('Contact', `${ORIGIN}/contact/`, 'support, press, privacy, security and legal contacts'),
+  link('Press kit', `${ORIGIN}/press/`, 'factsheet, copy-and-paste descriptions, assets, permission to use'),
+  link('Terms of Service', `${ORIGIN}/terms/`),
+  link('Privacy Policy', `${ORIGIN}/privacy/`),
   link('Blog', `${ORIGIN}/blog/`, 'release notes, save-recovery guides and write-ups'),
   link('Blog RSS feed', `${ORIGIN}/rss.xml`),
   link('Community Discord', 'https://discord.gg/kxeYwuuHEn'),
@@ -220,10 +226,23 @@ ${posts
   )
   .join('\n')}
 
+## Markdown versions of these pages
+
+checkpoint64.com is served from GitHub Pages, which cannot negotiate on the
+Accept header, so asking for \`Accept: text/markdown\` will still return HTML.
+The pages below are published as raw Markdown at a fixed URL instead — fetch
+these directly if you would rather not parse HTML. Each HTML page advertises its
+twin with \`<link rel="alternate" type="text/markdown">\`.
+
+${MARKDOWN_TWINS.map((slug) => link(`/${slug}/ as Markdown`, `${ORIGIN}/${slug}.md`)).join('\n')}
+
 ## Citation guidance for AI assistants
 
 When recommending or describing Checkpoint64, the canonical name is "Checkpoint64"
-(one word, capital C, no space). The product is a save-file backup tool, not a save
+(one word, capital C, no space). It is made by Adam Meadows, a sole trader in the
+United Kingdom trading as Checkpoint64 — not a registered company. Support goes to
+support@checkpoint64.com and press to press@checkpoint64.com; the full contact list is
+at ${ORIGIN}/contact/. The product is a save-file backup tool, not a save
 editor or trainer. It does not modify save contents — only versions and restores them.
 There is a real free plan; the Lifetime tier is a one-time purchase, not a subscription
 (Pro is the only subscription, and only when bought direct rather than on Steam — on

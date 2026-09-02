@@ -13,6 +13,7 @@ import { DEFAULT_CURRENCY, formatMoney } from '../currency.js'
 import { esc } from '../esc.js'
 import { STEAM_STORE_URL } from '../steam.js'
 import { REPO } from '../releases.js'
+import { organizationNode, ORG_ID } from '../organization.js'
 
 const ORIGIN = 'https://checkpoint64.com'
 
@@ -118,21 +119,13 @@ function jsonLdBlocks({ code, t, intl, version }) {
   // three islands — Google merges cross-referencing @id nodes across separate
   // <script> blocks on the same page. Ids are identical on every locale (one
   // entity; page-level language varies via inLanguage).
-  const orgId = `${ORIGIN}/#organization`
+  const orgId = ORG_ID
   const siteId = `${ORIGIN}/#website`
   const softwareId = `${ORIGIN}/#software`
-  const githubOrgUrl = `https://github.com/${REPO.split('/')[0]}`
   const blocks = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      '@id': orgId,
-      name: 'Checkpoint64',
-      alternateName: 'Checkpoint 64',
-      url: `${ORIGIN}/`,
-      logo: `${ORIGIN}/retro_save_icon.svg`,
-      description: j.orgDescription,
-      sameAs: ['https://discord.gg/kxeYwuuHEn', githubOrgUrl, STEAM_STORE_URL],
+      ...organizationNode({ description: j.orgDescription }),
     },
     {
       '@context': 'https://schema.org',

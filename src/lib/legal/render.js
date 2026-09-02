@@ -1,5 +1,6 @@
 import { markdownToHtml } from '../blog/render.js'
 import { esc } from '../esc.js'
+import { MARKDOWN_TWINS } from '../markdown-twins.js'
 
 // Splits the legal shell into { head, body } inner-HTML pieces for a SvelteKit
 // route ({@html} into <svelte:head> + after it). Simpler than the blog shell —
@@ -7,10 +8,16 @@ import { esc } from '../esc.js'
 //
 // `depth` = how many `../` segments are needed to climb back to site root.
 // /terms/index.html or /privacy/index.html → depth 1
-function layout({ title, description, body, depth }) {
+function layout({ title, description, body, depth, slug, extraHead = '' }) {
   const prefix = depth === 0 ? './' : '../'.repeat(depth)
   const desc = description
     ? `<meta name="description" content="${esc(description)}" />`
+    : ''
+  // Discovery for the raw-Markdown twin. checkpoint64.com is on GitHub Pages,
+  // which cannot negotiate on Accept, so a <link rel="alternate"> at a
+  // predictable /<slug>.md URL is how an agent finds the markdown here.
+  const markdown = MARKDOWN_TWINS.includes(slug)
+    ? `\n  <link rel="alternate" type="text/markdown" href="${prefix}${slug}.md" />`
     : ''
   const headHtml = `  <title>${esc(title)}</title>
   ${desc}
@@ -20,7 +27,7 @@ function layout({ title, description, body, depth }) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
-  <link rel="stylesheet" href="${prefix}blog.css" />`
+  <link rel="stylesheet" href="${prefix}blog.css" />${markdown}${extraHead ? `\n${extraHead}` : ''}`
   const bodyHtml = `  <a class="skip-link" href="#main">Skip to content</a>
   <nav class="blog-nav">
     <div class="blog-wrap">
@@ -43,16 +50,16 @@ ${body}
   return { head: headHtml, body: bodyHtml }
 }
 
-export async function renderLegal(doc, { depth = 1 } = {}) {
+export async function renderLegal(doc, { depth = 1, extraHead = '' } = {}) {
   const html = await markdownToHtml(doc.content)
   const updated = doc.updated
     ? `<p class="blog-post-meta">Last updated <time datetime="${doc.updated}">${doc.updated}</time></p>`
     : ''
   // Reuse the blog-post styles so headings, prose, and tables look right.
   const body = `    <article class="blog-post">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
         ${updated}
-      </header>
+      </div>
       <div class="blog-post-body">
 ${html}
       </div>
@@ -62,5 +69,7 @@ ${html}
     description: doc.description,
     body,
     depth,
+    slug: doc.slug,
+    extraHead,
   })
 }
