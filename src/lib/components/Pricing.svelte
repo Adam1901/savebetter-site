@@ -1,11 +1,36 @@
 <script>
   import { money } from '$lib/money.js'
+  import { fetchCheckoutUrl, PLAN_BY_CARD } from '$lib/checkout.js'
 
   let { t, intl } = $props()
   const pr = t.pricing
   // Only the free tier ($0) is a currency-rewritable money span; the paid prices
   // are rendered as-is, matching the old build.
   const prices = [money(0, { intl }), money(9.99, { intl }), money(5, { intl })]
+
+  // Index of the card whose checkout session is being minted, if any. Guards
+  // against a double-click opening two Stripe sessions — and against the second
+  // click's 429 (the backend's per-IP cooldown) resolving first and yanking the
+  // buyer to #download instead of Checkout.
+  let pending = $state(null)
+
+  // The paid cards keep href="#download" so they work with no JS, on
+  // middle-click, and while the prepay flag is still off. A plain left-click on
+  // one is intercepted to buy instead; anything fetchCheckoutUrl can't turn into
+  // a Stripe URL falls through to the href, which is the behaviour these buttons
+  // have always had.
+  async function buy(event, i) {
+    const plan = PLAN_BY_CARD[i]
+    if (!plan) return
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
+    event.preventDefault()
+    if (pending !== null) return
+    const fallback = event.currentTarget.href // read now — currentTarget is gone after the await
+    pending = i
+    const url = await fetchCheckoutUrl(plan)
+    pending = null
+    window.location.href = url || fallback
+  }
 </script>
 
 <section id="pricing" aria-labelledby="pricing-heading">
@@ -27,7 +52,11 @@
           </div>
           <div class="tagline">{c.tagline}</div>
           <ul>{#each c.features as ft}<li>{ft}</li>{/each}</ul>
-          <a href="#download" class="cta-btn">{c.cta}</a>
+          <a
+            href="#download"
+            class="cta-btn"
+            aria-busy={pending === i ? 'true' : undefined}
+            onclick={(e) => buy(e, i)}>{c.cta}</a>
         </div>
       {/each}
     </div>

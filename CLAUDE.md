@@ -14,9 +14,12 @@ The product source of truth lives in the sibling repo (`../savebetter`): `PHASES
 - `npm run build` — production build to `dist/` (emits `/`, `/de/`, `/fr/`, `/es/`, `/ru/`, `/blog/…`, `/terms/`, `/privacy/`, `sitemap.xml`, `rss.xml`)
 - `npm run preview` — serve the built `dist/` locally
 
-- `npm test` — `node --test tests/agent-readiness.test.js`, the one test file. It asserts the
-  machine-readable contract of the **built** output, so it needs `npm run build` first (both CI
-  workflows run it straight after the build). Node's built-in runner, no test framework.
+- `npm test` — `node --test tests/*.test.js`. Node's built-in runner, no test framework.
+  `tests/agent-readiness.test.js` asserts the machine-readable contract of the **built** output, so
+  it needs `npm run build` first (both CI workflows run it straight after the build);
+  `tests/checkout.test.js` is a plain unit test and does not. The glob is deliberate — `node --test
+  tests/` tries to load the directory as a module and dies, so a new file must match `*.test.js` to
+  be run at all.
 
 There is no linter and no type checker configured.
 
@@ -37,6 +40,19 @@ stripping and fails if any page in `dist/` loses its `<h1>` to it.
 - `src/render.js` — pure HTML-string renderers for every section (`hero`, `problemStrip`, `howItWorks`, `shelfMock`, `features`, `logbookPreview`, `dediStrip`, `pricing`, `downloadStrip`, `faq`, `footer`). Imported by both the browser entry and Node at build time, so it must stay DOM-free. The `cartridge(...)` helper renders the recurring cartridge visual.
 - `src/main.js` — browser entry. The body is already prerendered into `#app` by `vite.config.js`; this module only owns CSS import + interactivity (language menu, theme toggle, live release-tile refresh, currency rewrite, auto-backup ticker animation). Do NOT overwrite `#app.innerHTML` here.
 - `src/releases.js` — GitHub Releases lookup (`Checkpoint64/Checkpoint64` repo). Download tiles are baked at build time and refreshed client-side. Platform list = Windows, macOS Apple Silicon, Linux (.deb/.rpm). There is deliberately **no Intel-Mac tile** — that build is disabled in the app's release matrix; don't add one without checking the app repo.
+- `src/lib/checkout.js` — the **LIFETIME** and **PRO** pricing buttons ask the app backend
+  (`POST https://app.checkpoint64.com/billing/checkout/prepay?plan=paid|pro`) for a Stripe Checkout
+  URL and send the buyer there; paying mints them an account already at that tier and emails the
+  download link. The contract is `docs/STRIPE_PREPAY.md` in the app repo — don't restate it here.
+  **It is dormant right now**: the backend ships prepay behind `SAVEBETTER_STRIPE_PREPAY_ENABLED`
+  and answers 503 until that flips, which `fetchCheckoutUrl` turns into `null` so the click falls
+  through to the `href="#download"` these buttons have always had. That silence is the point — they
+  start selling the moment the backend is switched on, with no site deploy — so keep the 503 branch
+  quiet, and keep the CTAs real anchors: no-JS, middle-click and the flag-off path all ride on the
+  href. The request deliberately carries no body and no custom headers, which is what keeps it a
+  CORS *simple* request (either one would add a preflight round-trip to every click); it is
+  readable cross-origin only because `checkpoint64.com` is listed in the backend's
+  `savebetter.auth.allowed-origins`.
 - `src/currency.js` — money amounts are stored as raw USD numbers, SSR-rendered in EUR (the default), and rewritten client-side to the visitor's currency (USD/GBP/EUR). Use `money(...)` in render.js, never hardcode amounts in copy.
 - `src/i18n/config.js` — locale registry (order = switcher order). Adding a language: drop `src/i18n/locales/<code>.js` and register it here — sitemap, hreflang, switcher, `<html lang>`, the `[[lang]]`/guide route matchers, and the browser language redirect all derive from `LOCALES`/`SUBDIR_LOCALE_CODES` and follow automatically. **The one exception is `svelte.config.js`'s `prerender.entries`**, which must list the new `/xx/` by hand: `'*'` does not enumerate optional-param routes, and missing it is the only failure here that leaves the build green while hreflang and `sitemap.xml` advertise a URL GitHub Pages 404s.
 - `src/lib/i18n/head.js` — **the single source for the homepage `<head>`** on all five locales (title/meta/OG/Twitter, hreflang, canonical, and the five JSON-LD blocks), emitted verbatim into `<svelte:head>`. There is no hand-maintained `index.html` head and no `localize.js` regex surgery any more — nothing needs mirroring by hand; change `en.js` `meta`/`jsonld` and every locale follows. The visible FAQ and the FAQPage JSON-LD must stay in sync (Google penalizes mismatch), and the dedicated-server FAQ answer must stay at **index 3** — `head.js` hardcodes that index for the `{0}` savings substitution.

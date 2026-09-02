@@ -1167,6 +1167,10 @@ section .head .tape::before {
   transition: transform 80ms ease;
 }
 .price-card .cta-btn:hover { transform: translate(-1px, -1px); }
+/* Set while the Stripe checkout session is being minted, so the button reads as
+   working rather than dead during the round-trip. No copy change — the label
+   comes from i18n and a "loading" string would need all five locales. */
+.price-card .cta-btn[aria-busy='true'] { opacity: 0.6; cursor: progress; }
 .price-card.hl .cta-btn {
   background: var(--ink); color: var(--paper);
   border-color: var(--ink);
