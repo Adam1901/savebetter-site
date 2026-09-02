@@ -15,12 +15,14 @@ export const BACKEND_ORIGIN = 'https://app.checkpoint64.com'
 
 // Statuses that mean "there is nothing to sell yet", which is the expected
 // answer today and must never reach the console:
-//   404 — the prepay route is not deployed at all (savebetter#515 not merged);
-//   503 — it is deployed, but SAVEBETTER_STRIPE_PREPAY_ENABLED is off, or no
-//         price ID is configured for this plan.
-// Verified against the live backend, which answers 404 right now. Logging
-// either one would put a red error in every visitor's console on a site that
-// is working exactly as designed.
+//   404 — the prepay route is not deployed (it shipped in savebetter#515; kept
+//         because a rollback or a deploy window puts prod back in this state);
+//   503 — deployed, but SAVEBETTER_STRIPE_PREPAY_ENABLED is off, or no price ID
+//         is configured for this plan.
+// Both verified against the live backend, which answered 404 before #515's
+// deploy landed and answers 503 ("Prepay checkout is not available.") after it.
+// Logging either would put a red error in every visitor's console on a site
+// that is working exactly as designed.
 export const EXPECTED_OFF_STATUSES = new Set([404, 503])
 
 export function prepayEndpoint(plan, origin = BACKEND_ORIGIN) {
