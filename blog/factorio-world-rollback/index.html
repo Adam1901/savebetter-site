@@ -86,21 +86,163 @@
       "@type": "Organization",
       "@id": "https://checkpoint64.com/#organization",
       "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
       "url": "https://checkpoint64.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://checkpoint64.com/retro_save_icon.svg"
-      }
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
     },
     "publisher": {
       "@type": "Organization",
       "@id": "https://checkpoint64.com/#organization",
       "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
       "url": "https://checkpoint64.com/",
       "logo": {
         "@type": "ImageObject",
         "url": "https://checkpoint64.com/retro_save_icon.svg"
-      }
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
     }
   }
   </script><!----><!---->
@@ -125,13 +267,13 @@
   </nav>
   <main id="main" class="blog-main blog-wrap">
     <article class="blog-post">
-      <header class="blog-post-header">
+      <div class="blog-post-header">
         <nav class="guide-crumb" aria-label="Breadcrumb">
           <a href="../../">Home</a> <span aria-hidden="true">/</span> <a href="../../blog/">Logbook</a> <span aria-hidden="true">/</span> <span>Factorio World Rollback Without the Panic</span>
         </nav>
         <p class="blog-post-meta"><time datetime="2026-07-08">2026-07-08</time> · <span class="blog-author">By the Checkpoint64 team</span></p>
         <h1 class="blog-post-title pixel">Factorio World Rollback Without the Panic</h1>
-      </header>
+      </div>
       <div class="blog-post-body">
 <p>One wrong save in Factorio and suddenly your neat little factory turns into a crime scene. A mod update eats half the map, someone hosts co-op from the wrong file, autosave catches the exact moment the base starts imploding, and now you need a factorio world rollback fast - not a lecture on folder structures while your oil setup burns.</p>
 <p>The good news is that a rollback is usually possible. The less good news is that the right fix depends on what actually went wrong. If you restore the wrong file, load the wrong mod set, or overwrite the only healthy save you had left, you can make a bad evening worse.</p>
