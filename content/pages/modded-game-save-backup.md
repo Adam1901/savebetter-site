@@ -45,7 +45,7 @@ Anything not on the list still works — point Checkpoint64 at the save folder a
 
 | | Copy-paste the folder | Checkpoint64 |
 |---|---|---|
-| **When it happens** | When you remember | Automatically, every 30 seconds |
+| **When it happens** | When you remember | Automatically, every 60 seconds |
 | **History** | Whatever you kept | Every version, labelled |
 | **Restore** | Find the right folder, copy it back | Pick a version, click Restore |
 | **Co-saves included** | If you remembered them | Always — it's the whole folder |
@@ -54,5 +54,5 @@ Anything not on the list still works — point Checkpoint64 at the save folder a
 ## How to back up a modded save
 
 1. **Point Checkpoint64 at the game.** Presets know the folder; for anything else, pick it yourself.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version — only the changed files are sent.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version — only the changed files are sent.
 3. **Roll back when a mod breaks something.** Open Versions, pick a healthy save from before the change, and Restore.

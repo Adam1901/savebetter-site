@@ -69,7 +69,7 @@ still sitting there.
 Going from desk to Deck:
 
 1. Finish your session on the desktop. Auto-backup has already taken a version —
-   it checks every 30 seconds and uploads when something changed.
+   it checks every 60 seconds and uploads when something changed.
 2. Pick up the Deck, open the save, hit **Restore** on the newest version.
 3. Play.
 

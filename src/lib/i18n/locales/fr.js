@@ -59,7 +59,7 @@ export default {
       {
         label: '02 · AUTO-BACKUP',
         h3Html: "ACTIVEZ L'AUTO",
-        bodyHtml: "Checkpoint64 vérifie votre dossier toutes les 30 secondes. Quelque chose a changé ? Il attend que le jeu finisse d'écrire, puis envoie une nouvelle version tout seul. Seuls les fichiers modifiés sont transmis — le reste est ignoré.",
+        bodyHtml: "Checkpoint64 vérifie votre dossier toutes les 60 secondes. Quelque chose a changé ? Il attend que le jeu finisse d'écrire, puis envoie une nouvelle version tout seul. Seuls les fichiers modifiés sont transmis — le reste est ignoré.",
       },
       {
         label: '03 · RESTAURER',
@@ -231,7 +231,7 @@ export default {
     h2Html: 'QUESTIONS <span class="accent">FRÉQUENTES.</span>',
     items: [
       { q: "QU'EST-CE QUI COMPTE COMME « SAUVEGARDE » ?", a: "Tout ce que votre jeu écrit sur votre disque dur. Checkpoint64 traite les fichiers d'un dossier comme une seule sauvegarde et les protège ensemble. Des préréglages pour 140+ jeux (et sept émulateurs) font la configuration pour vous ; pour le reste, pointez le dossier et choisissez les fichiers vous-même." },
-      { q: 'ENVOYEZ-VOUS PENDANT QUE LE JEU TOURNE ?', a: "Oui, avec précaution. Checkpoint64 ne verrouille jamais vos fichiers. Il vérifie le dossier toutes les 30 secondes ; si le jeu est en train de sauvegarder, il attend que ça se calme et réessaie — aucun fichier corrompu, aucune saccade. L'appli somnole entre deux vérifications : vous ne la remarquerez pas en jouant." },
+      { q: 'ENVOYEZ-VOUS PENDANT QUE LE JEU TOURNE ?', a: "Oui, avec précaution. Checkpoint64 ne verrouille jamais vos fichiers. Il vérifie le dossier toutes les 60 secondes ; si le jeu est en train de sauvegarder, il attend que ça se calme et réessaie — aucun fichier corrompu, aucune saccade. L'appli somnole entre deux vérifications : vous ne la remarquerez pas en jouant." },
       { q: 'ET SI MON PARTENAIRE CO-OP ÉCRASE MON ENVOI ?', a: "Il ne peut pas, c'est voulu. Seule la personne qui tient le verrou peut envoyer. Pour pousser sa version, il doit d'abord reprendre le verrou — ce qui vous prévient, et s'inscrit dans le journal au vu de tous. Au pire, votre version reste à un clic de Restaurer dans l'historique." },
       { q: "AI-JE ENCORE BESOIN D'UN SERVEUR DÉDIÉ ?", a: "Pour la plupart des groupes, non. Tout l'intérêt d'un serveur dédié est de garder votre monde en ligne quand le PC de l'hôte est éteint. Checkpoint64 couvre environ 90 % de ça pour un paiement unique : celui qui veut jouer prend le verrou, joue sa session, puis repousse la sauvegarde. Un groupe co-op typique économise {0} par rapport à un serveur 24/7 qui reste inactif 18 heures par jour." },
       { q: 'ÇA MARCHE AVEC LES ÉMULATEURS OU LES SAUVEGARDES CONSOLE ?', a: "Les émulateurs, carrément — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 et Cemu ont tous leur préréglage : vos save states ont enfin un vrai historique de versions. Les sauvegardes console ne marchent que si vous les amenez d'abord sur un PC. L'appli elle-même tourne sur Windows, macOS (Apple Silicon) et Linux." },
@@ -294,7 +294,7 @@ export default {
     orgDescription: "Checkpoint64 conçoit un outil de backup de sauvegardes pour les joueurs PC — backups cloud automatiques, historique complet des versions et verrous co-op pour que les amis partagent des mondes sans s'écraser.",
     softwareDescription: "Backup cloud automatique, historique complet des versions et verrous co-op pour les sauvegardes de jeux PC. Plan gratuit inclus ; payez une fois pour plus d'espace. Compatible d'emblée avec Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 140+ autres jeux et 7 émulateurs.",
     featureList: [
-      'Backups automatiques en arrière-plan toutes les 30 secondes',
+      'Backups automatiques en arrière-plan toutes les 60 secondes',
       'Historique complet des versions avec restauration en un clic',
       'Verrous co-op appliqués côté serveur — un seul détenteur du monde à la fois',
       'Envois dédupliqués — seuls les fichiers modifiés sont transmis',
@@ -312,12 +312,12 @@ export default {
     howToTool: 'Application de bureau Checkpoint64',
     howToSteps: [
       { name: 'Envoyez votre sauvegarde', text: 'Pointez Checkpoint64 vers le dossier dans lequel votre jeu sauvegarde. Cliquez sur Envoyer pour transmettre un instantané au cloud — ce sera la version un.' },
-      { name: "Activez l'auto-backup", text: "Activez l'auto-backup. Checkpoint64 vérifie le dossier toutes les 30 secondes et envoie une nouvelle version dès que quelque chose a changé. Seuls les fichiers modifiés sont transmis." },
+      { name: "Activez l'auto-backup", text: "Activez l'auto-backup. Checkpoint64 vérifie le dossier toutes les 60 secondes et envoie une nouvelle version dès que quelque chose a changé. Seuls les fichiers modifiés sont transmis." },
       { name: 'Restaurez une version antérieure', text: "Ouvrez Versions sur n'importe quelle sauvegarde pour voir tout l'historique. Choisissez-en une et cliquez sur Restaurer pour revenir en arrière instantanément — les fichiers reviennent sur le disque et cette version devient l'actuelle." },
     ],
     faq: [
       { q: "Qu'est-ce qui compte comme « sauvegarde » ?", a: "Tout ce que votre jeu écrit sur votre disque dur. Checkpoint64 traite les fichiers d'un dossier comme une seule sauvegarde et les protège ensemble. Des préréglages pour 140+ jeux (et sept émulateurs) font la configuration pour vous ; pour le reste, pointez le dossier et choisissez les fichiers vous-même." },
-      { q: 'Envoyez-vous pendant que le jeu tourne ?', a: "Oui, avec précaution. Checkpoint64 ne verrouille jamais vos fichiers. Il vérifie le dossier toutes les 30 secondes ; si le jeu est en train de sauvegarder, il attend que ça se calme et réessaie — aucun fichier corrompu, aucune saccade. L'appli somnole entre deux vérifications : vous ne la remarquerez pas en jouant." },
+      { q: 'Envoyez-vous pendant que le jeu tourne ?', a: "Oui, avec précaution. Checkpoint64 ne verrouille jamais vos fichiers. Il vérifie le dossier toutes les 60 secondes ; si le jeu est en train de sauvegarder, il attend que ça se calme et réessaie — aucun fichier corrompu, aucune saccade. L'appli somnole entre deux vérifications : vous ne la remarquerez pas en jouant." },
       { q: 'Et si mon partenaire co-op écrase mon envoi ?', a: "Il ne peut pas, c'est voulu. Seule la personne qui tient le verrou peut envoyer. Pour pousser sa version, il doit d'abord reprendre le verrou — ce qui vous prévient, et s'inscrit dans le journal au vu de tous. Au pire, votre version reste à un clic de Restaurer dans l'historique." },
       { q: "Ai-je encore besoin d'un serveur dédié ?", a: "Pour la plupart des groupes, non. Tout l'intérêt d'un serveur dédié est de garder votre monde en ligne quand le PC de l'hôte est éteint. Checkpoint64 couvre environ 90 % de ça pour un paiement unique : celui qui veut jouer prend le verrou, joue sa session, puis repousse la sauvegarde. Un groupe co-op typique économise {0} par rapport à un serveur 24/7 qui reste inactif 18 heures par jour." },
       { q: 'Ça marche avec les émulateurs ou les sauvegardes console ?', a: "Les émulateurs, carrément — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 et Cemu ont tous leur préréglage : vos save states ont enfin un vrai historique de versions. Les sauvegardes console ne marchent que si vous les amenez d'abord sur un PC. L'appli elle-même tourne sur Windows, macOS (Apple Silicon) et Linux." },

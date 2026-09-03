@@ -41,5 +41,5 @@ The other half is SMAPI. Update or remove a mod mid-playthrough and your save ca
 ## How Checkpoint64 backs up Stardew Valley
 
 1. **Pick Stardew Valley.** The Saves folder is already known on all three platforms.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version, sending only what changed.
 3. **Restore a farm in one click.** Open Versions, pick the one from before the mistake or the mod update, and Restore.

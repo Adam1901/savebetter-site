@@ -39,5 +39,5 @@ For a small group, Checkpoint64 covers most of what a rented dedicated server is
 ## How Checkpoint64 backs up Sons of the Forest
 
 1. **Pick Sons of the Forest.** The LocalLow save path is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the crash, and Restore.

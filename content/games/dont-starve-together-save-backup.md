@@ -39,5 +39,5 @@ DST has one live world at a time, and whoever's hosting holds the only current c
 ## How Checkpoint64 backs up Don't Starve Together
 
 1. **Pick Don't Starve Together.** The cluster folder is already known on all three platforms.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed cluster and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed cluster and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the crash, and Restore.

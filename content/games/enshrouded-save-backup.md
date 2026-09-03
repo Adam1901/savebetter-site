@@ -35,7 +35,7 @@ Early Access means [world-format changes between updates](../blog/anatomy-of-a-s
 ## How Checkpoint64 backs up Enshrouded
 
 1. **Pick Enshrouded.** The Saved Games path is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed world and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed world and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the crash or the update, and Restore.
 
 For the deeper comparison against renting a real dedicated server, see the [dedicated server alternative guide](../dedicated-server-alternative/).

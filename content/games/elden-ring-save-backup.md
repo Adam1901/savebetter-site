@@ -41,5 +41,5 @@ Modded runs get the same treatment — Checkpoint64 backs up the `.co2` save the
 ## How Checkpoint64 backs up Elden Ring
 
 1. **Pick Elden Ring.** The save path — Steam ID subfolder included — is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick the save from before the sync issue or the commitment you regret, and Restore.

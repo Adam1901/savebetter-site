@@ -59,7 +59,7 @@ export default {
       {
         label: '02 · AUTO-BACKUP',
         h3Html: 'ACTIVA EL AUTO',
-        bodyHtml: 'Checkpoint64 revisa tu carpeta cada 30 segundos. ¿Algo cambió? Espera a que el juego termine de escribir y sube una versión nueva por su cuenta. Solo se envían los archivos modificados — el resto se omite.',
+        bodyHtml: 'Checkpoint64 revisa tu carpeta cada 60 segundos. ¿Algo cambió? Espera a que el juego termine de escribir y sube una versión nueva por su cuenta. Solo se envían los archivos modificados — el resto se omite.',
       },
       {
         label: '03 · RESTAURAR',
@@ -231,7 +231,7 @@ export default {
     h2Html: 'PREGUNTAS <span class="accent">FRECUENTES.</span>',
     items: [
       { q: '¿QUÉ CUENTA COMO «PARTIDA»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 140+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
-      { q: '¿SUBÍS MIENTRAS EL JUEGO ESTÁ ABIERTO?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 30 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
+      { q: '¿SUBÍS MIENTRAS EL JUEGO ESTÁ ABIERTO?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 60 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
       { q: '¿Y SI MI COMPAÑERO DE CO-OP SOBRESCRIBE MI SUBIDA?', a: 'No puede, a propósito. Solo quien tiene el bloqueo puede subir. Para empujar su versión tiene que tomar el bloqueo primero — lo que te avisa, y queda en la bitácora a la vista de todos. En el peor de los casos, tu versión está a un Restaurar de distancia en el historial.' },
       { q: '¿SIGO NECESITANDO UN SERVIDOR DEDICADO?', a: 'Para la mayoría de los grupos, no. Todo el sentido de un servidor dedicado es mantener tu mundo en línea cuando el PC del anfitrión está apagado. Checkpoint64 cubre alrededor del 90 % de eso por una tarifa única: quien quiera jugar toma el bloqueo, juega su sesión y devuelve la partida. Un grupo de co-op típico ahorra {0} frente a alquilar un servidor 24/7 que está parado 18 horas al día.' },
       { q: '¿FUNCIONA CON EMULADORES O PARTIDAS DE CONSOLA?', a: 'Con emuladores, totalmente — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 y Cemu tienen preajuste, así que tus save states por fin tienen historial de versiones de verdad. Las partidas de consola solo funcionan si primero las llevas a un PC. La app corre en Windows, macOS (Apple Silicon) y Linux.' },
@@ -294,7 +294,7 @@ export default {
     orgDescription: 'Checkpoint64 crea una herramienta de backup de partidas para jugadores de PC — backups automáticos en la nube, historial completo de versiones y bloqueos co-op para que los amigos compartan mundos sin sobrescribirse.',
     softwareDescription: 'Backup automático en la nube, historial completo de versiones y bloqueos co-op para partidas de PC. Plan gratis incluido; paga una vez por más espacio. Funciona de fábrica con Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, más 140+ juegos y 7 emuladores.',
     featureList: [
-      'Backups automáticos en segundo plano cada 30 segundos',
+      'Backups automáticos en segundo plano cada 60 segundos',
       'Historial completo de versiones con restauración en un clic',
       'Bloqueos co-op aplicados en el servidor — un solo portador del mundo a la vez',
       'Subidas deduplicadas — solo se envían los archivos que cambiaron',
@@ -312,12 +312,12 @@ export default {
     howToTool: 'App de escritorio Checkpoint64',
     howToSteps: [
       { name: 'Sube tu partida', text: 'Apunta Checkpoint64 a la carpeta donde tu juego guarda. Pulsa Subir para enviar una instantánea a la nube — esa será la versión uno.' },
-      { name: 'Activa el auto-backup', text: 'Activa el auto-backup. Checkpoint64 revisa la carpeta cada 30 segundos y sube una versión nueva en cuanto algo cambia. Solo se envían los archivos que cambiaron.' },
+      { name: 'Activa el auto-backup', text: 'Activa el auto-backup. Checkpoint64 revisa la carpeta cada 60 segundos y sube una versión nueva en cuanto algo cambia. Solo se envían los archivos que cambiaron.' },
       { name: 'Restaura cualquier versión anterior', text: 'Abre Versiones en cualquier partida para ver el historial completo. Elige una y pulsa Restaurar para volver atrás al instante — los archivos vuelven al disco y esa versión pasa a ser la actual.' },
     ],
     faq: [
       { q: '¿Qué cuenta como «partida»?', a: 'Todo lo que tu juego escribe en el disco duro. Checkpoint64 trata los archivos de una carpeta como una sola partida y los respalda juntos. Los preajustes para 140+ juegos (y siete emuladores) lo configuran por ti; para cualquier otro, apunta a la carpeta y elige los archivos tú mismo.' },
-      { q: '¿Subís mientras el juego está abierto?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 30 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
+      { q: '¿Subís mientras el juego está abierto?', a: 'Sí, con cuidado. Checkpoint64 nunca bloquea tus archivos. Revisa la carpeta cada 60 segundos; si el juego está guardando, espera a que haya calma y vuelve a intentarlo — sin archivos rotos, sin tirones. La app dormita entre revisiones: no la notarás mientras juegas.' },
       { q: '¿Y si mi compañero de co-op sobrescribe mi subida?', a: 'No puede, a propósito. Solo quien tiene el bloqueo puede subir. Para empujar su versión tiene que tomar el bloqueo primero — lo que te avisa, y queda en la bitácora a la vista de todos. En el peor de los casos, tu versión está a un Restaurar de distancia en el historial.' },
       { q: '¿Sigo necesitando un servidor dedicado?', a: 'Para la mayoría de los grupos, no. Todo el sentido de un servidor dedicado es mantener tu mundo en línea cuando el PC del anfitrión está apagado. Checkpoint64 cubre alrededor del 90 % de eso por una tarifa única: quien quiera jugar toma el bloqueo, juega su sesión y devuelve la partida. Un grupo de co-op típico ahorra {0} frente a alquilar un servidor 24/7 que está parado 18 horas al día.' },
       { q: '¿Funciona con emuladores o partidas de consola?', a: 'Con emuladores, totalmente — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 y Cemu tienen preajuste, así que tus save states por fin tienen historial de versiones de verdad. Las partidas de consola solo funcionan si primero las llevas a un PC. La app corre en Windows, macOS (Apple Silicon) y Linux.' },

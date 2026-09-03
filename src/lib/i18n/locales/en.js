@@ -60,7 +60,7 @@ export default {
       {
         label: '02 · AUTO-BACKUP',
         h3Html: 'FLIP AUTO ON',
-        bodyHtml: 'Checkpoint64 checks your save folder every 30 seconds. If something changed, it waits for the game to finish writing, then uploads a fresh version on its own. Only the changed files get sent — the rest is skipped.',
+        bodyHtml: 'Checkpoint64 checks your save folder every 60 seconds. If something changed, it waits for the game to finish writing, then uploads a fresh version on its own. Only the changed files get sent — the rest is skipped.',
       },
       {
         label: '03 · RESTORE',
@@ -237,7 +237,7 @@ export default {
     // `a` values are raw HTML; item index 3 uses {0} for the savings figure.
     items: [
       { q: "WHAT COUNTS AS A 'SAVE'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 140+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
-      { q: 'DO YOU UPLOAD WHILE THE GAME IS RUNNING?', a: 'Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won’t notice it while playing.' },
+      { q: 'DO YOU UPLOAD WHILE THE GAME IS RUNNING?', a: 'Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 60 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won’t notice it while playing.' },
       { q: 'WHAT IF MY CO-OP PARTNER OVERWRITES MY UPLOAD?', a: 'They can’t, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history.' },
       { q: 'DO I STILL NEED A DEDICATED SERVER?', a: 'For most groups, no. The whole point of a dedicated server is keeping your world online when the host’s PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day.' },
       { q: 'DOES THIS WORK FOR EMULATORS OR CONSOLE SAVES?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
@@ -300,7 +300,7 @@ export default {
     orgDescription: 'Checkpoint64 makes a save-file backup tool for PC gamers — automatic cloud backups, full version history, and co-op locks so friends can share worlds without overwriting each other.',
     softwareDescription: 'Automatic cloud backup, full version history, and co-op locks for PC game saves. Free plan included; pay once for more space. Works with Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim, plus 140+ more games and 7 emulators out of the box.',
     featureList: [
-      'Automatic background backups every 30 seconds',
+      'Automatic background backups every 60 seconds',
       'Full version history with one-click restore',
       'Server-enforced co-op locks — one world holder at a time',
       'Deduplicated uploads — only the files that changed are sent',
@@ -318,14 +318,14 @@ export default {
     howToTool: 'Checkpoint64 desktop app',
     howToSteps: [
       { name: 'Upload your save', text: 'Point Checkpoint64 at the folder your game writes saves to. Hit Upload to send a snapshot to the cloud — that becomes version one.' },
-      { name: 'Turn on auto-backup', text: 'Flip auto-backup on. Checkpoint64 checks the folder every 30 seconds and uploads a fresh version whenever something changed. Only the files that changed are sent.' },
+      { name: 'Turn on auto-backup', text: 'Flip auto-backup on. Checkpoint64 checks the folder every 60 seconds and uploads a fresh version whenever something changed. Only the files that changed are sent.' },
       { name: 'Restore any past version', text: 'Open Versions on any save to see the full history. Pick one and click Restore to roll back instantly — the files go back on disk and that version becomes current.' },
     ],
     // Plain-text FAQ for the FAQPage block. Mirrors the visible FAQ; index 3
     // takes the savings figure as {0}.
     faq: [
       { q: "What counts as a 'save'?", a: 'Whatever your game writes to your hard drive. Checkpoint64 treats the files in a folder as one save and backs them up together. Presets for 140+ games (and seven emulators) set this up for you; for anything else, point at the folder and pick the files yourself.' },
-      { q: 'Do you upload while the game is running?', a: "Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 30 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won't notice it while playing." },
+      { q: 'Do you upload while the game is running?', a: "Yes, carefully. Checkpoint64 never locks your save files. It checks the folder every 60 seconds; if the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter. The app naps between checks, so you won't notice it while playing." },
       { q: 'What if my co-op partner overwrites my upload?', a: "They can't, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history." },
       { q: 'Do I still need a dedicated server?', a: "For most groups, no. The whole point of a dedicated server is keeping your world online when the host's PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day." },
       { q: 'Does this work for emulators or console saves?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
