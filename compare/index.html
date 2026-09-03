@@ -272,7 +272,7 @@
         "name": "What's the difference between Checkpoint64 and GameSave Manager or Ludusavi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what's automatic and what's shared: Checkpoint64 versions every save on its own every 30 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can't be overwritten by two people at once."
+          "text": "Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what's automatic and what's shared: Checkpoint64 versions every save on its own every 60 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can't be overwritten by two people at once."
         }
       }
     ]
@@ -359,7 +359,7 @@
 <tbody><tr>
 <td><strong>Versioning</strong></td>
 <td>Manual or scheduled runs</td>
-<td>Automatic, every 30 seconds</td>
+<td>Automatic, every 60 seconds</td>
 </tr>
 <tr>
 <td><strong>Cloud storage</strong></td>
@@ -389,7 +389,7 @@
 <h2 id="how-checkpoint64-covers-the-gap">How Checkpoint64 covers the gap</h2>
 <ol>
 <li><strong>Install it and point it at your save folder.</strong> Presets for <a href="../saves/">140+ games</a> and <a href="../emulator-save-backup/">7 emulators</a> already know where to look.</li>
-<li><strong>Turn on auto-backup.</strong> Every 30 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.</li>
+<li><strong>Turn on auto-backup.</strong> Every 60 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.</li>
 <li><strong>Roll back whenever something goes wrong.</strong> Open Versions, pick a save from before the problem, and Restore.</li>
 </ol>
 
@@ -410,7 +410,7 @@
           </details>
           <details class="guide-faq-item">
             <summary>What&#39;s the difference between Checkpoint64 and GameSave Manager or Ludusavi?</summary>
-            <p>Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what&#39;s automatic and what&#39;s shared: Checkpoint64 versions every save on its own every 30 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can&#39;t be overwritten by two people at once.</p>
+            <p>Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what&#39;s automatic and what&#39;s shared: Checkpoint64 versions every save on its own every 60 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can&#39;t be overwritten by two people at once.</p>
           </details>
         </section>
         <aside class="guide-cta">
