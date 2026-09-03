@@ -39,7 +39,7 @@ Both problems have the same answer: a save you kept from before things went wron
 ## How Checkpoint64 backs up Skyrim
 
 1. **Pick Skyrim Special Edition.** Checkpoint64 already knows the save folder — no path hunting.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version. Only what changed is sent, so a big save folder stays light.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version. Only what changed is sent, so a big save folder stays light.
 3. **Roll back when a mod betrays you.** Open Versions, pick a healthy save from before the load-order change, and Restore. The `.ess` and its `.skse` go back on disk, and you're playing again.
 
 If you run mods across several games, the [modded game save backup guide](../modded-game-save-backup/) covers the same rollback approach for the rest of your library.

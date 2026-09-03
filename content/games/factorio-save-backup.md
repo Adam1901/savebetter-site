@@ -39,5 +39,5 @@ Factorio has exactly one live save at a time, same as Valheim: whoever's hosting
 ## How Checkpoint64 backs up Factorio
 
 1. **Pick Factorio.** The saves folder is already known on all three platforms.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the disaster, and Restore.

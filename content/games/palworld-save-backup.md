@@ -39,5 +39,5 @@ Palworld has exactly one live world file at a time, same as Valheim or Factorio 
 ## How Checkpoint64 backs up Palworld
 
 1. **Pick Palworld.** The SaveGames path is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed world and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed world and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the crash, and Restore.

@@ -51,5 +51,5 @@ Because every version lives in your account, your states aren't stuck on one mac
 ## How to back up your emulator saves
 
 1. **Pick your emulator.** The preset for the seven supported emulators already knows the folder; for anything else, point it yourself.
-2. **Turn on auto-backup.** Every 30 seconds Checkpoint64 checks for a changed state and uploads a new version — only what changed is sent.
+2. **Turn on auto-backup.** Every 60 seconds Checkpoint64 checks for a changed state and uploads a new version — only what changed is sent.
 3. **Roll back or move machines.** Open Versions to restore an earlier state, or restore the latest on a different PC.

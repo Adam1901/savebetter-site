@@ -39,5 +39,5 @@ Like most survival co-op games, 7 Days to Die groups usually run on one live wor
 ## How Checkpoint64 backs up 7 Days to Die
 
 1. **Pick 7 Days to Die.** The Saves folder is already known on all three platforms.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed world and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed world and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the update or the corruption, and Restore.

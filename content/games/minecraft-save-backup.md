@@ -41,5 +41,5 @@ Checkpoint64 has presets for the vanilla launcher and those modpack launchers, a
 ## How Checkpoint64 backs up Minecraft
 
 1. **Pick Minecraft (Java)** — or your modpack launcher. The save folder is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for changes and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for changes and uploads a new version, sending only what changed.
 3. **Restore a world in one click.** Open Versions, choose a healthy backup, and Restore — the world folder goes back on disk, chunks intact.

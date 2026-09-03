@@ -31,7 +31,7 @@ Drive instead of ours. The engine doesn't change — only where the files land.
 
 Everything that makes the app the app stays exactly the same:
 
-- **Auto-backup every 30 seconds.** It still watches the folder, waits for the
+- **Auto-backup every 60 seconds.** It still watches the folder, waits for the
   game to finish writing, and snapshots on its own.
 - **Only what changed gets sent.** The same deduplication — a 500 MB world
   re-uploads as a few MB after a normal session. Your Drive fills up slowly, not

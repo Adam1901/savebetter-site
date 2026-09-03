@@ -56,5 +56,5 @@ You need more the moment any of these is true:
 ## How to replace Steam Cloud with Checkpoint64
 
 1. **Install Checkpoint64 and pick your game.** Presets for 140+ games already know where the save folder is.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version. Only the files that changed are sent, so it stays light.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version. Only the files that changed are sent, so it stays light.
 3. **Roll back whenever you need to.** Open Versions, choose a past save, and Restore. That's the button Steam Cloud never gave you.

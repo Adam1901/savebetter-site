@@ -11,7 +11,7 @@ faq:
   - q: "Is Steam Cloud enough, or do I need something else?"
     a: "Steam Cloud is fine for one supported game on one PC with no mods and no disasters. It falls short the moment a game isn't covered, a bad save syncs over a good one, or you play the same save on two machines. Checkpoint64 keeps every version regardless of whether the developer built in cloud support."
   - q: "What's the difference between Checkpoint64 and GameSave Manager or Ludusavi?"
-    a: "Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what's automatic and what's shared: Checkpoint64 versions every save on its own every 30 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can't be overwritten by two people at once."
+    a: "Those tools are genuinely good at finding and archiving save files, and Ludusavi can even push to your own cloud storage if you set up rclone for it. The difference is what's automatic and what's shared: Checkpoint64 versions every save on its own every 60 seconds, includes cloud storage with no extra setup, and adds server-enforced locks so a shared save can't be overwritten by two people at once."
 ---
 
 **Every popular way to back up a PC game save is missing the same thing: a real version history.** Copy-paste, syncing with a cloud drive, Steam Cloud, and local tools like GameSave Manager or Ludusavi each protect against something — but none of them make it easy to roll back to an earlier save. Checkpoint64 adds automatic, versioned backup on top of whichever method you're already using.
@@ -40,7 +40,7 @@ Steam Cloud is automatic and free, but it's opt-in per game — plenty of titles
 
 |  | Local backup tools | Checkpoint64 |
 |---|---|---|
-| **Versioning** | Manual or scheduled runs | Automatic, every 30 seconds |
+| **Versioning** | Manual or scheduled runs | Automatic, every 60 seconds |
 | **Cloud storage** | Bring your own setup (e.g. Ludusavi + rclone) | Built in |
 | **Shared / co-op saves** | Single-user | Server-enforced locks — one holder at a time |
 | **Setup** | Configure per game | Presets for 140+ games, 7 emulators |
@@ -59,5 +59,5 @@ Where all four run out of road at the same point: a save gets [corrupted](../blo
 ## How Checkpoint64 covers the gap
 
 1. **Install it and point it at your save folder.** Presets for [140+ games](../saves/) and [7 emulators](../emulator-save-backup/) already know where to look.
-2. **Turn on auto-backup.** Every 30 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.
+2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.
 3. **Roll back whenever something goes wrong.** Open Versions, pick a save from before the problem, and Restore.

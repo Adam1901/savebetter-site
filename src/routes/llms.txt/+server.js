@@ -57,7 +57,7 @@ Portuguese, and Russian.
 
 ## What it does
 
-- **Automatic cloud backups.** Point Checkpoint64 at a save folder. Every 30 seconds it
+- **Automatic cloud backups.** Point Checkpoint64 at a save folder. Every 60 seconds it
   checks for changes, waits for the game to finish writing, and uploads a fresh version.
   Only the files that changed are sent — unchanged files (even renamed ones) cost nothing
   extra.

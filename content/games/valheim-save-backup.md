@@ -43,5 +43,5 @@ Valheim writes a single `.db.old` fallback. It's one generation deep — one cra
 ## How Checkpoint64 backs up Valheim
 
 1. **Pick Valheim.** The `worlds_local` path — LocalLow and all — is already known.
-2. **Turn on auto-backup.** Every 30 seconds it checks for changes and uploads a new version, sending only what changed.
+2. **Turn on auto-backup.** Every 60 seconds it checks for changes and uploads a new version, sending only what changed.
 3. **Restore, or hand off, in one click.** Open Versions to roll back, or pass the lock so a teammate can carry the world forward.

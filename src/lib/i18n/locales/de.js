@@ -59,7 +59,7 @@ export default {
       {
         label: '02 · AUTO-BACKUP',
         h3Html: 'AUTO EINSCHALTEN',
-        bodyHtml: 'Checkpoint64 prüft deinen Ordner alle 30 Sekunden. Hat sich etwas geändert, wartet es, bis das Spiel fertig geschrieben hat, und lädt dann von selbst eine neue Version hoch. Nur die geänderten Dateien werden gesendet — der Rest wird übersprungen.',
+        bodyHtml: 'Checkpoint64 prüft deinen Ordner alle 60 Sekunden. Hat sich etwas geändert, wartet es, bis das Spiel fertig geschrieben hat, und lädt dann von selbst eine neue Version hoch. Nur die geänderten Dateien werden gesendet — der Rest wird übersprungen.',
       },
       {
         label: '03 · WIEDERHERSTELLEN',
@@ -231,7 +231,7 @@ export default {
     h2Html: 'HÄUFIG <span class="accent">GEPRÜFT.</span>',
     items: [
       { q: 'WAS ZÄHLT ALS „SPIELSTAND"?', a: 'Alles, was dein Spiel auf die Festplatte schreibt. Checkpoint64 behandelt die Dateien in einem Ordner als einen Spielstand und sichert sie gemeinsam. Vorlagen für 140+ Spiele (und sieben Emulatoren) richten das für dich ein; für alles andere zeigst du auf den Ordner und wählst die Dateien selbst.' },
-      { q: 'LADET IHR HOCH, WÄHREND DAS SPIEL LÄUFT?', a: 'Ja, behutsam. Checkpoint64 sperrt deine Spielstand-Dateien nie. Es prüft den Ordner alle 30 Sekunden; speichert das Spiel gerade, wartet es, bis Ruhe ist, und versucht es erneut — keine kaputten Dateien, kein Ruckeln. Zwischen den Prüfungen döst die App, du merkst sie beim Spielen nicht.' },
+      { q: 'LADET IHR HOCH, WÄHREND DAS SPIEL LÄUFT?', a: 'Ja, behutsam. Checkpoint64 sperrt deine Spielstand-Dateien nie. Es prüft den Ordner alle 60 Sekunden; speichert das Spiel gerade, wartet es, bis Ruhe ist, und versucht es erneut — keine kaputten Dateien, kein Ruckeln. Zwischen den Prüfungen döst die App, du merkst sie beim Spielen nicht.' },
       { q: 'WAS, WENN MEIN CO-OP-PARTNER MEINEN UPLOAD ÜBERSCHREIBT?', a: 'Das geht nicht, mit Absicht. Nur wer die Sperre hält, kann hochladen. Wer seine Version pushen will, muss erst die Sperre übernehmen — das warnt dich und landet für alle sichtbar im Logbuch. Schlimmster Fall: Deine Version ist im Verlauf nur ein Wiederherstellen entfernt.' },
       { q: 'BRAUCHE ICH NOCH EINEN DEDIZIERTEN SERVER?', a: 'Für die meisten Gruppen nein. Der ganze Sinn eines dedizierten Servers ist, deine Welt online zu halten, wenn der PC des Hosts aus ist. Checkpoint64 deckt davon etwa 90 % für eine einmalige Gebühr ab: Wer spielen will, schnappt sich die Sperre, spielt seine Session und schiebt den Spielstand zurück. Eine typische co-op-Gruppe spart {0} gegenüber einem 24/7-Server, der 18 Stunden am Tag leer steht.' },
       { q: 'FUNKTIONIERT DAS MIT EMULATOREN ODER KONSOLEN-SPIELSTÄNDEN?', a: 'Emulatoren, absolut — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 und Cemu haben alle Vorlagen, deine Save-States bekommen also endlich echten Versionsverlauf. Konsolen-Spielstände funktionieren nur, wenn du sie erst auf einen PC bekommst. Die App selbst läuft auf Windows, macOS (Apple Silicon) und Linux.' },
@@ -295,7 +295,7 @@ export default {
     orgDescription: 'Checkpoint64 entwickelt ein Spielstand-Backup-Tool für PC-Gamer — automatische Cloud-Backups, voller Versionsverlauf und co-op-Sperren, damit Freunde Welten teilen, ohne sich gegenseitig zu überschreiben.',
     softwareDescription: 'Automatisches Cloud-Backup, voller Versionsverlauf und co-op-Sperren für PC-Spielstände. Gratis-Plan inklusive; einmal zahlen für mehr Platz. Funktioniert von Haus aus mit Minecraft, Stardew Valley, Skyrim, Palworld, Elden Ring, Factorio, Valheim sowie 140+ weiteren Spielen und 7 Emulatoren.',
     featureList: [
-      'Automatische Hintergrund-Backups alle 30 Sekunden',
+      'Automatische Hintergrund-Backups alle 60 Sekunden',
       'Voller Versionsverlauf mit Ein-Klick-Wiederherstellung',
       'Serverseitig erzwungene co-op-Sperren — immer nur ein Welt-Halter',
       'Deduplizierte Uploads — nur die geänderten Dateien werden gesendet',
@@ -313,12 +313,12 @@ export default {
     howToTool: 'Checkpoint64 Desktop-App',
     howToSteps: [
       { name: 'Lade deinen Spielstand hoch', text: 'Zeig Checkpoint64 auf den Ordner, in den dein Spiel speichert. Drück Hochladen, um einen Schnappschuss in die Cloud zu senden — das wird Version eins.' },
-      { name: 'Schalte Auto-Backup ein', text: 'Schalte Auto-Backup ein. Checkpoint64 prüft den Ordner alle 30 Sekunden und lädt eine neue Version hoch, sobald sich etwas geändert hat. Nur die geänderten Dateien werden gesendet.' },
+      { name: 'Schalte Auto-Backup ein', text: 'Schalte Auto-Backup ein. Checkpoint64 prüft den Ordner alle 60 Sekunden und lädt eine neue Version hoch, sobald sich etwas geändert hat. Nur die geänderten Dateien werden gesendet.' },
       { name: 'Stelle jede frühere Version wieder her', text: 'Öffne bei jedem Spielstand „Versionen", um den ganzen Verlauf zu sehen. Wähl eine und klick Wiederherstellen, um sofort zurückzurollen — die Dateien landen wieder auf der Platte, und diese Version wird aktuell.' },
     ],
     faq: [
       { q: 'Was zählt als „Spielstand"?', a: 'Alles, was dein Spiel auf die Festplatte schreibt. Checkpoint64 behandelt die Dateien in einem Ordner als einen Spielstand und sichert sie gemeinsam. Vorlagen für 140+ Spiele (und sieben Emulatoren) richten das für dich ein; für alles andere zeigst du auf den Ordner und wählst die Dateien selbst.' },
-      { q: 'Ladet ihr hoch, während das Spiel läuft?', a: 'Ja, behutsam. Checkpoint64 sperrt deine Spielstand-Dateien nie. Es prüft den Ordner alle 30 Sekunden; speichert das Spiel gerade, wartet es, bis Ruhe ist, und versucht es erneut — keine kaputten Dateien, kein Ruckeln. Zwischen den Prüfungen döst die App, du merkst sie beim Spielen nicht.' },
+      { q: 'Ladet ihr hoch, während das Spiel läuft?', a: 'Ja, behutsam. Checkpoint64 sperrt deine Spielstand-Dateien nie. Es prüft den Ordner alle 60 Sekunden; speichert das Spiel gerade, wartet es, bis Ruhe ist, und versucht es erneut — keine kaputten Dateien, kein Ruckeln. Zwischen den Prüfungen döst die App, du merkst sie beim Spielen nicht.' },
       { q: 'Was, wenn mein co-op-Partner meinen Upload überschreibt?', a: 'Das geht nicht, mit Absicht. Nur wer die Sperre hält, kann hochladen. Wer seine Version pushen will, muss erst die Sperre übernehmen — das warnt dich und landet für alle sichtbar im Logbuch. Schlimmster Fall: Deine Version ist im Verlauf nur ein Wiederherstellen entfernt.' },
       { q: 'Brauche ich noch einen dedizierten Server?', a: 'Für die meisten Gruppen nein. Der ganze Sinn eines dedizierten Servers ist, deine Welt online zu halten, wenn der PC des Hosts aus ist. Checkpoint64 deckt davon etwa 90 % für eine einmalige Gebühr ab: Wer spielen will, schnappt sich die Sperre, spielt seine Session und schiebt den Spielstand zurück. Eine typische co-op-Gruppe spart {0} gegenüber einem 24/7-Server, der 18 Stunden am Tag leer steht.' },
       { q: 'Funktioniert das mit Emulatoren oder Konsolen-Spielständen?', a: 'Emulatoren, absolut — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3 und Cemu haben alle Vorlagen, deine Save-States bekommen also endlich echten Versionsverlauf. Konsolen-Spielstände funktionieren nur, wenn du sie erst auf einen PC bekommst. Die App selbst läuft auf Windows, macOS (Apple Silicon) und Linux.' },
