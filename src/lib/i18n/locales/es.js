@@ -64,10 +64,10 @@ export default {
       {
         label: '03 · RESTAURAR',
         h3Html: 'VUELVE ATRÁS',
-        bodyHtml: 'Pulsa <b>Versiones →</b> en cualquier partida para ver todas las copias. Elige una y pulsa <b>Restaurar</b> — Checkpoint64 devuelve los archivos y marca esa versión como la actual. Tu error de las 2 de la mañana se arregla en 30 segundos.',
+        bodyHtml: 'Pulsa <b>Versiones →</b> en cualquier partida para ver todas las copias. Elige una y pulsa <b>Restaurar</b> — Checkpoint64 devuelve los archivos y marca esa versión como la actual. Tu error de las 2 de la mañana se arregla en 60 segundos.',
       },
     ],
-    autoMeta: 'revisa cada 30 s · solo sube lo que cambió',
+    autoMeta: 'revisa cada 60 s · solo sube lo que cambió',
   },
 
   shelf: {
@@ -115,7 +115,7 @@ export default {
       'Comparte con todos los fans que quieras, o limita el código y revócalo cuando quieras',
       'Los fans de solo lectura no ocupan plazas de tu equipo',
     ],
-    proNoteHtml: 'Los códigos de acceso alojados son parte de <a href="#pricing">Pro</a>, pensados para creadores, grupos y comunidades de mods.',
+    proNoteTpl: 'Los códigos de acceso alojados son parte de <a href="{0}">Pro</a>, pensados para creadores, grupos y comunidades de mods.',
   },
 
   // Reseñas de Steam. La descripción de la puntuación y el nombre del juego

@@ -5,6 +5,7 @@ import { pageSlugs, loadPage } from '$lib/pages/load.js'
 import { loadDoc } from '$lib/press.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
+import { PAGE_SLUGS } from '$lib/nav.js'
 
 // A file, not a directory — override the global trailingSlash:'always' so the
 // output lands at dist/sitemap.xml (not dist/sitemap.xml/index.html).
@@ -45,10 +46,15 @@ export async function GET() {
     .sort()
     .at(-1)
 
-  const homeAlternates = [
-    ...LOCALES.map((l) => `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code)}"/>`),
-    `      <xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}/"/>`,
+  // hreflang alternates for one page across every locale. The homepage passes
+  // no slug; each product page passes its own, so /de/pricing/ advertises
+  // /fr/pricing/ rather than the French homepage. Built the same way as the
+  // <link rel="alternate"> tags in i18n/head.js so the two cannot disagree.
+  const alternatesFor = (slug = '') => [
+    ...LOCALES.map((l) => `      <xhtml:link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code, slug)}"/>`),
+    `      <xhtml:link rel="alternate" hreflang="x-default" href="${ORIGIN}${pathForLocale('en', slug)}"/>`,
   ].join('\n')
+  const homeAlternates = alternatesFor()
   // No lastmod: the homepage has no single verifiable modification date. Its
   // content comes from locale copy, the build-time release tiles and the Steam
   // review counts, and the logbook strip is mock data — so nothing on the page
@@ -62,8 +68,22 @@ export async function GET() {
     alternates: homeAlternates,
   }))
 
+  // The seven product pages split out of the old single homepage, in every
+  // locale. No lastmod, for the same reason the homepages carry none: their
+  // content comes from locale copy and build-time release data, so nothing on
+  // them maps to a date we can stand behind.
+  const pageUrls = PAGE_SLUGS.flatMap((slug) =>
+    LOCALES.map((l) => ({
+      loc: pathForLocale(l.code, slug),
+      changefreq: 'monthly',
+      priority: l.code === 'en' ? '0.9' : '0.7',
+      alternates: alternatesFor(slug),
+    })),
+  )
+
   const urls = [
     ...homeUrls,
+    ...pageUrls,
     { loc: '/blog/', lastmod: newestPost, changefreq: 'weekly', priority: '0.8' },
     ...posts.map((p) => ({
       loc: `/blog/${p.slug}/`,

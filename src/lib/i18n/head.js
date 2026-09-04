@@ -90,20 +90,28 @@ const THEME_BOOTSTRAP = `    <script>
         })();
     </script>`
 
-// Identical hreflang set on every page (absolute URLs), straight off the
-// registry so it can't drift from sitemap.xml — which builds its own alternates
-// the same way.
-const HREFLANG = [
-  ...LOCALES.map((l) => `    <link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code)}"/>`),
-  `    <link rel="alternate" hreflang="x-default" href="${ORIGIN}/"/>`,
-].join('\n')
+// The hreflang set for one page (absolute URLs), straight off the registry so
+// it can't drift from sitemap.xml — which builds its own alternates the same
+// way.
+// `slug` is '' for the homepage and e.g. 'pricing' for a product page, so
+// /de/pricing/ advertises /fr/pricing/ rather than the French homepage.
+function hreflangFor(slug = '') {
+  return [
+    ...LOCALES.map((l) => `    <link rel="alternate" hreflang="${l.code}" href="${ORIGIN}${pathForLocale(l.code, slug)}"/>`),
+    `    <link rel="alternate" hreflang="x-default" href="${ORIGIN}${pathForLocale('en', slug)}"/>`,
+  ].join('\n')
+}
 
 // The dedicated-server FAQ answer ({0}) as plain text (no <span>) for JSON-LD,
-// in EUR like the rest of the SSR money. Mirrors the visible FAQ's index 3.
-function plainSavings(t, intl) {
-  const lo = formatMoney(120, DEFAULT_CURRENCY, intl)
-  const hi = formatMoney(240, DEFAULT_CURRENCY, intl)
-  return `${lo}–${hi}${t.money.aYear}`
+// in EUR like the rest of the SSR money. Mirrors the visible FAQ's answer.
+// Exported because the FAQPage schema now lives on the pages that actually
+// display those questions (/help/, /how-it-works/, /pricing/, /co-op/) rather
+// than on the homepage, and each of them has to build the same plain text.
+export function plainSavings(locale = 'en') {
+  const L = getLocale(locale)
+  const lo = formatMoney(120, DEFAULT_CURRENCY, L.intl)
+  const hi = formatMoney(240, DEFAULT_CURRENCY, L.intl)
+  return `${lo}–${hi}${L.t.money.aYear}`
 }
 
 // softwareVersion tracks the latest GitHub release, passed in from the page's
@@ -112,8 +120,10 @@ function plainSavings(t, intl) {
 // the fallback for a build where that fetch failed, so keep it roughly current.
 const FALLBACK_VERSION = '1.0'
 
-// The five JSON-LD blocks, regenerated in the target language.
-function jsonLdBlocks({ code, t, intl, version }) {
+// The three site-level JSON-LD blocks, regenerated in the target language.
+// HowTo and FAQPage used to be here too; they moved to /how-it-works/ and the
+// pages that display those questions when the single page became eight.
+function jsonLdBlocks({ code, t, version }) {
   const j = t.jsonld
   // Stable @ids so the three site-level entities read as ONE graph instead of
   // three islands — Google merges cross-referencing @id nodes across separate
@@ -150,7 +160,7 @@ function jsonLdBlocks({ code, t, intl, version }) {
       description: j.softwareDescription,
       image: `${ORIGIN}/og-image.png`,
       softwareVersion: version,
-      downloadUrl: `${ORIGIN}/#download`,
+      downloadUrl: `${ORIGIN}/download/`,
       isAccessibleForFree: true,
       sameAs: [STEAM_STORE_URL, `https://github.com/${REPO}`],
       publisher: { '@id': orgId },
@@ -159,60 +169,91 @@ function jsonLdBlocks({ code, t, intl, version }) {
         price: '0',
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
-        url: `${ORIGIN}/#pricing`,
+        url: `${ORIGIN}/pricing/`,
       },
       featureList: j.featureList,
     },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'HowTo',
-      name: j.howToName,
-      description: j.howToDescription,
-      totalTime: 'PT2M',
-      supply: j.howToSupply.map((name) => ({ '@type': 'HowToSupply', name })),
-      tool: [{ '@type': 'HowToTool', name: j.howToTool }],
-      step: j.howToSteps.map((s, i) => ({
-        '@type': 'HowToStep',
-        position: i + 1,
-        name: s.name,
-        text: s.text,
-        url: `${ORIGIN}/#how`,
-      })),
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: j.faq.map((item, i) => ({
-        '@type': 'Question',
-        name: item.q,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: i === 3 ? fmt(item.a, plainSavings(t, intl)) : item.a,
-        },
-      })),
-    },
   ]
+  return serializeJsonLd(blocks)
+}
+
+// HowTo, for /how-it-works/ — the page that now actually walks through the
+// three steps. It used to sit on the homepage next to the full walkthrough;
+// after the split the homepage only teases those steps, and schema describing
+// content a page does not show is the mismatch Google penalizes.
+export function howToNode(locale = 'en') {
+  const L = getLocale(locale)
+  const j = L.t.jsonld
+  const pageUrl = `${ORIGIN}${pathForLocale(L.code, 'how-it-works')}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: j.howToName,
+    description: j.howToDescription,
+    totalTime: 'PT2M',
+    supply: j.howToSupply.map((name) => ({ '@type': 'HowToSupply', name })),
+    tool: [{ '@type': 'HowToTool', name: j.howToTool }],
+    step: j.howToSteps.map((s, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.name,
+      text: s.text,
+      url: pageUrl,
+    })),
+  }
+}
+
+// The plain-text FAQ pairs behind the FAQPage schema, keyed by question so a
+// page can emit schema for exactly the questions it displays. `t.jsonld.faq` is
+// the plain-text mirror of the visible `t.faq.items`; the savings figure is
+// spliced into whichever answer carries the {0} placeholder rather than a
+// hardcoded index, so reordering the FAQ can no longer put the money in the
+// wrong answer.
+export function faqPairs(locale = 'en') {
+  const L = getLocale(locale)
+  const savings = plainSavings(locale)
+  return L.t.jsonld.faq.map((item) => ({ q: item.q, a: fmt(item.a, savings) }))
+}
+
+// One <script type="application/ld+json"> per node, indented to match the rest
+// of the head. `npm test` parses every one of these back out of dist/, so a
+// block that doesn't round-trip through JSON.parse fails the build.
+function serializeJsonLd(blocks) {
   return blocks
+    .filter(Boolean)
     .map((b) => `    <script type="application/ld+json">\n${JSON.stringify(b, null, 8).replace(/^/gm, '    ')}\n    </script>`)
     .join('\n')
 }
 
-// Full homepage <head> inner HTML for `locale`. `includeAnalytics` is false in
-// dev (pass `!dev` from $app/environment at the call site). `releaseTag` is the
-// build-time GitHub tag ("v1.0.8"); null when that fetch failed.
-export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = null } = {}) {
-  const L = getLocale(locale)
-  const t = L.t
-  const intl = L.intl
-  const code = L.code
-  const ogLocale = L.ogLocale
-  const prefix = code === 'en' ? './' : '../'
-  const pageUrl = `${ORIGIN}${pathForLocale(code)}`
-  const version = String(releaseTag || '').replace(/^v/, '') || FALLBACK_VERSION
-
+// Everything both the homepage and the product pages put in <head>. The two
+// differ only in title/description/OG text, canonical + hreflang slug, JSON-LD,
+// and whether the language redirect ships — so those are the parameters and the
+// rest is stated once here.
+//
+// `prefix` is the relative path back to the site root, because PR previews are
+// served from a subpath (see `paths.relative` in svelte.config.js): './' at '/',
+// '../' at '/de/' and '/features/', '../../' at '/de/features/'.
+function headShell({
+  slug = '',
+  code,
+  ogLocale,
+  prefix,
+  includeAnalytics,
+  includeLangRedirect = false,
+  title,
+  description,
+  ogTitle,
+  ogDescription,
+  ogImageAlt,
+  twitterTitle,
+  twitterDescription,
+  twitterImageAlt,
+  jsonLd = '',
+}) {
+  const pageUrl = `${ORIGIN}${pathForLocale(code, slug)}`
   return `    <meta name="msvalidate.01" content="91385F5B3EAE099308DBAAF85B0EF115"/>
-${includeAnalytics ? `${ANALYTICS}\n` : ''}    <title>${esc(t.meta.title)}</title>
-    <meta name="description" content="${esc(t.meta.description)}"/>
+${includeAnalytics ? `${ANALYTICS}\n` : ''}    <title>${esc(title)}</title>
+    <meta name="description" content="${esc(description)}"/>
     <meta name="keywords" content="${esc(KEYWORDS)}"/>
     <meta name="author" content="Checkpoint64"/>
     <meta name="publisher" content="Checkpoint64"/>
@@ -226,9 +267,8 @@ ${includeAnalytics ? `${ANALYTICS}\n` : ''}    <title>${esc(t.meta.title)}</titl
     <meta name="theme-color" content="#1a1814" media="(prefers-color-scheme: dark)"/>
     <meta name="color-scheme" content="light dark"/>
     <link rel="canonical" href="${pageUrl}"/>
-${HREFLANG}
-${LANG_REDIRECT}
-${THEME_BOOTSTRAP}
+${hreflangFor(slug)}
+${includeLangRedirect ? `${LANG_REDIRECT}\n` : ''}${THEME_BOOTSTRAP}
     <link rel="icon" type="image/svg+xml" href="${prefix}retro_save_icon.svg"/>
     <link rel="alternate icon" href="${prefix}retro_save_icon.svg"/>
     <link rel="mask-icon" href="${prefix}retro_save_icon.svg" color="#ff5f4e"/>
@@ -239,25 +279,113 @@ ${THEME_BOOTSTRAP}
     <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
     <meta property="og:type" content="website"/>
     <meta property="og:site_name" content="Checkpoint64"/>
-    <meta property="og:title" content="${esc(t.meta.ogTitle)}"/>
-    <meta property="og:description" content="${esc(t.meta.ogDescription)}"/>
+    <meta property="og:title" content="${esc(ogTitle)}"/>
+    <meta property="og:description" content="${esc(ogDescription)}"/>
     <meta property="og:url" content="${pageUrl}"/>
     <meta property="og:image" content="${ORIGIN}/og-image.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="630"/>
-    <meta property="og:image:alt" content="${esc(t.meta.ogImageAlt)}"/>
+    <meta property="og:image:alt" content="${esc(ogImageAlt)}"/>
     <meta property="og:locale" content="${ogLocale}"/>
     <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="${esc(t.meta.twitterTitle)}"/>
-    <meta name="twitter:description" content="${esc(t.meta.twitterDescription)}"/>
+    <meta name="twitter:title" content="${esc(twitterTitle)}"/>
+    <meta name="twitter:description" content="${esc(twitterDescription)}"/>
     <meta name="twitter:image" content="${ORIGIN}/og-image.png"/>
-    <meta name="twitter:image:alt" content="${esc(t.meta.twitterImageAlt)}"/>
+    <meta name="twitter:image:alt" content="${esc(twitterImageAlt)}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=Caveat&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'"/>
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=Caveat&family=JetBrains+Mono:wght@400;500;700&display=swap"/></noscript>
-${jsonLdBlocks({ code, t, intl, version })}`
+${jsonLd}`
+}
+
+// Full homepage <head> inner HTML for `locale`. `includeAnalytics` is false in
+// dev (pass `!dev` from $app/environment at the call site). `releaseTag` is the
+// build-time GitHub tag ("v1.0.8"); null when that fetch failed.
+export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = null } = {}) {
+  const L = getLocale(locale)
+  const t = L.t
+  const version = String(releaseTag || '').replace(/^v/, '') || FALLBACK_VERSION
+
+  return headShell({
+    slug: '',
+    code: L.code,
+    ogLocale: L.ogLocale,
+    prefix: L.code === 'en' ? './' : '../',
+    includeAnalytics,
+    // Only the apex root redirects a first-time visitor to their language. The
+    // script self-guards on pathname anyway, but there is no reason to ship it
+    // on the seven product pages.
+    includeLangRedirect: true,
+    title: t.meta.title,
+    description: t.meta.description,
+    ogTitle: t.meta.ogTitle,
+    ogDescription: t.meta.ogDescription,
+    ogImageAlt: t.meta.ogImageAlt,
+    twitterTitle: t.meta.twitterTitle,
+    twitterDescription: t.meta.twitterDescription,
+    twitterImageAlt: t.meta.twitterImageAlt,
+    jsonLd: jsonLdBlocks({ code: L.code, t, version }),
+  })
+}
+
+// <head> for one of the seven product pages split out of the old homepage.
+// Copy comes from `t.pages[slug]`; `prefix` is computed by the caller (the
+// layout knows the URL depth, this module does not).
+//
+// The homepage keeps the five site-level JSON-LD blocks. A product page carries
+// the Organization (identical node, from organization.js — `npm test` compares
+// them across every page in dist/) plus a BreadcrumbList, and a FAQPage only
+// where the page actually shows those questions. Schema that describes
+// questions a page doesn't display is exactly the mismatch Google penalizes.
+export function pageHead({ slug, locale = 'en', prefix = '../', includeAnalytics = true, faq = [], extraNodes = [] } = {}) {
+  const L = getLocale(locale)
+  const t = L.t
+  const p = t.pages?.[slug]
+  if (!p) throw new Error(`pageHead: no copy for page "${slug}" — add it to t.pages in en.js`)
+
+  const pageUrl = `${ORIGIN}${pathForLocale(L.code, slug)}`
+  const blocks = [
+    { '@context': 'https://schema.org', ...organizationNode() },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}${pathForLocale(L.code)}` },
+        { '@type': 'ListItem', position: 2, name: p.breadcrumb, item: pageUrl },
+      ],
+    },
+    faq.length
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faq.map((item) => ({
+            '@type': 'Question',
+            name: item.q,
+            acceptedAnswer: { '@type': 'Answer', text: item.a },
+          })),
+        }
+      : null,
+    ...extraNodes,
+  ]
+
+  return headShell({
+    slug,
+    code: L.code,
+    ogLocale: L.ogLocale,
+    prefix,
+    includeAnalytics,
+    title: p.title,
+    description: p.description,
+    ogTitle: p.ogTitle || p.title,
+    ogDescription: p.ogDescription || p.description,
+    ogImageAlt: t.meta.ogImageAlt,
+    twitterTitle: p.ogTitle || p.title,
+    twitterDescription: p.ogDescription || p.description,
+    twitterImageAlt: t.meta.twitterImageAlt,
+    jsonLd: serializeJsonLd(blocks),
+  })
 }
 
 // The translated <noscript> notice that sits just after the app body.

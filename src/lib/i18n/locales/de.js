@@ -67,7 +67,7 @@ export default {
         bodyHtml: 'Klick bei jedem Spielstand auf <b>Versionen →</b> und sieh jedes Backup. Wähl eines und drück <b>Wiederherstellen</b> — Checkpoint64 legt die Dateien zurück und markiert diese Version als die aktuelle. Dein 2-Uhr-nachts-Fehler wird zur 30-Sekunden-Reparatur.',
       },
     ],
-    autoMeta: 'prüft alle 30 s · lädt nur Änderungen hoch',
+    autoMeta: 'prüft alle 60 s · lädt nur Änderungen hoch',
   },
 
   shelf: {
@@ -115,7 +115,7 @@ export default {
       'Teile mit beliebig vielen Fans, oder begrenze den Code und widerrufe ihn jederzeit',
       'Nur-Lese-Fans belegen keine Plätze deines Teams',
     ],
-    proNoteHtml: 'Gehostete Teilen-Codes gehören zu <a href="#pricing">Pro</a>, gemacht für Creator, Crews und Modding-Gruppen.',
+    proNoteTpl: 'Gehostete Teilen-Codes gehören zu <a href="{0}">Pro</a>, gemacht für Creator, Crews und Modding-Gruppen.',
   },
 
   // Steam-Reviews. Die Score-Beschreibung und der Spielname kommen direkt von

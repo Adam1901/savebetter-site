@@ -51,5 +51,5 @@ still aren't. The free plan isn't a demo; it's the product, sized small.
 
 ---
 
-[Download Checkpoint64](/#download) — it's free, and now your co-op partner
+[Download Checkpoint64](/download/) — it's free, and now your co-op partner
 can be too.

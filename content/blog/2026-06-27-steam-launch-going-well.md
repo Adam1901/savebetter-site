@@ -14,7 +14,7 @@ back and forth. Thank you.
 
 If you haven't yet:
 [wishlist it on Steam](https://store.steampowered.com/app/4790820) so Valve pings
-you the day it ships, and [grab the early build](/#download) to start a history
+you the day it ships, and [grab the early build](/download/) to start a history
 under your saves today.
 
 ## What we're building next
@@ -38,5 +38,5 @@ an optional one-time Lifetime purchase, and no subscriptions, on Steam or off.
 ---
 
 [Wishlist Checkpoint64 on Steam](https://store.steampowered.com/app/4790820) or
-[download the early build](/#download). If you're in the playtest, keep the
+[download the early build](/download/). If you're in the playtest, keep the
 strange saves coming.

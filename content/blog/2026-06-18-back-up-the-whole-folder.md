@@ -89,5 +89,5 @@ A few smaller things you'll notice the moment you open it:
 
 ---
 
-[Download Checkpoint64](/#download) — it's free, and it'll catch the save
+[Download Checkpoint64](/download/) — it's free, and it'll catch the save
 files you didn't know to pick.

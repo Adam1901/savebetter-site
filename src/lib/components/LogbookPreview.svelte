@@ -1,6 +1,8 @@
 <script>
   // Mock logbook feed — hardcoded English chrome like the rest of the app visuals.
-  let { t } = $props()
+  // `paper` is the homepage's cream band; on /co-op/ the logbook sits on the
+  // dark page beside the Discord note, so the caller turns it off.
+  let { t, paper = true } = $props()
   const lb = t.logbook
   const entries = [
     { t: '12m', who: 'you', tag: 'v#012', body: 'uploaded a new version', id: '8af23901' },
@@ -12,11 +14,11 @@
   ]
 </script>
 
-<section class="paper" aria-labelledby="logbook-heading">
+<section class:paper aria-labelledby="logbook-heading">
   <div class="wrap">
     <div class="head">
-      <span class="tape" style="color:#a82828">{lb.tape}</span>
-      <span class="hand" style="color:#a82828;font-size:22px">{lb.hand}</span>
+      <span class="tape" style={paper ? 'color:#a82828' : undefined}>{lb.tape}</span>
+      <span class="hand" style="font-size:22px;{paper ? 'color:#a82828' : 'color:var(--accent)'}">{lb.hand}</span>
     </div>
     <h2 id="logbook-heading">{@html lb.h2Html}</h2>
     <p class="lede">{lb.lede}</p>

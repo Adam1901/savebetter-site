@@ -97,6 +97,6 @@ break against is the single most useful thing you can hand us while we build the
 
 ---
 
-[Get on the launch list](/#download) and we'll tell you the day these land — or
-[grab the early build](/#download) now and start a version history under your
+[Get on the launch list](/download/) and we'll tell you the day these land — or
+[grab the early build](/download/) now and start a version history under your
 saves today.

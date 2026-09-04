@@ -118,6 +118,6 @@ have room to spare, so it sits dormant.
 
 ---
 
-[Download Checkpoint64](/#download) or
+[Download Checkpoint64](/download/) or
 [grab it on Steam](https://store.steampowered.com/app/4790820) — it's free, and
 it'll now version a game we've never heard of.

@@ -64,10 +64,10 @@ export default {
       {
         label: '03 · RESTAURER',
         h3Html: 'REVENEZ EN ARRIÈRE',
-        bodyHtml: "Cliquez sur <b>Versions →</b> sur n'importe quelle sauvegarde pour voir tous les backups. Choisissez-en un et cliquez sur <b>Restaurer</b> — Checkpoint64 remet les fichiers en place et marque cette version comme l'actuelle. Votre bêtise de 2 h du matin devient une réparation de 30 secondes.",
+        bodyHtml: "Cliquez sur <b>Versions →</b> sur n'importe quelle sauvegarde pour voir tous les backups. Choisissez-en un et cliquez sur <b>Restaurer</b> — Checkpoint64 remet les fichiers en place et marque cette version comme l'actuelle. Votre bêtise de 2 h du matin devient une réparation de 60 secondes.",
       },
     ],
-    autoMeta: 'vérifie toutes les 30 s · n’envoie que ce qui a changé',
+    autoMeta: 'vérifie toutes les 60 s · n’envoie que ce qui a changé',
   },
 
   shelf: {
@@ -115,7 +115,7 @@ export default {
       'Partagez avec autant de fans que vous voulez, ou plafonnez le code et révoquez-le quand bon vous semble',
       'Les fans en lecture seule n’occupent aucune place de votre équipe',
     ],
-    proNoteHtml: 'Les codes de partage hébergés font partie de <a href="#pricing">Pro</a>, pensés pour les créateurs, les groupes et les communautés de mods.',
+    proNoteTpl: 'Les codes de partage hébergés font partie de <a href="{0}">Pro</a>, pensés pour les créateurs, les groupes et les communautés de mods.',
   },
 
   // Avis Steam. La description du score et le nom du jeu viennent directement de

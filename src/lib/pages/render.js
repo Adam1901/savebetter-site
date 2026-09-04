@@ -34,7 +34,7 @@ export function ctaBlock(prefix) {
   return `        <aside class="guide-cta">
           <p class="guide-cta-title pixel">Never lose a save again</p>
           <p>Automatic backups and full version history. Free download for Windows, macOS, and Linux.</p>
-          <a class="guide-cta-btn pixel" href="${prefix}#download">Download Checkpoint64 free</a>
+          <a class="guide-cta-btn pixel" href="${prefix}download/">Download Checkpoint64 free</a>
         </aside>`
 }
 

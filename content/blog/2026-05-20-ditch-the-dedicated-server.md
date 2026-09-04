@@ -135,5 +135,5 @@ server's uptime, and the rental bill.
 
 ---
 
-[Download Checkpoint64](/#download) — it's free, and the free plan is real.
+[Download Checkpoint64](/download/) — it's free, and the free plan is real.
 No email list, no follow-ups.

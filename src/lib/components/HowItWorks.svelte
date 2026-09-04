@@ -1,7 +1,9 @@
 <script>
   import { onMount } from 'svelte'
 
-  let { t } = $props()
+  // `showHead` is false on /how-it-works/, whose page header already says
+  // "POINT IT AT A FOLDER. FORGET ABOUT IT." as the <h1>.
+  let { t, showHead = true } = $props()
   const h = t.how
 
   // Animated auto-backup ticker on step 2 (reduced-motion aware). Ported from
@@ -32,13 +34,15 @@
   })
 </script>
 
-<section class="paper" id="how" aria-labelledby="how-heading">
+<section class="paper" id="how" aria-labelledby={showHead ? 'how-heading' : undefined} aria-label={showHead ? undefined : h.tape}>
   <div class="wrap">
-    <div class="head">
-      <span class="tape" style="color:#a82828">{h.tape}</span>
-    </div>
-    <h2 id="how-heading">{@html h.h2Html}</h2>
-    <p class="lede">{h.lede}</p>
+    {#if showHead}
+      <div class="head">
+        <span class="tape" style="color:#a82828">{h.tape}</span>
+      </div>
+      <h2 id="how-heading">{@html h.h2Html}</h2>
+      <p class="lede">{h.lede}</p>
+    {/if}
 
     <div class="steps">
       <div class="step">
