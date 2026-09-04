@@ -40,6 +40,16 @@ const GAMES = [
   '7-days-to-die-save-backup',
   'sons-of-the-forest-save-backup',
   'enshrouded-save-backup',
+  'baldurs-gate-3-save-backup',
+  'cyberpunk-2077-save-backup',
+  'rimworld-save-backup',
+  'project-zomboid-save-backup',
+  'terraria-save-backup',
+  'no-mans-sky-save-backup',
+  'stellaris-save-backup',
+  'kingdom-come-deliverance-2-save-backup',
+  'stalker-2-save-backup',
+  'subnautica-2-save-backup',
 ]
 
 // Every routable page. `games` is the hub index (content/pages/games.md) whose
@@ -58,7 +68,16 @@ export function gameSlugs() {
 // Guide slug ↔ backend-catalog slug, for cross-linking the hand-written
 // per-game guides with the generated /saves/<catalog-slug>/ location pages.
 // The convention is <catalog-slug>-save-backup; exceptions go here.
-const GUIDE_CATALOG_EXCEPTIONS = { 'skyrim-save-backup': 'skyrim-se' }
+// The guide slug stays the searchable full title ("baldurs-gate-3") while the
+// catalog uses a short one ("bg3"); without an entry here the derived slug just
+// misses, which costs the /saves/ cross-link AND the `about` VideoGame JSON-LD
+// with the build still green — so check any new guide's derived slug against
+// content/catalog/catalog.json before trusting the convention.
+const GUIDE_CATALOG_EXCEPTIONS = {
+  'skyrim-save-backup': 'skyrim-se',
+  'baldurs-gate-3-save-backup': 'bg3',
+  'kingdom-come-deliverance-2-save-backup': 'kcd2',
+}
 
 /** Catalog slug for a game-guide slug, or null when the slug isn't a game guide. */
 export function catalogSlugForGuide(guideSlug) {
