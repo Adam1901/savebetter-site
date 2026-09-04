@@ -223,6 +223,9 @@ export default {
     hoursTpl: '{0} on record',
     helpfulTpl: '{0} found this helpful',
     anonymous: 'Steam player',
+    // {0} is the reviewer's Steam name. The visible link text is just the name,
+    // so the accessible name has to say where the link goes.
+    readOnSteamAria: 'Read {0}’s review on Steam',
   },
 
   savings: {
