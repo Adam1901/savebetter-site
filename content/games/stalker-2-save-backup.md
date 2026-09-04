@@ -24,7 +24,7 @@ faq:
 %LOCALAPPDATA%\Stalker2\Saved\GOG\SaveGames
 ```
 
-Which one is in use depends on where you bought the game. Checkpoint64 checks them in order and uses the first that exists, so there's nothing to work out or configure — and if you later move stores, it finds the new one. S.T.A.L.K.E.R. 2 writes only to Windows in the app's game catalog, so this is the whole picture.
+Which one is in use depends on where you bought the game. Checkpoint64 checks them in order and uses the first that exists, so there's nothing to work out or configure. S.T.A.L.K.E.R. 2 writes only to Windows in the app's game catalog, so this is the whole picture.
 
 ## Store-specific paths are a documentation trap
 
