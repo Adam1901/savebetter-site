@@ -56,6 +56,391 @@
       <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/"/>
   </url>
   <url>
+    <loc>https://checkpoint64.com/features/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/features/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/features/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/features/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/features/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/features/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/features/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/features/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/features/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/features/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/features/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/features/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/features/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/features/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/features/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/features/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/features/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/features/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/features/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/features/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/features/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/features/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/features/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/features/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/features/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/features/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/features/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/features/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/features/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/features/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/features/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/features/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/features/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/features/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/features/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/how-it-works/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/how-it-works/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/how-it-works/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/how-it-works/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/how-it-works/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/how-it-works/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/how-it-works/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/how-it-works/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/how-it-works/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/how-it-works/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/how-it-works/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/co-op/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/co-op/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/co-op/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/co-op/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/co-op/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/co-op/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/co-op/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/co-op/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/co-op/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/co-op/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/co-op/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/creators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/creators/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/creators/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/creators/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/creators/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/creators/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/creators/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/creators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/creators/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/creators/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/creators/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/creators/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/creators/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/creators/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/creators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/creators/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/creators/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/creators/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/creators/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/creators/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/creators/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/creators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/creators/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/creators/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/creators/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/creators/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/creators/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/creators/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/creators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/creators/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/creators/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/creators/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/creators/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/creators/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/creators/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/pricing/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/pricing/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/pricing/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/download/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/download/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/download/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/download/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/download/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/download/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/download/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/download/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/download/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/download/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/download/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/download/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/download/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/download/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/download/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/download/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/download/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/download/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/download/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/download/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/download/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/download/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/download/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/download/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/download/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/download/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/download/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/download/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/download/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/download/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/download/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/help/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/help/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/help/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/help/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/help/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/help/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/help/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/de/help/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/help/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/help/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/help/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/help/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/help/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/help/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/fr/help/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/help/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/help/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/help/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/help/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/help/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/help/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/es/help/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/help/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/help/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/help/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/help/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/help/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/help/"/>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/ru/help/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://checkpoint64.com/help/"/>
+      <xhtml:link rel="alternate" hreflang="de" href="https://checkpoint64.com/de/help/"/>
+      <xhtml:link rel="alternate" hreflang="fr" href="https://checkpoint64.com/fr/help/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://checkpoint64.com/es/help/"/>
+      <xhtml:link rel="alternate" hreflang="ru" href="https://checkpoint64.com/ru/help/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://checkpoint64.com/help/"/>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/blog/</loc>
     <lastmod>2026-09-04</lastmod>
     <changefreq>weekly</changefreq>

@@ -62,7 +62,7 @@ and locks included. Lifetime: one-time purchase (direct via Stripe or through St
 1 GiB per space, up to 3 teams. Pro: 5 GiB per space, up to 5 teams, 25 seats per team,
 100 versions / 90 days retention guaranteed, read-only share codes and Patreon supporter
 sync. No per-seat fee on any tier. Current prices are listed at
-https://checkpoint64.com/#pricing.
+https://checkpoint64.com/pricing/.
 
 Each tier also caps how many *other* people's teams you can join as a contributing
 member: 3 on Free, 5 on Lifetime, 8 on Pro. Teams you own don't count toward it, and
@@ -131,12 +131,13 @@ the save back. The world's full history is preserved instead of overwritten.
 ## Links
 
 - [Home](https://checkpoint64.com/)
-- [How it works](https://checkpoint64.com/#how)
-- [Features](https://checkpoint64.com/#features)
-- [Pricing](https://checkpoint64.com/#pricing)
-- [For streamers and creators](https://checkpoint64.com/#creators)
-- [FAQ](https://checkpoint64.com/#faq)
-- [Download](https://checkpoint64.com/#download)
+- [How it works](https://checkpoint64.com/how-it-works/)
+- [Features](https://checkpoint64.com/features/)
+- [Pricing](https://checkpoint64.com/pricing/)
+- [For streamers and creators](https://checkpoint64.com/creators/)
+- [Co-op and teams](https://checkpoint64.com/co-op/): locks, the shared logbook and passing one world around
+- [Help and FAQ](https://checkpoint64.com/help/)
+- [Download](https://checkpoint64.com/download/)
 - [On Steam](https://store.steampowered.com/app/4790820/)
 - [About Checkpoint64](https://checkpoint64.com/about/): who builds it, how it is funded, where save data is stored
 - [Contact](https://checkpoint64.com/contact/): support, press, privacy, security and legal contacts
