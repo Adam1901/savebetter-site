@@ -188,6 +188,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Palworld World Handoff Without Save Panic](https://checkpoint64.com/blog/palworld-world-handoff/): 2026-09-04 — Palworld world handoff without rented servers or risky zip files. Keep co-op saves moving, protected and ready when the next host wants to play again.
 - [Save File Ownership Keeps Your Worlds Yours](https://checkpoint64.com/blog/save-file-ownership/): 2026-09-02 — Save file ownership means your world stays yours: protect progress, share co-op saves safely, and restore the version before disaster strikes and sticks.
 - [World Overwrite Example: Recover a Lost Save](https://checkpoint64.com/blog/world-overwrite-example/): 2026-08-31 — A world overwrite example for gamers: see how one bad save replacement happens, what recovery looks like, and how version history prevents a total wipe.
 - [Modded Save Protection Without the Rituals](https://checkpoint64.com/blog/modded-save-protection/): 2026-08-29 — Modded save protection keeps your worlds recoverable when mods misbehave, updates collide or a mate overwrites the only good save. Keep versions safe.
