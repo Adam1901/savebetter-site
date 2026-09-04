@@ -122,5 +122,5 @@ it's the difference between a save that's *synced* and a save that's *safe*.
 
 ---
 
-[Download Checkpoint64](/#download) — it's free, and the free plan is real.
+[Download Checkpoint64](/download/) — it's free, and the free plan is real.
 No email list, no follow-ups.

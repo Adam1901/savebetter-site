@@ -80,5 +80,5 @@ version underneath so a bad write is never the only copy.
 ---
 
 [Wishlist Checkpoint64 on Steam](https://store.steampowered.com/app/4790820) and
-Valve will tell you the day it ships — or [grab the early build](/#download) now
+Valve will tell you the day it ships — or [grab the early build](/download/) now
 and start a history under your saves today.

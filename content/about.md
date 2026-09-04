@@ -39,7 +39,7 @@ nothing about the free plan is a countdown to a trial expiring.
 - **Pro** — the only tier with a recurring option, and only when bought direct; on Steam it is a
   one-time unlock.
 
-Current prices are listed on the [pricing section of the home page](/#pricing).
+Current prices are listed on the [pricing page](/pricing/).
 
 ## What Checkpoint64 deliberately is not
 

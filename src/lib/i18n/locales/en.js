@@ -16,6 +16,12 @@ export default {
       pricing: 'PRICING',
       faq: 'FAQ',
       blog: 'BLOG',
+      // Added when the single page became eight — these label real pages now,
+      // not in-page anchors.
+      audience: "WHO IT'S FOR",
+      coop: 'CO-OP & TEAMS',
+      compare: 'VS. STEAM CLOUD & DRIVE SYNC',
+      help: 'HELP',
     },
     cta: 'DOWNLOAD',
     ctaAria: 'Download Checkpoint64',
@@ -33,6 +39,15 @@ export default {
     ctaSecondary: 'SEE IT WORK',
     ctaSecondaryAria: 'See how Checkpoint64 works',
     small: ['free plan, actually free', 'pay once for more space', 'no subscription, ever'],
+    shelfNote: 'every save is a cartridge. every version kept.',
+  },
+
+  // Link labels on the homepage teasers, and on the mini-FAQs that close the
+  // product pages.
+  teasers: {
+    how: 'SEE THE FULL WALKTHROUGH',
+    features: 'ALL FEATURES',
+    allQuestions: 'ALL QUESTIONS',
   },
 
   problems: {
@@ -68,7 +83,22 @@ export default {
         bodyHtml: 'Click <b>Versions →</b> on any save to see every backup. Pick one and hit <b>Restore</b> — Checkpoint64 puts the files back and marks that version as the current one. Your 2am mistake becomes a 30-second fix.',
       },
     ],
-    autoMeta: 'checks every 30 s · uploads only what changed',
+    // 60 s, matching the step copy above and the app's actual poll interval.
+    autoMeta: 'checks every 60 s · uploads only what changed',
+
+    // The six facts under the steps on /how-it-works/.
+    underTheHood: {
+      tape: 'UNDER THE HOOD',
+      h2Html: 'WHAT IT DOES <span class="accent">WHILE YOU PLAY.</span>',
+      facts: [
+        { title: 'IT NEVER LOCKS YOUR FILES.', body: 'If the game is mid-save it waits for things to go quiet and tries again — no broken files, no stutter.' },
+        { title: 'IT NAPS BETWEEN CHECKS.', body: 'One look at the folder every 60 seconds, then back to sleep. You won’t notice it while playing.' },
+        { title: 'ONLY CHANGED FILES GO UP.', body: 'Renamed files cost nothing extra. A 500 MB world re-uploads as a few MB after a normal session.' },
+        { title: 'RESTORE NEVER LOSES YOUR PLACE.', body: 'The version you restore from stays in history, so rolling back never costs you where you were.' },
+        { title: 'IT WATCHES THE FOLDER, NOT THE GAME.', body: 'Steam, GOG, Epic, an emulator — it doesn’t care which launcher put the game there.' },
+        { title: 'SAVE FILES ONLY.', body: 'It never touches games or ROMs. Pick which files count and skip the screenshots.' },
+      ],
+    },
   },
 
   shelf: {
@@ -89,6 +119,9 @@ export default {
       { tag: '140+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 140+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
       { tag: 'SHARE CODES', title: 'ONE WORLD,\nWHOLE CROWD.', body: 'Running a community world? Mint a join code and anyone holding it can download your save — but never upload over it. Codes are capped and revocable, and read-only visitors don’t use up seats. (Pro)' },
       { tag: 'LOGBOOK', title: 'WHO DID WHAT,\nWHEN.', body: 'Every upload, restore, and lock-grab gets written down in your group’s logbook. Handy when your co-op partner blames you for the bad run.' },
+      { tag: 'ANY LAUNCHER', title: 'COVERS WHAT STEAM\nCLOUD DOESN’T.', body: 'It watches the save folder, not the game, so it doesn’t care which launcher put the game there — emulators, modded setups, GOG and Epic copies whose developers never wired Cloud up.' },
+      { tag: 'AUTO-DETECT', title: 'FINDS YOUR\nGAMES.', body: 'Installed-game detection scans your Steam library and offers what it recognises. Anything else, point it at a folder.' },
+      { tag: 'DISCORD', title: 'YOUR CREW\nGETS A DM.', body: 'Link a Discord account and the bot DMs your teammates whenever someone manually commits or restores a shared save.' },
     ],
   },
 
@@ -120,7 +153,59 @@ export default {
       'Share with as many fans as you like, or cap the code and revoke it whenever',
       'Read-only fans don’t use up your team’s seats',
     ],
-    proNoteHtml: 'Hosted share codes are part of <a href="#pricing">Pro</a>, built for creators, crews, and modding groups.',
+    // {0} is the pricing page URL, built by the caller — the old '#pricing'
+    // anchor stopped existing when pricing became its own page.
+    proNoteTpl: 'Hosted share codes are part of <a href="{0}">Pro</a>, built for creators, crews, and modding groups.',
+
+    pressKit: {
+      tape: 'MAKING A VIDEO ABOUT CHECKPOINT64?',
+      body: 'The press kit has screenshots, trailer footage, and a review unlock so you can test the paid tiers properly. You have permission to use all of it in coverage, including monetised video, without asking first.',
+      cta: 'PRESS KIT',
+    },
+  },
+
+  // /co-op/ — the lock, the logbook and the case against renting a 24/7 box.
+  coop: {
+    vsDedi: 'VS. A DEDICATED SERVER',
+    faqTitleHtml: 'CO-OP <span class="accent">QUESTIONS.</span>',
+
+    // The cartridge-and-logbook visual in the masthead. App chrome, so the
+    // names and entries stay English in every locale.
+    lockArt: {
+      note: 'jess has the world tonight — nobody can save over her.',
+      entries: [
+        { t: '2m', who: 'jess', body: 'claimed the lock' },
+        { t: '4h', who: 'you', body: 'uploaded v#031' },
+        { t: 'yest', who: 'kel', body: 'restored v#029' },
+      ],
+      awayLabel: 'host away?',
+      takeOver: 'TAKE OVER LOCK',
+    },
+
+    lockSteps: {
+      tape: 'LOCK AND PASS',
+      h2Html: 'PASS THE WORLD AROUND<br/><span class="accent">LIKE A CARTRIDGE.</span>',
+      lede: 'No host PC that has to stay on. No “who has the latest save?” Whoever wants to play grabs the lock, plays their session, then pushes the save back.',
+      steps: [
+        { label: '01 · GRAB', h3: 'TAKE THE LOCK', body: 'Open the shared save and claim the lock. Everyone else’s cartridge flips to read-only while you hold it — they can still download and look, nobody can upload.', chip: 'LOCK U' },
+        { label: '02 · PLAY', h3: 'PLAY YOUR SESSION', body: 'Host the world from your own PC like normal. Auto-backup keeps filing versions while you play, so even the session itself has an undo button.', chip: 'AUTO ON' },
+        { label: '03 · PASS', h3: 'PUSH IT BACK', body: 'Release the lock and the latest version is what the next person downloads. Went quiet instead? Locks expire on their own, and a teammate can take over — with a warning, and a logbook entry.', chip: 'LOCK JESS' },
+      ],
+    },
+
+    teamSizes: {
+      aria: 'Teams and seats by plan',
+      tiers: [
+        { tag: 'FREE', big: '1 TEAM', note: 'join up to 3 friends’ teams' },
+        { tag: 'LIFETIME', big: '3 TEAMS', note: 'join up to 5 friends’ teams' },
+        { tag: 'PRO', big: '5 TEAMS', note: 'join up to 8 · 25 seats per team' },
+      ],
+      every: {
+        tag: 'EVERY TIER',
+        perSeat: ' / SEAT',
+        note: 'no charge per person. teammates see your display name, never your email.',
+      },
+    },
   },
 
   // Steam reviews social-proof strip. The score description (e.g.
@@ -217,6 +302,39 @@ export default {
         cta: 'GET PRO',
       },
     ],
+
+    // Shorter lede for the homepage teaser, which shows prices without the
+    // feature lists.
+    teaserLede: 'Free is actually free — not a seven-day trial. Lifetime is pay-once. Pro is for crews who save together. No charge per person.',
+    faqTitleHtml: 'MONEY <span class="accent">QUESTIONS.</span>',
+
+    // The three dashed caveats under the cards on /pricing/.
+    notes: [
+      '<b>On Steam, Pro is a one-time unlock.</b> Bought direct, it’s monthly. There are no subscriptions of any kind on Steam.',
+      '<b>No charge per person</b> on any tier. Invite your crew; the price doesn’t move.',
+      '<b>Your data stays yours.</b> Export everything as a zip whenever you like; deleting your account actually deletes it.',
+    ],
+
+    // The side-by-side table. `plans` heads the three columns and must stay in
+    // the same order as `cards` above.
+    compare: {
+      tape: 'SIDE BY SIDE',
+      h2Html: 'SAME APP. <span class="accent">MORE ROOM.</span>',
+      featureCol: 'Feature',
+      plans: ['FREE', 'LIFETIME', 'PRO'],
+      note: '“guaranteed minimum” means we may give you more, never less.',
+      rows: [
+        { k: 'Teams you can create', free: '1', life: 'up to 3', pro: 'up to 5' },
+        { k: 'Friends’ teams you can join', free: '3', life: '5', pro: '8' },
+        { k: 'Cloud storage per space', free: '20 MiB', life: '1 GiB', pro: '5 GiB' },
+        { k: 'Seats per team', free: 'included', life: 'included', pro: '25 guaranteed minimum' },
+        { k: 'Auto-backup + version history', free: '✓', life: '✓', pro: '✓ · 100 versions / 90 days guaranteed' },
+        { k: 'Co-op locks + logbook', free: '✓', life: '✓', pro: '✓' },
+        { k: 'Read-only share codes', free: '—', life: '—', pro: '✓' },
+        { k: 'Priority bandwidth', free: '—', life: '—', pro: '2× API throughput' },
+        { k: 'Buy on Steam', free: 'n/a', life: '✓ one-time', pro: '✓ one-time unlock' },
+      ],
+    },
   },
 
   download: {
@@ -229,6 +347,29 @@ export default {
     comingSoon: 'coming soon',
     tileAriaLiveTpl: 'Download Checkpoint64 for {0} ({1})',
     tileAriaSoonTpl: 'Checkpoint64 for {0} — see releases on GitHub',
+
+    platformNotes: {
+      tape: 'EVERY BUILD',
+      h2Html: 'PICK YOUR <span class="accent">PLATFORM.</span>',
+      foot: 'Same account everywhere — sign in on a second machine and your shelf is already there.',
+      cards: [
+        { name: 'STEAM', items: ['Windows and Linux', 'Steam Deck supported', 'Lifetime and Pro as one-time unlocks — no subscriptions on Steam'] },
+        { name: 'WINDOWS', items: ['.msi installer or portable .exe', 'Windows 10 and 11', 'Updates in-app'] },
+        { name: 'MACOS', items: ['Apple Silicon .dmg', 'Same shelf, same account', 'Updates in-app'] },
+        { name: 'LINUX', items: ['.deb and .rpm packages', 'x64 and ARM64', 'Steam Deck via Steam'] },
+      ],
+    },
+
+    firstMinute: {
+      tape: 'AFTER INSTALL',
+      h2Html: 'FIRST BACKUP IN <span class="accent">UNDER A MINUTE.</span>',
+      cta: 'HOW IT WORKS',
+      steps: [
+        'Add a game. Installed-game detection offers what it finds in your Steam library; presets for 140+ games and 7 emulators know their save paths.',
+        'Hit Upload once. That’s version one. Flip auto-backup on and every change becomes a new version on its own.',
+        'Play. When something goes wrong, open Versions, pick one from before the problem, and Restore.',
+      ],
+    },
   },
 
   faq: {
@@ -244,7 +385,46 @@ export default {
       { q: 'WHAT DOES IT COST?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
       { q: 'CAN I USE IT TODAY?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'WHO CAN SEE MY SAVES?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period, in case of 2am regret).' },
+      { q: 'IS THE FREE PLAN A TRIAL?', a: 'No. It has no timer and no card on file. 20 MiB is small on purpose — enough for Stardew, Hollow Knight, or a whole retro library — and it never expires.' },
+      { q: 'IS PRO A SUBSCRIPTION?', a: 'Bought direct, yes — monthly, cancel anytime. On Steam, Pro is a one-time unlock; there are no subscriptions of any kind on Steam.' },
     ],
+  },
+
+  // /help/ — the grouped FAQ, the guide cluster and the ways to reach a human.
+  // The groups name which questions they hold in src/lib/faq.js (indices are
+  // not translatable), so this only carries their titles.
+  help: {
+    indexAria: 'Question groups',
+    groupsAria: 'Frequently asked questions',
+    contactTitle: 'CONTACT',
+    groups: [
+      { id: 'basics', title: 'THE BASICS' },
+      { id: 'coop', title: 'CO-OP & TEAMS' },
+      { id: 'billing', title: 'PLANS & BILLING' },
+    ],
+    guides: {
+      tape: 'GUIDES',
+      h2Html: 'WHERE YOUR SAVES <span class="accent">ACTUALLY LIVE.</span>',
+      items: [
+        { kind: 'GUIDE', title: 'Game save backup guides', slug: 'games' },
+        { kind: 'REFERENCE', title: 'Save locations for 140+ games', slug: 'saves' },
+        { kind: 'GUIDE', title: 'Emulator save backup', slug: 'emulator-save-backup' },
+        { kind: 'GUIDE', title: 'Modded game save backup', slug: 'modded-game-save-backup' },
+        { kind: 'COMPARE', title: 'Steam Cloud alternative', slug: 'steam-cloud-alternative' },
+        { kind: 'COMPARE', title: 'Dedicated server alternative', slug: 'dedicated-server-alternative' },
+        { kind: 'STEAM DECK', title: 'Where Steam Deck saves live', slug: 'blog/steam-deck-save-file-location' },
+        { kind: 'STEAM DECK', title: 'Move saves between Deck and PC', slug: 'blog/move-game-saves-between-steam-deck-and-pc' },
+      ],
+    },
+    contact: {
+      tape: 'CONTACT',
+      h2Html: 'STILL <span class="accent">STUCK?</span>',
+      cards: [
+        { tag: 'EMAIL', line: 'support@checkpoint64.com', body: 'Bugs, billing, account deletion, anything else.' },
+        { tag: 'DISCORD', line: 'Join the server ↗', body: 'Quickest answers, other players, and the bot that DMs your crew.' },
+        { tag: 'GITHUB', line: 'Releases & changelog ↗', body: 'Every build, every release note, older installers.' },
+      ],
+    },
   },
 
   consent: {
@@ -266,6 +446,10 @@ export default {
       features: 'Features',
       pricing: 'Pricing',
       joinList: 'Download',
+      coop: 'Co-op & teams',
+      creators: 'For creators',
+      compare: 'Compare',
+      help: 'Help & FAQ',
       changelog: 'Changelog',
       blog: 'Blog',
       discord: 'Discord',
@@ -281,6 +465,76 @@ export default {
     discordAria: 'Join the Checkpoint64 Discord (opens in a new tab)',
     copyTpl: '© {0} CHECKPOINT64 · ALL RIGHTS RESERVED',
     notAffiliated: 'NOT AFFILIATED WITH ANY GAME LISTED ABOVE',
+  },
+
+  // Per-page head + masthead copy for the seven product pages. `title` and
+  // `description` are the <title>/meta description; `breadcrumb` is used by
+  // both the visible trail and the BreadcrumbList schema, so the two cannot
+  // disagree. `hand` is the handwritten margin note beside the breadcrumb.
+  //
+  // Keys here MUST match the slugs in src/lib/nav.js — pageHead() throws at
+  // prerender if a page has no entry, which is the loud failure we want.
+  pages: {
+    features: {
+      title: 'Features — Version History, Co-op Locks and 140+ Game Presets',
+      description: 'Every backup kept as a restorable version, server-enforced co-op locks, uploads of only what changed, and presets for 140+ games and 7 emulators. Free plan included.',
+      breadcrumb: 'Features',
+      hand: 'no fluff, no charge per person',
+      h1Html: 'WHAT’S IN <span class="accent">THE BOX.</span>',
+      lede: 'Built by people who reload saves a lot. No fluff, no charge per person, no “powered by AI.” Just a save vault that works.',
+      notes: [
+        'save files only — it never touches games or ROMs',
+        'works with Steam, GOG, Epic, emulators — it watches the folder, not the launcher',
+      ],
+    },
+    'how-it-works': {
+      title: 'How Checkpoint64 Works — Automatic Game Save Backup in 3 Steps',
+      description: 'Point Checkpoint64 at your save folder, flip auto-backup on, and roll back to any earlier version in seconds. It checks every 60 seconds and uploads only what changed.',
+      breadcrumb: 'How it works',
+      hand: 'three steps, once',
+      h1Html: 'POINT IT AT A FOLDER.<br/><span class="accent">FORGET ABOUT IT.</span>',
+      lede: 'Three steps, once. After that you never think about save files again — which is the whole point.',
+    },
+    'co-op': {
+      title: 'Co-op & Teams — Share One World Without Overwriting Each Other',
+      description: 'One live world, one holder. Server-enforced locks mean only the lock holder can upload, locks expire on their own, and every take-over lands in a shared logbook.',
+      breadcrumb: 'Co-op & teams',
+      hand: 'one world, one lock',
+      h1Html: 'ONE WORLD.<br/>ONE LOCK.<br/><span class="accent">NO OVERWRITES.</span>',
+      lede: 'Games like Factorio, Valheim, and Satisfactory have one live world at a time. Whoever holds the lock uploads; everyone else downloads. Holder gone quiet? Locks expire on their own, and you can take over — with a warning, and a logbook entry so everyone knows.',
+    },
+    creators: {
+      title: 'For Streamers & Creators — Share Your Save With the Whole Chat',
+      description: 'Mint a read-only share code for any world and hand your exact save to every viewer. They download and play it; they can never save over yours. Read-only fans use no seats.',
+      breadcrumb: 'For creators',
+      hand: 'one code, every fan',
+      h1Html: 'SHARE YOUR RUN<br/>WITH <span class="accent">THE WHOLE CHAT.</span>',
+      lede: 'Got an audience? Hand them your exact save. Mint a read-only share code for any world: your 100% file, a challenge seed, last night’s cursed run. Drop it in your video description, and fans pull a perfect copy into their own library. They download it and play; they can never save over yours.',
+    },
+    pricing: {
+      title: 'Pricing — Free Plan, Pay-Once Lifetime, or Pro for Crews',
+      description: 'Free is actually free, with no timer and no card. Lifetime is a one-time payment. Pro adds room and read-only share codes. No charge per person on any tier.',
+      breadcrumb: 'Pricing',
+      hand: 'no rip-cords',
+      h1Html: 'PICK YOUR <span class="accent">CART.</span>',
+      lede: 'Three ways to play it. Free is actually free — not a seven-day trial. Lifetime is pay-once. Pro is for crews who save together. No charge per person, no surprise fees, no rip-cords.',
+    },
+    download: {
+      title: 'Download Checkpoint64 — Free for Windows, macOS and Linux',
+      description: 'Free download with a free plan that is not a trial. Installers for Windows, macOS Apple Silicon and Linux, plus Steam for Windows and Linux including Steam Deck.',
+      breadcrumb: 'Download',
+      hand: 'free plan, actually free',
+      h1Html: 'GRAB IT.',
+      lede: '',
+    },
+    help: {
+      title: 'Help & FAQ — Checkpoint64 Game Save Backup',
+      description: 'The questions we get most, grouped: what counts as a save, backing up while the game runs, co-op locks, emulators, plans and billing. Plus guides and how to reach us.',
+      breadcrumb: 'Help',
+      hand: 'real humans at the other end',
+      h1Html: 'FREQUENTLY <span class="accent">CHECKED.</span>',
+      lede: 'The questions we get most, grouped. Not here? Email support@checkpoint64.com or ask on Discord.',
+    },
   },
 
   meta: {
@@ -332,6 +586,8 @@ export default {
       { q: 'What does it cost?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
       { q: 'Can I use it today?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'Who can see my saves?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period).' },
+      { q: 'Is the free plan a trial?', a: 'No. It has no timer and no card on file. 20 MiB is small on purpose — enough for Stardew, Hollow Knight, or a whole retro library — and it never expires.' },
+      { q: 'Is Pro a subscription?', a: 'Bought direct, yes — monthly, cancel anytime. On Steam, Pro is a one-time unlock; there are no subscriptions of any kind on Steam.' },
     ],
   },
 }

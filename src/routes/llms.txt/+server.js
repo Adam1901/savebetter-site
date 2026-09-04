@@ -106,7 +106,7 @@ and locks included. Lifetime: one-time purchase (direct via Stripe or through St
 1 GiB per space, up to 3 teams. Pro: 5 GiB per space, up to 5 teams, 25 seats per team,
 100 versions / 90 days retention guaranteed, read-only share codes and Patreon supporter
 sync. No per-seat fee on any tier. Current prices are listed at
-https://checkpoint64.com/#pricing.
+https://checkpoint64.com/pricing/.
 
 Each tier also caps how many *other* people's teams you can join as a contributing
 member: 3 on Free, 5 on Lifetime, 8 on Pro. Teams you own don't count toward it, and
@@ -176,12 +176,13 @@ the save back. The world's full history is preserved instead of overwritten.
 
 ${[
   link('Home', `${ORIGIN}/`),
-  link('How it works', `${ORIGIN}/#how`),
-  link('Features', `${ORIGIN}/#features`),
-  link('Pricing', `${ORIGIN}/#pricing`),
-  link('For streamers and creators', `${ORIGIN}/#creators`),
-  link('FAQ', `${ORIGIN}/#faq`),
-  link('Download', `${ORIGIN}/#download`),
+  link('How it works', `${ORIGIN}/how-it-works/`),
+  link('Features', `${ORIGIN}/features/`),
+  link('Pricing', `${ORIGIN}/pricing/`),
+  link('For streamers and creators', `${ORIGIN}/creators/`),
+  link('Co-op and teams', `${ORIGIN}/co-op/`, 'locks, the shared logbook and passing one world around'),
+  link('Help and FAQ', `${ORIGIN}/help/`),
+  link('Download', `${ORIGIN}/download/`),
   link('On Steam', 'https://store.steampowered.com/app/4790820/'),
   link('About Checkpoint64', `${ORIGIN}/about/`, 'who builds it, how it is funded, where save data is stored'),
   link('Contact', `${ORIGIN}/contact/`, 'support, press, privacy, security and legal contacts'),

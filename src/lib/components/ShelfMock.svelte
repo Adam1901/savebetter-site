@@ -2,7 +2,9 @@
   import Cartridge from './Cartridge.svelte'
 
   // Mock cart shelf — hardcoded English game names/paths, like the app UI it depicts.
-  let { t } = $props()
+  // `paper` puts the shelf on the cream band, which is where /features/
+  // shows it; the homepage no longer carries this section at all.
+  let { t, paper = false } = $props()
   const sh = t.shelf
   const games = [
     {
@@ -34,11 +36,11 @@
   ]
 </script>
 
-<section id="shelf" aria-labelledby="shelf-heading">
+<section id="shelf" class:paper aria-labelledby="shelf-heading">
   <div class="wrap">
     <div class="head">
-      <span class="tape">{sh.tape}</span>
-      <span class="hand" style="color:var(--accent);font-size:22px">{sh.hand}</span>
+      <span class="tape" style={paper ? 'color:#a82828' : undefined}>{sh.tape}</span>
+      <span class="hand" style="font-size:22px;{paper ? 'color:#a82828' : 'color:var(--accent)'}">{sh.hand}</span>
     </div>
     <h2 id="shelf-heading">{@html sh.h2Html}</h2>
     <p class="lede">{sh.lede}</p>

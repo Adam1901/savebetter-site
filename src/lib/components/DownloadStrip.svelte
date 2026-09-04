@@ -4,7 +4,10 @@
   import { fmt } from '$lib/i18n/config.js'
   import { esc } from '$lib/esc.js'
 
-  let { t, releases = null } = $props()
+  // `level` is 'h1' on /download/, where this strip IS the page masthead, and
+  // 'h2' everywhere else it appears as a closing CTA. `crumb` adds the
+  // breadcrumb line that only the dedicated page shows.
+  let { t, releases = null, level = 'h2', crumb = null, lp = './' } = $props()
   const d = t.download
 
   // Headline/blurb/signoff are baked from the build-time release and stay put
@@ -31,7 +34,14 @@
   <div class="wrap">
     <div class="inner">
       <div>
-        <h2 id="download-heading">{@html headline}</h2>
+        {#if crumb}
+          <span class="crumb crumb-on-accent">
+            <a href={lp}>Home</a>
+            <span aria-hidden="true">›</span>
+            <span>{crumb}</span>
+          </span>
+        {/if}
+        <svelte:element this={level} id="download-heading">{@html headline}</svelte:element>
         <p>{blurb}</p>
         <p class="signoff">{@html signoff}</p>
       </div>

@@ -1,21 +1,26 @@
 <script>
   import Cartridge from './Cartridge.svelte'
+  import { fmt } from '$lib/i18n/config.js'
 
   // Streamer / creator pitch. Console chrome (HOSTED ACCESS, share code, chips,
   // fan carts) stays English across locales like every app-mockup visual.
-  let { t } = $props()
+  // `showHead` is false on /creators/, whose page header already carries the
+  // heading and lede as the <h1> block.
+  let { t, showHead = true, lp = './' } = $props()
   const c = t.creators
   const fanCart = { color: '#3df0ff', name: 'STREAM WORLD', meta: 'now · 6.0 MB', files: null, status: 'READ-ONLY', statusKind: 'dim', showVersions: false, size: 'sm' }
 </script>
 
-<section id="creators" aria-labelledby="creators-heading">
+<section id="creators" aria-labelledby={showHead ? 'creators-heading' : undefined} aria-label={showHead ? undefined : c.tape}>
   <div class="wrap">
-    <div class="head">
-      <span class="tape">{c.tape}</span>
-      <span class="hand" style="color:var(--accent);font-size:22px">{c.hand}</span>
-    </div>
-    <h2 id="creators-heading">{@html c.h2Html}</h2>
-    <p class="lede">{c.lede}</p>
+    {#if showHead}
+      <div class="head">
+        <span class="tape">{c.tape}</span>
+        <span class="hand" style="color:var(--accent);font-size:22px">{c.hand}</span>
+      </div>
+      <h2 id="creators-heading">{@html c.h2Html}</h2>
+      <p class="lede">{c.lede}</p>
+    {/if}
 
     <div class="steps">
       {#each c.steps as s}
@@ -55,6 +60,6 @@
     <ul class="creator-points">
       {#each c.points as p}<li><span aria-hidden="true">▸ </span>{p}</li>{/each}
     </ul>
-    <p class="creator-pro">{@html c.proNoteHtml}</p>
+    <p class="creator-pro">{@html fmt(c.proNoteTpl, `${lp}pricing/`)}</p>
   </div>
 </section>

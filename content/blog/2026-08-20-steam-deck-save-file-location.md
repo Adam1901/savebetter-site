@@ -123,5 +123,5 @@ the Deck and a desktop, that's
 
 ---
 
-[Download Checkpoint64](/#download) — it's free, and the free plan is real.
+[Download Checkpoint64](/download/) — it's free, and the free plan is real.
 No email list, no follow-ups.
