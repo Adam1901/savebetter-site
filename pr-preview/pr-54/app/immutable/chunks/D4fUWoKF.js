@@ -1,0 +1,1 @@
+var e={basics:[0,1,4,6],coop:[2,3,7],billing:[5,8,9]},t={"how-it-works":[0,1,4],pricing:[5,8,7],"co-op":[2,3]};function n(e,t){return t.map(t=>e.faq.items[t])}function r(e,t){return t.map(t=>e[t])}export{r as i,t as n,n as r,e as t};
