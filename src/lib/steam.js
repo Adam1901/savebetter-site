@@ -11,6 +11,19 @@ export const STEAM_APP_ID = '4790820'
 export const STEAM_APP_NAME = 'Checkpoint64'
 export const STEAM_STORE_URL = `https://store.steampowered.com/app/${STEAM_APP_ID}/`
 
+// Permalink to one review. Steam has no /recommendationid/ route — a single
+// review lives under its AUTHOR's profile, keyed by the app it is about:
+// steamcommunity.com/profiles/<steamid>/recommended/<appid>/. That is the URL
+// the "helpful" link on the store page itself points at.
+//
+// The API omits author.steamid for a private profile, so this returns null and
+// the card falls back to the store page rather than linking somewhere broken.
+export function reviewPermalink(steamId) {
+  const id = String(steamId || '').trim()
+  if (!/^\d{17}$/.test(id)) return null
+  return `https://steamcommunity.com/profiles/${id}/recommended/${STEAM_APP_ID}/`
+}
+
 // First call (num_per_page=0) returns ONLY the aggregate query_summary
 // (score description + totals). The second returns the actual review bodies,
 // ordered by helpfulness within the last year, English-only, positive.
@@ -65,6 +78,9 @@ export function parseSteamReviews(summaryJson, reviewsJson, { limit = 6, minChar
       id: String(r.recommendationid || ''),
       author: String(r.author?.personaname || '').trim(),
       url: r.author?.profile_url || '',
+      // Where the card links. Falls back to the store page when the reviewer's
+      // profile is private and Steam withholds the steamid.
+      reviewUrl: reviewPermalink(r.author?.steamid) || STEAM_STORE_URL,
       playtimeMinutes: r.author?.playtime_at_review || r.author?.playtime_forever || 0,
       votesUp: Number(r.votes_up) || 0,
       text: cleanReviewText(r.review, maxChars),

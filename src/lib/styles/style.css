@@ -200,6 +200,7 @@ nav.top .brand {
   font-family: var(--f-pixel); font-size: 13px; color: var(--accent);
   letter-spacing: -1px;
   display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
 }
 nav.top .brand::before {
   content: ""; display: inline-block; width: 14px; height: 18px;
@@ -208,11 +209,13 @@ nav.top .brand::before {
 }
 /* Nav links use the mono face (not the wide pixel face) so all of them fit on
    one row beside the pixel wordmark without crowding or wrapping. */
-nav.top .links { display: flex; gap: 20px; }
-nav.top .links a {
+nav.top .links { display: flex; align-items: center; gap: 20px; }
+nav.top .links a,
+nav.top .links .drop-menu summary {
   font-family: var(--f-mono); font-size: 12.5px; font-weight: 700;
   letter-spacing: 0.4px; white-space: nowrap; color: var(--fg);
   text-decoration: none; opacity: 0.78;
+  display: inline-flex; align-items: center; line-height: 1;
 }
 nav.top .links a:hover { opacity: 1; color: var(--accent); }
 nav.top .nav-actions {
@@ -350,37 +353,28 @@ nav.top .cta:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var
 }
 
 @media (max-width: 1199px) {
-  /* Small-laptop / tablet band: tighten the row so all links stay on one line
-     with breathing room before the mobile collapse takes over. */
+  /* Small-laptop / tablet band: tighten the row so every link stays on one line
+     with breathing room before the drawer takes over. The dropdown summary is
+     not an <a>, so it has to be named alongside them or it stays full size and
+     breaks the row. */
   nav.top .links { gap: 13px; }
-  nav.top .links a { font-size: 11.5px; }
+  nav.top .links a,
+  nav.top .links .drop-menu summary { font-size: 11.5px; }
 }
 @media (max-width: 1023px) {
-  /* Below the width where all eight links fit with breathing room, collapse the
-     row but keep BLOG visible: it's the only destination that isn't an anchor on
-     this page, so users would otherwise have to scroll to the footer to reach it. */
-  nav.top .links { gap: 0; }
-  nav.top .links a { display: none; }
-  nav.top .links a.blog {
-    display: inline-flex;
-    align-items: center;
-    border: 1.5px solid var(--fg);
-    padding: 7px 10px;
-    opacity: 1;
-  }
-  nav.top .links a.blog:hover {
-    background: var(--fg);
-    color: var(--bg);
-  }
+  /* Below the width where the row fits, fold ALL of it into the hamburger.
+     This used to hide every <a> and keep only BLOG — which was defensible when
+     the other links were in-page anchors on a single page, but they are real
+     pages now, and hiding them with no drawer to open left this whole band with
+     no way to reach any of them. (The "who it's for" dropdown is a <details>,
+     so `a { display: none }` never hid it either: it sat alone in the bar.) */
+  nav.top .links { display: none; }
+  .nav-menu { display: block; }
 }
 @media (max-width: 520px) {
-  /* Phone widths: brand + BLOG + lang + theme + CTA overflow the bar and clip
-     the DOWNLOAD button, so fold the links and the bar CTA into the hamburger
-     drawer. The language picker and theme toggle stay in the bar as compact
-     controls; DOWNLOAD becomes the prominent top item of the drawer. */
-  nav.top .links { display: none; }
+  /* Phone widths: the bar CTA overflows and clips, so DOWNLOAD folds into the
+     drawer too. The language picker and theme toggle stay as compact controls. */
   nav.top .cta { display: none; }
-  .nav-menu { display: block; }
 }
 @media (max-width: 480px) {
   .theme-toggle { width: 32px; height: 32px; }
@@ -586,6 +580,7 @@ section .head .tape::before {
 }
 @media (max-width: 880px) { .steps { grid-template-columns: 1fr; } }
 .step {
+  display: flex; flex-direction: column;
   background: #fff; color: var(--ink);
   border: 2px solid var(--ink); padding: 26px 24px 28px;
   box-shadow: 6px 6px 0 var(--ink);
@@ -994,8 +989,11 @@ section .head .tape::before {
   gap: 12px 16px;
   margin: -28px 0 36px;
 }
+/* inline-flex + gap, because the "▲ " that used to sit inside the glyph span
+   was a trailing space HTML collapses — the badge read "▲8 user reviews". */
 .steam-badge {
-  font-family: var(--f-pixel); font-size: 11px;
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--f-pixel); font-size: 11px; line-height: 1;
   color: var(--accent-ink); background: var(--accent);
   border: 2px solid var(--ink);
   box-shadow: 3px 3px 0 var(--ink);
@@ -1005,13 +1003,22 @@ section .head .tape::before {
   font-family: var(--f-mono); font-size: 13px;
   color: rgba(var(--fg-rgb), 0.72); letter-spacing: 0.04em;
 }
+/* A filled button, not an outline: it is the one place on the page that sends
+   people to the store, and the outline version disappeared against the band. */
 .steam-link {
-  font-family: var(--f-pixel); font-size: 10px;
-  color: var(--accent);
-  border: 1.5px solid var(--accent);
-  padding: 8px 10px; margin-left: auto;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--f-pixel); font-size: 10px; line-height: 1;
+  color: var(--accent-ink); background: var(--accent);
+  border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 9px 12px; margin-left: auto;
+  text-decoration: none;
+  transition: transform 80ms ease, box-shadow 80ms ease;
 }
-.steam-link:hover { background: var(--accent); color: var(--accent-ink); }
+.steam-link:hover {
+  color: var(--accent-ink);
+  transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink);
+}
 
 .steam-grid {
   display: grid; grid-template-columns: repeat(3, 1fr);
@@ -1022,6 +1029,7 @@ section .head .tape::before {
 
 .steam-card {
   display: flex; flex-direction: column;
+  position: relative; /* anchor for the stretched .steam-open link */
   margin: 0;
   background: #fff; color: var(--ink);
   border: 2px solid var(--ink);
@@ -1035,10 +1043,11 @@ section .head .tape::before {
   border-bottom: 1.5px dashed rgba(26, 24, 20, 0.4);
 }
 .steam-rec {
-  font-family: var(--f-pixel); font-size: 10px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--f-pixel); font-size: 10px; line-height: 1;
   color: var(--accent-ink); background: #66c0f4; /* Steam blue */
   border: 1.5px solid var(--ink);
-  padding: 5px 7px;
+  padding: 6px 7px;
 }
 .steam-hrs {
   font-family: var(--f-mono); font-size: 11px;
@@ -1064,7 +1073,20 @@ section .head .tape::before {
   color: var(--accent-ink); background: var(--accent);
   border: 1.5px solid var(--ink);
 }
-.steam-author { font-family: var(--f-pixel); font-size: 11px; }
+/* The reviewer's name is the card's one anchor; ::after stretches it over the
+   whole card so anywhere in the card opens that review, while the quote itself
+   stays selectable. */
+.steam-open {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--f-pixel); font-size: 11px;
+  color: var(--ink); text-decoration: none;
+}
+.steam-open::after { content: ""; position: absolute; inset: 0; }
+.steam-open-mark { color: var(--accent); font-family: var(--f-mono); font-size: 12px; }
+.steam-card:hover { box-shadow: 8px 8px 0 var(--accent); }
+.steam-card:hover .steam-open { color: var(--accent); }
+.steam-card:focus-within { box-shadow: 8px 8px 0 var(--accent); }
+.steam-open:focus-visible::after { outline: 2px solid var(--accent); outline-offset: 3px; }
 .steam-helpful {
   margin-left: auto;
   font-family: var(--f-mono); font-size: 11px;
@@ -1125,6 +1147,7 @@ section .head .tape::before {
   gap: 22px;
 }
 .price-card {
+  display: flex; flex-direction: column;
   border: 2px solid var(--fg);
   padding: 28px 26px 30px;
   position: relative;
@@ -1144,14 +1167,22 @@ section .head .tape::before {
 .price-card .tag {
   font-family: var(--f-pixel); font-size: 11px; margin-bottom: 18px; opacity: 0.75;
 }
-.price-card .priceline { display: flex; align-items: baseline; gap: 6px; margin-bottom: 4px; }
-.price-card .price { font-family: var(--f-pixel); font-size: 36px; letter-spacing: -2px; }
-.price-card .unit { font-family: var(--f-mono); font-size: 13px; opacity: 0.7; }
+.price-card .priceline {
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 2px 10px; margin-bottom: 10px;
+}
+.price-card .price {
+  font-family: var(--f-pixel); font-size: 36px; letter-spacing: -2px;
+  line-height: 1;
+}
+.price-card .unit { font-family: var(--f-mono); font-size: 13px; line-height: 1.3; opacity: 0.7; }
 .price-card .tagline { font-family: var(--f-hand); font-size: 18px; margin-bottom: 22px; opacity: 0.85; }
 .price-card ul {
   list-style: none; padding: 0; margin: 0 0 26px;
   display: flex; flex-direction: column; gap: 8px;
 }
+/* Cards are equal height; the tallest list decides. Everything below the list
+   is pinned to the bottom so the three CTAs line up across the row. */
 .price-card li {
   font-family: var(--f-mono); font-size: 13.5px;
   display: flex; gap: 10px;
@@ -1161,6 +1192,7 @@ section .head .tape::before {
 .price-card.hl li { opacity: 0.95; }
 .price-card.hl li::before { color: var(--ink); }
 .price-card .cta-btn {
+  margin-top: auto;
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
   font-family: var(--f-pixel); font-size: 12px;
   padding: 14px 18px; border: 2px solid var(--fg);
@@ -1362,8 +1394,9 @@ footer.bot .footer-h {
 footer.bot .copyline {
   margin-top: 36px; padding-top: 22px;
   border-top: 1px dashed rgba(var(--fg-rgb), 0.18);
-  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
-  font-family: var(--f-pixel); font-size: 9px;
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px 14px;
+  font-family: var(--f-pixel); font-size: 9px; line-height: 1.6;
 }
 
 /* misc helpers */
@@ -1648,6 +1681,9 @@ footer.bot .copyline {
 }
 .drop-menu summary::-webkit-details-marker { display: none; }
 .drop-menu summary::marker { content: ""; }
+/* .lang-caret is 8px, sized for the compact language chip. Beside 12.5px nav
+   text that reads as a speck, so the dropdown's caret gets its own size. */
+.drop-menu summary .lang-caret { font-size: 10px; }
 .drop-menu summary:hover, .drop-menu summary.cur { opacity: 1; color: var(--accent); }
 .drop-menu summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; opacity: 1; }
 .drop-menu[open] summary { opacity: 1; color: var(--accent); }
