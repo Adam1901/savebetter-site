@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Fri, 04 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Why Do Game Saves Corrupt? 8 Usual Culprits</title>
+      <link>https://checkpoint64.com/blog/why-do-game-saves-corrupt/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/why-do-game-saves-corrupt/</guid>
+      <pubDate>Sun, 06 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Why do game saves corrupt? Learn how crashes, cloud conflicts, mods and failing drives can wreck progress - and how to keep every world recoverable safely.</description>
+    </item>
     <item>
       <title>Palworld World Handoff Without Save Panic</title>
       <link>https://checkpoint64.com/blog/palworld-world-handoff/</link>

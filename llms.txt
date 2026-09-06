@@ -199,6 +199,7 @@ published in 5.
 
 Newest first. Every post is also in the RSS feed at https://checkpoint64.com/rss.xml.
 
+- [Why Do Game Saves Corrupt? 8 Usual Culprits](https://checkpoint64.com/blog/why-do-game-saves-corrupt/): 2026-09-06 — Why do game saves corrupt? Learn how crashes, cloud conflicts, mods and failing drives can wreck progress - and how to keep every world recoverable safely.
 - [Palworld World Handoff Without Save Panic](https://checkpoint64.com/blog/palworld-world-handoff/): 2026-09-04 — Palworld world handoff without rented servers or risky zip files. Keep co-op saves moving, protected and ready when the next host wants to play again.
 - [Save File Ownership Keeps Your Worlds Yours](https://checkpoint64.com/blog/save-file-ownership/): 2026-09-02 — Save file ownership means your world stays yours: protect progress, share co-op saves safely, and restore the version before disaster strikes and sticks.
 - [World Overwrite Example: Recover a Lost Save](https://checkpoint64.com/blog/world-overwrite-example/): 2026-08-31 — A world overwrite example for gamers: see how one bad save replacement happens, what recovery looks like, and how version history prevents a total wipe.
