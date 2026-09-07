@@ -63,12 +63,12 @@ other providers depend on how this one lands.
 
 ## Members-only saves: Patreon
 
-If you make things, you already know the Creators side of Checkpoint64. Pro lets
-you mint a **read-only share code** for any save — a challenge seed, your 100%
-file, a hand-tuned starting world — and hand it to an audience. Fans redeem the
-code, your world drops into their library, and they can play it but never save
-over yours. Read-only visitors don't burn a seat, so "as many fans as you like"
-actually means that. (The [community-servers post](/blog/read-only-community-servers/)
+If you make things, you already know the Creators side of Checkpoint64. Every
+plan lets you mint a **read-only share code** for any save — a challenge seed,
+your 100% file, a hand-tuned starting world — and hand it to an audience. Fans
+redeem the code, your world drops into their library, and they can play it but
+never save over yours. Read-only visitors don't burn a seat; what your plan sets
+is how many of them can hold a copy at once. (The [community-servers post](/blog/read-only-community-servers/)
 is the full tour.)
 
 The missing piece has been *gating.* Plenty of creators want the save to be a

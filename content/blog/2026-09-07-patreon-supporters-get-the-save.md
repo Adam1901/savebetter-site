@@ -75,15 +75,20 @@ a copy.
 
 ## The costs, stated plainly
 
-**Hosting read-only members is a Pro feature**, so binding a team to a campaign
-needs Pro on your account. That's deliberate: your supporters' downloads are
-storage requests billed to us, and enough of them add up.
+**Hosted access works on every plan.** What a plan buys is how many patrons can
+hold a copy of a given team's saves at once: **3 on free, 15 on Lifetime,
+unlimited on Pro.** Your supporters' downloads are storage requests billed to us,
+and enough of them add up — but you can run the whole thing on a free account
+first and see whether it's worth paying for.
+
+That count is of *current* read-only members, not of everyone who ever joined. A
+patron who lapses and gets swept out frees their slot for the next one, so the
+number you're managing is your live audience, not a running total.
 
 **Your supporters need nothing.** Free plan is fine. Read-only members don't
-consume one of your team's seats, so "as many patrons as you like" means that
-literally — and backing several creators doesn't count against a supporter's own
-plan limits either. Someone on the free plan can back six creators and unlock all
-six.
+consume one of your team's seats, and backing several creators doesn't count
+against a supporter's own plan limits either. Someone on the free plan can back
+six creators and unlock all six.
 
 ## Join codes still work
 
