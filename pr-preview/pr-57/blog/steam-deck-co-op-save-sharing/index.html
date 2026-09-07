@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1teoznn--><!---->  <title>Co-op on the couch; taking the shared world to your Steam Deck without stranding the group — Checkpoint64</title>
+  <meta name="description" content="A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you&#39;ve become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../../retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="../../rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Co-op on the couch; taking the shared world to your Steam Deck without stranding the group" />
+  <meta property="og:description" content="A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you&#39;ve become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current." />
+  <meta property="og:url" content="https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/" />
+  <meta property="og:image" content="https://checkpoint64.com/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Co-op on the couch; taking the shared world to your Steam Deck without stranding the group" />
+  <meta name="twitter:description" content="A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you&#39;ve become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current." />
+  <meta name="twitter:image" content="https://checkpoint64.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta property="article:published_time" content="2026-08-19" />
+  <meta property="article:tag" content="steam-deck" />
+  <meta property="article:tag" content="co-op" />
+  <meta property="article:tag" content="linux" />
+  <meta property="article:tag" content="save-sharing" />
+  <meta property="article:tag" content="locks" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logbook",
+        "item": "https://checkpoint64.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Co-op on the couch; taking the shared world to your Steam Deck without stranding the group",
+        "item": "https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Co-op on the couch; taking the shared world to your Steam Deck without stranding the group",
+    "description": "A co-op world lives on one machine at a time, and the moment you want to play it on the Deck instead of at your desk you've become a host with two PCs and a coordination problem. A server-enforced lock turns the Deck into just another seat — take it, play, push it back — without anyone having to ask whose save is current.",
+    "url": "https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://checkpoint64.com/blog/steam-deck-co-op-save-sharing/"
+    },
+    "datePublished": "2026-08-19",
+    "dateModified": "2026-08-19",
+    "image": "https://checkpoint64.com/og-image.png",
+    "inLanguage": "en",
+    "keywords": "steam-deck, co-op, linux, save-sharing, locks",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    }
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[-1--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post">
+      <div class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../../">Home</a> <span aria-hidden="true">/</span> <a href="../../blog/">Logbook</a> <span aria-hidden="true">/</span> <span>Co-op on the couch; taking the shared world to your Steam Deck without stranding the group</span>
+        </nav>
+        <p class="blog-post-meta"><time datetime="2026-08-19">2026-08-19</time> · <span class="blog-author">By the Checkpoint64 team</span> · <span class="blog-tag">steam-deck</span> <span class="blog-tag">co-op</span> <span class="blog-tag">linux</span> <span class="blog-tag">save-sharing</span> <span class="blog-tag">locks</span></p>
+        <h1 class="blog-post-title pixel">Co-op on the couch; taking the shared world to your Steam Deck without stranding the group</h1>
+      </div>
+      <div class="blog-post-body">
+<p>Most co-op survival and builder games have exactly one live world. Whoever
+hosts holds it; everyone else is a visitor. That&#39;s fine until the world needs to
+move — and a Steam Deck makes it need to move more often, because now even
+<em>your own</em> two machines disagree about who has the latest copy.</p>
+<p>You end up with two questions stacked on top of each other:</p>
+<ul>
+<li><strong>Whose save is current?</strong> — the group problem, as old as co-op.</li>
+<li><strong>Which of my machines has it?</strong> — the new one the Deck adds.</li>
+</ul>
+<p>They have the same answer.</p>
+<h2 id="one-world-a-queue-for-it">One world, a queue for it</h2>
+<p>Checkpoint64 keeps the world in the cloud with its full version history, and
+puts a <strong>server-enforced lock</strong> in front of it. Only the person holding the lock
+can push a new version. Everyone else can pull and look, but not overwrite.</p>
+<p>Playing a session looks like this:</p>
+<ol>
+<li>Take the lock. Whoever held it last gets told, and it lands in the group&#39;s
+shared logbook, so there&#39;s a record rather than an argument.</li>
+<li>Restore the latest version and play.</li>
+<li>Finish, and the new version goes up. The lock frees for the next person.</li>
+</ol>
+<p>The Deck doesn&#39;t complicate that, because the Deck is just another seat at the
+same table. Same account, same save, same lock. Taking the world to the sofa is
+the identical operation as taking it to a friend — you take the lock, you have
+the world, and the group knows.</p>
+<h2 id="the-deck-specific-bit">The Deck-specific bit</h2>
+<p>The one thing that would normally break here is where the files land. Your
+desktop writes the world to a Windows path; the Deck runs the same game through
+Proton and needs it inside a per-game prefix under <code>compatdata</code>, keyed by an app
+ID nobody memorises.</p>
+<p>Checkpoint64 resolves that on the machine doing the restoring, so the world you
+took on your desktop arrives somewhere your Deck&#39;s copy of the game will
+actually read it. There&#39;s no path to carry across and nothing to configure. The
+<a href="/blog/steam-deck-save-file-location/">full mechanics are here</a> if you want them,
+and the two-machine version without the co-op layer is
+<a href="/blog/move-game-saves-between-steam-deck-and-pc/">its own post</a>.</p>
+<h2 id="what-you-give-up">What you give up</h2>
+<p>Be straight about it: this is not a dedicated server, and the world is <strong>not
+online while nobody&#39;s holding it</strong>. If your group needs someone able to drop in
+at 3am across four time zones, rent a box — that&#39;s the case a rented server
+genuinely wins.</p>
+<p>What it replaces is the far more common shape: five people who play in roughly
+the same evening window, currently paying
+<a href="/dedicated-server-alternative/">€120–240 a year</a> for a machine that sits idle
+about eighteen hours a day, and <em>still</em> losing an evening occasionally because
+two people played separately and one save ate the other. The lock fixes the
+second problem outright, and a Deck stops being a reason the world is stuck on
+somebody&#39;s desktop.</p>
+<h2 id="games-this-fits">Games this fits</h2>
+<p>The single-world co-op games where &quot;who&#39;s got it?&quot; is a recurring question —
+<a href="/saves/valheim/">Valheim</a>, <a href="/saves/factorio/">Factorio</a>,
+<a href="/saves/satisfactory/">Satisfactory</a>, <a href="/saves/palworld/">Palworld</a>,
+<a href="/saves/enshrouded/">Enshrouded</a>, and the rest of the co-op catalog. Most of them
+run on a Deck through Proton, which is exactly why the world keeps needing to
+move in the first place.</p>
+<p>Checkpoint64 is on Steam with a SteamOS + Linux build, so a Deck installs it from
+your library like anything else.</p>
+<hr>
+<p><a href="/download/">Download Checkpoint64</a> — it&#39;s free, and the free plan is real.
+No email list, no follow-ups.</p>
+
+      </div>
+      <nav class="guide-related" aria-label="More from the Logbook">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="../../blog/best-tools-for-modded-saves/">Best Tools for Modded Saves That Stop Disasters</a></li>
+          <li><a href="../../blog/serverless-multiplayer-co-op-without-rent/">Serverless Multiplayer: Co-op Without Rent</a></li>
+          <li><a href="../../blog/cross-platform-saves/">Cross Platform Saves: What Actually Carries Over</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>
