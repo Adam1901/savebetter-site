@@ -87,7 +87,7 @@ export async function GET() {
     { loc: '/blog/', lastmod: newestPost, changefreq: 'weekly', priority: '0.8' },
     ...posts.map((p) => ({
       loc: `/blog/${p.slug}/`,
-      lastmod: p.date,
+      lastmod: p.updated || p.date,
       changefreq: 'monthly',
       priority: '0.7',
     })),

@@ -1,9 +1,17 @@
 ---
 title: Google Drive and Patreon; two integrations we're building next
 date: 2026-07-24
+updated: 2026-09-07
 excerpt: Two integrations are in the works — back your saves up to your own Google Drive instead of our storage, and gate a creator's read-only share code to Patreon members. Here's what each one does, why it fits, and the honest state of both.
 tags: [integrations, google-drive, patreon, roadmap]
 ---
+
+> **Update, September 2026: the Patreon half of this post has shipped, and it works
+> differently to what's described below.** There is no share code and no redeem
+> step in the Patreon path — a creator binds a team to their campaign, and access
+> is reconciled every hour in both directions. See
+> [Patreon is connected](/blog/patreon-supporters-get-the-save/) for how it
+> actually works. The Google Drive half is still in progress.
 
 Two requests land in our inbox more than any others. From players: *"Can I point
 this at my own cloud storage instead of your quota?"* From creators: *"Can I hand
