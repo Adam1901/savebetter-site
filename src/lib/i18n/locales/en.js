@@ -117,7 +117,7 @@ export default {
       { tag: 'CO-OP LOCKS', title: 'ONE PERSON\nHOLDS THE WORLD.', body: 'Games like Factorio, Valheim, and Satisfactory have one live world at a time. Whoever holds the lock uploads; everyone else downloads. Holder gone quiet? Locks expire on their own, and you can take over — with a warning, and a logbook entry so everyone knows.' },
       { tag: 'ONLY WHAT CHANGED', title: 'TINY\nUPLOADS.', body: 'Only the files that changed get uploaded — renamed files cost nothing extra. A 500 MB Minecraft world re-uploads as a few MB after a normal session, not the whole thing. Easy on your internet, easy on your storage.' },
       { tag: '140+ GAMES READY', title: 'SET UP IN\nSECONDS.', body: 'Presets for 140+ games — four flavours of modded Minecraft, Stardew, Skyrim, Palworld, Elden Ring — plus seven emulators. Pick which files count and skip the screenshots. If it writes saves to a folder, it works.' },
-      { tag: 'SHARE CODES', title: 'ONE WORLD,\nWHOLE CROWD.', body: 'Running a community world? Mint a join code and anyone holding it can download your save — but never upload over it. Codes are capped and revocable, and read-only visitors don’t use up seats. (Pro)' },
+      { tag: 'SHARE CODES', title: 'ONE WORLD,\nWHOLE CROWD.', body: 'Running a community world? Mint a join code and anyone holding it can download your save — but never upload over it. Codes are capped and revocable, and read-only visitors don’t use up seats. Every plan can host — 3 fans at once on Free, 15 on Lifetime, unlimited on Pro.' },
       { tag: 'LOGBOOK', title: 'WHO DID WHAT,\nWHEN.', body: 'Every upload, restore, and lock-grab gets written down in your group’s logbook. Handy when your co-op partner blames you for the bad run.' },
       { tag: 'ANY LAUNCHER', title: 'COVERS WHAT STEAM\nCLOUD DOESN’T.', body: 'It watches the save folder, not the game, so it doesn’t care which launcher put the game there — emulators, modded setups, GOG and Epic copies whose developers never wired Cloud up.' },
       { tag: 'AUTO-DETECT', title: 'FINDS YOUR\nGAMES.', body: 'Installed-game detection scans your Steam library and offers what it recognises. Anything else, point it at a folder.' },
@@ -136,26 +136,29 @@ export default {
 
   // For streamers / content creators (MARKETING.md §4.4). Expands the SHARE
   // CODES feature tile into an audience pitch: read-only "hosted access" join
-  // codes (Pro-gated, shipped #60) let a creator hand their exact save to any
-  // number of fans, who get download-only access and can never overwrite it.
+  // codes (shipped #60) let a creator hand their exact save to fans, who get
+  // download-only access and can never overwrite it. Available on EVERY plan
+  // since #545 — what a plan caps is how many fans may hold access AT ONCE
+  // (free 3, Lifetime 15, Pro unlimited). The backend numbers live in
+  // savebetter.usage.readonly-member-cap-by-plan; keep these in step with them.
   creators: {
     tape: 'FOR STREAMERS & CREATORS',
     hand: 'one code, every fan',
     h2Html: 'SHARE YOUR RUN<br/>WITH <span class="accent">THE WHOLE CHAT.</span>',
     lede: 'Got an audience? Hand them your exact save. Mint a read-only share code for any world: your 100% file, a challenge seed, last night’s cursed run. Drop it in your video description, and fans pull a perfect copy into their own library. They download it and play; they can never save over yours.',
     steps: [
-      { label: '01 · MINT', h3Html: 'MAKE A CODE', body: 'Open the save, hit Hosted access, and mint a share code. Cap it at a number of uses, or leave it unlimited. Your call, and it takes a couple of seconds. (Pro plan.)' },
+      { label: '01 · MINT', h3Html: 'MAKE A CODE', body: 'Open the save, hit Hosted access, and mint a share code. Cap it at a number of uses, or leave it unlimited. Your call, and it takes a couple of seconds. Every plan can mint one.' },
       { label: '02 · DROP THE LINK', h3Html: 'POST IT ANYWHERE', body: 'Put the code in your video description, your Discord, or a stream panel. Fans without the app yet? Share the link instead, and it opens a download page that walks them in.' },
       { label: '03 · THEY PLAY IT', h3Html: 'FANS GRAB YOUR SAVE', body: 'Fans paste the code and your world drops into their own library, read-only. They download and play your exact run, with no way to overwrite it.' },
     ],
     points: [
       'Always read-only, so fans can play your save but never change it',
-      'Share with as many fans as you like, or cap the code and revoke it whenever',
+      'Cap the code or revoke it whenever — and your plan sets how many fans can hold access at once',
       'Read-only fans don’t use up your team’s seats',
     ],
     // {0} is the pricing page URL, built by the caller — the old '#pricing'
     // anchor stopped existing when pricing became its own page.
-    proNoteTpl: 'Hosted share codes are part of <a href="{0}">Pro</a>, built for creators, crews, and modding groups.',
+    proNoteTpl: 'Hosted share codes work on every plan — 3 read-only fans at once on Free, 15 on Lifetime, and no limit at all on <a href="{0}">Pro</a>, built for creators, crews, and modding groups.',
 
     pressKit: {
       tape: 'MAKING A VIDEO ABOUT CHECKPOINT64?',
@@ -274,6 +277,7 @@ export default {
           '20 MiB cloud storage per space',
           'auto-backup + full version history',
           'co-op locks + logbook included',
+          'share codes for 3 read-only fans',
         ],
         cta: 'GET FREE',
       },
@@ -286,6 +290,7 @@ export default {
           '1 GiB storage per space',
           'buy direct or on Steam',
           'no subscription, ever',
+          'share codes for 15 read-only fans',
           'everything in Free, with room to breathe',
         ],
         cta: 'GET LIFETIME',
@@ -299,7 +304,7 @@ export default {
           '5 GiB storage per space',
           '25 seats per team (guaranteed minimum)',
           '100 versions / 90 days kept (guaranteed minimum)',
-          'read-only share codes for your community',
+          'unlimited read-only share codes',
           'priority bandwidth (2× the API throughput)',
         ],
         cta: 'GET PRO',
@@ -333,7 +338,7 @@ export default {
         { k: 'Seats per team', free: 'included', life: 'included', pro: '25 guaranteed minimum' },
         { k: 'Auto-backup + version history', free: '✓', life: '✓', pro: '✓ · 100 versions / 90 days guaranteed' },
         { k: 'Co-op locks + logbook', free: '✓', life: '✓', pro: '✓' },
-        { k: 'Read-only share codes', free: '—', life: '—', pro: '✓' },
+        { k: 'Read-only share codes', free: '3 fans at once', life: '15 fans at once', pro: 'unlimited' },
         { k: 'Priority bandwidth', free: '—', life: '—', pro: '2× API throughput' },
         { k: 'Buy on Steam', free: 'n/a', life: '✓ one-time', pro: '✓ one-time unlock' },
       ],
@@ -385,7 +390,7 @@ export default {
       { q: 'WHAT IF MY CO-OP PARTNER OVERWRITES MY UPLOAD?', a: 'They can’t, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history.' },
       { q: 'DO I STILL NEED A DEDICATED SERVER?', a: 'For most groups, no. The whole point of a dedicated server is keeping your world online when the host’s PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day.' },
       { q: 'DOES THIS WORK FOR EMULATORS OR CONSOLE SAVES?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
-      { q: 'WHAT DOES IT COST?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
+      { q: 'WHAT DOES IT COST?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, unlimited read-only share codes. Share codes themselves work on every plan — Free hosts 3 read-only fans at a time, Lifetime 15. No charge per person on any tier.' },
       { q: 'CAN I USE IT TODAY?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'WHO CAN SEE MY SAVES?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period, in case of 2am regret).' },
       { q: 'IS THE FREE PLAN A TRIAL?', a: 'No. It has no timer and no card on file. 20 MiB is small on purpose — enough for Stardew, Hollow Knight, or a whole retro library — and it never expires.' },
@@ -508,7 +513,7 @@ export default {
     },
     creators: {
       title: 'For Streamers & Creators — Share Your Save With the Whole Chat',
-      description: 'Mint a read-only share code for any world and hand your exact save to every viewer. They download and play it; they can never save over yours. Read-only fans use no seats.',
+      description: 'Mint a read-only share code for any world and hand your exact save to every viewer. They download and play it; they can never save over yours. Read-only fans use no seats, and every plan can host — 3 at once on Free, 15 on Lifetime, unlimited on Pro.',
       breadcrumb: 'For creators',
       hand: 'one code, every fan',
       h1Html: 'SHARE YOUR RUN<br/>WITH <span class="accent">THE WHOLE CHAT.</span>',
@@ -516,7 +521,7 @@ export default {
     },
     pricing: {
       title: 'Pricing — Free Plan, Pay-Once Lifetime, or Pro for Crews',
-      description: 'Free is actually free, with no timer and no card. Lifetime is a one-time payment. Pro adds room and read-only share codes. No charge per person on any tier.',
+      description: 'Free is actually free, with no timer and no card. Lifetime is a one-time payment. Share codes work on every plan; Pro adds room and lifts the fan limit. No charge per person on any tier.',
       breadcrumb: 'Pricing',
       hand: 'no rip-cords',
       h1Html: 'PICK YOUR <span class="accent">CART.</span>',
@@ -586,7 +591,7 @@ export default {
       { q: 'What if my co-op partner overwrites my upload?', a: "They can't, on purpose. Only the person holding the lock can upload. To push their version they have to take the lock first — which warns you, and goes in the logbook for all to see. Worst case, your version is one Restore away in the history." },
       { q: 'Do I still need a dedicated server?', a: "For most groups, no. The whole point of a dedicated server is keeping your world online when the host's PC is off. Checkpoint64 covers about 90% of that for a one-time fee: whoever wants to play grabs the lock, plays their session, then pushes the save back. A typical co-op group saves {0} compared to renting a 24/7 server that sits idle 18 hours a day." },
       { q: 'Does this work for emulators or console saves?', a: 'Emulators, absolutely — RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, RPCS3, and Cemu all have presets, so your save states finally get real version history. Console saves only work if you can get them onto a PC first. The app itself runs on Windows, macOS (Apple Silicon), and Linux.' },
-      { q: 'What does it cost?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, read-only share codes. No charge per person on any tier.' },
+      { q: 'What does it cost?', a: 'The free plan is real and stays free: 20 MiB, your own space plus one team. Lifetime is a one-time payment — 1 GiB per space, up to 3 teams, bought direct or through Steam. Pro is for big crews: 5 GiB per space, 5 teams, 25 seats each, unlimited read-only share codes. Share codes themselves work on every plan — Free hosts 3 read-only fans at a time, Lifetime 15. No charge per person on any tier.' },
       { q: 'Can I use it today?', a: 'Yes — v1.0 is out. It’s a free download for Windows, macOS (Apple Silicon), and Linux, and it’s on Steam too.' },
       { q: 'Who can see my saves?', a: 'Your teammates — and only the ones you invite. They see your display name, never your email. And your data stays yours: export everything as a zip whenever you like, and deleting your account actually deletes it (after a 7-day cooling-off period).' },
       { q: 'Is the free plan a trial?', a: 'No. It has no timer and no card on file. 20 MiB is small on purpose — enough for Stardew, Hollow Knight, or a whole retro library — and it never expires.' },
