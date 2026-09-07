@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1teoznn--><!---->  <title>Serverless Multiplayer: Co-op Without Rent — Checkpoint64</title>
+  <meta name="description" content="Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../../retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="../../rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="Serverless Multiplayer: Co-op Without Rent" />
+  <meta property="og:description" content="Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file." />
+  <meta property="og:url" content="https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/" />
+  <meta property="og:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/b61030b0-9ddf-4229-a6c9-6e2191c801d6.webp" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Serverless Multiplayer: Co-op Without Rent" />
+  <meta name="twitter:description" content="Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file." />
+  <meta name="twitter:image" content="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/b61030b0-9ddf-4229-a6c9-6e2191c801d6.webp" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta property="article:published_time" content="2026-08-18" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Logbook",
+        "item": "https://checkpoint64.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Serverless Multiplayer: Co-op Without Rent",
+        "item": "https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Serverless Multiplayer: Co-op Without Rent",
+    "description": "Serverless multiplayer lets co-op groups share worlds without renting a server. Learn where it works, where it fails, and how to protect every save file.",
+    "url": "https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://checkpoint64.com/blog/serverless-multiplayer-co-op-without-rent/"
+    },
+    "datePublished": "2026-08-18",
+    "dateModified": "2026-08-18",
+    "image": "https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/b61030b0-9ddf-4229-a6c9-6e2191c801d6.webp",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    }
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[-1--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post">
+      <div class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../../">Home</a> <span aria-hidden="true">/</span> <a href="../../blog/">Logbook</a> <span aria-hidden="true">/</span> <span>Serverless Multiplayer: Co-op Without Rent</span>
+        </nav>
+        <p class="blog-post-meta"><time datetime="2026-08-18">2026-08-18</time> · <span class="blog-author">By the Checkpoint64 team</span></p>
+        <h1 class="blog-post-title pixel">Serverless Multiplayer: Co-op Without Rent</h1>
+      </div>
+      <figure class="blog-post-lead">
+        <img src="https://afocirmbqdxnkyescnev.supabase.co/storage/v1/object/public/featured-images/a5a4271f-ee85-47d3-97ad-a7052bf533e6/b61030b0-9ddf-4229-a6c9-6e2191c801d6.webp" alt="Serverless Multiplayer: Co-op Without Rent" loading="eager" />
+      </figure>
+      <div class="blog-post-body">
+<p>Your mate has the good world save. Your mate is away for the weekend. Your entire group is now staring at the Discord chat like a party of villagers waiting for a door to open.</p>
+<p>That is the practical problem <strong>serverless multiplayer</strong> tries to solve. Not every co-op session needs a rented machine humming away 24/7 just so someone can plant parsnips, move conveyor belts, or get repeatedly flattened by a boss. For plenty of games, the expensive bit is not running the world. It is making sure the right person has the right save, nobody overwrites it, and a bad mod or crash does not turn 80 hours into digital compost.</p>
+<h2>What serverless multiplayer actually means</h2>
+<p>The phrase gets used loosely, so let’s remove the fog machine. Traditional multiplayer usually means a dedicated server: a computer hosts the game world continuously, players connect to it, and the server keeps the authoritative save. That can be a home PC, a rented host, or an official service.</p>
+<p>Serverless multiplayer, in the co-op sense, means the group does not keep a permanent game server running. Instead, players take turns hosting locally, with the shared world moving safely between them. The game still needs a host while people are playing. There is no sorcery here, and no tiny goblin maintaining your Valheim map at 3am. The difference is that you are not paying monthly for an always-on box just to make ownership less annoying.</p>
+<p>For games built around host-and-play sessions, this can be a much better fit. You launch the game, host from your PC, friends join, everybody logs off, and the world is handed to the next trusted player when it is their turn. The key word is <em>safely</em>. Passing a save through Discord, Google Drive, USB sticks, or a folder called `FINAL_final_USE_THIS_ONE` is not a system. It is a hostage situation with extra steps.</p>
+<h2>When serverless multiplayer beats a dedicated server</h2>
+<p>A dedicated server earns its keep when people play at wildly different hours, need the world online constantly, or want a public community with dozens of players. If your Minecraft realm is effectively a small town, leave it running. Nobody wants to schedule access to the town square.</p>
+<p>But many co-op groups do not play like that. They play on Tuesday nights, perhaps a bit on Sunday, then disappear for two weeks because work, school, holidays, and the unstoppable gravitational pull of a new release happened. Paying a recurring server bill for that pattern can feel like renting a cinema just in case three friends fancy watching a film.</p>
+<p>Serverless co-op makes sense when your group has a few regular players, trusts each other with the world, and only needs one host at a time. It is particularly useful for games where a local save already contains the whole world: <a href="https://checkpoint64.com/stardew-save-backup/" rel="nofollow noopener">Stardew Valley farms</a>, <a href="https://checkpoint64.com/saves/factorio/" rel="nofollow noopener">Factorio factories</a>, Satisfactory builds, <a href="https://checkpoint64.com/palworld-save-backup/" rel="nofollow noopener">Palworld worlds</a>, modded survival saves, and emulator save files.</p>
+<p>The money story is refreshingly simple. A free plan that is actually free is useful. Paying once for more storage and keeping it forever is better than another subscription nibbling at your bank account. No rented server to forget cancelling. No mysterious price rise because a hosting company discovered the word “community”. No “powered by AI” sticker slapped onto a sync button for reasons known only to marketing departments.</p>
+<h2>The real challenge: the save is the server</h2>
+<p>With a dedicated server, the world lives in one place. With serverless multiplayer, the save file becomes the thing that must be protected and controlled.</p>
+<p>That creates three ways a great co-op world can die embarrassingly. First, two people launch different copies of the same save and make conflicting changes. Second, someone copies an older version over a newer one because the filenames are a cursed archaeological dig. Third, a game crash, mod update, or power cut damages the active save and leaves the group debating whether the last six hours were ever real.</p>
+<p>A proper serverless setup needs more than cloud storage. It needs version history, clear ownership, and a way to stop simultaneous edits. Cloud folders are excellent at synchronising files. They are much less excellent at understanding that two people independently building factories in the same world is a conflict, not a collaboration feature.</p>
+<h3>Version history is your rollback button</h3>
+<p>Every meaningful save change should create a recoverable point in time. That means you can roll back the mod update that ate your NPCs, the accidental chest clear, or the session where someone “tidied up” and demolished the wrong half of the base.</p>
+<p>This matters even more with modded games. A modpack is not a stable ecosystem. It is a Jenga tower made from dependencies, load orders, hotfixes, and one mod author deciding that version 2.4.1 needs a total inventory rewrite. Keeping older versions of the save means a bad launch is a problem, not an obituary.</p>
+<h3>One world, one active editor</h3>
+<p>The most valuable rule in serverless co-op is painfully unglamorous: only one person should hold the active world at a time.</p>
+<p>A lock-based handoff enforces that rule without asking your group to remember it. One player checks out the save, hosts the session, and later releases it for the next person. Everyone can see who has it and when it last changed. Expiring locks are useful too, because every group contains at least one person who vanishes mid-campaign and leaves the save trapped on a laptop until the heat death of the universe.</p>
+<p>This is where Checkpoint64 fits the job neatly. It watches supported save folders, checks for changes every 30 seconds, uploads only what changed, keeps prior versions, and uses server-enforced locks for co-op handoffs. In normal human language: the world follows the group, not whichever friend happened to host it first.</p>
+<h2>A practical serverless multiplayer routine</h2>
+<p>You do not need a ritual circle of backup drives to make this work. You need a boring, repeatable routine. Boring is good. Boring saves worlds.</p>
+<p>Before a session, the intended host takes the current shared save and confirms they hold the lock. Everyone joins as normal through the game’s own multiplayer tools. After the session, the host saves and exits cleanly, waits for the new version to upload, then releases the lock. The next host starts from that latest version rather than from a local mystery copy.</p>
+<p>Add one extra habit for modded games: agree on the modpack version before launching. Save sharing cannot rescue a world opened with the wrong mods, missing dependencies, or a different game build. It can restore the damage afterwards, which is lovely, but avoiding the damage remains cheaper on the blood pressure.</p>
+<p>A shared logbook also helps more than it sounds. Leave a note when you update mods, beat a major boss, rebuild a base, or finish a risky migration. When someone asks, “Which version was before the bee incident?”, you will have an answer that is more useful than scrolling through timestamps and regret.</p>
+<h2>Where serverless multiplayer falls short</h2>
+<p>This approach is not a universal replacement for dedicated hosting. If players need access while the usual host is asleep, at work, or offline for a week, a server is still the clean answer. The same goes for large worlds with many concurrent players, persistent economy servers, public access, or games that require a dedicated process for their multiplayer features.</p>
+<p>Your upload speed also matters. A giant world with frequent, chunky save files may take time to move between players, especially on slower broadband. Incremental uploads help, but physics remains annoyingly committed to being physics.</p>
+<p>There is also a social trade-off. Serverless co-op works best with a defined crew. If your group cannot agree who hosts next, cannot stick to one modpack, or considers “I think this is the latest file” acceptable documentation, a dedicated server may be worth the cost purely as a peace treaty.</p>
+<h2>The better question is not “server or no server?”</h2>
+<p>The better question is: how often does your world genuinely need to be online, and what happens when the person holding it is not?</p>
+<p>For a small group that plays together, serverless multiplayer can cut the rental bill without returning to the bad old days of save files passed around like contraband. Keep every version. Hand the world over deliberately. Make rollbacks quick enough that one disastrous session becomes a story, not the end of the campaign.</p>
+<p>Your co-op world is not disposable. Treat it less like a temporary download and more like a cartridge shelf: labelled, protected, and always ready for the next person to pick up.</p>
+      </div>
+      <nav class="guide-related" aria-label="More from the Logbook">
+        <h2>Keep reading</h2>
+        <ul>
+          <li><a href="../../blog/cross-platform-saves/">Cross Platform Saves: What Actually Carries Over</a></li>
+          <li><a href="../../blog/modded-world-preservation-guide/">Modded World Preservation Guide for PC Gamers</a></li>
+          <li><a href="../../blog/how-to-verify-save-integrity/">How to Verify Save Integrity Before It Bites</a></li>
+        </ul>
+      </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>
