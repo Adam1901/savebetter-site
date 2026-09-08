@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--1ha5dvy--><!---->  <title>How to Back Up No Man&#39;s Sky Saves (Every Big Update Is a Risk Window) — Checkpoint64</title>
+  <meta name="description" content="No Man&#39;s Sky ships large updates that change how saves are written, and its own save slots rotate. Checkpoint64 keeps every version of your NMS folder, so a bad update or an expedition slot you overwrote is one click from undone. Free download." />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" type="image/svg+xml" href="../../../retro_save_icon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Checkpoint64 Logbook" href="../../../rss.xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Patrick+Hand&family=JetBrains+Mono:wght@400;500;700&display=swap" /></noscript>
+  <link rel="stylesheet" href="../../../blog.css" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('cp64-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+      } catch (e) { /* localStorage blocked */ }
+    })();
+  </script>
+  <link rel="canonical" href="https://checkpoint64.com/games/no-mans-sky/guide/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Checkpoint64" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content="How to Back Up No Man&#39;s Sky Saves (Every Big Update Is a Risk Window)" />
+  <meta property="og:description" content="No Man&#39;s Sky ships large updates that change how saves are written, and its own save slots rotate. Checkpoint64 keeps every version of your NMS folder, so a bad update or an expedition slot you overwrote is one click from undone. Free download." />
+  <meta property="og:url" content="https://checkpoint64.com/games/no-mans-sky/guide/" />
+  <meta property="og:image" content="https://checkpoint64.com/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Checkpoint64 — never lose a save again." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Back Up No Man&#39;s Sky Saves (Every Big Update Is a Risk Window)" />
+  <meta name="twitter:description" content="No Man&#39;s Sky ships large updates that change how saves are written, and its own save slots rotate. Checkpoint64 keeps every version of your NMS folder, so a bad update or an expedition slot you overwrote is one click from undone. Free download." />
+  <meta name="twitter:image" content="https://checkpoint64.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Checkpoint64 — never lose a save again." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Back Up No Man's Sky Saves (Every Big Update Is a Risk Window)",
+    "description": "No Man's Sky ships large updates that change how saves are written, and its own save slots rotate. Checkpoint64 keeps every version of your NMS folder, so a bad update or an expedition slot you overwrote is one click from undone. Free download.",
+    "url": "https://checkpoint64.com/games/no-mans-sky/guide/",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://checkpoint64.com/games/no-mans-sky/guide/"
+    },
+    "dateModified": "2026-09-04",
+    "image": "https://checkpoint64.com/og-image.png",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://checkpoint64.com/#organization",
+      "name": "Checkpoint64",
+      "alternateName": "Checkpoint 64",
+      "url": "https://checkpoint64.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://checkpoint64.com/retro_save_icon.svg"
+      },
+      "email": "support@checkpoint64.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Adam Meadows"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "technical support",
+          "email": "support@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "press",
+          "email": "press@checkpoint64.com",
+          "url": "https://checkpoint64.com/press/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "privacy",
+          "email": "privacy@checkpoint64.com",
+          "url": "https://checkpoint64.com/privacy/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "security",
+          "email": "security@checkpoint64.com",
+          "url": "https://checkpoint64.com/contact/",
+          "availableLanguage": [
+            "English"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "legal",
+          "email": "legal@checkpoint64.com",
+          "url": "https://checkpoint64.com/terms/",
+          "availableLanguage": [
+            "English"
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://discord.gg/kxeYwuuHEn",
+        "https://github.com/checkpoint64",
+        "https://store.steampowered.com/app/4790820/"
+      ]
+    },
+    "about": {
+      "@type": "VideoGame",
+      "name": "No Man's Sky",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q15297043",
+        "https://en.wikipedia.org/wiki/No_Man%27s_Sky",
+        "https://store.steampowered.com/app/275850/"
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://checkpoint64.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Games",
+        "item": "https://checkpoint64.com/games/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "No Man's Sky save backup",
+        "item": "https://checkpoint64.com/games/no-mans-sky/guide/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where are No Man's Sky saves stored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "On Windows they're under %APPDATA%\\HelloGames\\NMS, in a per-account subfolder holding .hg save files. Each save slot is a pair of files — the save itself and its metadata — so the folder is what has to be restored together, not one file out of it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can an update break a No Man's Sky save?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Updates can change how saves are written, and a save opened by a newer version isn't guaranteed to work with the older one. That mostly matters when something goes wrong and you want to go back. A version taken before the update is a save that still matches the build that wrote it."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does No Man's Sky keep old saves itself?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It keeps a small rotation per slot — the current save and a previous one — and overwrites as you play. That covers the last few minutes. It doesn't cover a problem you notice after a session or two, because the older copy is long overwritten by then."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I keep an expedition save from being overwritten?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Expeditions use their own slots, and it's easy to reuse or clear one you meant to keep. Checkpoint64 keeps every version it uploaded, so a slot you overwrote is recoverable from the version history even though the game no longer has it."
+        }
+      }
+    ]
+  }
+  </script><!----><!---->
+</head>
+<body>
+  <!-- data-sveltekit-reload: every navigation is a full page load, matching the
+       old build. Do NOT remove it — the homepage's pre-paint scripts (theme
+       bootstrap, language redirect, analytics) live in <svelte:head>{@html …}
+       and only run on a fresh document load; SvelteKit client-side nav would
+       skip them. -->
+  <div style="display: contents" data-sveltekit-reload><!--[--><!--[0--><!--[--><!--[-1--><!--[--><!---->  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="blog-nav">
+    <div class="blog-wrap">
+      <a class="blog-brand pixel" href="../../../">CHECKPOINT64</a>
+      <div class="blog-nav-right">
+        <button class="theme-toggle" data-theme-toggle type="button" aria-label="Switch to light mode" title="Toggle theme">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☀</span>
+        </button>
+        <a class="blog-allposts" href="../../../blog/">All posts →</a>
+      </div>
+    </div>
+  </nav>
+  <main id="main" class="blog-main blog-wrap">
+    <article class="blog-post guide-page">
+      <div class="blog-post-header">
+        <nav class="guide-crumb" aria-label="Breadcrumb">
+          <a href="../../../">Home</a> <span aria-hidden="true">/</span> <a href="../../../games/">Games</a> <span aria-hidden="true">/</span> <span>No Man&#39;s Sky save backup</span>
+        </nav>
+        <h1 class="blog-post-title pixel">How to Back Up No Man&#39;s Sky Saves (Every Big Update Is a Risk Window)</h1>
+        <p class="blog-post-meta">Last updated <time datetime="2026-09-04">2026-09-04</time></p>
+      </div>
+      <div class="blog-post-body">
+<p><strong>No Man&#39;s Sky ships large updates that change what saves contain, and the game&#39;s own per-slot rotation is only a couple of saves deep.</strong> Checkpoint64 backs up the NMS folder automatically and keeps every version, so a bad update or an overwritten slot is a Restore rather than a loss.</p>
+<h2 id="where-no-man39s-sky-saves-live">Where No Man&#39;s Sky saves live</h2>
+<pre class="shiki github-dark-dimmed" style="background-color:#22272e;color:#adbac7" tabindex="0"><code><span class="line"><span>%APPDATA%\HelloGames\NMS</span></span></code></pre><p>Inside it there&#39;s a per-account subfolder holding the <code>.hg</code> files. Each save slot is a pair — the save and its metadata — and they have to stay consistent with each other, which is why <a href="../../../blog/back-up-the-whole-folder/">the folder is the unit worth backing up</a> rather than a single file. No Man&#39;s Sky writes only to Windows in the app&#39;s game catalog, so this one folder is the whole picture.</p>
+<h2 id="updates-are-the-risk-window">Updates are the risk window</h2>
+<p>Large updates change what the game stores and how. Most of the time that&#39;s invisible and fine. It matters on the day it isn&#39;t: a save written by a newer build isn&#39;t guaranteed to work with the older one, so &quot;just roll back the game&quot; is not by itself a way out. Having a copy of the save from before the update is what makes rolling back an actual option.</p>
+<p>That&#39;s less about expecting any given update to break something and more about <a href="../../../blog/anatomy-of-a-save-corruption/">what a save is exposed to over a long life</a> — a base you&#39;ve had for years has sat through a lot of them.</p>
+<h2 id="the-game39s-own-rotation-is-shallow">The game&#39;s own rotation is shallow</h2>
+<p>No Man&#39;s Sky keeps a current and a previous save per slot and overwrites as you go. That&#39;s a real safety net for the last few minutes of play, and useless for a problem you notice next session. A dated history doesn&#39;t rotate on the game&#39;s schedule.</p>
+<h2 id="expedition-slots">Expedition slots</h2>
+<p>Expeditions get their own slots, and clearing or reusing one you meant to keep is easy to do without noticing. A version history keeps that save available after the game has moved on from it.</p>
+<h2 id="how-checkpoint64-backs-up-no-man39s-sky">How Checkpoint64 backs up No Man&#39;s Sky</h2>
+<ol>
+<li><strong>Pick No Man&#39;s Sky.</strong> The HelloGames path is already known.</li>
+<li><strong>Turn on auto-backup.</strong> Every 60 seconds it checks for a changed save and uploads a new version, sending only what changed.</li>
+<li><strong>Restore in one click.</strong> Open Versions, pick a version from before the update or the overwrite, and Restore.</li>
+</ol>
+
+      </div>
+        <section class="guide-faq" aria-label="Frequently asked questions">
+          <h2>Common questions</h2>
+          <details class="guide-faq-item" open>
+            <summary>Where are No Man&#39;s Sky saves stored?</summary>
+            <p>On Windows they&#39;re under %APPDATA%\HelloGames\NMS, in a per-account subfolder holding .hg save files. Each save slot is a pair of files — the save itself and its metadata — so the folder is what has to be restored together, not one file out of it.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Can an update break a No Man&#39;s Sky save?</summary>
+            <p>Updates can change how saves are written, and a save opened by a newer version isn&#39;t guaranteed to work with the older one. That mostly matters when something goes wrong and you want to go back. A version taken before the update is a save that still matches the build that wrote it.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Does No Man&#39;s Sky keep old saves itself?</summary>
+            <p>It keeps a small rotation per slot — the current save and a previous one — and overwrites as you play. That covers the last few minutes. It doesn&#39;t cover a problem you notice after a session or two, because the older copy is long overwritten by then.</p>
+          </details>
+          <details class="guide-faq-item">
+            <summary>Can I keep an expedition save from being overwritten?</summary>
+            <p>Expeditions use their own slots, and it&#39;s easy to reuse or clear one you meant to keep. Checkpoint64 keeps every version it uploaded, so a slot you overwrote is recoverable from the version history even though the game no longer has it.</p>
+          </details>
+        </section>
+        <aside class="guide-cta">
+          <p class="guide-cta-title pixel">Never lose a save again</p>
+          <p>Automatic backups and full version history. Free download for Windows, macOS, and Linux.</p>
+          <a class="guide-cta-btn pixel" href="../../../download/">Download Checkpoint64 free</a>
+        </aside>
+        <nav class="guide-related" aria-label="Related guides">
+          <h2>More guides</h2>
+          <ul>
+          <li><a href="../../../games/no-mans-sky/save/">No Man&#39;s Sky save file location</a></li>
+          <li><a href="../../../games/">All supported games</a></li>
+          <li><a href="../../../compare/">Compare</a></li>
+          <li><a href="../../../steam-cloud-alternative/">Steam Cloud Alternative</a></li>
+          <li><a href="../../../dedicated-server-alternative/">Dedicated Server Alternative</a></li>
+          <li><a href="../../../modded-game-save-backup/">Modded Game Save Backup</a></li>
+          <li><a href="../../../emulator-save-backup/">Emulator Save Backup</a></li>
+          </ul>
+        </nav>
+    </article>
+  </main>
+  <footer class="blog-footer">
+    <div class="blog-wrap">
+      <a href="../../../">← Back to checkpoint64.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector('[data-theme-toggle]');
+      if (!btn) return;
+      var icon = btn.querySelector('[data-theme-icon]');
+      function current() {
+        return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+      }
+      function apply(theme) {
+        if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+        else document.documentElement.removeAttribute('data-theme');
+        if (icon) icon.textContent = theme === 'light' ? '☾' : '☀';
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+      }
+      apply(current());
+      btn.addEventListener('click', function () {
+        var next = current() === 'light' ? 'dark' : 'light';
+        apply(next);
+        try { localStorage.setItem('cp64-theme', next); } catch (e) {}
+      });
+    })();
+  </script><!----><!--]--><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]--></div>
+</body>
+</html>

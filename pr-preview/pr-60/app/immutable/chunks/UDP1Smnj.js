@@ -1,0 +1,1 @@
+var e=[{usd:0,plan:null},{usd:9.99,plan:`paid`},{usd:5,plan:`pro`}];export{e as t};
