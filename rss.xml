@@ -6,7 +6,14 @@
     <description>Release notes and write-ups from the Checkpoint64 team.</description>
     <language>en</language>
     <atom:link href="https://checkpoint64.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>How to Undo Accidental Game Overwrites Safely</title>
+      <link>https://checkpoint64.com/blog/undo-accidental-game-overwrites/</link>
+      <guid isPermaLink="true">https://checkpoint64.com/blog/undo-accidental-game-overwrites/</guid>
+      <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Undo accidental game overwrites without losing more progress. Learn where saves hide, when recovery works, and how version history prevents the next disaster.</description>
+    </item>
     <item>
       <title>Why Do Game Saves Corrupt? 8 Usual Culprits</title>
       <link>https://checkpoint64.com/blog/why-do-game-saves-corrupt/</link>

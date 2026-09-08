@@ -442,7 +442,7 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/blog/</loc>
-    <lastmod>2026-09-06</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -455,6 +455,12 @@
   <url>
     <loc>https://checkpoint64.com/blog/ditch-the-dedicated-server/</loc>
     <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/blog/undo-accidental-game-overwrites/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1034,6 +1040,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/007-first-light/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/7-days-to-die/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1045,6 +1056,11 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/alchemy-factory/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/anno-117/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1159,7 +1175,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/civ7/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/clair-obscur-expedition-33/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/core-keeper/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/crimson-desert/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1294,7 +1325,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/far-far-west/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/fields-of-mistria/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/forza-horizon-6/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1319,12 +1360,32 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/grounded-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/hades/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/hades-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/hollow-knight/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/hollow-knight-silksong/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/how-to-fish/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1384,6 +1445,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/meccha-chameleon/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/medieval-dynasty/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1395,6 +1461,11 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/metro-exodus/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/mina-the-hollower/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1429,6 +1500,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/mixtape/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/monster-hunter-rise/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1444,7 +1520,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/mortal-shell-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/necesse/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/nioh-3/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1454,7 +1540,22 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/no-more-room-in-hell-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/no-rest-for-the-wicked/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/omori/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/onimusha-way-of-the-sword/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1489,6 +1590,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/pragmata/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/prince-of-persia-lost-crown/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1510,6 +1616,11 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/raft/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/resident-evil-requiem/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1604,6 +1715,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/saves/slay-the-spire-2/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/saves/sons-of-the-forest/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1625,6 +1741,11 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/star-wars-outlaws/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/star-wars-zero-company/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -1695,6 +1816,11 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/saves/the-long-dark/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/saves/the-outer-worlds-2/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
