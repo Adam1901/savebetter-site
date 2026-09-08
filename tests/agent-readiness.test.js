@@ -119,6 +119,27 @@ test('every prerendered page keeps its <h1> after boilerplate stripping', () => 
   assert.ok(pages.length > 100, `expected the full site in dist/, found ${pages.length} pages`)
 })
 
+// A page whose rel=canonical is not its own URL is invisible to every check
+// this repo has: it builds, its links resolve, its schema parses. It went wrong
+// once already — the game guides derived their canonical from the catalog entry
+// while their route derived the path from the slug, so a game dropping out of
+// the catalog (which the daily rebuild can do with no commit) would have
+// stamped each guide with its old flat URL, now a redirect stub back to itself.
+// Every page is self-canonical on this site, so the check is just: does the
+// canonical agree with where the file actually is?
+test('every page is canonical to its own URL', () => {
+  const wrong = []
+  for (const f of htmlFiles) {
+    const html = read(f)
+    if (isRedirectStub(html)) continue
+    const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1]
+    if (!canonical) continue // not every page type declares one
+    const expected = `https://checkpoint64.com/${rel(f).replace(/index\.html$/, '')}`
+    if (canonical !== expected) wrong.push(`${rel(f)}: ${canonical} (expected ${expected})`)
+  }
+  assert.deepEqual(wrong, [], 'pages whose canonical disagrees with their own path')
+})
+
 // The URL move that put every game under /games/<game>/ left ~370 of these
 // behind. Two things have to stay true of them, and neither shows up anywhere
 // else: they must actually point somewhere (an empty stub is a dead end that

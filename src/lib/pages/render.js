@@ -92,24 +92,38 @@ export async function renderPage(doc, { depth = 1 } = {}) {
     : ''
 
   // A non-null catalog slug is what makes this a game guide: the flat
-  // comparison guides aren't about one game and resolve nothing. Resolved to
-  // the catalog entry (not just tested for existence) because the Article's
-  // `about` needs the game's display name too.
+  // comparison guides aren't about one game and resolve nothing.
+  //
+  // This slug — a pure string function of doc.slug — is the page's IDENTITY,
+  // and everything positional keys off it: the canonical URL, the breadcrumb,
+  // the depth the caller passed. It has to, because the route that serves this
+  // page (games/[game]/guide/) derives its own path the same string way and
+  // never looks at the catalog. Keying identity off the catalog *entry* below
+  // instead would let a lookup miss stamp this page with its own old flat URL —
+  // which is now a redirect stub back to here, i.e. a canonical loop, on a page
+  // that still builds and links perfectly. Not hypothetical: catalog/load.js
+  // drops any game whose paths go empty, and the site rebuilds daily off the
+  // live API, so a backend path edit alone could trigger it.
   const catalogSlug = catalogSlugForGuide(doc.slug)
+  // The entry itself is only needed for content that genuinely depends on the
+  // game being IN the catalog: the `about` node's display name, and the link to
+  // a save-location page that doesn't exist if the game left.
   const catalogGame = catalogSlug
     ? (await getCatalog()).find((g) => g.slug === catalogSlug)
     : null
-  const url = catalogGame
-    ? `${ORIGIN}/games/${catalogGame.slug}/guide/`
+  const url = catalogSlug
+    ? `${ORIGIN}/games/${catalogSlug}/guide/`
     : `${ORIGIN}/${doc.slug}/`
   // Game guides cross-link their generated save-location page (exact paths
   // straight from the app's catalog) and the hub they now live under.
-  const locationLinks = catalogGame
+  const locationLinks = catalogSlug
     ? [
-        {
-          href: `${prefix}games/${catalogGame.slug}/save/`,
-          label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
-        },
+        ...(catalogGame
+          ? [{
+              href: `${prefix}games/${catalogSlug}/save/`,
+              label: `${doc.breadcrumb.replace(/\s*save backup$/i, '')} save file location`,
+            }]
+          : []),
         { href: `${prefix}games/`, label: 'All supported games' },
       ]
     : []
@@ -121,7 +135,7 @@ export async function renderPage(doc, { depth = 1 } = {}) {
 
   const body = `    <article class="blog-post guide-page">
       <div class="blog-post-header">
-${breadcrumbNav(doc, prefix, { underGames: Boolean(catalogGame) })}
+${breadcrumbNav(doc, prefix, { underGames: Boolean(catalogSlug) })}
         <h1 class="blog-post-title pixel">${esc(doc.title)}</h1>
         ${updated}
       </div>
@@ -139,10 +153,10 @@ ${tail}
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
-      ...(catalogGame
+      ...(catalogSlug
         ? [{ '@type': 'ListItem', position: 2, name: 'Games', item: `${ORIGIN}/games/` }]
         : []),
-      { '@type': 'ListItem', position: catalogGame ? 3 : 2, name: doc.breadcrumb, item: url },
+      { '@type': 'ListItem', position: catalogSlug ? 3 : 2, name: doc.breadcrumb, item: url },
     ],
   })
   // The page-level entity. Without it these guides carried only a breadcrumb and
