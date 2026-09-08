@@ -24,6 +24,9 @@ export function loadPosts() {
       slug: data.slug || slugFromFilename(file),
       title: data.title || 'Untitled',
       date,
+      // Optional `updated:` frontmatter, normalised like `date`. Feeds sitemap <lastmod>
+      // and BlogPosting.dateModified; null for the posts (most of them) that never changed.
+      updated: data.updated ? new Date(data.updated).toISOString().slice(0, 10) : null,
       excerpt: data.excerpt || '',
       tags: Array.isArray(data.tags) ? data.tags : [],
       draft: !!data.draft || new Date(date).getTime() > new Date().getTime(),

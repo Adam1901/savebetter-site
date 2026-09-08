@@ -1,9 +1,17 @@
 ---
 title: Google Drive and Patreon; two integrations we're building next
 date: 2026-07-24
+updated: 2026-09-07
 excerpt: Two integrations are in the works — back your saves up to your own Google Drive instead of our storage, and gate a creator's read-only share code to Patreon members. Here's what each one does, why it fits, and the honest state of both.
 tags: [integrations, google-drive, patreon, roadmap]
 ---
+
+> **Update, September 2026: the Patreon half of this post has shipped, and it works
+> differently to what's described below.** There is no share code and no redeem
+> step in the Patreon path — a creator binds a team to their campaign, and access
+> is reconciled every hour in both directions. See
+> [Patreon is connected](/blog/patreon-supporters-get-the-save/) for how it
+> actually works. The Google Drive half is still in progress.
 
 Two requests land in our inbox more than any others. From players: *"Can I point
 this at my own cloud storage instead of your quota?"* From creators: *"Can I hand
@@ -55,12 +63,12 @@ other providers depend on how this one lands.
 
 ## Members-only saves: Patreon
 
-If you make things, you already know the Creators side of Checkpoint64. Pro lets
-you mint a **read-only share code** for any save — a challenge seed, your 100%
-file, a hand-tuned starting world — and hand it to an audience. Fans redeem the
-code, your world drops into their library, and they can play it but never save
-over yours. Read-only visitors don't burn a seat, so "as many fans as you like"
-actually means that. (The [community-servers post](/blog/read-only-community-servers/)
+If you make things, you already know the Creators side of Checkpoint64. Every
+plan lets you mint a **read-only share code** for any save — a challenge seed,
+your 100% file, a hand-tuned starting world — and hand it to an audience. Fans
+redeem the code, your world drops into their library, and they can play it but
+never save over yours. Read-only visitors don't burn a seat; what your plan sets
+is how many of them can hold a copy at once. (The [community-servers post](/blog/read-only-community-servers/)
 is the full tour.)
 
 The missing piece has been *gating.* Plenty of creators want the save to be a

@@ -305,7 +305,7 @@ ${relatedNav}    </article>`
       url,
       mainEntityOfPage: { '@type': 'WebPage', '@id': url },
       datePublished: post.date || undefined,
-      dateModified: post.date || undefined,
+      dateModified: post.updated || post.date || undefined,
       image,
       inLanguage: 'en',
       keywords: post.tags.length ? post.tags.join(', ') : undefined,

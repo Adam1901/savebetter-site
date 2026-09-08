@@ -61,18 +61,26 @@ silently doing the wrong thing.
 This is the part that makes it usable for an actual audience. Your plan's seat
 count is about **collaborators** — people who write to the world. Community
 members are consumers, not collaborators, so they're **excluded from the seat
-tally entirely.** The only thing capping read-only headcount is the `maxUses`
-you set on the code (or nothing, if you leave it open).
+tally entirely.** Two separate things limit a read-only audience, and neither is
+a seat: the `maxUses` on the code, which is a budget of redemptions and doesn't
+refill when someone leaves, and your plan, which caps how many read-only members
+one space holds at a time.
 
 You're not buying 500 seats to let 500 people download your megabase.
 
-## It's a Pro feature
+## What your plan actually sets
 
-Minting join codes is gated to **Pro**, at the account level. Hosting a world
-for an audience is a creator move, and it's where Checkpoint64 earns its keep,
-so it lives in the Pro tier. The gate sits on code *creation*: a non-Pro account
-can't mint a read-only code, and the read-only role is join-code-only, so
-there's no side door through the email-invite path either.
+Hosting an audience works on **every plan**, free included. What your plan sets
+is how many read-only members one space can hold at the same time: **3 on free,
+15 on Lifetime, unlimited on Pro.**
+
+The count is enforced where the membership is actually created — redeeming a
+code, accepting an invite, being demoted to read-only — and not when a code is
+minted. That distinction matters: checking at mint time would be free to walk
+around, since one unlimited-use code would then never be counted against again.
+
+It counts *current* members, so it isn't a lifetime budget. Remove someone, or
+let a code's holder be cleared out, and the slot comes back.
 
 ## When to reach for this (and when not to)
 
