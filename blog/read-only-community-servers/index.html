@@ -322,15 +322,21 @@ silently doing the wrong thing.</p>
 <p>This is the part that makes it usable for an actual audience. Your plan&#39;s seat
 count is about <strong>collaborators</strong> — people who write to the world. Community
 members are consumers, not collaborators, so they&#39;re <strong>excluded from the seat
-tally entirely.</strong> The only thing capping read-only headcount is the <code>maxUses</code>
-you set on the code (or nothing, if you leave it open).</p>
+tally entirely.</strong> Two separate things limit a read-only audience, and neither is
+a seat: the <code>maxUses</code> on the code, which is a budget of redemptions and doesn&#39;t
+refill when someone leaves, and your plan, which caps how many read-only members
+one space holds at a time.</p>
 <p>You&#39;re not buying 500 seats to let 500 people download your megabase.</p>
-<h2 id="it39s-a-pro-feature">It&#39;s a Pro feature</h2>
-<p>Minting join codes is gated to <strong>Pro</strong>, at the account level. Hosting a world
-for an audience is a creator move, and it&#39;s where Checkpoint64 earns its keep,
-so it lives in the Pro tier. The gate sits on code <em>creation</em>: a non-Pro account
-can&#39;t mint a read-only code, and the read-only role is join-code-only, so
-there&#39;s no side door through the email-invite path either.</p>
+<h2 id="what-your-plan-actually-sets">What your plan actually sets</h2>
+<p>Hosting an audience works on <strong>every plan</strong>, free included. What your plan sets
+is how many read-only members one space can hold at the same time: <strong>3 on free,
+15 on Lifetime, unlimited on Pro.</strong></p>
+<p>The count is enforced where the membership is actually created — redeeming a
+code, accepting an invite, being demoted to read-only — and not when a code is
+minted. That distinction matters: checking at mint time would be free to walk
+around, since one unlimited-use code would then never be counted against again.</p>
+<p>It counts <em>current</em> members, so it isn&#39;t a lifetime budget. Remove someone, or
+let a code&#39;s holder be cleared out, and the slot comes back.</p>
 <h2 id="when-to-reach-for-this-and-when-not-to">When to reach for this (and when not to)</h2>
 <p>Community members are the right tool when access is <strong>one-directional</strong>:</p>
 <ul>

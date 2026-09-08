@@ -83,7 +83,7 @@
       "@id": "https://checkpoint64.com/blog/google-drive-and-patreon-integrations/"
     },
     "datePublished": "2026-07-24",
-    "dateModified": "2026-07-24",
+    "dateModified": "2026-09-07",
     "image": "https://checkpoint64.com/og-image.png",
     "inLanguage": "en",
     "keywords": "integrations, google-drive, patreon, roadmap",
@@ -280,6 +280,14 @@
         <h1 class="blog-post-title pixel">Google Drive and Patreon; two integrations we&#39;re building next</h1>
       </div>
       <div class="blog-post-body">
+<blockquote>
+<p><strong>Update, September 2026: the Patreon half of this post has shipped, and it works
+differently to what&#39;s described below.</strong> There is no share code and no redeem
+step in the Patreon path — a creator binds a team to their campaign, and access
+is reconciled every hour in both directions. See
+<a href="/blog/patreon-supporters-get-the-save/">Patreon is connected</a> for how it
+actually works. The Google Drive half is still in progress.</p>
+</blockquote>
 <p>Two requests land in our inbox more than any others. From players: <em>&quot;Can I point
 this at my own cloud storage instead of your quota?&quot;</em> From creators: <em>&quot;Can I hand
 a save to my supporters without keeping a spreadsheet of who&#39;s paid this month?&quot;</em></p>
@@ -322,12 +330,12 @@ libraries, less critical for a two-save setup that never troubles the built-in
 quota. We&#39;re starting with Google Drive because it&#39;s what people asked for first;
 other providers depend on how this one lands.</p>
 <h2 id="members-only-saves-patreon">Members-only saves: Patreon</h2>
-<p>If you make things, you already know the Creators side of Checkpoint64. Pro lets
-you mint a <strong>read-only share code</strong> for any save — a challenge seed, your 100%
-file, a hand-tuned starting world — and hand it to an audience. Fans redeem the
-code, your world drops into their library, and they can play it but never save
-over yours. Read-only visitors don&#39;t burn a seat, so &quot;as many fans as you like&quot;
-actually means that. (The <a href="/blog/read-only-community-servers/">community-servers post</a>
+<p>If you make things, you already know the Creators side of Checkpoint64. Every
+plan lets you mint a <strong>read-only share code</strong> for any save — a challenge seed,
+your 100% file, a hand-tuned starting world — and hand it to an audience. Fans
+redeem the code, your world drops into their library, and they can play it but
+never save over yours. Read-only visitors don&#39;t burn a seat; what your plan sets
+is how many of them can hold a copy at once. (The <a href="/blog/read-only-community-servers/">community-servers post</a>
 is the full tour.)</p>
 <p>The missing piece has been <em>gating.</em> Plenty of creators want the save to be a
 <strong>member perk</strong>, not a free-for-all — and the current answer is to paste the code

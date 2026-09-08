@@ -465,6 +465,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://checkpoint64.com/blog/patreon-supporters-get-the-save/</loc>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://checkpoint64.com/blog/why-do-game-saves-corrupt/</loc>
     <lastmod>2026-09-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -658,7 +664,7 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/blog/google-drive-and-patreon-integrations/</loc>
-    <lastmod>2026-07-24</lastmod>
+    <lastmod>2026-09-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
