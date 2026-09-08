@@ -32,11 +32,11 @@ Keeping a version history lets you separate the two. Restore after a crash and c
 
 ## Crashes and continuous writes
 
-Zomboid streams world chunks to disk as you move through the map rather than writing one save file at a checkpoint. That's good for a huge persistent world and bad for interruptions — a crash partway through leaves a save that can load wrong, or not at all. It's [the ordinary anatomy of a corrupted save](../blog/anatomy-of-a-save-corruption/): nothing dramatic, just a write that didn't finish.
+Zomboid streams world chunks to disk as you move through the map rather than writing one save file at a checkpoint. That's good for a huge persistent world and bad for interruptions — a crash partway through leaves a save that can load wrong, or not at all. It's [the ordinary anatomy of a corrupted save](../../../blog/anatomy-of-a-save-corruption/): nothing dramatic, just a write that didn't finish.
 
 ## Co-op without renting a server
 
-Zomboid supports a real dedicated server, and for a group that wants the world online around the clock that's still the answer. For a group that plays the same few evenings a week, hosting plus a shared history covers most of it: whoever plays next pulls the current world, and a lock stops two people building on separate copies. The [dedicated server alternative guide](../dedicated-server-alternative/) works through the trade-off properly.
+Zomboid supports a real dedicated server, and for a group that wants the world online around the clock that's still the answer. For a group that plays the same few evenings a week, hosting plus a shared history covers most of it: whoever plays next pulls the current world, and a lock stops two people building on separate copies. The [dedicated server alternative guide](../../../dedicated-server-alternative/) works through the trade-off properly.
 
 ## How Checkpoint64 backs up Project Zomboid
 

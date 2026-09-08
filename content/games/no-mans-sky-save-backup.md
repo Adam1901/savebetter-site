@@ -22,13 +22,13 @@ faq:
 %APPDATA%\HelloGames\NMS
 ```
 
-Inside it there's a per-account subfolder holding the `.hg` files. Each save slot is a pair — the save and its metadata — and they have to stay consistent with each other, which is why [the folder is the unit worth backing up](../blog/back-up-the-whole-folder/) rather than a single file. No Man's Sky writes only to Windows in the app's game catalog, so this one folder is the whole picture.
+Inside it there's a per-account subfolder holding the `.hg` files. Each save slot is a pair — the save and its metadata — and they have to stay consistent with each other, which is why [the folder is the unit worth backing up](../../../blog/back-up-the-whole-folder/) rather than a single file. No Man's Sky writes only to Windows in the app's game catalog, so this one folder is the whole picture.
 
 ## Updates are the risk window
 
 Large updates change what the game stores and how. Most of the time that's invisible and fine. It matters on the day it isn't: a save written by a newer build isn't guaranteed to work with the older one, so "just roll back the game" is not by itself a way out. Having a copy of the save from before the update is what makes rolling back an actual option.
 
-That's less about expecting any given update to break something and more about [what a save is exposed to over a long life](../blog/anatomy-of-a-save-corruption/) — a base you've had for years has sat through a lot of them.
+That's less about expecting any given update to break something and more about [what a save is exposed to over a long life](../../../blog/anatomy-of-a-save-corruption/) — a base you've had for years has sat through a lot of them.
 
 ## The game's own rotation is shallow
 

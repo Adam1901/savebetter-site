@@ -28,17 +28,17 @@ On macOS that's `~/Library/Application Support/Terraria/Worlds`, on Linux `~/.lo
 
 Terraria writes a `.bak` next to each world holding the previous save. It's genuinely useful and worth knowing about — if a save goes wrong and you catch it immediately, that file is your way back.
 
-What it isn't is a history. The next save overwrites it. If a world got damaged two sessions ago, the `.bak` has been overwritten twice since and holds nothing you want. That's the gap a dated version history fills, and it's the same argument as [why cloud saves aren't backups](../blog/cloud-saves-arent-backups/): one-deep is better than zero and much worse than dated.
+What it isn't is a history. The next save overwrites it. If a world got damaged two sessions ago, the `.bak` has been overwritten twice since and holds nothing you want. That's the gap a dated version history fills, and it's the same argument as [why cloud saves aren't backups](../../../blog/cloud-saves-arent-backups/): one-deep is better than zero and much worse than dated.
 
 ## A world is more than its .wld
 
 Alongside each `.wld` sits a `.twld` holding extra world data, plus the `.bak` companions and map files. They're written together and describe the same world, so pulling one out of a folder and restoring it on its own is how you end up with a world that loads but isn't quite right.
 
-That's why [the folder is the unit worth backing up](../blog/back-up-the-whole-folder/) — restoring the set keeps the pieces consistent with each other, which is the whole point of restoring at all.
+That's why [the folder is the unit worth backing up](../../../blog/back-up-the-whole-folder/) — restoring the set keeps the pieces consistent with each other, which is the whole point of restoring at all.
 
 ## Long-lived worlds and mods
 
-A big Terraria world is often years old, which means it has been through a lot of saves and a lot of game versions — [the ordinary way saves accumulate risk](../blog/anatomy-of-a-save-corruption/). Modded worlds add the usual hazard on top: remove a mod and the world may reference content that no longer exists. tModLoader keeps a separate save folder and has its own preset in Checkpoint64, and the [modded game save backup guide](../modded-game-save-backup/) covers that pattern across games.
+A big Terraria world is often years old, which means it has been through a lot of saves and a lot of game versions — [the ordinary way saves accumulate risk](../../../blog/anatomy-of-a-save-corruption/). Modded worlds add the usual hazard on top: remove a mod and the world may reference content that no longer exists. tModLoader keeps a separate save folder and has its own preset in Checkpoint64, and the [modded game save backup guide](../../../modded-game-save-backup/) covers that pattern across games.
 
 ## How Checkpoint64 backs up Terraria
 

@@ -1,7 +1,7 @@
 import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { legalSlugs, loadLegal } from '$lib/legal/load.js'
-import { pageSlugs, loadPage } from '$lib/pages/load.js'
+import { pageSlugs, gameSummaries, loadPage } from '$lib/pages/load.js'
 import { loadDoc } from '$lib/press.js'
 import { getCatalog } from '$lib/catalog/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
@@ -26,7 +26,7 @@ const ORIGIN = 'https://checkpoint64.com'
 // `updated` frontmatter) or omits the element entirely. There is deliberately no
 // `|| today()` fallback: that silently re-stamped a URL on every deploy.
 //
-// The generated /saves/ pages are why that rule earns its keep. They are the
+// The generated save-location pages are why that rule earns its keep. They are the
 // bulk of this sitemap and they grow with the catalog — ~150 of 238 URLs at
 // the time of writing, against 83 that carry a real date — and main.yml
 // rebuilds daily. Stamping them with today(), which this did until the
@@ -124,10 +124,20 @@ export async function GET() {
       changefreq: 'yearly',
       priority: '0.5',
     })),
-    // Generated save-location pages, one per catalog game (+ their A–Z index).
-    { loc: '/saves/', changefreq: 'weekly', priority: '0.8' },
+    // The game hub, the 22 hand-written deep dives, and the generated
+    // save-location page for every catalog game. Only these canonicals are
+    // listed — the old /saves/… and /<game>-save-backup/ URLs still resolve,
+    // but as redirect stubs, and a sitemap that advertises a redirect asks
+    // Google to spend crawl budget rediscovering what it already followed.
+    { loc: '/games/', lastmod: loadPage('games')?.updated, changefreq: 'weekly', priority: '0.8' },
+    ...gameSummaries().map((g) => ({
+      loc: `/games/${g.catalogSlug}/guide/`,
+      lastmod: loadPage(g.slug)?.updated,
+      changefreq: 'monthly',
+      priority: '0.8',
+    })),
     ...catalog.map((g) => ({
-      loc: `/saves/${g.slug}/`,
+      loc: `/games/${g.slug}/save/`,
       changefreq: 'monthly',
       priority: '0.7',
     })),

@@ -32,13 +32,13 @@ Checkpoint64 backs up all three — whatever your emulator writes to its save fo
 
 | Emulator | Systems |
 |---|---|
-| **[RetroArch](../saves/retroarch/)** | Multi-system front-end (NES → PSP and beyond) |
-| **[Dolphin](../saves/dolphin/)** | GameCube, Wii |
-| **[PCSX2](../saves/pcsx2/)** | PlayStation 2 |
-| **[DuckStation](../saves/duckstation/)** | PlayStation 1 |
-| **[PPSSPP](../saves/ppsspp/)** | PSP |
-| **[RPCS3](../saves/rpcs3/)** | PlayStation 3 |
-| **[Cemu](../saves/cemu/)** | Wii U |
+| **[RetroArch](../games/retroarch/save/)** | Multi-system front-end (NES → PSP and beyond) |
+| **[Dolphin](../games/dolphin/save/)** | GameCube, Wii |
+| **[PCSX2](../games/pcsx2/save/)** | PlayStation 2 |
+| **[DuckStation](../games/duckstation/save/)** | PlayStation 1 |
+| **[PPSSPP](../games/ppsspp/save/)** | PSP |
+| **[RPCS3](../games/rpcs3/save/)** | PlayStation 3 |
+| **[Cemu](../games/cemu/save/)** | Wii U |
 
 Each link is that emulator's save-location page — the exact folder it writes to, per platform.
 

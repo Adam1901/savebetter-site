@@ -20,7 +20,7 @@ kept the version from before that moment.
 Strip away the game and a save is just bytes in a file: a structured blob the
 game knows how to read back. Depending on the game it might be one binary file,
 a zip of several files, a little embedded database, or a
-[folder full of region chunks](/minecraft-save-backup/). Whatever the shape,
+[folder full of region chunks](/games/minecraft/guide/). Whatever the shape,
 two things are usually true:
 
 - **It has structure the game trusts.** A header, offsets, lengths, sometimes a
@@ -66,7 +66,7 @@ nonsense, and the loader trips over the contradiction.
 
 The bytes are perfectly intact — but the thing reading them changed. A game
 patch alters the save format
-([7 Days to Die does this on most major updates](/7-days-to-die-save-backup/)),
+([7 Days to Die does this on most major updates](/games/7-days-to-die/guide/)),
 a [mod that wrote custom data into the save](/modded-game-save-backup/) gets
 removed or updated, an
 [emulator core changes how it lays out a memory card](/emulator-save-backup/).

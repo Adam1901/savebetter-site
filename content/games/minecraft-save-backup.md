@@ -28,7 +28,7 @@ Inside a world, the `region` folder holds the `.mca` files that store your terra
 
 ## Why "world corrupted" happens — and why Minecraft can't save you
 
-Minecraft writes region files continuously as you explore. A [crash mid-write](../blog/anatomy-of-a-save-corruption/), a full disk, or a misbehaving mod can leave a `.mca` half-written, and the next load throws the dreaded corruption error. The game keeps a `session.lock` and, for the world data, a single `level.dat_old` — one fallback, one generation deep. If the good copy is older than that, there's nothing to roll back to.
+Minecraft writes region files continuously as you explore. A [crash mid-write](../../../blog/anatomy-of-a-save-corruption/), a full disk, or a misbehaving mod can leave a `.mca` half-written, and the next load throws the dreaded corruption error. The game keeps a `session.lock` and, for the world data, a single `level.dat_old` — one fallback, one generation deep. If the good copy is older than that, there's nothing to roll back to.
 
 Checkpoint64 keeps every version it has uploaded, labelled and dated. Open Versions, pick a world from before the corruption, and Restore.
 
@@ -36,7 +36,7 @@ Checkpoint64 keeps every version it has uploaded, labelled and dated. Open Versi
 
 Mods make corruption *more* likely, not less — custom chunk generation and world-altering mods write far more than vanilla does. And modpacks scatter your worlds: Prism Launcher, CurseForge, Modrinth, and Feed The Beast each keep instances separate, with their own `saves` folder per instance.
 
-Checkpoint64 has presets for the vanilla launcher and those modpack launchers, and points at any instance folder they don't cover. For the broader rollback approach across modded games, see the [modded game save backup guide](../modded-game-save-backup/).
+Checkpoint64 has presets for the vanilla launcher and those modpack launchers, and points at any instance folder they don't cover. For the broader rollback approach across modded games, see the [modded game save backup guide](../../../modded-game-save-backup/).
 
 ## How Checkpoint64 backs up Minecraft
 

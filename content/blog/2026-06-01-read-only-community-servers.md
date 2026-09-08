@@ -8,9 +8,9 @@ tags: [community, hosted-saves, read-only]
 The current save-sharing model is a Google Drive folder and a secret password that gets passed around. 
 Why risk your mega builds leaking? Checkpoint64 puts you in control.
 
-A streamer builds an absurd [Factorio megabase](/factorio-save-backup/) and
+A streamer builds an absurd [Factorio megabase](/games/factorio/guide/) and
 the chat wants to walk through it. A modpack author ships a hand-tuned
-starting world. A [Minecraft creator](/minecraft-save-backup/) wants 500
+starting world. A [Minecraft creator](/games/minecraft/guide/) wants 500
 people to spawn into the same showcase build. In every one of
 those cases the relationship is one-directional — the host has the canonical
 save, everyone else just wants a copy. Nobody downloading it should be able to
@@ -84,7 +84,7 @@ Community members are the right tool when access is **one-directional**:
 
 They're the *wrong* tool when people need to actually play together and push
 the world forward. For a four-friend co-op group passing a
-[Valheim world](/valheim-save-backup/) back and forth, you want regular
+[Valheim world](/games/valheim/guide/) back and forth, you want regular
 members and the
 [lock-and-pass flow](/blog/ditch-the-dedicated-server/) — everyone writes, just
 not at the same time.

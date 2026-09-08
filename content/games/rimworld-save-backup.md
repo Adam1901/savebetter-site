@@ -28,11 +28,11 @@ On macOS that's `~/Library/Application Support/RimWorld/Saves`, and on Linux `~/
 
 RimWorld rebuilds a colony on load from what the save describes, and the save describes it in terms of the mods that were active. Pull one out mid-colony and the game is being asked to reconstruct things it no longer has definitions for. Update one whose data changed shape and the same thing happens more quietly.
 
-This is the ordinary shape of [modded save breakage](../modded-game-save-backup/), and RimWorld runs into it more than most because heavily modded colonies are the norm rather than the exception. The reliable answer isn't to avoid mods — it's to be able to go back to the version that matches the mods it was written with.
+This is the ordinary shape of [modded save breakage](../../../modded-game-save-backup/), and RimWorld runs into it more than most because heavily modded colonies are the norm rather than the exception. The reliable answer isn't to avoid mods — it's to be able to go back to the version that matches the mods it was written with.
 
 ## Rotating autosaves aren't a history
 
-RimWorld's own autosave keeps a limited number of files and overwrites the oldest. That's fine for the mistake you notice immediately. It's no help for the one you notice five in-game days later, by which point the good autosave has already been rotated out. An external history doesn't rotate on the game's schedule — the same argument [cloud saves run into](../blog/cloud-saves-arent-backups/), for the same reason.
+RimWorld's own autosave keeps a limited number of files and overwrites the oldest. That's fine for the mistake you notice immediately. It's no help for the one you notice five in-game days later, by which point the good autosave has already been rotated out. An external history doesn't rotate on the game's schedule — the same argument [cloud saves run into](../../../blog/cloud-saves-arent-backups/), for the same reason.
 
 ## How Checkpoint64 backs up RimWorld
 

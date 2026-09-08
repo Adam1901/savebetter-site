@@ -26,7 +26,7 @@ Each world gets its own folder inside `Saves`, holding the world state, the regi
 
 ## Updates and old saves don't mix
 
-This is one of the most-discussed 7 Days to Die gotchas: a major version update routinely isn't compatible with saves from the previous one, and the game will tell you as much rather than silently corrupting things. It's the [format-mismatch failure](../blog/anatomy-of-a-save-corruption/) — the bytes are intact, but the thing reading them changed. There's no official tool to carry an old save forward — your options are start fresh or keep playing the old version. If you update without meaning to, or want to keep playing your current world a little longer on the old build, having a version from right before the update is the only way back. Checkpoint64 keeps that automatically, without you having to remember to copy a save folder first.
+This is one of the most-discussed 7 Days to Die gotchas: a major version update routinely isn't compatible with saves from the previous one, and the game will tell you as much rather than silently corrupting things. It's the [format-mismatch failure](../../../blog/anatomy-of-a-save-corruption/) — the bytes are intact, but the thing reading them changed. There's no official tool to carry an old save forward — your options are start fresh or keep playing the old version. If you update without meaning to, or want to keep playing your current world a little longer on the old build, having a version from right before the update is the only way back. Checkpoint64 keeps that automatically, without you having to remember to copy a save folder first.
 
 ## Recovering a horde-night base
 
@@ -34,7 +34,7 @@ A crash, a bad shutdown, or a mod that rewrites world data can leave a region fi
 
 ## Hosting a group without a rented server
 
-Like most survival co-op games, 7 Days to Die groups usually run on one live world hosted by whoever's got the server — which is why a rented dedicated server is the common fix for keeping it online. Checkpoint64 covers most of that need for a small group without the recurring bill: full version history plus a lock so only one session saves over the world at a time. The [dedicated server alternative guide](../dedicated-server-alternative/) covers the trade-off.
+Like most survival co-op games, 7 Days to Die groups usually run on one live world hosted by whoever's got the server — which is why a rented dedicated server is the common fix for keeping it online. Checkpoint64 covers most of that need for a small group without the recurring bill: full version history plus a lock so only one session saves over the world at a time. The [dedicated server alternative guide](../../../dedicated-server-alternative/) covers the trade-off.
 
 ## How Checkpoint64 backs up 7 Days to Die
 

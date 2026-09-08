@@ -1,16 +1,20 @@
-import { layout, socialMeta, jsonLd, PUBLISHER } from '../blog/render.js'
+import { markdownToHtml, layout, socialMeta, jsonLd, PUBLISHER, OG_IMAGE } from '../blog/render.js'
 import { aboutGame, POPULAR_SLUGS } from './entities.js'
 import { ctaBlock, faqSection } from '../pages/render.js'
-import { relatedGuideSlugForCatalog, loadPage } from '../pages/load.js'
+import { relatedGuideSlugForCatalog, guideHrefForCatalog, gameSummaries, loadPage } from '../pages/load.js'
 import { esc } from '../esc.js'
 
 // Generated "save file location" pages — one per backend-catalog game
-// (/saves/<slug>/) plus the /saves/ A–Z index. These target the
-// "<game> save file location" query family with the exact per-platform paths
-// the app itself uses (the catalog's pathTemplates), so the content is real
-// data, not filler: the catalog is maintained for the product and the pages
-// ride along. Hand-written guides (content/games/) stay the deep-dive layer;
-// where one exists the two pages cross-link.
+// (/games/<slug>/save/) plus the /games/ hub that indexes them. These target
+// the "<game> save file location" query family with the exact per-platform
+// paths the app itself uses (the catalog's pathTemplates), so the content is
+// real data, not filler: the catalog is maintained for the product and the
+// pages ride along. Hand-written guides (content/games/) stay the deep-dive
+// layer at /games/<slug>/guide/; where one exists the two pages cross-link.
+//
+// The catalog slug is the site's game identity — it is the only key that names
+// all 147 games (the guides name 22), so it owns the /games/<slug>/ segment and
+// the guide slug is now just a markdown filename. See pages/load.js.
 
 const ORIGIN = 'https://checkpoint64.com'
 
@@ -120,7 +124,7 @@ ${tips.join('\n')}
 function backupSection(game, prefix, guide) {
   const name = esc(game.displayName)
   const guideLink = guide
-    ? `\n        <p>For the deeper story — how ${name} saves break and how rollback works — read the full <a href="${prefix}${guide.slug}/">${esc(guide.breadcrumb)}</a> guide.</p>`
+    ? `\n        <p>For the deeper story — how ${name} saves break and how rollback works — read the full <a href="${prefix}${guide.href}">${esc(guide.breadcrumb)}</a> guide.</p>`
     : ''
   return `        <h2>Backing up ${name} saves automatically</h2>
         <ol>
@@ -212,9 +216,8 @@ function neighbours(games, slug, n = 6, popularCount = 3) {
 function relatedSection(game, games, prefix) {
   const links = [
     ...neighbours(games, game.slug).map((g) =>
-      `          <li><a href="${prefix}saves/${esc(g.slug)}/">${esc(g.displayName)} save file location</a></li>`),
-    `          <li><a href="${prefix}saves/">All game save locations</a></li>`,
-    `          <li><a href="${prefix}games/">Per-game backup guides</a></li>`,
+      `          <li><a href="${prefix}games/${esc(g.slug)}/save/">${esc(g.displayName)} save file location</a></li>`),
+    `          <li><a href="${prefix}games/">All ${games.length} supported games</a></li>`,
   ].join('\n')
   return `        <nav class="guide-related" aria-label="Related pages">
           <h2>More save locations</h2>
@@ -224,12 +227,22 @@ ${links}
         </nav>`
 }
 
-// /saves/<slug>/index.html → depth 2.
-export function renderSavePage(game, games, { depth = 2 } = {}) {
+// The hand-written deep dive for this game, when there is one: the 1:1 guide,
+// or the family guide a launcher variant / emulator borrows. `href` is where it
+// now lives, which is not derivable from the doc slug any more.
+function deepDive(catalogSlug) {
+  const slug = relatedGuideSlugForCatalog(catalogSlug)
+  if (!slug) return null
+  const doc = loadPage(slug)
+  return doc ? { ...doc, href: guideHrefForCatalog(catalogSlug) } : null
+}
+
+// /games/<slug>/save/index.html → depth 3.
+export function renderSavePage(game, games, { depth = 3 } = {}) {
   const prefix = depth === 0 ? './' : '../'.repeat(depth)
   const rows = platformRows(game)
   const name = esc(game.displayName)
-  const url = `${ORIGIN}/saves/${game.slug}/`
+  const url = `${ORIGIN}/games/${game.slug}/save/`
   const title = `${game.displayName} Save File Location (${platformList(rows)})`
   const first = rows[0]
   // The title is deliberately left alone: it exact-matches this page's highest-volume
@@ -239,8 +252,7 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
     : 'and how to back them up automatically with Checkpoint64.'
   const description = `${game.displayName} keeps its save files at ${first.paths[0]} on ${first.label}. Exact save folder paths for ${platformList(rows, { prose: true })}, ${backupTail}`
 
-  const guideSlug = relatedGuideSlugForCatalog(game.slug)
-  const guide = guideSlug ? loadPage(guideSlug) : null
+  const guide = deepDive(game.slug)
   const faq = buildFaq(game, rows)
 
   const noteBlock = game.note
@@ -250,7 +262,7 @@ export function renderSavePage(game, games, { depth = 2 } = {}) {
   const body = `    <article class="blog-post guide-page">
       <div class="blog-post-header">
         <nav class="guide-crumb" aria-label="Breadcrumb">
-          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <a href="${prefix}saves/">Save locations</a> <span aria-hidden="true">/</span> <span>${name}</span>
+          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <a href="${prefix}games/">Games</a> <span aria-hidden="true">/</span> <span>${name}</span>
         </nav>
         <h1 class="blog-post-title pixel">${esc(title)}</h1>
       </div>
@@ -266,12 +278,15 @@ ${ctaBlock(prefix)}
 ${relatedSection(game, games, prefix)}
     </article>`
 
+  // Home > Games > <game>. The /games/<slug>/ segment between the hub and this
+  // page is deliberately absent: it is a redirect stub to this very URL, and a
+  // breadcrumb item pointing at a noindex redirect is worse than one less level.
   const breadcrumbLd = jsonLd({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
-      { '@type': 'ListItem', position: 2, name: 'Save locations', item: `${ORIGIN}/saves/` },
+      { '@type': 'ListItem', position: 2, name: 'Games', item: `${ORIGIN}/games/` },
       { '@type': 'ListItem', position: 3, name: game.displayName, item: url },
     ],
   })
@@ -315,18 +330,30 @@ ${relatedSection(game, games, prefix)}
   })
 }
 
-// /saves/index.html → depth 1.
-export function renderSavesIndex(games, { depth = 1 } = {}) {
+// /games/index.html → depth 1. The one hub for both game intents: the 22
+// hand-written deep dives (what /games/ used to be) and the A–Z of every
+// catalog game's save location (what /saves/ used to be). Merged rather than
+// cross-linked because they were two indexes of the same 147 games, splitting
+// the link equity and making a visitor guess which one they wanted. Both grids
+// survive verbatim, so every internal link either page carried still exists.
+export async function renderGamesHub(doc, games, { depth = 1 } = {}) {
   const prefix = depth === 0 ? './' : '../'.repeat(depth)
-  const url = `${ORIGIN}/saves/`
-  const title = `Game Save File Locations — ${games.length} Games`
-  const description = `Where ${games.length} games keep their save files on Windows, macOS, and Linux — the exact folder paths Checkpoint64 uses for automatic save backup, in one A–Z list.`
+  const url = `${ORIGIN}/games/`
+  const title = doc.title
+  const description = doc.description
+  const bodyHtml = await markdownToHtml(doc.content)
 
-  const cards = games.map((g) => {
-    const rows = platformRows(g)
-    const first = rows[0]
+  const guideCards = gameSummaries().map((g) => `          <li class="blog-card">
+            <a class="blog-card-link" href="${prefix}games/${esc(g.catalogSlug)}/guide/">
+              <h2 class="blog-card-title">${esc(g.name)}</h2>
+              <p class="blog-card-excerpt">${esc(g.description)}</p>
+            </a>
+          </li>`).join('\n')
+
+  const locationCards = games.map((g) => {
+    const first = platformRows(g)[0]
     return `          <li class="blog-card">
-            <a class="blog-card-link" href="${prefix}saves/${esc(g.slug)}/">
+            <a class="blog-card-link" href="${prefix}games/${esc(g.slug)}/save/">
               <h2 class="blog-card-title">${esc(g.displayName)}</h2>
               <p class="blog-card-excerpt">${esc(first.paths[0])}</p>
             </a>
@@ -336,17 +363,26 @@ export function renderSavesIndex(games, { depth = 1 } = {}) {
   const body = `    <article class="blog-post guide-page">
       <div class="blog-post-header">
         <nav class="guide-crumb" aria-label="Breadcrumb">
-          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <span>Save locations</span>
+          <a href="${prefix}">Home</a> <span aria-hidden="true">/</span> <span>${esc(doc.breadcrumb)}</span>
         </nav>
         <h1 class="blog-post-title pixel">${esc(title)}</h1>
       </div>
       <div class="blog-post-body">
-        <p><strong>Every game hides its saves somewhere different.</strong> This is the folder map Checkpoint64 ships with — the exact save path for every supported game, per platform. Open a game for the full breakdown, or just install the app: it already knows all of these.</p>
-        <p>Looking for the deep-dive backup guides instead? See the <a href="${prefix}games/">per-game backup guides</a>.</p>
+${bodyHtml}
+        <h2>In-depth backup guides</h2>
+        <p>How saves break in each of these games, and how to roll one back.</p>
+      </div>
+        <ul class="blog-list guide-games-grid" aria-label="In-depth game guides">
+${guideCards}
+        </ul>
+      <div class="blog-post-body">
+        <h2>Every game save file location</h2>
+        <p>The folder map Checkpoint64 ships with — the exact save path for all ${games.length} supported games, per platform. Open a game for the full breakdown, or just install the app: it already knows all of these.</p>
       </div>
         <ul class="blog-list guide-games-grid" aria-label="All game save locations">
-${cards}
+${locationCards}
         </ul>
+${faqSection(doc)}
 ${ctaBlock(prefix)}
     </article>`
 
@@ -355,7 +391,7 @@ ${ctaBlock(prefix)}
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: `${ORIGIN}/` },
-      { '@type': 'ListItem', position: 2, name: 'Save locations', item: url },
+      { '@type': 'ListItem', position: 2, name: doc.breadcrumb, item: url },
     ],
   })
   const itemListLd = jsonLd({
@@ -365,15 +401,44 @@ ${ctaBlock(prefix)}
       '@type': 'ListItem',
       position: i + 1,
       name: g.displayName,
-      url: `${ORIGIN}/saves/${g.slug}/`,
+      url: `${ORIGIN}/games/${g.slug}/save/`,
     })),
+  })
+  const faqLd = doc.faq.length
+    ? jsonLd({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: doc.faq.map((f) => ({
+          '@type': 'Question',
+          name: f.q,
+          acceptedAnswer: { '@type': 'Answer', text: f.a },
+        })),
+      })
+    : ''
+  // The page-level entity. The old /games/ hub had one (an Article, from
+  // pages/render.js) and the old /saves/ index did not; merging them must not
+  // quietly drop it, or the site's main index page becomes the one page not
+  // attached to the Organization every other page links itself to.
+  // CollectionPage rather than Article because that is what this is.
+  const collectionLd = jsonLd({
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: title,
+    description,
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    dateModified: doc.updated || undefined,
+    inLanguage: 'en',
+    publisher: PUBLISHER,
   })
 
   const head = [
-    socialMeta({ type: 'website', title, description, url }),
+    socialMeta({ type: 'website', title, description, url, image: OG_IMAGE }),
+    collectionLd,
     breadcrumbLd,
     itemListLd,
-  ].join('\n')
+    faqLd,
+  ].filter(Boolean).join('\n')
 
   return layout({
     title: `${title} — Checkpoint64`,

@@ -6,10 +6,10 @@ tags: [savings, co-op, dedicated-servers]
 pinned: true
 ---
 
-If you've ever played [Valheim](/valheim-save-backup/),
-[Factorio](/factorio-save-backup/), [Satisfactory](/satisfactory-save-backup/),
-[V Rising](/saves/v-rising/), [Project Zomboid](/saves/project-zomboid/),
-[7 Days to Die](/7-days-to-die-save-backup/), or any of the other "world lives
+If you've ever played [Valheim](/games/valheim/guide/),
+[Factorio](/games/factorio/guide/), [Satisfactory](/games/satisfactory/guide/),
+[V Rising](/games/v-rising/save/), [Project Zomboid](/games/project-zomboid/save/),
+[7 Days to Die](/games/7-days-to-die/guide/), or any of the other "world lives
 in one file" co-op games with friends, the conversation always goes the same
 way:
 
@@ -98,7 +98,7 @@ If that's your group, keep your server. We're not here to argue with people
 who actually use the uptime.
 
 For the rest — the four-friend co-op, the weekend
-[modded Minecraft group](/minecraft-save-backup/), the two-person Factorio
+[modded Minecraft group](/games/minecraft/guide/), the two-person Factorio
 playthrough that goes for six months — paying for empty hours doesn't pencil
 out. (The [dedicated server alternative guide](/dedicated-server-alternative/)
 is the reference version of this argument, with a side-by-side table and the

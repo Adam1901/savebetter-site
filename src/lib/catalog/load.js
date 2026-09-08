@@ -1,8 +1,8 @@
 import { readFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-// The app backend's game catalog — the data behind the generated /saves/
-// per-game "save file location" pages. Fetched ONCE per build from the
+// The app backend's game catalog — the data behind the generated /games/<slug>/save/
+// pages. Fetched ONCE per build from the
 // anonymous /public/catalog endpoint (same build-time-network pattern as
 // releases.js / steam.js / blog/feed.js) and memoized in module scope.
 //

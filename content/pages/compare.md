@@ -58,6 +58,6 @@ Where all four run out of road at the same point: a save gets [corrupted](../blo
 
 ## How Checkpoint64 covers the gap
 
-1. **Install it and point it at your save folder.** Presets for [140+ games](../saves/) and [7 emulators](../emulator-save-backup/) already know where to look.
+1. **Install it and point it at your save folder.** Presets for [140+ games](../games/) and [7 emulators](../emulator-save-backup/) already know where to look.
 2. **Turn on auto-backup.** Every 60 seconds it checks for a changed save and uploads a new version — only the changed bytes, so it stays light.
 3. **Roll back whenever something goes wrong.** Open Versions, pick a save from before the problem, and Restore.

@@ -38,8 +38,7 @@
         <ul>
           <li><a href="{prefix}blog/">{f.links.blog}</a></li>
           <li><a href="{lp}help/">{f.links.help}</a></li>
-          <li><a href="{prefix}games/">Game save backup guides</a></li>
-          <li><a href="{prefix}saves/">Save locations</a></li>
+          <li><a href="{prefix}games/">Games &amp; save locations</a></li>
           <li><a href="{prefix}steam-cloud-alternative/">Steam Cloud alternative</a></li>
           <li><a href="{prefix}dedicated-server-alternative/">Dedicated server alternative</a></li>
           <li><a href="{prefix}modded-game-save-backup/">Modded save backup</a></li>

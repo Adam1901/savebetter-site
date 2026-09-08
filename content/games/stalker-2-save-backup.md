@@ -28,11 +28,11 @@ Which one is in use depends on where you bought the game. Checkpoint64 checks th
 
 ## Store-specific paths are a documentation trap
 
-A game with one save folder gets one answer that stays right. A game with three gets three answers scattered across forum posts, each written by someone who only had one copy, none of them saying which is which. The generated [save file location page](../saves/stalker-2/) lists all three side by side for exactly this reason.
+A game with one save folder gets one answer that stays right. A game with three gets three answers scattered across forum posts, each written by someone who only had one copy, none of them saying which is which. The generated [save file location page](../../../games/stalker-2/save/) lists all three side by side for exactly this reason.
 
 ## Patches, builds and mods
 
-Saves are written against the build that made them. A large patch can change what a save contains, so a save touched by the newer build isn't guaranteed to load on the older one — which turns "roll the game back" into something you can only do if you also kept the save. Mods compound it in the usual way: pull one out and a save written with it loaded may not behave. The [modded game save backup guide](../modded-game-save-backup/) covers that pattern across games.
+Saves are written against the build that made them. A large patch can change what a save contains, so a save touched by the newer build isn't guaranteed to load on the older one — which turns "roll the game back" into something you can only do if you also kept the save. Mods compound it in the usual way: pull one out and a save written with it loaded may not behave. The [modded game save backup guide](../../../modded-game-save-backup/) covers that pattern across games.
 
 Either way the answer is a version from before the change, loading against the setup that wrote it.
 

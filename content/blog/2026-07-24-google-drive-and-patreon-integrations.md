@@ -19,9 +19,9 @@ gating, limits, exact wording in the app — can still move before launch.
 ## Bring your own storage: Google Drive
 
 Every plan comes with cloud storage built in — the free plan is a deliberately
-small 20 MiB, enough for [Stardew](/stardew-save-backup/) or a
+small 20 MiB, enough for [Stardew](/games/stardew/guide/) or a
 [retro library](/emulator-save-backup/), and it scales up from there.
-But a 40-hour [modded Minecraft world](/minecraft-save-backup/) can eat that on
+But a 40-hour [modded Minecraft world](/games/minecraft/guide/) can eat that on
 its own, and some people would simply rather keep their own bytes in their own
 account. Fair.
 

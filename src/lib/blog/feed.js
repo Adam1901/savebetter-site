@@ -16,6 +16,7 @@
 // published at …" attribution.
 import { XMLParser } from 'fast-xml-parser'
 import sanitizeHtmlLib from 'sanitize-html'
+import { retargetLegacyPath } from '../pages/load.js'
 
 // One or more RSS/Atom feeds. Order only matters for tie-breaks; posts are
 // re-sorted by date once merged with the local markdown.
@@ -155,10 +156,45 @@ const SANITIZE_OPTIONS = {
   allowedSchemesAppliedToAttributes: ['href', 'src', 'srcset'],
   // Drop disallowed tags AND their text (so <script>…</script> bodies vanish).
   disallowedTagsMode: 'discard',
-  // Harden outbound links against tab-nabbing without changing visible markup.
+  // Harden outbound links against tab-nabbing, and point any link to our own
+  // site at where that page actually lives now (see retargetFeedHref).
   transformTags: {
-    a: sanitizeHtmlLib.simpleTransform('a', { rel: 'nofollow noopener' }, true),
+    // `rel` is spread LAST so a feed-supplied rel cannot displace it — that is
+    // what simpleTransform(…, merge: true) did, and it is the tab-nabbing
+    // hardening, not a default.
+    a: (tagName, attribs) => ({
+      tagName: 'a',
+      attribs: {
+        ...attribs,
+        ...(attribs.href ? { href: retargetFeedHref(attribs.href) } : {}),
+        rel: 'nofollow noopener',
+      },
+    }),
   },
+}
+
+const SELF_ORIGIN = /^https?:\/\/checkpoint64\.com\//
+
+// Imported posts are our own articles, republished by the content service, so
+// they link to checkpoint64.com pages — at the URLs those pages had when the
+// post was written. The /games/ move stranded a batch of those on redirect
+// stubs, and since the feed is refetched every build, editing anything in this
+// repo would not have held: new posts keep arriving with the old URLs. So the
+// rewrite happens here, on the way in.
+//
+// Two shapes, both of which appear in the live feed: absolute on our own
+// origin, and `../../x/` (a rendered post sits at /blog/<slug>/, so exactly two
+// levels up is the site root). Anything else — off-site, deeper, anchor-only —
+// is left exactly as written.
+function retargetFeedHref(href) {
+  if (SELF_ORIGIN.test(href)) {
+    const path = href.replace(SELF_ORIGIN, '')
+    return `https://checkpoint64.com/${retargetLegacyPath(path)}`
+  }
+  if (href.startsWith('../../') && !href.slice(6).startsWith('../')) {
+    return `../../${retargetLegacyPath(href.slice(6))}`
+  }
+  return href
 }
 function sanitizeHtml(html) {
   return sanitizeHtmlLib(String(html || ''), SANITIZE_OPTIONS).trim()

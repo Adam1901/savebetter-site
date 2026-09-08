@@ -22,7 +22,7 @@ faq:
 %LOCALAPPDATA%\Larian Studios\Baldur's Gate 3\PlayerProfiles
 ```
 
-On macOS it's `~/Library/Application Support/Larian Studios/Baldur's Gate 3/PlayerProfiles`. Each save is a small folder — `.lsv` save data alongside the screenshot the load menu shows you — which is exactly why [the whole folder is the unit worth backing up](../blog/back-up-the-whole-folder/) rather than one file inside it. Checkpoint64 already knows both paths.
+On macOS it's `~/Library/Application Support/Larian Studios/Baldur's Gate 3/PlayerProfiles`. Each save is a small folder — `.lsv` save data alongside the screenshot the load menu shows you — which is exactly why [the whole folder is the unit worth backing up](../../../blog/back-up-the-whole-folder/) rather than one file inside it. Checkpoint64 already knows both paths.
 
 ## Honour Mode has no second chance by design
 
@@ -32,7 +32,7 @@ An external version history sidesteps that without touching the rules of the mod
 
 ## Mods, patches, and load orders
 
-A BG3 save remembers the mods that were loaded when it was written. Remove one mid-campaign, or let a patch shuffle your load order, and the save can refuse to load or come back missing pieces. This is the standard failure shape for [modded saves](../modded-game-save-backup/) generally, and long BG3 campaigns run straight into it.
+A BG3 save remembers the mods that were loaded when it was written. Remove one mid-campaign, or let a patch shuffle your load order, and the save can refuse to load or come back missing pieces. This is the standard failure shape for [modded saves](../../../modded-game-save-backup/) generally, and long BG3 campaigns run straight into it.
 
 The fix is the same either way: restore a version from before the mod change, so the save is loading against the setup that wrote it.
 

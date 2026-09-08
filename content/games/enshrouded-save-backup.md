@@ -30,7 +30,7 @@ Enshrouded's own dedicated server tool is the real solution if your group needs 
 
 ## Recovering after a crash or an update
 
-Early Access means [world-format changes between updates](../blog/anatomy-of-a-save-corruption/) are a real possibility, and a crash mid-save is always a risk on top of that. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy world from before the crash or the update, rather than losing the build.
+Early Access means [world-format changes between updates](../../../blog/anatomy-of-a-save-corruption/) are a real possibility, and a crash mid-save is always a risk on top of that. Checkpoint64 keeps every version it uploaded, so recovering means restoring the last healthy world from before the crash or the update, rather than losing the build.
 
 ## How Checkpoint64 backs up Enshrouded
 
@@ -38,4 +38,4 @@ Early Access means [world-format changes between updates](../blog/anatomy-of-a-s
 2. **Turn on auto-backup.** Every 60 seconds it checks for a changed world and uploads a new version, sending only what changed.
 3. **Restore in one click.** Open Versions, pick a healthy version from before the crash or the update, and Restore.
 
-For the deeper comparison against renting a real dedicated server, see the [dedicated server alternative guide](../dedicated-server-alternative/).
+For the deeper comparison against renting a real dedicated server, see the [dedicated server alternative guide](../../../dedicated-server-alternative/).

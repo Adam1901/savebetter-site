@@ -40,6 +40,18 @@ const htmlFiles = files.filter((f) => f.endsWith('.html'))
 const read = (path) => readFileSync(path, 'utf8')
 const rel = (path) => relative(DIST, path).replaceAll('\\', '/')
 
+// A prerendered redirect. SvelteKit writes one of these for every `redirect()`
+// thrown at build time (postbuild/prerender.js) — two tags and nothing else,
+// which is the only redirect GitHub Pages can serve. The old /saves/… and
+// /<game>-save-backup/ URLs are all stubs like this now, pointing at their new
+// home under /games/.
+//
+// They have no <h1> because they have no content, so the extraction test below
+// skips them. Matched by exact whole-file shape rather than by path: a real
+// page that lost its body cannot pass as one of these.
+const REDIRECT_STUB = /^<script>location\.href="[^"]*";<\/script><meta http-equiv="refresh" content="0;url=[^"]*">$/
+const isRedirectStub = (html) => REDIRECT_STUB.test(html.trim())
+
 const VOID = new Set(['br', 'img', 'input', 'meta', 'link', 'hr', 'source', 'path', 'use', 'circle', 'rect', 'area', 'col', 'embed', 'track', 'wbr'])
 // What a boilerplate-stripping extractor throws away before it reads a page.
 const CHROME = new Set(['header', 'footer', 'nav', 'aside'])
@@ -99,11 +111,53 @@ function jsonLdBlocks(html, path) {
 // --- 1. Content without JavaScript -----------------------------------------
 
 test('every prerendered page keeps its <h1> after boilerplate stripping', () => {
-  const broken = htmlFiles
+  const pages = htmlFiles.filter((f) => !isRedirectStub(read(f)))
+  const broken = pages
     .map((f) => ({ path: rel(f), ...readable(read(f)) }))
     .filter((page) => !page.headings.includes('h1'))
   assert.deepEqual(broken.map((p) => p.path), [], 'pages whose <h1> sits inside <header>/<footer>/<nav>')
-  assert.ok(htmlFiles.length > 100, `expected the full site in dist/, found ${htmlFiles.length} pages`)
+  assert.ok(pages.length > 100, `expected the full site in dist/, found ${pages.length} pages`)
+})
+
+// A page whose rel=canonical is not its own URL is invisible to every check
+// this repo has: it builds, its links resolve, its schema parses. It went wrong
+// once already — the game guides derived their canonical from the catalog entry
+// while their route derived the path from the slug, so a game dropping out of
+// the catalog (which the daily rebuild can do with no commit) would have
+// stamped each guide with its old flat URL, now a redirect stub back to itself.
+// Every page is self-canonical on this site, so the check is just: does the
+// canonical agree with where the file actually is?
+test('every page is canonical to its own URL', () => {
+  const wrong = []
+  for (const f of htmlFiles) {
+    const html = read(f)
+    if (isRedirectStub(html)) continue
+    const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1]
+    if (!canonical) continue // not every page type declares one
+    const expected = `https://checkpoint64.com/${rel(f).replace(/index\.html$/, '')}`
+    if (canonical !== expected) wrong.push(`${rel(f)}: ${canonical} (expected ${expected})`)
+  }
+  assert.deepEqual(wrong, [], 'pages whose canonical disagrees with their own path')
+})
+
+// The URL move that put every game under /games/<game>/ left ~370 of these
+// behind. Two things have to stay true of them, and neither shows up anywhere
+// else: they must actually point somewhere (an empty stub is a dead end that
+// still returns 200), and they must stay out of sitemap.xml — advertising a
+// redirect spends crawl budget rediscovering what Google already followed.
+test('redirect stubs point somewhere and are not advertised as pages', () => {
+  const sitemap = read(join(DIST, 'sitemap.xml'))
+  const stubs = htmlFiles.filter((f) => isRedirectStub(read(f)))
+  assert.ok(stubs.length > 0, 'no redirect stubs in dist/ — did the /games/ move regress?')
+  for (const f of stubs) {
+    const target = read(f).match(/content="0;url=([^"]+)"/)?.[1]
+    assert.ok(target, `${rel(f)}: redirect stub with no target`)
+    // Relative, like every other link on this site: PR previews are served
+    // from a subpath, where a root-absolute redirect would leave the preview.
+    assert.ok(!target.startsWith('/'), `${rel(f)}: root-absolute redirect breaks PR previews`)
+    const loc = `/${rel(f).replace(/index\.html$/, '')}`
+    assert.ok(!sitemap.includes(`<loc>https://checkpoint64.com${loc}</loc>`), `sitemap advertises the redirect ${loc}`)
+  }
 })
 
 test('homepage serves an <h1> and 500+ characters of text in raw HTML', () => {

@@ -89,7 +89,7 @@ and there's no way to work out which one is yours from inside a Proton prefix â€
 so they don't resolve on the Steam Deck. The Crew 2 and Prince of Persia: The
 Lost Crown never used that folder in the first place, and do work there.
 
-The catalog's save locations are all written up at [/saves/](/saves/), if you
+The catalog's save locations are all written up at [/games/](/games/), if you
 just want to know where a game keeps your files.
 
 ## If Steam is your only way in
