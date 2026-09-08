@@ -30,11 +30,11 @@ Late-game Factorio saves get big — big enough that Checkpoint64 raises its usu
 
 ## Recovering from a mod update that breaks your save
 
-"This save requires the following mods" is the classic Factorio failure — a mod updated, got removed, or changed its data format, and your save still references the version that's gone. It's the same failure mode the [modded game save backup guide](../modded-game-save-backup/) covers across Skyrim, Minecraft, and the rest of a modded library, and there's no built-in way back except an old copy you happened to keep. Checkpoint64 keeps every version it backed up, so restoring the save from right before the mod update — then sorting your mod list out at your own pace — is a quick fix instead of losing the base.
+"This save requires the following mods" is the classic Factorio failure — a mod updated, got removed, or changed its data format, and your save still references the version that's gone. It's the same failure mode the [modded game save backup guide](../../../modded-game-save-backup/) covers across Skyrim, Minecraft, and the rest of a modded library, and there's no built-in way back except an old copy you happened to keep. Checkpoint64 keeps every version it backed up, so restoring the save from right before the mod update — then sorting your mod list out at your own pace — is a quick fix instead of losing the base.
 
 ## Co-op Factorio without a dedicated server
 
-Factorio has exactly one live save at a time, same as Valheim: whoever's hosting has the only current copy, and a rented dedicated server is the usual way to keep the world online without leaving a PC running. Checkpoint64 covers most of that need for a small group — full version history plus a lock so nobody uploads over someone else's session. The [dedicated server alternative guide](../dedicated-server-alternative/) goes deeper on that trade-off, and the [cost breakdown of a rented server's idle hours](../blog/ditch-the-dedicated-server/) runs the actual numbers.
+Factorio has exactly one live save at a time, same as Valheim: whoever's hosting has the only current copy, and a rented dedicated server is the usual way to keep the world online without leaving a PC running. Checkpoint64 covers most of that need for a small group — full version history plus a lock so nobody uploads over someone else's session. The [dedicated server alternative guide](../../../dedicated-server-alternative/) goes deeper on that trade-off, and the [cost breakdown of a rented server's idle hours](../../../blog/ditch-the-dedicated-server/) runs the actual numbers.
 
 ## How Checkpoint64 backs up Factorio
 

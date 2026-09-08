@@ -22,11 +22,11 @@ faq:
 %USERPROFILE%\Saved Games\CD Projekt Red\Cyberpunk 2077
 ```
 
-That's a user-profile folder, not the `AppData` location most Windows games use, so it's easy to miss if you go hunting by hand. Each save is a folder — the `.dat` payload, its metadata, and the screenshot the load menu shows — which is why [the folder is the unit worth backing up](../blog/back-up-the-whole-folder/), not one file out of it. Cyberpunk writes only to Windows in the app's game catalog, so this one folder is the whole picture.
+That's a user-profile folder, not the `AppData` location most Windows games use, so it's easy to miss if you go hunting by hand. Each save is a folder — the `.dat` payload, its metadata, and the screenshot the load menu shows — which is why [the folder is the unit worth backing up](../../../blog/back-up-the-whole-folder/), not one file out of it. Cyberpunk writes only to Windows in the app's game catalog, so this one folder is the whole picture.
 
 ## Patches and mods on a long playthrough
 
-A Cyberpunk save carries references to what was loaded when it was written. That's fine until an update lands and your mod list no longer matches — then a save can fail to load outright, or load with pieces missing in ways that only surface an hour later. It's the ordinary shape of [a save that breaks after the fact](../blog/anatomy-of-a-save-corruption/), and long modded playthroughs meet it more often than short ones.
+A Cyberpunk save carries references to what was loaded when it was written. That's fine until an update lands and your mod list no longer matches — then a save can fail to load outright, or load with pieces missing in ways that only surface an hour later. It's the ordinary shape of [a save that breaks after the fact](../../../blog/anatomy-of-a-save-corruption/), and long modded playthroughs meet it more often than short ones.
 
 Restoring a version from before the update puts the save back alongside the setup that wrote it, which is the difference between a bad evening and a lost character.
 

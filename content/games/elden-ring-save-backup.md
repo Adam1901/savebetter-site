@@ -26,7 +26,7 @@ That single `.sl2` file holds every character slot you've got — there's no per
 
 ## Steam Cloud's rocky history with this game
 
-Elden Ring has a well-known reputation, especially since launch, for Steam Cloud sync corrupting or silently overwriting saves — common enough that plenty of player guides tell you to just turn Steam Cloud off for this game and back up manually instead. It's the sharpest example of why [cloud saves aren't backups](../blog/cloud-saves-arent-backups/): sync's whole job is replacing the old copy with the new one, even when the new one is broken.
+Elden Ring has a well-known reputation, especially since launch, for Steam Cloud sync corrupting or silently overwriting saves — common enough that plenty of player guides tell you to just turn Steam Cloud off for this game and back up manually instead. It's the sharpest example of why [cloud saves aren't backups](../../../blog/cloud-saves-arent-backups/): sync's whole job is replacing the old copy with the new one, even when the new one is broken.
 
 Checkpoint64 is that manual backup, minus the manual part. It keeps a dated version history of the actual `.sl2` file that doesn't depend on Steam's sync working correctly, so if a cloud sync ever does go wrong, it doesn't take your only copy with it.
 
@@ -36,7 +36,7 @@ Elden Ring doesn't let you undo either of these. Start New Game+ and the world m
 
 ## Seamless Co-op and modded saves
 
-Modded runs get the same treatment — Checkpoint64 backs up the `.co2` save the Seamless Co-op mod keeps, right alongside the vanilla file, so a modded co-op character has the same version history as a solo one. The [modded game save backup guide](../modded-game-save-backup/) covers the general approach for the rest of your modded library.
+Modded runs get the same treatment — Checkpoint64 backs up the `.co2` save the Seamless Co-op mod keeps, right alongside the vanilla file, so a modded co-op character has the same version history as a solo one. The [modded game save backup guide](../../../modded-game-save-backup/) covers the general approach for the rest of your modded library.
 
 ## How Checkpoint64 backs up Elden Ring
 

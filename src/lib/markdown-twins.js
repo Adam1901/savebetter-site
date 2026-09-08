@@ -14,7 +14,7 @@
 // Only docs whose markdown IS the page source belong here. /press/ deliberately
 // does not: its markdown carries {{version}}/{{gameCount}} placeholders the
 // route fills at render time, so the raw file would hand an agent template
-// junk. Blog posts, guides and the ~94 /saves/ pages are the obvious next
+// junk. Blog posts, guides and the save-location pages are the obvious next
 // batch — they have real markdown sources too — but that is ~140 more files
 // and no consumer has asked for them yet.
 export const MARKDOWN_TWINS = ['about', 'contact', 'terms', 'privacy']

@@ -414,8 +414,7 @@ export default {
       tape: 'GUIDES',
       h2Html: 'WHERE YOUR SAVES <span class="accent">ACTUALLY LIVE.</span>',
       items: [
-        { kind: 'GUIDE', title: 'Game save backup guides', slug: 'games' },
-        { kind: 'REFERENCE', title: 'Save locations for 140+ games', slug: 'saves' },
+        { kind: 'GUIDE', title: 'Save locations & backup guides for 140+ games', slug: 'games' },
         { kind: 'GUIDE', title: 'Emulator save backup', slug: 'emulator-save-backup' },
         { kind: 'GUIDE', title: 'Modded game save backup', slug: 'modded-game-save-backup' },
         { kind: 'COMPARE', title: 'Steam Cloud alternative', slug: 'steam-cloud-alternative' },

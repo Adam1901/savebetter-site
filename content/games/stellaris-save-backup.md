@@ -32,7 +32,7 @@ An external history doesn't change how the mode plays. It just means the save fr
 
 ## Long campaigns cross updates
 
-A Stellaris save is written against a specific game version, DLC set and mod list. A campaign that runs for months of real time will span several updates, and a save that loaded fine before a patch can throw errors after one. This is the ordinary [modded and patched save problem](../modded-game-save-backup/) stretched over a long timeline.
+A Stellaris save is written against a specific game version, DLC set and mod list. A campaign that runs for months of real time will span several updates, and a save that loaded fine before a patch can throw errors after one. This is the ordinary [modded and patched save problem](../../../modded-game-save-backup/) stretched over a long timeline.
 
 Restoring a version from before the update gives you a save matched to what wrote it, which is usually the fastest way out.
 

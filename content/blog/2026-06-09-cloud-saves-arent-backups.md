@@ -108,8 +108,8 @@ backup is the thing that's on yours.
 If you want the two side by side, the
 [Steam Cloud alternative guide](/steam-cloud-alternative/) has the
 feature-by-feature table. And it isn't hypothetical: Steam Cloud's
-[history of corrupting Elden Ring saves](/elden-ring-save-backup/) and
-Stardew Valley's [pick-one-blind sync conflict dialog](/stardew-save-backup/)
+[history of corrupting Elden Ring saves](/games/elden-ring/guide/) and
+Stardew Valley's [pick-one-blind sync conflict dialog](/games/stardew/guide/)
 are both this exact failure with a game's name on it.
 
 ## Where this fits

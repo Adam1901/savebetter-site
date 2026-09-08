@@ -1,5 +1,5 @@
 // Knowledge-graph identities for the catalog games — the `sameAs` targets on the
-// VideoGame entity that each /saves/<slug>/ page declares itself `about`.
+// VideoGame entity that each /games/<slug>/save/ page declares itself `about`.
 //
 // Why this exists: a save-location page is *about* a game, and nothing in the
 // markup used to say so. Wikidata Q-IDs are what Google reconciles entities
@@ -152,7 +152,7 @@ export const GAME_ENTITIES = {
   witcher3: { wikidata: "Q4267401", wikipedia: "https://en.wikipedia.org/wiki/The_Witcher_3%3A_Wild_Hunt", steam: "292030" },
 }
 
-// The `about` node for a page covering `game`. Both the generated /saves/ pages
+// The `about` node for a page covering `game`. Both the generated save-location pages
 // and the hand-written guides use it, so it lives here with the data rather than
 // in either renderer — importing it from one into the other would make the two
 // render modules circular.
@@ -174,7 +174,7 @@ export function aboutGame(game) {
   }
 }
 
-// The titles worth spending internal-link equity on. The /saves/ related-links
+// The titles worth spending internal-link equity on. The save-page related-links
 // block used to be purely alphabetical, which handed Elden Ring's inbound links
 // to Enshrouded and Don't Starve by accident of spelling; these get linked from
 // every other save-location page instead. Ordered by search demand, not A–Z.

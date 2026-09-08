@@ -1,16 +1,13 @@
-import { error } from '@sveltejs/kit'
+import { error, redirect } from '@sveltejs/kit'
 import { getCatalog, getGame } from '$lib/catalog/load.js'
-import { renderSavePage } from '$lib/catalog/render.js'
 
-// One generated save-location page per backend-catalog game. entries() makes
-// every page prerender even before anything links to it (the /saves/ index
-// does too, but don't lean on the crawl).
+// /saves/<slug>/ -> /games/<slug>/save/. One stub per indexed URL; the slug is
+// unchanged, only the shape around it.
 export async function entries() {
   return (await getCatalog()).map((g) => ({ slug: g.slug }))
 }
 
 export async function load({ params }) {
-  const game = await getGame(params.slug)
-  if (!game) error(404)
-  return renderSavePage(game, await getCatalog(), { depth: 2 })
+  if (!(await getGame(params.slug))) error(404)
+  redirect(308, `../../games/${params.slug}/save/`)
 }

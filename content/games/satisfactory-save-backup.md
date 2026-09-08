@@ -44,4 +44,4 @@ Late-game Satisfactory saves get large — a sprawling world can run to tens of 
 
 ## Co-op factories
 
-In co-op, one world is canonical, and "who's got the latest save?" gets messy when players host separate sessions. Checkpoint64 gives that world a single backed-up history with version locks, so one save moves forward instead of forking into three. If you're coordinating co-op without renting a 24/7 machine, the [dedicated server alternative guide](../dedicated-server-alternative/) goes deeper, and the [idle-hours cost math](../blog/ditch-the-dedicated-server/) explains why most groups are overpaying.
+In co-op, one world is canonical, and "who's got the latest save?" gets messy when players host separate sessions. Checkpoint64 gives that world a single backed-up history with version locks, so one save moves forward instead of forking into three. If you're coordinating co-op without renting a 24/7 machine, the [dedicated server alternative guide](../../../dedicated-server-alternative/) goes deeper, and the [idle-hours cost math](../../../blog/ditch-the-dedicated-server/) explains why most groups are overpaying.

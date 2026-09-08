@@ -31,7 +31,7 @@ trip back into settings to add them by hand.
 
 We're turning this on **game by game**, starting with the ones whose save folder
 is *just saves* — nothing else living in there to sweep up by accident.
-**[Stardew Valley](/stardew-save-backup/) is first.** As we confirm each game's folder is clean, it gets
+**[Stardew Valley](/games/stardew/guide/) is first.** As we confirm each game's folder is clean, it gets
 the option too. Games that aren't enabled yet keep working exactly as before,
 picking files one at a time.
 

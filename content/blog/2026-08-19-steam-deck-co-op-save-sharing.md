@@ -67,9 +67,9 @@ somebody's desktop.
 ## Games this fits
 
 The single-world co-op games where "who's got it?" is a recurring question —
-[Valheim](/saves/valheim/), [Factorio](/saves/factorio/),
-[Satisfactory](/saves/satisfactory/), [Palworld](/saves/palworld/),
-[Enshrouded](/saves/enshrouded/), and the rest of the co-op catalog. Most of them
+[Valheim](/games/valheim/save/), [Factorio](/games/factorio/save/),
+[Satisfactory](/games/satisfactory/save/), [Palworld](/games/palworld/save/),
+[Enshrouded](/games/enshrouded/save/), and the rest of the co-op catalog. Most of them
 run on a Deck through Proton, which is exactly why the world keeps needing to
 move in the first place.
 

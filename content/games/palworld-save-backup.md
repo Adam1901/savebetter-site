@@ -30,11 +30,11 @@ Inside that folder, saves nest under your Steam ID and then the world itself. `L
 
 ## Surviving a crash or a bad shutdown
 
-Palworld — or a dedicated server running it — crashing, losing power, or getting force-closed mid-save is one of the most commonly reported ways `Level.sav` ends up unreadable; it's the classic [interrupted write](../blog/anatomy-of-a-save-corruption/), where the file simply never finishes landing on disk. Checkpoint64 keeps every version it backed up, so recovering from a bad shutdown means restoring the last healthy version from before the crash, not losing the world.
+Palworld — or a dedicated server running it — crashing, losing power, or getting force-closed mid-save is one of the most commonly reported ways `Level.sav` ends up unreadable; it's the classic [interrupted write](../../../blog/anatomy-of-a-save-corruption/), where the file simply never finishes landing on disk. Checkpoint64 keeps every version it backed up, so recovering from a bad shutdown means restoring the last healthy version from before the crash, not losing the world.
 
 ## Sharing one world without a rented server
 
-Palworld has exactly one live world file at a time, same as Valheim or Factorio — whoever's hosting holds the only copy, and a rented dedicated server is the usual answer for keeping it online without leaving one PC running. Checkpoint64 covers most of the same need for a small group with version history plus a lock, so only one person saves over the world at a time. The [dedicated server alternative guide](../dedicated-server-alternative/) covers the trade-off in depth.
+Palworld has exactly one live world file at a time, same as Valheim or Factorio — whoever's hosting holds the only copy, and a rented dedicated server is the usual answer for keeping it online without leaving one PC running. Checkpoint64 covers most of the same need for a small group with version history plus a lock, so only one person saves over the world at a time. The [dedicated server alternative guide](../../../dedicated-server-alternative/) covers the trade-off in depth.
 
 ## How Checkpoint64 backs up Palworld
 

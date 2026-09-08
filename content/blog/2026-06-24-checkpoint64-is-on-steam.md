@@ -50,7 +50,7 @@ short version is that a copy of one file isn't a history of it.
 **Steam Cloud only covers Steam games that opted in.** A surprising number don't,
 and that's before you leave Steam at all. Checkpoint64 watches the *folder*, so
 it works across Steam, GOG, Epic, the Microsoft Store, emulators, and modded
-launchers the same way — presets for [75+ games](/saves/) and
+launchers the same way — presets for [75+ games](/games/) and
 [7 emulators](/emulator-save-backup/) out of the box, and "point it at any
 folder" for everything else. Your GOG copy of a game and
 your Steam copy land in the same logbook.
@@ -73,8 +73,8 @@ version underneath so a bad write is never the only copy.
 2. **Join the playtest** if you want to run a real save through it before 1.0 and
    tell us where it creaks.
 3. **Bring a weird save.** A 40-hour
-   [modded Minecraft world](/minecraft-save-backup/), an emulator memory card,
-   a co-op [Valheim seed](/valheim-save-backup/) two people pass back and
+   [modded Minecraft world](/games/minecraft/guide/), an emulator memory card,
+   a co-op [Valheim seed](/games/valheim/guide/) two people pass back and
    forth — the edge cases are the most useful thing you can hand us.
 
 ---

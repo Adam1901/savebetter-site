@@ -22,19 +22,19 @@ faq:
 %LOCALAPPDATA%\Subnautica2\Saved\SaveGames
 ```
 
-Saves are `.sav` files with `.bak` companions alongside them, which is why [the folder is the unit worth backing up](../blog/back-up-the-whole-folder/) rather than one file inside it. Checkpoint64 already knows the path, so there's nothing to point it at by hand. The generated [save file location page](../saves/subnautica-2/) has the same path in reference form.
+Saves are `.sav` files with `.bak` companions alongside them, which is why [the folder is the unit worth backing up](../../../blog/back-up-the-whole-folder/) rather than one file inside it. Checkpoint64 already knows the path, so there's nothing to point it at by hand. The generated [save file location page](../../../games/subnautica-2/save/) has the same path in reference form.
 
 ## One world, several people
 
 The problem co-op creates isn't losing the world — it's that only one copy of it is current, and it lives on whichever machine last played. Everyone has met the version of this where two people played separately and one evening's building has to be thrown away.
 
-A shared history plus a lock is the small fix: whoever plays next pulls the current world, the lock says who's holding it, and nobody builds on a copy that's about to be superseded. The [dedicated server alternative guide](../dedicated-server-alternative/) covers when that's enough and when a group genuinely wants a rented always-on server instead.
+A shared history plus a lock is the small fix: whoever plays next pulls the current world, the lock says who's holding it, and nobody builds on a copy that's about to be superseded. The [dedicated server alternative guide](../../../dedicated-server-alternative/) covers when that's enough and when a group genuinely wants a rented always-on server instead.
 
 ## A save matches the build that wrote it
 
 A save is written against a specific version of the game. While a game is still being updated, what a save has to contain can change between builds — so a world that loads cleanly now isn't guaranteed to load identically after the next update, and rolling the game back doesn't help unless you also kept the save.
 
-That's not a prediction about any particular update. It's the same reason [long-lived saves accumulate risk](../blog/anatomy-of-a-save-corruption/) generally: the more builds a world has been through, the more chances there were for something to go sideways. A version taken before each update is the cheap insurance.
+That's not a prediction about any particular update. It's the same reason [long-lived saves accumulate risk](../../../blog/anatomy-of-a-save-corruption/) generally: the more builds a world has been through, the more chances there were for something to go sideways. A version taken before each update is the cheap insurance.
 
 ## The .bak is one save deep
 

@@ -34,10 +34,10 @@ Back up the **whole save folder**, not just the obvious save file. Modded games 
 
 Checkpoint64 ships knowing where these keep their saves:
 
-- **[Modded Minecraft](../minecraft-save-backup/)** — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers
-- **[Skyrim Special Edition](../skyrim-save-backup/)** — `.ess` saves and `.skse` co-saves
-- **[Elden Ring](../elden-ring-save-backup/)** — the Seamless Co-op mod's `.co2` save alongside the vanilla `.sl2`
-- **[Stardew Valley](../stardew-save-backup/)**, **[Fallout 4](../saves/fallout4/)**, **[RimWorld](../saves/rimworld/)**, **[Factorio](../factorio-save-backup/)**, and 50+ more
+- **[Modded Minecraft](../games/minecraft/guide/)** — vanilla plus the CurseForge, Modrinth, Prism, and FTB launchers
+- **[Skyrim Special Edition](../games/skyrim-se/guide/)** — `.ess` saves and `.skse` co-saves
+- **[Elden Ring](../games/elden-ring/guide/)** — the Seamless Co-op mod's `.co2` save alongside the vanilla `.sl2`
+- **[Stardew Valley](../games/stardew/guide/)**, **[Fallout 4](../games/fallout4/save/)**, **[RimWorld](../games/rimworld/save/)**, **[Factorio](../games/factorio/guide/)**, and 50+ more
 
 Anything not on the list still works — point Checkpoint64 at the save folder and choose the files yourself.
 

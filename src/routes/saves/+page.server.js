@@ -1,7 +1,7 @@
-import { getCatalog } from '$lib/catalog/load.js'
-import { renderSavesIndex } from '$lib/catalog/render.js'
+import { redirect } from '@sveltejs/kit'
 
-// The /saves/ A–Z index of every generated save-location page.
-export async function load() {
-  return renderSavesIndex(await getCatalog(), { depth: 1 })
+// The A-Z of save locations merged into the game hub. Kept as a redirect stub
+// because these URLs are indexed and linked from published blog posts.
+export function load() {
+  redirect(308, '../games/')
 }

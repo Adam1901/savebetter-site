@@ -28,7 +28,7 @@ That's a user-profile folder, not the `AppData` location most Windows games use 
 
 Most games let you save whenever you like, so the worst case for a crash is a few minutes. Here, saving on demand is a limited resource by design, and the practical result is that an hour of play can sit between your last save and your current position.
 
-That design decision is about tension, and it works. What it also does is raise the cost of everything that isn't tension: a crash to desktop, a write interrupted by a power cut, [a save that quietly went wrong earlier](../blog/anatomy-of-a-save-corruption/). An automatic external backup takes those off the table without touching how the game plays — it runs on a clock, not on your consumables.
+That design decision is about tension, and it works. What it also does is raise the cost of everything that isn't tension: a crash to desktop, a write interrupted by a power cut, [a save that quietly went wrong earlier](../../../blog/anatomy-of-a-save-corruption/). An automatic external backup takes those off the table without touching how the game plays — it runs on a clock, not on your consumables.
 
 ## Restoring is your call
 
@@ -36,7 +36,7 @@ Being able to restore is also being able to undo a fight you lost, and that's a 
 
 ## Mods
 
-A save written with mods loaded won't necessarily behave the same after one is removed or updated — the standard [modded save](../modded-game-save-backup/) pattern. A version from before the change loads against the setup that wrote it.
+A save written with mods loaded won't necessarily behave the same after one is removed or updated — the standard [modded save](../../../modded-game-save-backup/) pattern. A version from before the change loads against the setup that wrote it.
 
 ## How Checkpoint64 backs up Kingdom Come: Deliverance II
 

@@ -1,7 +1,7 @@
 import { loadAllPosts } from '$lib/blog/load.js'
 import { getFeedPosts } from '$lib/server/build-data.js'
 import { getCatalog } from '$lib/catalog/load.js'
-import { gameSlugs, gameSummaries, pageSummaries } from '$lib/pages/load.js'
+import { gameSummaries, pageSummaries } from '$lib/pages/load.js'
 import { LOCALES, pathForLocale } from '$lib/i18n/config.js'
 import { MARKDOWN_TWINS } from '$lib/markdown-twins.js'
 
@@ -40,7 +40,7 @@ export async function GET() {
     .slice()
     .sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
 
-  const guides = pageSummaries().filter((p) => !gameSlugs().includes(p.slug))
+  const guides = pageSummaries()
 
   const body = `# Checkpoint64
 
@@ -214,8 +214,9 @@ ${guides.map((g) => link(g.breadcrumb, `${ORIGIN}/${g.slug}/`, g.title)).join('\
 
 ## Per-game backup guides
 
+${link('All supported games, A-Z', `${ORIGIN}/games/`)}
 ${gameSummaries()
-  .map((g) => link(`${g.name} save backup`, `${ORIGIN}/${g.slug}/`, g.description))
+  .map((g) => link(`${g.name} save backup`, `${ORIGIN}/games/${g.catalogSlug}/guide/`, g.description))
   .join('\n')}
 
 ## Blog
@@ -263,9 +264,8 @@ Save file locations, one page per built-in preset — the exact folders each gam
 to on Windows, macOS and Linux. Reference material: skip this section if you only need
 to know what Checkpoint64 is and does.
 
-${link('All supported games, A–Z', `${ORIGIN}/saves/`)}
 ${catalog
-  .map((g) => link(`${g.displayName} save file location`, `${ORIGIN}/saves/${g.slug}/`))
+  .map((g) => link(`${g.displayName} save file location`, `${ORIGIN}/games/${g.slug}/save/`))
   .join('\n')}
 `
 

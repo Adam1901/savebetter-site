@@ -117,7 +117,7 @@ The interesting part is only ever the finding.
 Checkpoint64 is on Steam with a SteamOS + Linux build, so you can install it on
 a Deck the same way you install anything else. If you want the per-game paths
 for the desktop side, they're all listed under
-[game save locations](/saves/). If you're moving a world back and forth between
+[game save locations](/games/). If you're moving a world back and forth between
 the Deck and a desktop, that's
 [its own post](/blog/move-game-saves-between-steam-deck-and-pc/).
 
