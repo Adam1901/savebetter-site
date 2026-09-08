@@ -129,7 +129,14 @@ function jsonLdBlocks({ code, t, version, steam }) {
   // aggregateRating OR a review; this node carried the first two and neither of
   // the last, so it has never been eligible. The Steam score supplies the
   // rating — genuine third-party reviews, already fetched at build time and
-  // already displayed on this page by SteamReviews.svelte.
+  // already displayed on this page by SteamReviews.svelte. Eligibility is not
+  // display: Google still decides whether to draw stars, and at a handful of
+  // reviews scoring 100% it very likely won't. The node being well-formed is
+  // what this buys; the snippet follows the review count, not the markup.
+  //
+  // No `url` here — provenance is already carried by the SoftwareApplication's
+  // `sameAs` Steam link, and `url` on an AggregateRating reads as "the page
+  // this aggregate lives on", which is this page, not Steam.
   //
   // bestRating/worstRating are stated, not defaulted: schema.org assumes 5/1,
   // so a percentage would be read as "94 out of 5" and fail validation. And the
@@ -144,7 +151,6 @@ function jsonLdBlocks({ code, t, version, steam }) {
     bestRating: 100,
     worstRating: 0,
     ratingCount: steam.totalReviews,
-    url: STEAM_STORE_URL,
   }
   // Stable @ids so the three site-level entities read as ONE graph instead of
   // three islands — Google merges cross-referencing @id nodes across separate
