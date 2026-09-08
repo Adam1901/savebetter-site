@@ -94,18 +94,5 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# ---------- Known SEO/marketing scrapers (politely blocked) ----------
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
 Sitemap: https://checkpoint64.com/sitemap.xml
 Host: https://checkpoint64.com

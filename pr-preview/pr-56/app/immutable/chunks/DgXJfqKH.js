@@ -1,0 +1,1 @@
+import{n as e}from"./C6PghC39.js";import{m as t}from"./BLW8aJIB.js";function n(n,{suffix:r=``,to:i=null,intl:a}={}){let o=e(n,`EUR`,a),s=i==null?`${o}${r}`:`${o}–${e(i,`EUR`,a)}${r}`;return`<span class="money" data-money="${n}"${i==null?``:` data-money-to="${i}"`}${r?` data-money-suffix="${t(r)}"`:``}>${s}</span>`}export{n as t};

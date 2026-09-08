@@ -442,7 +442,7 @@
   </url>
   <url>
     <loc>https://checkpoint64.com/blog/</loc>
-    <lastmod>2026-09-07</lastmod>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -455,6 +455,12 @@
   <url>
     <loc>https://checkpoint64.com/blog/ditch-the-dedicated-server/</loc>
     <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/blog/undo-accidental-game-overwrites/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -879,144 +885,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/games/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/skyrim-save-backup/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/minecraft-save-backup/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/satisfactory-save-backup/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/valheim-save-backup/</loc>
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/stardew-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/elden-ring-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/palworld-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/factorio-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/dont-starve-together-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/7-days-to-die-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/sons-of-the-forest-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/enshrouded-save-backup/</loc>
-    <lastmod>2026-07-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/baldurs-gate-3-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/cyberpunk-2077-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/rimworld-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/project-zomboid-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/terraria-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/no-mans-sky-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/stellaris-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/kingdom-come-deliverance-2-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/stalker-2-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://checkpoint64.com/subnautica-2-save-backup/</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://checkpoint64.com/press/</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1035,767 +903,1020 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/</loc>
+    <loc>https://checkpoint64.com/games/</loc>
+    <lastmod>2026-09-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/7-days-to-die/</loc>
+    <loc>https://checkpoint64.com/games/skyrim-se/guide/</loc>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/minecraft/guide/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/satisfactory/guide/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/valheim/guide/</loc>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/stardew/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/elden-ring/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/palworld/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/factorio/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/dont-starve-together/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/7-days-to-die/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/sons-of-the-forest/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/enshrouded/guide/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/bg3/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/cyberpunk-2077/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/rimworld/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/project-zomboid/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/terraria/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/no-mans-sky/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/stellaris/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/kcd2/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/stalker-2/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/subnautica-2/guide/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/007-first-light/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/7-days-to-die/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/abiotic-factor/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/alchemy-factory/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/anno-117/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/anno-1800/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/aska/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-black-flag/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-mirage/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-odyssey/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-origins/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-shadows/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-syndicate/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-unity/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/ac-valhalla/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/astroneer/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/avatar-frontiers-of-pandora/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/bg3/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/bellwright/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/big-walk/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/black-mesa/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/black-myth-wukong/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/calyx/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/castle-story/save/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://checkpoint64.com/games/cemu/save/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/abiotic-factor/</loc>
+    <loc>https://checkpoint64.com/games/cities-skylines/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/alchemy-factory/</loc>
+    <loc>https://checkpoint64.com/games/civ6/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/anno-1800/</loc>
+    <loc>https://checkpoint64.com/games/civ7/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/aska/</loc>
+    <loc>https://checkpoint64.com/games/clair-obscur-expedition-33/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-black-flag/</loc>
+    <loc>https://checkpoint64.com/games/core-keeper/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-mirage/</loc>
+    <loc>https://checkpoint64.com/games/crimson-desert/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-odyssey/</loc>
+    <loc>https://checkpoint64.com/games/crimson-moon/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-origins/</loc>
+    <loc>https://checkpoint64.com/games/crisis-the-third-way/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-shadows/</loc>
+    <loc>https://checkpoint64.com/games/ck3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-syndicate/</loc>
+    <loc>https://checkpoint64.com/games/cult-of-the-lamb/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-unity/</loc>
+    <loc>https://checkpoint64.com/games/cyberpunk-2077/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ac-valhalla/</loc>
+    <loc>https://checkpoint64.com/games/dark-souls-3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/astroneer/</loc>
+    <loc>https://checkpoint64.com/games/darkest-dungeon/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/avatar-frontiers-of-pandora/</loc>
+    <loc>https://checkpoint64.com/games/dave-the-diver/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/bg3/</loc>
+    <loc>https://checkpoint64.com/games/disco-elysium/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/bellwright/</loc>
+    <loc>https://checkpoint64.com/games/dishonored-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/big-walk/</loc>
+    <loc>https://checkpoint64.com/games/dos2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/black-mesa/</loc>
+    <loc>https://checkpoint64.com/games/dolphin/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/black-myth-wukong/</loc>
+    <loc>https://checkpoint64.com/games/dont-starve-together/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/calyx/</loc>
+    <loc>https://checkpoint64.com/games/duckstation/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/castle-story/</loc>
+    <loc>https://checkpoint64.com/games/dyson-sphere-program/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/cemu/</loc>
+    <loc>https://checkpoint64.com/games/elden-ring/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/cities-skylines/</loc>
+    <loc>https://checkpoint64.com/games/enshrouded/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/civ6/</loc>
+    <loc>https://checkpoint64.com/games/factorio/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/core-keeper/</loc>
+    <loc>https://checkpoint64.com/games/fallout4/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/crimson-moon/</loc>
+    <loc>https://checkpoint64.com/games/fallout-nv/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/crisis-the-third-way/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ck3/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-4/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/cult-of-the-lamb/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-5/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/cyberpunk-2077/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-6/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dark-souls-3/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-new-dawn/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/darkest-dungeon/</loc>
+    <loc>https://checkpoint64.com/games/far-cry-primal/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dave-the-diver/</loc>
+    <loc>https://checkpoint64.com/games/far-far-west/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/disco-elysium/</loc>
+    <loc>https://checkpoint64.com/games/fields-of-mistria/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dishonored-2/</loc>
+    <loc>https://checkpoint64.com/games/forza-horizon-6/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dos2/</loc>
+    <loc>https://checkpoint64.com/games/frostpunk/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dolphin/</loc>
+    <loc>https://checkpoint64.com/games/gothic-1-remake/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dont-starve-together/</loc>
+    <loc>https://checkpoint64.com/games/gta-v/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/duckstation/</loc>
+    <loc>https://checkpoint64.com/games/grounded/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/dyson-sphere-program/</loc>
+    <loc>https://checkpoint64.com/games/grounded-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/elden-ring/</loc>
+    <loc>https://checkpoint64.com/games/hades/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/enshrouded/</loc>
+    <loc>https://checkpoint64.com/games/hades-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/factorio/</loc>
+    <loc>https://checkpoint64.com/games/hollow-knight/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/fallout4/</loc>
+    <loc>https://checkpoint64.com/games/hollow-knight-silksong/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/fallout-nv/</loc>
+    <loc>https://checkpoint64.com/games/how-to-fish/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-3/</loc>
+    <loc>https://checkpoint64.com/games/humanitz/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-4/</loc>
+    <loc>https://checkpoint64.com/games/hytale/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-5/</loc>
+    <loc>https://checkpoint64.com/games/icarus/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-6/</loc>
+    <loc>https://checkpoint64.com/games/immortals-fenyx-rising/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-new-dawn/</loc>
+    <loc>https://checkpoint64.com/games/kenshi/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/far-cry-primal/</loc>
+    <loc>https://checkpoint64.com/games/kingdom-come/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/fields-of-mistria/</loc>
+    <loc>https://checkpoint64.com/games/kcd2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/frostpunk/</loc>
+    <loc>https://checkpoint64.com/games/kingdoms-reborn/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/gothic-1-remake/</loc>
+    <loc>https://checkpoint64.com/games/kirby-super-star-ultra/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/gta-v/</loc>
+    <loc>https://checkpoint64.com/games/mafia-old-country/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/grounded/</loc>
+    <loc>https://checkpoint64.com/games/mass-effect-le/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/hades/</loc>
+    <loc>https://checkpoint64.com/games/meccha-chameleon/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/hollow-knight/</loc>
+    <loc>https://checkpoint64.com/games/medieval-dynasty/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/humanitz/</loc>
+    <loc>https://checkpoint64.com/games/metaphor-refantazio/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/hytale/</loc>
+    <loc>https://checkpoint64.com/games/metro-exodus/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/icarus/</loc>
+    <loc>https://checkpoint64.com/games/mina-the-hollower/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/immortals-fenyx-rising/</loc>
+    <loc>https://checkpoint64.com/games/minecraft-curseforge/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/kenshi/</loc>
+    <loc>https://checkpoint64.com/games/minecraft-ftb/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/kingdom-come/</loc>
+    <loc>https://checkpoint64.com/games/minecraft/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/kcd2/</loc>
+    <loc>https://checkpoint64.com/games/minecraft-modrinth/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/kingdoms-reborn/</loc>
+    <loc>https://checkpoint64.com/games/minecraft-pinecone/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/kirby-super-star-ultra/</loc>
+    <loc>https://checkpoint64.com/games/minecraft-prism/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/mafia-old-country/</loc>
+    <loc>https://checkpoint64.com/games/mixtape/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/mass-effect-le/</loc>
+    <loc>https://checkpoint64.com/games/monster-hunter-rise/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/medieval-dynasty/</loc>
+    <loc>https://checkpoint64.com/games/monster-hunter-wilds/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/metaphor-refantazio/</loc>
+    <loc>https://checkpoint64.com/games/monster-hunter-world/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/metro-exodus/</loc>
+    <loc>https://checkpoint64.com/games/mortal-shell-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft-curseforge/</loc>
+    <loc>https://checkpoint64.com/games/necesse/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft-ftb/</loc>
+    <loc>https://checkpoint64.com/games/nioh-3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft/</loc>
+    <loc>https://checkpoint64.com/games/no-mans-sky/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft-modrinth/</loc>
+    <loc>https://checkpoint64.com/games/no-more-room-in-hell-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft-pinecone/</loc>
+    <loc>https://checkpoint64.com/games/no-rest-for-the-wicked/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/minecraft-prism/</loc>
+    <loc>https://checkpoint64.com/games/omori/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/monster-hunter-rise/</loc>
+    <loc>https://checkpoint64.com/games/onimusha-way-of-the-sword/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/monster-hunter-wilds/</loc>
+    <loc>https://checkpoint64.com/games/oxygen-not-included/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/monster-hunter-world/</loc>
+    <loc>https://checkpoint64.com/games/palworld/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/necesse/</loc>
+    <loc>https://checkpoint64.com/games/pcsx2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/no-mans-sky/</loc>
+    <loc>https://checkpoint64.com/games/persona-3-reload/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/no-rest-for-the-wicked/</loc>
+    <loc>https://checkpoint64.com/games/planet-coaster-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/oxygen-not-included/</loc>
+    <loc>https://checkpoint64.com/games/ppsspp/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/palworld/</loc>
+    <loc>https://checkpoint64.com/games/pragmata/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/pcsx2/</loc>
+    <loc>https://checkpoint64.com/games/prince-of-persia-lost-crown/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/persona-3-reload/</loc>
+    <loc>https://checkpoint64.com/games/prison-architect/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/planet-coaster-2/</loc>
+    <loc>https://checkpoint64.com/games/project-zomboid/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ppsspp/</loc>
+    <loc>https://checkpoint64.com/games/quaismorph/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/prince-of-persia-lost-crown/</loc>
+    <loc>https://checkpoint64.com/games/raft/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/prison-architect/</loc>
+    <loc>https://checkpoint64.com/games/resident-evil-requiem/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/project-zomboid/</loc>
+    <loc>https://checkpoint64.com/games/retroarch/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/quaismorph/</loc>
+    <loc>https://checkpoint64.com/games/riders-republic/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/raft/</loc>
+    <loc>https://checkpoint64.com/games/rimworld/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/retroarch/</loc>
+    <loc>https://checkpoint64.com/games/roadside-research/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/riders-republic/</loc>
+    <loc>https://checkpoint64.com/games/romestead/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/rimworld/</loc>
+    <loc>https://checkpoint64.com/games/rpcs3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/roadside-research/</loc>
+    <loc>https://checkpoint64.com/games/runescape-dragonwilds/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/romestead/</loc>
+    <loc>https://checkpoint64.com/games/rvthereyet/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/rpcs3/</loc>
+    <loc>https://checkpoint64.com/games/stalker-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/runescape-dragonwilds/</loc>
+    <loc>https://checkpoint64.com/games/stalker-cop/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/rvthereyet/</loc>
+    <loc>https://checkpoint64.com/games/satisfactory/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/stalker-2/</loc>
+    <loc>https://checkpoint64.com/games/scavland/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/stalker-cop/</loc>
+    <loc>https://checkpoint64.com/games/schedule-1/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/satisfactory/</loc>
+    <loc>https://checkpoint64.com/games/scrap-mechanic/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/scavland/</loc>
+    <loc>https://checkpoint64.com/games/scriptorium-master-of-manuscripts/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/schedule-1/</loc>
+    <loc>https://checkpoint64.com/games/sekiro/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/scrap-mechanic/</loc>
+    <loc>https://checkpoint64.com/games/shapez-2-factory/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/scriptorium-master-of-manuscripts/</loc>
+    <loc>https://checkpoint64.com/games/skyrim-se/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/sekiro/</loc>
+    <loc>https://checkpoint64.com/games/slay-the-spire-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/shapez-2-factory/</loc>
+    <loc>https://checkpoint64.com/games/sons-of-the-forest/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/skyrim-se/</loc>
+    <loc>https://checkpoint64.com/games/soulmask/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/sons-of-the-forest/</loc>
+    <loc>https://checkpoint64.com/games/south-park-stick-of-truth/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/soulmask/</loc>
+    <loc>https://checkpoint64.com/games/space-engineers/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/south-park-stick-of-truth/</loc>
+    <loc>https://checkpoint64.com/games/star-wars-outlaws/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/space-engineers/</loc>
+    <loc>https://checkpoint64.com/games/star-wars-zero-company/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/star-wars-outlaws/</loc>
+    <loc>https://checkpoint64.com/games/stardew/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/stardew/</loc>
+    <loc>https://checkpoint64.com/games/starrupture/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/starrupture/</loc>
+    <loc>https://checkpoint64.com/games/stationeers/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/stationeers/</loc>
+    <loc>https://checkpoint64.com/games/stellaris/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/stellaris/</loc>
+    <loc>https://checkpoint64.com/games/subnautica/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/subnautica/</loc>
+    <loc>https://checkpoint64.com/games/subnautica-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/subnautica-2/</loc>
+    <loc>https://checkpoint64.com/games/suicide-squad-kill-the-justice-league/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/suicide-squad-kill-the-justice-league/</loc>
+    <loc>https://checkpoint64.com/games/sunkenland/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/sunkenland/</loc>
+    <loc>https://checkpoint64.com/games/supermarket-simulator/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/supermarket-simulator/</loc>
+    <loc>https://checkpoint64.com/games/terraria/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/terraria/</loc>
+    <loc>https://checkpoint64.com/games/the-crew-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/the-crew-2/</loc>
+    <loc>https://checkpoint64.com/games/oblivion/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/oblivion/</loc>
+    <loc>https://checkpoint64.com/games/the-last-caretaker/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/the-last-caretaker/</loc>
+    <loc>https://checkpoint64.com/games/the-long-dark/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/the-long-dark/</loc>
+    <loc>https://checkpoint64.com/games/the-outer-worlds-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/planet-crafter/</loc>
+    <loc>https://checkpoint64.com/games/planet-crafter/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/sims-4/</loc>
+    <loc>https://checkpoint64.com/games/sims-4/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/witcher3/</loc>
+    <loc>https://checkpoint64.com/games/witcher3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/tmodloader/</loc>
+    <loc>https://checkpoint64.com/games/tmodloader/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ghost-recon-breakpoint/</loc>
+    <loc>https://checkpoint64.com/games/ghost-recon-breakpoint/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/ghost-recon-wildlands/</loc>
+    <loc>https://checkpoint64.com/games/ghost-recon-wildlands/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/rainbow-six-siege/</loc>
+    <loc>https://checkpoint64.com/games/rainbow-six-siege/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/splinter-cell-blacklist/</loc>
+    <loc>https://checkpoint64.com/games/splinter-cell-blacklist/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/total-war-warhammer-3/</loc>
+    <loc>https://checkpoint64.com/games/total-war-warhammer-3/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/twisted-tower/</loc>
+    <loc>https://checkpoint64.com/games/twisted-tower/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/two-point-museum/</loc>
+    <loc>https://checkpoint64.com/games/two-point-museum/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/v-rising/</loc>
+    <loc>https://checkpoint64.com/games/v-rising/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/valheim/</loc>
+    <loc>https://checkpoint64.com/games/valheim/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/vintage-story/</loc>
+    <loc>https://checkpoint64.com/games/vintage-story/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/rogue-trader/</loc>
+    <loc>https://checkpoint64.com/games/rogue-trader/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/watch-dogs/</loc>
+    <loc>https://checkpoint64.com/games/watch-dogs/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/watch-dogs-2/</loc>
+    <loc>https://checkpoint64.com/games/watch-dogs-2/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/watch-dogs-legion/</loc>
+    <loc>https://checkpoint64.com/games/watch-dogs-legion/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://checkpoint64.com/saves/water-park-simulator/</loc>
+    <loc>https://checkpoint64.com/games/water-park-simulator/save/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
