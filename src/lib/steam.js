@@ -46,6 +46,18 @@ export function cleanReviewText(raw, maxChars = 280) {
   return s
 }
 
+// Steam's aggregate score as a whole-number percentage, or null when there is
+// no data to divide. ONE source for it on purpose: the homepage renders this
+// number in the reviews strip AND stamps it into the SoftwareApplication's
+// aggregateRating (i18n/head.js), and Google requires the rating it reads to be
+// the rating the visitor sees. Two `Math.round` calls in two files is exactly
+// how those drift apart.
+export function positivePercent(steam) {
+  const total = Number(steam?.totalReviews) || 0
+  if (total <= 0) return null
+  return Math.round(((Number(steam?.totalPositive) || 0) / total) * 100)
+}
+
 // Steam reports playtime in minutes. "142 hrs" reads better than "8520 min".
 export function formatPlaytime(minutes) {
   const m = Number(minutes)

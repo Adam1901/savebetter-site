@@ -21,7 +21,7 @@
   let { data } = $props()
   const L = getLocale(data.locale)
   const t = L.t
-  const head = homeHead({ locale: data.locale, includeAnalytics: !dev, releaseTag: data.releases?.tag })
+  const head = homeHead({ locale: data.locale, includeAnalytics: !dev, releaseTag: data.releases?.tag, steam: data.steam })
 </script>
 
 <svelte:head>{@html head}</svelte:head>

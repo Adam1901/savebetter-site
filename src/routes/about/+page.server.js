@@ -1,7 +1,7 @@
 import { loadDoc } from '$lib/press.js'
 import { renderLegal } from '$lib/legal/render.js'
 import { jsonLd } from '$lib/blog/render.js'
-import { organizationNode, ORIGIN } from '$lib/organization.js'
+import { ORG_ID, ORIGIN } from '$lib/organization.js'
 
 // The /about/ trust anchor. Its own static route rather than a [slug=guide]
 // page, for the same reason /press/ is: relatedGuides() would otherwise
@@ -17,10 +17,10 @@ export async function load() {
     description: doc.description,
     url: `${ORIGIN}/about/`,
     inLanguage: 'en',
-    // The full node, not a bare {"@id"} reference: Google merges by @id across
-    // pages but will not fetch the homepage to resolve a dangling one.
-    about: organizationNode(),
-    publisher: { '@id': `${ORIGIN}/#organization` },
+    // A bare reference is safe here: the legal shell this page renders on now
+    // emits the full Organization node itself, so the @id resolves on-page.
+    about: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
   })
   return renderLegal(doc, { depth: 1, extraHead: schema })
 }
