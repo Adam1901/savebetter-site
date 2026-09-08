@@ -1,7 +1,7 @@
 import { loadDoc } from '$lib/press.js'
 import { renderLegal } from '$lib/legal/render.js'
 import { jsonLd } from '$lib/blog/render.js'
-import { organizationNode, ORIGIN } from '$lib/organization.js'
+import { ORG_ID, ORIGIN } from '$lib/organization.js'
 
 // The /contact/ trust anchor — see the note on /about/'s loader for why this is
 // a static route rather than a guide page.
@@ -15,8 +15,10 @@ export async function load() {
     description: doc.description,
     url: `${ORIGIN}/contact/`,
     inLanguage: 'en',
-    mainEntity: organizationNode(),
-    publisher: { '@id': `${ORIGIN}/#organization` },
+    // Resolves against the full Organization node the legal shell emits on this
+    // same page — see /about/'s loader.
+    mainEntity: { '@id': ORG_ID },
+    publisher: { '@id': ORG_ID },
   })
   return renderLegal(doc, { depth: 1, extraHead: schema })
 }

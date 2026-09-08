@@ -221,6 +221,7 @@ export default {
     h2Html: 'STRAIGHT FROM <span class="accent">STEAM.</span>',
     lede: 'Real reviews from real players, pulled live from our Steam page.',
     countTpl: '{0} reviews',
+    percentTpl: '{0}% positive',
     viewOnSteam: 'View on Steam',
     recommended: 'RECOMMENDED',
     hoursTpl: '{0} on record',

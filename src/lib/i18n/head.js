@@ -11,8 +11,8 @@
 import { getLocale, pathForLocale, fmt, LOCALES, SUBDIR_LOCALE_CODES } from './config.js'
 import { DEFAULT_CURRENCY, formatMoney } from '../currency.js'
 import { esc } from '../esc.js'
-import { STEAM_STORE_URL } from '../steam.js'
 import { REPO } from '../releases.js'
+import { STEAM_STORE_URL, positivePercent } from '../steam.js'
 import { organizationNode, ORG_ID } from '../organization.js'
 
 const ORIGIN = 'https://checkpoint64.com'
@@ -123,8 +123,35 @@ const FALLBACK_VERSION = '1.0'
 // The three site-level JSON-LD blocks, regenerated in the target language.
 // HowTo and FAQPage used to be here too; they moved to /how-it-works/ and the
 // pages that display those questions when the single page became eight.
-function jsonLdBlocks({ code, t, version }) {
+function jsonLdBlocks({ code, t, version, steam }) {
   const j = t.jsonld
+  // Google's Software App rich result needs name + offers.price + EITHER an
+  // aggregateRating OR a review; this node carried the first two and neither of
+  // the last, so it has never been eligible. The Steam score supplies the
+  // rating — genuine third-party reviews, already fetched at build time and
+  // already displayed on this page by SteamReviews.svelte. Eligibility is not
+  // display: Google still decides whether to draw stars, and at a handful of
+  // reviews scoring 100% it very likely won't. The node being well-formed is
+  // what this buys; the snippet follows the review count, not the markup.
+  //
+  // No `url` here — provenance is already carried by the SoftwareApplication's
+  // `sameAs` Steam link, and `url` on an AggregateRating reads as "the page
+  // this aggregate lives on", which is this page, not Steam.
+  //
+  // bestRating/worstRating are stated, not defaulted: schema.org assumes 5/1,
+  // so a percentage would be read as "94 out of 5" and fail validation. And the
+  // whole key is gated on there being reviews at all — fetchSteamReviews()
+  // returns null on a Steam outage, and an ungated division would emit
+  // ratingValue: null (JSON.stringify's rendering of NaN) rather than no
+  // rating at all, which is a broken node instead of an absent one.
+  const percent = positivePercent(steam)
+  const aggregateRating = percent === null ? undefined : {
+    '@type': 'AggregateRating',
+    ratingValue: percent,
+    bestRating: 100,
+    worstRating: 0,
+    ratingCount: steam.totalReviews,
+  }
   // Stable @ids so the three site-level entities read as ONE graph instead of
   // three islands — Google merges cross-referencing @id nodes across separate
   // <script> blocks on the same page. Ids are identical on every locale (one
@@ -164,6 +191,7 @@ function jsonLdBlocks({ code, t, version }) {
       isAccessibleForFree: true,
       sameAs: [STEAM_STORE_URL, `https://github.com/${REPO}`],
       publisher: { '@id': orgId },
+      aggregateRating,
       offers: {
         '@type': 'Offer',
         price: '0',
@@ -303,7 +331,7 @@ ${jsonLd}`
 // Full homepage <head> inner HTML for `locale`. `includeAnalytics` is false in
 // dev (pass `!dev` from $app/environment at the call site). `releaseTag` is the
 // build-time GitHub tag ("v1.0.8"); null when that fetch failed.
-export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = null } = {}) {
+export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = null, steam = null } = {}) {
   const L = getLocale(locale)
   const t = L.t
   const version = String(releaseTag || '').replace(/^v/, '') || FALLBACK_VERSION
@@ -326,7 +354,7 @@ export function homeHead({ locale = 'en', includeAnalytics = true, releaseTag = 
     twitterTitle: t.meta.twitterTitle,
     twitterDescription: t.meta.twitterDescription,
     twitterImageAlt: t.meta.twitterImageAlt,
-    jsonLd: jsonLdBlocks({ code: L.code, t, version }),
+    jsonLd: jsonLdBlocks({ code: L.code, t, version, steam }),
   })
 }
 

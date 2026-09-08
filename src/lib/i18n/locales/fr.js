@@ -128,6 +128,7 @@ export default {
     h2Html: 'DIRECT DE <span class="accent">STEAM.</span>',
     lede: 'De vrais avis de vrais joueurs, chargés en direct depuis notre page Steam.',
     countTpl: '{0} avis',
+    percentTpl: '{0}% d’avis positifs',
     viewOnSteam: 'Voir sur Steam',
     recommended: 'RECOMMANDÉ',
     hoursTpl: '{0} au compteur',

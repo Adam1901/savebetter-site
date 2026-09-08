@@ -143,6 +143,7 @@ export default {
     // Russian numeral agreement has three forms; a "label: N" construction
     // sidesteps it entirely for counts we never see at build time.
     countTpl: 'отзывов: {0}',
+    percentTpl: '{0}% положительных',
     viewOnSteam: 'Открыть в Steam',
     recommended: 'РЕКОМЕНДУЕТ',
     hoursTpl: 'наиграно {0}',

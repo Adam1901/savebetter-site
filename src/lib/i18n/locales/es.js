@@ -128,6 +128,7 @@ export default {
     h2Html: 'DIRECTO DE <span class="accent">STEAM.</span>',
     lede: 'Reseñas reales de jugadores reales, cargadas en vivo desde nuestra página de Steam.',
     countTpl: '{0} reseñas',
+    percentTpl: '{0}% positivas',
     viewOnSteam: 'Ver en Steam',
     recommended: 'RECOMENDADO',
     hoursTpl: '{0} jugadas',

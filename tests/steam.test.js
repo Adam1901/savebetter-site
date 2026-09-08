@@ -8,7 +8,7 @@
 // visitor who clicked it.
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { parseSteamReviews, reviewPermalink, STEAM_APP_ID, STEAM_STORE_URL } from '../src/lib/steam.js'
+import { parseSteamReviews, positivePercent, reviewPermalink, STEAM_APP_ID, STEAM_STORE_URL } from '../src/lib/steam.js'
 
 const summary = { query_summary: { review_score_desc: 'Very Positive', total_reviews: 120, total_positive: 115 } }
 const longEnough = (s) => s.padEnd(70, ' .')
@@ -44,4 +44,19 @@ test('a review with a public profile links to that review; a private one falls b
   assert.equal(privateProfile.reviewUrl, STEAM_STORE_URL)
   // Never a link that reads as a permalink but isn't one.
   for (const r of parsed.reviews) assert.ok(!/undefined|null/.test(r.reviewUrl), r.reviewUrl)
+})
+
+// The homepage renders this number AND stamps it into the SoftwareApplication's
+// aggregateRating. The case that matters is the absent one: fetchSteamReviews()
+// returns null on a Steam outage, and a division that isn't guarded yields NaN,
+// which JSON.stringify writes as `ratingValue: null` — a broken rating node
+// instead of no rating node, on every locale of the homepage.
+test('the positive percentage is absent, never NaN, when there is nothing to divide', () => {
+  for (const empty of [null, undefined, {}, { totalReviews: 0, totalPositive: 0 }]) {
+    assert.equal(positivePercent(empty), null, `${JSON.stringify(empty)} should yield no rating`)
+  }
+  assert.equal(positivePercent({ totalReviews: 8, totalPositive: 8 }), 100)
+  assert.equal(positivePercent({ totalReviews: 9, totalPositive: 8 }), 89)
+  // What the schema block actually does with it.
+  assert.equal(JSON.stringify({ aggregateRating: positivePercent(null) ?? undefined }), '{}')
 })

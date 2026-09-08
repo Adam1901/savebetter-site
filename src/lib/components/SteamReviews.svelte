@@ -1,5 +1,5 @@
 <script>
-  import { formatPlaytime, STEAM_STORE_URL } from '$lib/steam.js'
+  import { formatPlaytime, positivePercent, STEAM_STORE_URL } from '$lib/steam.js'
   import { fmt } from '$lib/i18n/config.js'
 
   // Social-proof strip backed by build-time Steam reviews. Renders nothing when
@@ -9,6 +9,10 @@
   const s = t.steam
   const show = !!(steam && Array.isArray(steam.reviews) && steam.reviews.length && s)
   const count = show && steam.totalReviews ? fmt(s.countTpl, steam.totalReviews.toLocaleString('en-US')) : ''
+  // The numeric score, shown because the homepage's SoftwareApplication schema
+  // now declares it as an aggregateRating and Google only honours a rating the
+  // page actually displays. "Very Positive" is a label, not a rating value.
+  const percent = show ? positivePercent(steam) : null
   const initialOf = (author) => (author || '?').trim().charAt(0).toUpperCase() || '?'
 
   // Each card links to that review's permalink on Steam (steam.js builds it
@@ -32,6 +36,7 @@
              trailing space inside the span, which HTML collapses away — the
              badge rendered as "▲8 user reviews". -->
         {#if steam.scoreDesc}<span class="steam-badge"><span aria-hidden="true">▲</span>{steam.scoreDesc}</span>{/if}
+        {#if percent !== null}<span class="steam-count">{fmt(s.percentTpl, percent)}</span>{/if}
         {#if count}<span class="steam-count">{count}</span>{/if}
         <a class="steam-link" href={steam.storeUrl} target="_blank" rel="noopener noreferrer">{s.viewOnSteam} <span aria-hidden="true">↗</span></a>
       </div>
